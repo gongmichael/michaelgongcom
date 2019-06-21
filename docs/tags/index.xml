@@ -2,120 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Michael&#39;s Hugo Learn</title>
-    <link>https://gongmichael.github.io/michaelgongcom/tags/</link>
+    <link>https://michael-gong.com/tags/</link>
     <description>Recent content in Tags on Michael&#39;s Hugo Learn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Sep 2018 14:51:12 +0600</lastBuildDate>
     
-	<atom:link href="https://gongmichael.github.io/michaelgongcom/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://michael-gong.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bamboo</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/bamboo/</link>
+      <link>https://michael-gong.com/tags/bamboo/</link>
       <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/bamboo/</guid>
+      <guid>https://michael-gong.com/tags/bamboo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JSON</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/json/</link>
+      <link>https://michael-gong.com/tags/json/</link>
       <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/json/</guid>
+      <guid>https://michael-gong.com/tags/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST APIs</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/rest-apis/</link>
+      <link>https://michael-gong.com/tags/rest-apis/</link>
       <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/rest-apis/</guid>
+      <guid>https://michael-gong.com/tags/rest-apis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Unicorn</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/unicorn/</link>
+      <link>https://michael-gong.com/tags/unicorn/</link>
       <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/unicorn/</guid>
+      <guid>https://michael-gong.com/tags/unicorn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jQuery</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/jquery/</link>
+      <link>https://michael-gong.com/tags/jquery/</link>
       <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/jquery/</guid>
+      <guid>https://michael-gong.com/tags/jquery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/java/</link>
+      <link>https://michael-gong.com/tags/java/</link>
       <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/java/</guid>
+      <guid>https://michael-gong.com/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/development/</link>
+      <link>https://michael-gong.com/tags/development/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/development/</guid>
+      <guid>https://michael-gong.com/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/go/</link>
+      <link>https://michael-gong.com/tags/go/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/go/</guid>
+      <guid>https://michael-gong.com/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/golang/</link>
+      <link>https://michael-gong.com/tags/golang/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/golang/</guid>
+      <guid>https://michael-gong.com/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/hugo/</link>
+      <link>https://michael-gong.com/tags/hugo/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/hugo/</guid>
+      <guid>https://michael-gong.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>templates</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/templates/</link>
+      <link>https://michael-gong.com/tags/templates/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/templates/</guid>
+      <guid>https://michael-gong.com/tags/templates/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://gongmichael.github.io/michaelgongcom/tags/themes/</link>
+      <link>https://michael-gong.com/tags/themes/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/tags/themes/</guid>
+      <guid>https://michael-gong.com/tags/themes/</guid>
       <description></description>
     </item>
     

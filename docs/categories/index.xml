@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Michael&#39;s Hugo Learn</title>
-    <link>https://gongmichael.github.io/michaelgongcom/categories/</link>
+    <link>https://michael-gong.com/categories/</link>
     <description>Recent content in Categories on Michael&#39;s Hugo Learn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Sep 2018 14:51:12 +0600</lastBuildDate>
     
-	<atom:link href="https://gongmichael.github.io/michaelgongcom/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://michael-gong.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>cat1</title>
-      <link>https://gongmichael.github.io/michaelgongcom/categories/cat1/</link>
+      <link>https://michael-gong.com/categories/cat1/</link>
       <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/categories/cat1/</guid>
+      <guid>https://michael-gong.com/categories/cat1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Development</title>
-      <link>https://gongmichael.github.io/michaelgongcom/categories/development/</link>
+      <link>https://michael-gong.com/categories/development/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/categories/development/</guid>
+      <guid>https://michael-gong.com/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>https://gongmichael.github.io/michaelgongcom/categories/golang/</link>
+      <link>https://michael-gong.com/categories/golang/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/categories/golang/</guid>
+      <guid>https://michael-gong.com/categories/golang/</guid>
       <description></description>
     </item>
     

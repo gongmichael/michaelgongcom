@@ -2,512 +2,512 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Michael&#39;s Hugo Learn</title>
-    <link>https://gongmichael.github.io/michaelgongcom/</link>
+    <link>https://michael-gong.com/</link>
     <description>Recent content on Michael&#39;s Hugo Learn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Sep 2018 14:51:12 +0600</lastBuildDate>
     
-	<atom:link href="https://gongmichael.github.io/michaelgongcom/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://michael-gong.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Models with DPCP</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/real-science/</link>
+      <link>https://michael-gong.com/blogs/real-science/</link>
       <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/real-science/</guid>
+      <guid>https://michael-gong.com/blogs/real-science/</guid>
       <description>import numpy as np import pandas as pd import itertools as it import gc import sys,os import yaml import matplotlib.</description>
     </item>
     
     <item>
       <title>Are You Doing the Right Way</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/are-you-doing-the-right-way/</link>
+      <link>https://michael-gong.com/blogs/are-you-doing-the-right-way/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/are-you-doing-the-right-way/</guid>
+      <guid>https://michael-gong.com/blogs/are-you-doing-the-right-way/</guid>
       <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
     </item>
     
     <item>
       <title>Selected Equity Options Summary</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171101/</link>
+      <link>https://michael-gong.com/blogs/20171101/</link>
       <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171101/</guid>
+      <guid>https://michael-gong.com/blogs/20171101/</guid>
       <description>1. Selected Equity Options Summary Base on our previous research, we find that our models performs better in the first two decile of S&amp;amp;P 500.</description>
     </item>
     
     <item>
       <title>Test Version 2: Add dummy for DOTM for Put option and DITM for Call option</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171024/</link>
+      <link>https://michael-gong.com/blogs/20171024/</link>
       <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171024/</guid>
+      <guid>https://michael-gong.com/blogs/20171024/</guid>
       <description>Stock Summary By Size __________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq(%) Trading Volume Trading Dispersion __________________________________________________________________________________________________ SPX 1 0.</description>
     </item>
     
     <item>
       <title>Option contracts availability </title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/availability/</link>
+      <link>https://michael-gong.com/imvolsurf/availability/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/availability/</guid>
+      <guid>https://michael-gong.com/imvolsurf/availability/</guid>
       <description>Option contracts availability 1 Contracts scatter plot The following figure plots the option contracts against its delta and maturity.</description>
     </item>
     
     <item>
       <title>S&amp;P 500 Equity Summary Statistics</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/20170926/</link>
+      <link>https://michael-gong.com/blogs/20170926/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20170926/</guid>
+      <guid>https://michael-gong.com/blogs/20170926/</guid>
       <description>1.Summary Statistics    mean std   maturity cp_flag       10 C 0.</description>
     </item>
     
     <item>
       <title>Stock Summary</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171010/</link>
+      <link>https://michael-gong.com/blogs/20171010/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171010/</guid>
+      <guid>https://michael-gong.com/blogs/20171010/</guid>
       <description>Stock Summary By Industry ___________________________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq Trading Volume ___________________________________________________________________________________________________________________ Manufacturing 183 0.</description>
     </item>
     
     <item>
       <title>Stock Summary</title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/archproto/</link>
+      <link>https://michael-gong.com/imvolsurf/archproto/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/archproto/</guid>
+      <guid>https://michael-gong.com/imvolsurf/archproto/</guid>
       <description>Fully Efficient DFM with GARCH(1,1) prototype (JNJ as illustration) Model Documentation 0.</description>
     </item>
     
     <item>
       <title>Simple Image Post</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/simple-image-post/</link>
+      <link>https://michael-gong.com/blogs/simple-image-post/</link>
       <pubDate>Wed, 12 Sep 2018 12:52:36 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/simple-image-post/</guid>
+      <guid>https://michael-gong.com/blogs/simple-image-post/</guid>
       <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
     </item>
     
     <item>
       <title>Features Of CoderPortfolio</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/featuresofcoderportfolio/</link>
+      <link>https://michael-gong.com/blogs/featuresofcoderportfolio/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/featuresofcoderportfolio/</guid>
+      <guid>https://michael-gong.com/blogs/featuresofcoderportfolio/</guid>
       <description>Change Point &amp;ldquo;private content&amp;rdquo; short code added. It is now possible to communicate your personal hobby and your own content.</description>
     </item>
     
     <item>
       <title>Hugo Demo</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/theme-demo/</link>
+      <link>https://michael-gong.com/blogs/theme-demo/</link>
       <pubDate>Mon, 12 Mar 2018 12:52:36 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/theme-demo/</guid>
+      <guid>https://michael-gong.com/blogs/theme-demo/</guid>
       <description>Style Demo h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading This is bold text</description>
     </item>
     
     <item>
       <title>Zoom in significant deltaO stocks</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171107/</link>
+      <link>https://michael-gong.com/blogs/20171107/</link>
       <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171107/</guid>
+      <guid>https://michael-gong.com/blogs/20171107/</guid>
       <description>1.Zoom in significant deltaO stocks 1.1 distribution of variable percentage significance ________________________________________________________________________ const delta_n matur_n delta2 inter deltaO delta2O maturS ________________________________________________________________________ count 88.</description>
     </item>
     
     <item>
       <title>Zoom in significant deltaO stocks</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/creating-a-new-theme/</link>
+      <link>https://michael-gong.com/blogs/creating-a-new-theme/</link>
       <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/creating-a-new-theme/</guid>
+      <guid>https://michael-gong.com/blogs/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo.</description>
     </item>
     
     <item>
       <title>Asymmetry</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/readme/</link>
+      <link>https://michael-gong.com/blogs/readme/</link>
       <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/readme/</guid>
+      <guid>https://michael-gong.com/blogs/readme/</guid>
       <description>Asymmetry fadfda
  Investigate the asymmetry of Implied Volatility Surface</description>
     </item>
     
     <item>
       <title>Option contracts availability </title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/crosssection/</link>
+      <link>https://michael-gong.com/imvolsurf/crosssection/</link>
       <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/crosssection/</guid>
+      <guid>https://michael-gong.com/imvolsurf/crosssection/</guid>
       <description>1. Likelihood of models ______________________________________________________________________________ ecoDfm fulDfm ecoDfmX1 ecoDfmX2 fulDfmX1 fulDfmX2 ______________________________________________________________________________ JNJ aic -350936.</description>
     </item>
     
     <item>
       <title>Residual Properties</title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/residualeval/</link>
+      <link>https://michael-gong.com/imvolsurf/residualeval/</link>
       <pubDate>Sun, 12 Mar 2017 14:51:12 +0600</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/residualeval/</guid>
+      <guid>https://michael-gong.com/imvolsurf/residualeval/</guid>
       <description>Residual Properties 1. Heteroskedasticity The figure below plot the EWMA of residuals.</description>
     </item>
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/hugo-template-primer/</link>
+      <link>https://michael-gong.com/blogs/hugo-template-primer/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/hugo-template-primer/</guid>
+      <guid>https://michael-gong.com/blogs/hugo-template-primer/</guid>
       <description>Hugo uses the excellent go html/template library for its template engine.</description>
     </item>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/hugoisforlovers/</link>
+      <link>https://michael-gong.com/blogs/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/hugoisforlovers/</guid>
+      <guid>https://michael-gong.com/blogs/hugoisforlovers/</guid>
       <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.</description>
     </item>
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/migrate-from-jekyll/</link>
+      <link>https://michael-gong.com/blogs/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/migrate-from-jekyll/</guid>
+      <guid>https://michael-gong.com/blogs/migrate-from-jekyll/</guid>
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/csevaluate/</link>
+      <link>https://michael-gong.com/imvolsurf/csevaluate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/csevaluate/</guid>
+      <guid>https://michael-gong.com/imvolsurf/csevaluate/</guid>
       <description>Bernales Guidolin 2014 Table 2 The table below shows the replication of Bernales Guidolin regression in Panel A.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/csevalute/</link>
+      <link>https://michael-gong.com/imvolsurf/csevalute/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/csevalute/</guid>
+      <guid>https://michael-gong.com/imvolsurf/csevalute/</guid>
       <description>1. In sample regression statistics (for ALL options) In this version, I delete contracts with maturity less than 11 days</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/dozmethod/</link>
+      <link>https://michael-gong.com/imvolsurf/dozmethod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/dozmethod/</guid>
+      <guid>https://michael-gong.com/imvolsurf/dozmethod/</guid>
       <description>1. RMSE against Doz iteration 2. Latent factors of Doz method (converged) 3.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecevaluate/</link>
+      <link>https://michael-gong.com/imvolsurf/ecevaluate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecevaluate/</guid>
+      <guid>https://michael-gong.com/imvolsurf/ecevaluate/</guid>
       <description>Economic Significance evaluation I setup a option straddle strategy to evaluate the economic significance of DFM and DFMX models.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/garch/</link>
+      <link>https://michael-gong.com/imvolsurf/garch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/garch/</guid>
+      <guid>https://michael-gong.com/imvolsurf/garch/</guid>
       <description>Introducing GARCH(1,1) 1. Estimated Parameters w a b JNJ 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/isevaluate/</link>
+      <link>https://michael-gong.com/imvolsurf/isevaluate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/isevaluate/</guid>
+      <guid>https://michael-gong.com/imvolsurf/isevaluate/</guid>
       <description>1.DFM In-sample Analysis 1.1 Likelihood change ==== ====== ======= ====== .</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/model/</link>
+      <link>https://michael-gong.com/imvolsurf/model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/model/</guid>
+      <guid>https://michael-gong.com/imvolsurf/model/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/modelredocument/</link>
+      <link>https://michael-gong.com/imvolsurf/modelredocument/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/modelredocument/</guid>
+      <guid>https://michael-gong.com/imvolsurf/modelredocument/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/newscreen/</link>
+      <link>https://michael-gong.com/imvolsurf/newscreen/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/newscreen/</guid>
+      <guid>https://michael-gong.com/imvolsurf/newscreen/</guid>
       <description>1. Data Sources In order to investigate the put call parity violation, the data comes from 3 dataset, all of them come from OptionMetrics.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/offgridfit/</link>
+      <link>https://michael-gong.com/imvolsurf/offgridfit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/offgridfit/</guid>
+      <guid>https://michael-gong.com/imvolsurf/offgridfit/</guid>
       <description>1. In sample fit performance for off-grid contracts This figure plots the in-sample RMSE for off-grid contracts on stock level.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/oosevaluate/</link>
+      <link>https://michael-gong.com/imvolsurf/oosevaluate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/oosevaluate/</guid>
+      <guid>https://michael-gong.com/imvolsurf/oosevaluate/</guid>
       <description>1. Out of Sample Forecasting Performance ___________________________________________________________ Orginal Set Insignificance 0 ____________________ ______________________ RMSE MAE MCP RMSE MAE MCP ___________________________________________________________ EQT CS3 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/osevaluate/</link>
+      <link>https://michael-gong.com/imvolsurf/osevaluate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/osevaluate/</guid>
+      <guid>https://michael-gong.com/imvolsurf/osevaluate/</guid>
       <description>Out-of-sample performace evaluation  I estimated 4 models: fully efficient DFM (fulDfm), economic restricted DFM (ecoDfm), fully efficient DFMX(fulDfmX), and economic restricted DFMX (ecoDfmX).</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/prevaluate/</link>
+      <link>https://michael-gong.com/imvolsurf/prevaluate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/prevaluate/</guid>
+      <guid>https://michael-gong.com/imvolsurf/prevaluate/</guid>
       <description>1.Data Description I choose the second largest stocks in each quintile of S&amp;amp;P 100 index.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/par/</link>
+      <link>https://michael-gong.com/imvolsurf/par/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/par/</guid>
+      <guid>https://michael-gong.com/imvolsurf/par/</guid>
       <description>AAPL vC:
 [[ 0.22281611] [ 0.25816104] [ 0.27871024] [ 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/par3i/</link>
+      <link>https://michael-gong.com/imvolsurf/par3i/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/par3i/</guid>
+      <guid>https://michael-gong.com/imvolsurf/par3i/</guid>
       <description>AAPL vC:
 [[ 0.22240501] [ 0.22405836] [ 0.225774 ] [ 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/par_revisit/</link>
+      <link>https://michael-gong.com/imvolsurf/par_revisit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/par_revisit/</guid>
+      <guid>https://michael-gong.com/imvolsurf/par_revisit/</guid>
       <description>AAPL vC:
 [[ 0.22313105] [ 0.22443361] [ 0.22519078] [ 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/par_revisit1/</link>
+      <link>https://michael-gong.com/imvolsurf/par_revisit1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/par_revisit1/</guid>
+      <guid>https://michael-gong.com/imvolsurf/par_revisit1/</guid>
       <description>AAPL vC:
 [[ 0.23994076] [ 0.22454118] [ 0.21558772] [ 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/readme/</link>
+      <link>https://michael-gong.com/imvolsurf/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/readme/</guid>
+      <guid>https://michael-gong.com/imvolsurf/readme/</guid>
       <description>Data Description 7Firms.h Created on 2016/11/03  This file contains the screened data from 7FirmsInterpolated.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/smallcap/</link>
+      <link>https://michael-gong.com/imvolsurf/smallcap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/smallcap/</guid>
+      <guid>https://michael-gong.com/imvolsurf/smallcap/</guid>
       <description>Small Cap Stock analysis (RHI) Estmiation results ecoDfm fulDfm ecoDfmX1 ecoDfmX2 fulDfmX1 fulDfmX2 No.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecodfm/</link>
+      <link>https://michael-gong.com/imvolsurf/ecodfm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecodfm/</guid>
+      <guid>https://michael-gong.com/imvolsurf/ecodfm/</guid>
       <description>ecoDfm system matrices vC [[[ 0.00e+00] [ 0.00e+00] [ 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecodfmx1/</link>
+      <link>https://michael-gong.com/imvolsurf/ecodfmx1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecodfmx1/</guid>
+      <guid>https://michael-gong.com/imvolsurf/ecodfmx1/</guid>
       <description>ecoDfmX1 system matrices vC [[[ 8.45e-02] [ 8.49e-02] [ 8.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecodfmx2/</link>
+      <link>https://michael-gong.com/imvolsurf/ecodfmx2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/ecodfmx2/</guid>
+      <guid>https://michael-gong.com/imvolsurf/ecodfmx2/</guid>
       <description>ecoDfmX2 system matrices vC [[[ 9.84e-02] [ 1.02e-01] [ 1.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/economic/</link>
+      <link>https://michael-gong.com/imvolsurf/economic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/economic/</guid>
+      <guid>https://michael-gong.com/imvolsurf/economic/</guid>
       <description>Straddle strategy In this version, I only implement the option straddle strategy to evaluate the economic significance of DFM and DFMX models.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/fuldfm/</link>
+      <link>https://michael-gong.com/imvolsurf/fuldfm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/fuldfm/</guid>
+      <guid>https://michael-gong.com/imvolsurf/fuldfm/</guid>
       <description>fulDfm system matrices vC [[[ 0.00e+00] [ 0.00e+00] [ 0.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/fuldfmx1/</link>
+      <link>https://michael-gong.com/imvolsurf/fuldfmx1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/fuldfmx1/</guid>
+      <guid>https://michael-gong.com/imvolsurf/fuldfmx1/</guid>
       <description>fulDfmX1 system matrices vC [[[ 1.09e-01] [ 1.14e-01] [ 1.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/fuldfmx2/</link>
+      <link>https://michael-gong.com/imvolsurf/fuldfmx2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/fuldfmx2/</guid>
+      <guid>https://michael-gong.com/imvolsurf/fuldfmx2/</guid>
       <description>fulDfmX2 system matrices vC [[[ 1.06e-01] [ 9.73e-02] [ 1.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/illustration/</link>
+      <link>https://michael-gong.com/imvolsurf/illustration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/illustration/</guid>
+      <guid>https://michael-gong.com/imvolsurf/illustration/</guid>
       <description>Illustration using one stock (Johnson &amp;amp; Johnson:JNJ) Overview of last two meetings * Meeting with @Dick + Issues: Identification of both constants in measurement equation and state equation.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/insample/</link>
+      <link>https://michael-gong.com/imvolsurf/insample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/insample/</guid>
+      <guid>https://michael-gong.com/imvolsurf/insample/</guid>
       <description>1.Estimation results Below is the estimated parameters of model (15).</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/insample3i/</link>
+      <link>https://michael-gong.com/imvolsurf/insample3i/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/insample3i/</guid>
+      <guid>https://michael-gong.com/imvolsurf/insample3i/</guid>
       <description>1.Estimation results Below is the estimated parameters of model (15).</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/outsample/</link>
+      <link>https://michael-gong.com/imvolsurf/outsample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/outsample/</guid>
+      <guid>https://michael-gong.com/imvolsurf/outsample/</guid>
       <description>1.Out of sample forecasting performance statistics aggregated The figure below plots the out of sample forecasting error (RMSE) and mean correct prediction.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/params/</link>
+      <link>https://michael-gong.com/imvolsurf/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/params/</guid>
+      <guid>https://michael-gong.com/imvolsurf/params/</guid>
       <description>&amp;rdquo;&amp;lsquo;python vC [[[ 1.06e-01] [ 9.73e-02] [ 1.14e-01] [ 7.00e-02] [ 6.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/preliminary/</link>
+      <link>https://michael-gong.com/imvolsurf/preliminary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/preliminary/</guid>
+      <guid>https://michael-gong.com/imvolsurf/preliminary/</guid>
       <description>1. Descriptive plot Below is the descriptive plotting of data.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/residuals/</link>
+      <link>https://michael-gong.com/imvolsurf/residuals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/residuals/</guid>
+      <guid>https://michael-gong.com/imvolsurf/residuals/</guid>
       <description>Residuals properties 0. A illustration plot of residuals 1. Test for heteroskedasticity  I use Engle’s Test for Autoregressive Conditional Heteroscedasticity.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/update/</link>
+      <link>https://michael-gong.com/imvolsurf/update/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/update/</guid>
+      <guid>https://michael-gong.com/imvolsurf/update/</guid>
       <description>1. Fit errors of different trainning sample In this update, I&amp;rsquo;ve tried 3 different grouping, and investigate their in-sample properties.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/imvolsurf/update_v1/</link>
+      <link>https://michael-gong.com/imvolsurf/update_v1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/imvolsurf/update_v1/</guid>
+      <guid>https://michael-gong.com/imvolsurf/update_v1/</guid>
       <description>(2) Re-estimated DFMX model (equation 9 - 12) (2.1) plot of factors (2.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://gongmichael.github.io/michaelgongcom/resume/</link>
+      <link>https://michael-gong.com/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/resume/</guid>
+      <guid>https://michael-gong.com/resume/</guid>
       <description>Home  Xun (Michael) Gong     Home  About  Education  Publications  Experience  Skills       Xun (Michael) Gong  Rotterdam, NL · gong@-remove-ese.</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>templates on Michael&#39;s Hugo Learn</title>
-    <link>https://gongmichael.github.io/michaelgongcom/tags/templates/</link>
+    <link>https://michael-gong.com/tags/templates/</link>
     <description>Recent content in templates on Michael&#39;s Hugo Learn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://gongmichael.github.io/michaelgongcom/tags/templates/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://michael-gong.com/tags/templates/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>https://gongmichael.github.io/michaelgongcom/blogs/hugo-template-primer/</link>
+      <link>https://michael-gong.com/blogs/hugo-template-primer/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gongmichael.github.io/michaelgongcom/blogs/hugo-template-primer/</guid>
+      <guid>https://michael-gong.com/blogs/hugo-template-primer/</guid>
       <description>Hugo uses the excellent go html/template library for its template engine.</description>
     </item>
     
