@@ -1,0 +1,228 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="out-of-sample-performace-evaluation">Out-of-sample performace evaluation</h1>
+
+<ul>
+<li>I estimated 4 models: fully efficient DFM (fulDfm), economic restricted DFM (ecoDfm), fully efficient DFMX(fulDfmX), and economic restricted DFMX (ecoDfmX).</li>
+<li>The window size is 1000 days. I re-estimated models every 10 days (approx. 2 weeks).</li>
+<li>The estimation procedure is pushed to extreme: BFGS stops when the decreases of negative likelihood less than the machine precision (1E-16).</li>
+</ul>
+
+<h2 id="1-on-stock-level">1. On stock level</h2>
+
+<p>The table below reports the RMSE at stock level. The best model with lowest RMSE is highlighted with <code>*</code>.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">       ecoDfm  ecoDfmX    fulDfm   fulDfmX
+JNJ   <span style="color:#f60">0.03051</span>  <span style="color:#f60">0.03034</span>  <span style="color:#f60">0.01731</span><span style="color:#555">*</span>   <span style="color:#f60">0.01736</span>
+IBM   <span style="color:#f60">0.03150</span>  <span style="color:#f60">0.03153</span>  <span style="color:#f60">0.01776</span><span style="color:#555">*</span>   <span style="color:#f60">0.01786</span>
+PEP   <span style="color:#f60">0.02764</span>  <span style="color:#f60">0.02745</span>  <span style="color:#f60">0.01629</span><span style="color:#555">*</span>   <span style="color:#f60">0.01630</span>
+UTX   <span style="color:#f60">0.03595</span>  <span style="color:#f60">0.03585</span>  <span style="color:#f60">0.01816</span><span style="color:#555">*</span>   <span style="color:#f60">0.01822</span>
+UNP   <span style="color:#f60">0.03053</span>  <span style="color:#f60">0.03052</span>  <span style="color:#f60">0.01884</span><span style="color:#555">*</span>   <span style="color:#f60">0.01887</span>
+OXY   <span style="color:#f60">0.03562</span>  <span style="color:#f60">0.03551</span>  <span style="color:#f60">0.02341</span><span style="color:#555">*</span>   <span style="color:#f60">0.02342</span>
+COST  <span style="color:#f60">0.02789</span>  <span style="color:#f60">0.02679</span>  <span style="color:#f60">0.01749</span><span style="color:#555">*</span>   <span style="color:#f60">0.01760</span>
+EMC   <span style="color:#f60">0.04210</span>  <span style="color:#f60">0.04199</span>  <span style="color:#f60">0.03122</span><span style="color:#555">*</span>   <span style="color:#f60">0.03123</span>
+BK    <span style="color:#f60">0.05065</span>  <span style="color:#f60">0.05060</span>  <span style="color:#f60">0.03505</span>    <span style="color:#f60">0.03500</span><span style="color:#555">*</span>
+DVN   <span style="color:#f60">0.03263</span>  <span style="color:#f60">0.03267</span>  <span style="color:#f60">0.02247</span>    <span style="color:#f60">0.02246</span><span style="color:#555">*</span></code></pre></div>
+<p>The table below reports the MCP at stock level. The best model with highest MCP is highlighted with <code>*</code>.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">       ecoDfm  ecoDfmX    fulDfm   fulDfmX
+JNJ   <span style="color:#f60">0.53310</span>  <span style="color:#f60">0.53319</span>  <span style="color:#f60">0.56771</span><span style="color:#555">*</span>   <span style="color:#f60">0.56741</span>
+IBM   <span style="color:#f60">0.52362</span>  <span style="color:#f60">0.52277</span>  <span style="color:#f60">0.55692</span><span style="color:#555">*</span>   <span style="color:#f60">0.55590</span>
+PEP   <span style="color:#f60">0.53472</span>  <span style="color:#f60">0.53445</span>  <span style="color:#f60">0.57646</span><span style="color:#555">*</span>   <span style="color:#f60">0.57562</span>
+UTX   <span style="color:#f60">0.52777</span>  <span style="color:#f60">0.52993</span>  <span style="color:#f60">0.57477</span>    <span style="color:#f60">0.57651</span><span style="color:#555">*</span>
+UNP   <span style="color:#f60">0.53180</span>  <span style="color:#f60">0.53292</span>  <span style="color:#f60">0.57300</span>    <span style="color:#f60">0.57304</span><span style="color:#555">*</span>
+OXY   <span style="color:#f60">0.53242</span>  <span style="color:#f60">0.53276</span>  <span style="color:#f60">0.56182</span><span style="color:#555">*</span>   <span style="color:#f60">0.55907</span>
+COST  <span style="color:#f60">0.53438</span>  <span style="color:#f60">0.52911</span>  <span style="color:#f60">0.56862</span><span style="color:#555">*</span>   <span style="color:#f60">0.56734</span>
+EMC   <span style="color:#f60">0.54192</span>  <span style="color:#f60">0.53955</span>  <span style="color:#f60">0.57083</span>    <span style="color:#f60">0.57126</span><span style="color:#555">*</span>
+BK    <span style="color:#f60">0.53433</span>  <span style="color:#f60">0.53342</span>  <span style="color:#f60">0.57904</span>    <span style="color:#f60">0.58134</span><span style="color:#555">*</span>
+DVN   <span style="color:#f60">0.53714</span>  <span style="color:#f60">0.53691</span>  <span style="color:#f60">0.56046</span><span style="color:#555">*</span>   <span style="color:#f60">0.55961</span></code></pre></div>
+<h2 id="2-on-option-groups-level">2. On option groups level</h2>
+
+<p>The table below shows the RMSE at option groups level. The number of times that the model outperforms is shown in parenthesis (we have 10 stocks in total).</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                ecoDfm    ecoDfmX     fulDfm    fulDfmX
+DOTM Put <span style="color:#f60">1</span>   <span style="color:#f60">0.0688</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0684</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0425</span>(<span style="color:#f60">2</span>)   <span style="color:#f60">0.0423</span>(<span style="color:#f60">8</span>)<span style="color:#555">*</span>
+DOTM Put <span style="color:#f60">2</span>   <span style="color:#f60">0.0656</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0650</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0258</span>(<span style="color:#f60">1</span>)   <span style="color:#f60">0.0256</span>(<span style="color:#f60">9</span>)<span style="color:#555">*</span>
+DOTM Put <span style="color:#f60">3</span>   <span style="color:#f60">0.0680</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0675</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0212</span>(<span style="color:#f60">5</span>)   <span style="color:#f60">0.0212</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>
+OTM Put <span style="color:#f60">1</span>    <span style="color:#f60">0.0291</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0291</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0244</span>(<span style="color:#f60">7</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0244</span>(<span style="color:#f60">3</span>)
+OTM Put <span style="color:#f60">2</span>    <span style="color:#f60">0.0173</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0170</span>(<span style="color:#f60">3</span>)  <span style="color:#f60">0.0165</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0167</span>(<span style="color:#f60">0</span>)
+OTM Put <span style="color:#f60">3</span>    <span style="color:#f60">0.0159</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0156</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0120</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0121</span>(<span style="color:#f60">4</span>)
+ATM Put <span style="color:#f60">1</span>    <span style="color:#f60">0.0263</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0263</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.022</span>(<span style="color:#f60">10</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0222</span>(<span style="color:#f60">0</span>)
+ATM Put <span style="color:#f60">2</span>    <span style="color:#f60">0.0153</span>(<span style="color:#f60">4</span>)  <span style="color:#f60">0.0153</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0155</span>(<span style="color:#f60">4</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0157</span>(<span style="color:#f60">1</span>)
+ATM Put <span style="color:#f60">3</span>    <span style="color:#f60">0.0116</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0115</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0112</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0114</span>(<span style="color:#f60">3</span>)
+ATM Call <span style="color:#f60">1</span>   <span style="color:#f60">0.0263</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0264</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0227</span>(<span style="color:#f60">9</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0228</span>(<span style="color:#f60">1</span>)
+ATM Call <span style="color:#f60">2</span>   <span style="color:#f60">0.0160</span>(<span style="color:#f60">2</span>)  <span style="color:#f60">0.0160</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0156</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0157</span>(<span style="color:#f60">1</span>)
+ATM Call <span style="color:#f60">3</span>   <span style="color:#f60">0.0120</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0120</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0112</span>(<span style="color:#f60">7</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0112</span>(<span style="color:#f60">2</span>)
+OTM Call <span style="color:#f60">1</span>   <span style="color:#f60">0.0257</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0258</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0225</span>(<span style="color:#f60">9</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0225</span>(<span style="color:#f60">1</span>)
+OTM Call <span style="color:#f60">2</span>   <span style="color:#f60">0.0144</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0143</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span> <span style="color:#f60">0.0146</span>(<span style="color:#f60">4</span>)   <span style="color:#f60">0.0148</span>(<span style="color:#f60">0</span>)
+OTM Call <span style="color:#f60">3</span>   <span style="color:#f60">0.0102</span>(<span style="color:#f60">3</span>)  <span style="color:#f60">0.0103</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.0102</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0103</span>(<span style="color:#f60">1</span>)
+DOTM Call <span style="color:#f60">1</span>  <span style="color:#f60">0.0473</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0474</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0382</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0382</span>(<span style="color:#f60">4</span>)
+DOTM Call <span style="color:#f60">2</span>  <span style="color:#f60">0.0207</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0208</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.0182</span>(<span style="color:#f60">7</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0183</span>(<span style="color:#f60">3</span>)
+DOTM Call <span style="color:#f60">3</span>  <span style="color:#f60">0.0125</span>(<span style="color:#f60">2</span>)  <span style="color:#f60">0.0126</span>(<span style="color:#f60">2</span>)  <span style="color:#f60">0.0123</span>(<span style="color:#f60">3</span>)<span style="color:#555">*</span>  <span style="color:#f60">0.0123</span>(<span style="color:#f60">3</span>)</code></pre></div>
+<p>The table below shows the MCP at option groups level. The number of times that the model outperforms is shown in parenthesis (we have 10 stocks in total).</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                ecoDfm    ecoDfmX     fulDfm     fulDfmX
+DOTM Put <span style="color:#f60">1</span>   <span style="color:#f60">0.5197</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5208</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5954</span>(<span style="color:#f60">7</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5949</span>(<span style="color:#f60">3</span>)
+DOTM Put <span style="color:#f60">2</span>   <span style="color:#f60">0.4915</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.4919</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5745</span>(<span style="color:#f60">4</span>)    <span style="color:#f60">0.5757</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>
+DOTM Put <span style="color:#f60">3</span>   <span style="color:#f60">0.5016</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5014</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5635</span>(<span style="color:#f60">4</span>)    <span style="color:#f60">0.5648</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>
+OTM Put <span style="color:#f60">1</span>    <span style="color:#f60">0.5473</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5475</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5876</span>(<span style="color:#f60">3</span>)    <span style="color:#f60">0.5883</span>(<span style="color:#f60">7</span>)<span style="color:#555">*</span>
+OTM Put <span style="color:#f60">2</span>    <span style="color:#f60">0.5509</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5546</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5677</span>(<span style="color:#f60">4</span>)    <span style="color:#f60">0.5663</span>(<span style="color:#f60">4</span>)<span style="color:#555">*</span>
+OTM Put <span style="color:#f60">3</span>    <span style="color:#f60">0.5351</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5376</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5738</span>(<span style="color:#f60">0</span>)    <span style="color:#f60">0.5786</span>(<span style="color:#f60">10</span>)<span style="color:#555">*</span>
+ATM Put <span style="color:#f60">1</span>    <span style="color:#f60">0.5519</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5503</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5934</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5931</span>(<span style="color:#f60">4</span>)
+ATM Put <span style="color:#f60">2</span>    <span style="color:#f60">0.5480</span>(<span style="color:#f60">2</span>)  <span style="color:#f60">0.5430</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5651</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5630</span>(<span style="color:#f60">2</span>)
+ATM Put <span style="color:#f60">3</span>    <span style="color:#f60">0.5649</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5660</span>(<span style="color:#f60">2</span>)  <span style="color:#f60">0.5784</span>(<span style="color:#f60">4</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5778</span>(<span style="color:#f60">3</span>)
+ATM Call <span style="color:#f60">1</span>   <span style="color:#f60">0.5445</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5430</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5881</span>(<span style="color:#f60">5</span>)    <span style="color:#f60">0.5891</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>
+ATM Call <span style="color:#f60">2</span>   <span style="color:#f60">0.5238</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5204</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5585</span>(<span style="color:#f60">7</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5559</span>(<span style="color:#f60">2</span>)
+ATM Call <span style="color:#f60">3</span>   <span style="color:#f60">0.5272</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5212</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5747</span>(<span style="color:#f60">9</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5684</span>(<span style="color:#f60">1</span>)
+OTM Call <span style="color:#f60">1</span>   <span style="color:#f60">0.5422</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5422</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5602</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5592</span>(<span style="color:#f60">3</span>)
+OTM Call <span style="color:#f60">2</span>   <span style="color:#f60">0.5190</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5199</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5343</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5347</span>(<span style="color:#f60">4</span>)
+OTM Call <span style="color:#f60">3</span>   <span style="color:#f60">0.5207</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5197</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5542</span>(<span style="color:#f60">4</span>)    <span style="color:#f60">0.5547</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>
+DOTM Call <span style="color:#f60">1</span>  <span style="color:#f60">0.5362</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5351</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5737</span>(<span style="color:#f60">5</span>)    <span style="color:#f60">0.5731</span>(<span style="color:#f60">5</span>)<span style="color:#555">*</span>
+DOTM Call <span style="color:#f60">2</span>  <span style="color:#f60">0.5280</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5274</span>(<span style="color:#f60">0</span>)  <span style="color:#f60">0.5474</span>(<span style="color:#f60">6</span>)<span style="color:#555">*</span>   <span style="color:#f60">0.5480</span>(<span style="color:#f60">4</span>)
+DOTM Call <span style="color:#f60">3</span>  <span style="color:#f60">0.5437</span>(<span style="color:#f60">1</span>)  <span style="color:#f60">0.5432</span>(<span style="color:#f60">2</span>)  <span style="color:#f60">0.5504</span>(<span style="color:#f60">3</span>)    <span style="color:#f60">0.5514</span>(<span style="color:#f60">4</span>)<span style="color:#555">*</span></code></pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,294 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Speed up GJR-GARCH with Numba</span></h2>
+    <span class="text-info">June 1, 2019 | Michael Gong</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/numba">Numba</a></li>
+    
+      <li><a class="tag" href="/tags/garch">GARCH</a></li>
+    
+      <li><a class="tag" href="/tags/python">Python</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="speed-up-gjr-garch-with-numba">Speed up GJR-GARCH with Numba</h1>
+
+<h2 id="1-introduction">1. Introduction</h2>
+
+<p>GJR-GARCH is widely used for modeling the heteroskedasticity of assets&rsquo; return. GJR-GARCH introduces a asymmetric impact of the previous negative shocks at time $t$, which empirically turns out to outperforms the GARCH model.</p>
+
+<p>The GJR-GARCH is defined as
+$$r_t = \mu + \epsilon_t$$
+$$\epsilon_t=\sigma_t z_t$$</p>
+
+<p>$$\sigma^2_t = \omega + \alpha\epsilon_t^2 + \gamma I_{t-1}\epsilon^2_{t-1} + \beta \sigma^2_{t-1}$$
+where $I_{t-1} = 0$ if $r_{t-1}\geq \mu$, and $I_{t-1} = 1$ if $r_{t-1}&lt;\mu$. The $r_t$ is the asset return, and $z_t$ is a standard Gaussian disturbance.</p>
+
+<p>We usually estimate the parameters ${\mu, \omega,\alpha,\gamma,\beta }$ by minimize the negative log-likelihood function of the return process:
+$$LLF=-\frac{N}{2}\text{log}(2\pi)-\frac{1}{2}\sum_{t=1}^N\text{log}\sigma^2_t-\frac{1}{2}\sum_{t=1}^N\frac{\epsilon^2_t}{\sigma^2_t}$$</p>
+
+<p>To compute the LLF, we need a forward pass of the GJR-GARCH process, which is slow in pure Python environment. If we have multiples assets and intend to back-test the performance with rolling window scheme, extreme long computation time might make the analysis infeasible. In this article, I show we can easily reduce the computation time with <a href="https://numba.pydata.org/">Numba</a>&rsquo;s Just-In-Time (JIT) compilation.</p>
+
+<p>The code of this article requries <code>pandas_datareader</code> package (<code>pip install pandas_datareader</code>)</p>
+
+<h2 id="2-prepare-data">2. Prepare Data</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">datetime</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">dt</span>
+<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pandas_datareader.data</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">web</span>
+<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">matplotlib.pyplot</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">plt</span>
+<span style="color:#555">%</span>matplotlib inline
+
+start <span style="color:#555">=</span> dt<span style="color:#555">.</span>datetime(<span style="color:#f60">2000</span>, <span style="color:#f60">1</span>, <span style="color:#f60">1</span>)
+end <span style="color:#555">=</span> dt<span style="color:#555">.</span>datetime(<span style="color:#f60">2019</span>, <span style="color:#f60">1</span>, <span style="color:#f60">1</span>)
+sp500 <span style="color:#555">=</span> web<span style="color:#555">.</span>DataReader(<span style="color:#c30">&#39;MSFT&#39;</span>, <span style="color:#c30">&#39;yahoo&#39;</span>, start<span style="color:#555">=</span>start, end<span style="color:#555">=</span>end)
+returns <span style="color:#555">=</span> <span style="color:#f60">100</span> <span style="color:#555">*</span> sp500[<span style="color:#c30">&#39;Adj Close&#39;</span>]<span style="color:#555">.</span>pct_change()<span style="color:#555">.</span>dropna()</code></pre></div>
+<p>Plotting the return series and the squared return series, we can observe obvious volatility clustering</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#555">=</span> plt<span style="color:#555">.</span>figure(figsize<span style="color:#555">=</span>(<span style="color:#f60">12</span>,<span style="color:#f60">4</span>))
+ax <span style="color:#555">=</span> fig<span style="color:#555">.</span>add_subplot(<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">1</span>)
+ax<span style="color:#555">.</span>plot(returns,label<span style="color:#555">=</span><span style="color:#c30">&#39;MSFT return&#39;</span>, linewidth<span style="color:#555">=</span><span style="color:#f60">0.7</span>, color<span style="color:#555">=</span><span style="color:#c30">&#34;#ffa500&#34;</span>)
+plt<span style="color:#555">.</span>legend()
+ax <span style="color:#555">=</span> fig<span style="color:#555">.</span>add_subplot(<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">2</span>)
+ax<span style="color:#555">.</span>plot(returns<span style="color:#555">**</span><span style="color:#f60">2</span>,label<span style="color:#555">=</span><span style="color:#c30">&#39;MSFT squared return&#39;</span>, linewidth<span style="color:#555">=</span><span style="color:#f60">0.7</span>, color<span style="color:#555">=</span><span style="color:#c30">&#34;#40e0d0&#34;</span>)
+plt<span style="color:#555">.</span>legend()</code></pre></div>
+<p><img src="/img/posts/GJR-GARCH/MSFTSquaredReturn.png" alt="png" /></p>
+
+<h2 id="3-pure-python-gjr-garch-implementation">3. Pure Python GJR-GARCH implementation</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">numpy</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">np</span>
+<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pandas</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">pd</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">garch_filter</span>(omega, alpha, gamma, beta, eps):
+    iT <span style="color:#555">=</span> <span style="color:#366">len</span>(eps)
+    sigma_2 <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(iT)
+    s <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(iT)
+    
+    <span style="color:#09f;font-style:italic"># Setting the unconditional variance</span>
+    sigma_2[<span style="color:#f60">0</span>] <span style="color:#555">=</span> omega<span style="color:#555">/</span>(<span style="color:#f60">1</span> <span style="color:#555">-</span> alpha <span style="color:#555">-</span> <span style="color:#f60">0.5</span><span style="color:#555">*</span>gamma <span style="color:#555">-</span> beta)
+    
+    <span style="color:#09f;font-style:italic"># Vectorize the asymmtric indicator</span>
+    s[eps<span style="color:#555">&lt;</span><span style="color:#f60">0</span>] <span style="color:#555">=</span> <span style="color:#f60">1</span>
+    
+    <span style="color:#09f;font-style:italic"># loop over the garch filter </span>
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">1</span>, iT): 
+        sigma_2[i] <span style="color:#555">=</span> omega <span style="color:#555">+</span> alpha <span style="color:#555">*</span> eps[i<span style="color:#555">-</span><span style="color:#f60">1</span>]<span style="color:#555">**</span><span style="color:#f60">2</span> <span style="color:#555">+</span> gamma <span style="color:#555">*</span> s[i<span style="color:#555">-</span><span style="color:#f60">1</span>] <span style="color:#555">*</span> eps[i<span style="color:#555">-</span><span style="color:#f60">1</span>]<span style="color:#555">**</span><span style="color:#f60">2</span> <span style="color:#555">+</span> beta<span style="color:#555">*</span>sigma_2[i<span style="color:#555">-</span><span style="color:#f60">1</span>]
+    <span style="color:#069;font-weight:bold">return</span> sigma_2
+
+
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">garch_loglike</span>(mu, omega, alpha, gamma, beta, returns):
+    iT <span style="color:#555">=</span> <span style="color:#366">len</span>(returns)
+    eps <span style="color:#555">=</span> returns <span style="color:#555">-</span> mu
+    sigma_2 <span style="color:#555">=</span> garch_filter(omega, alpha, gamma, beta, eps)
+    loglike <span style="color:#555">=</span> ((iT<span style="color:#555">/</span><span style="color:#f60">2</span> <span style="color:#555">*</span> np<span style="color:#555">.</span>log(<span style="color:#f60">2</span> <span style="color:#555">*</span> np<span style="color:#555">.</span>pi) <span style="color:#555">+</span> iT<span style="color:#555">/</span><span style="color:#f60">2</span> <span style="color:#555">*</span> np<span style="color:#555">.</span>log(sigma_2[<span style="color:#f60">0</span>]) <span style="color:#555">+</span> <span style="color:#f60">1</span> <span style="color:#555">/</span>(<span style="color:#f60">2</span> <span style="color:#555">*</span> sigma_2[<span style="color:#f60">0</span>]) <span style="color:#555">*</span> <span style="color:#366">sum</span>(eps <span style="color:#555">**</span> <span style="color:#f60">2</span>)))
+
+    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">-</span>loglike</code></pre></div>
+<h2 id="4-numba-gjr-garch-implementation">4. Numba GJR-GARCH implementation</h2>
+
+<p>Once we set <code>nopython=True</code>, Numba will avoid python and compile the code using LLVM. So once the code is successfully compiled, we are no longer using the interpreted code, instead we are using compiled code.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">numba</span> <span style="color:#069;font-weight:bold">import</span> jit
+
+<span style="color:#99f">@jit</span>(nopython<span style="color:#555">=</span>True)
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">garch_filter</span>(omega, alpha, gamma, beta, eps):
+    iT <span style="color:#555">=</span> <span style="color:#366">len</span>(eps)
+    sigma_2 <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(iT)
+    s <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(iT)
+    
+    <span style="color:#09f;font-style:italic"># Setting the unconditional variance</span>
+    sigma_2[<span style="color:#f60">0</span>] <span style="color:#555">=</span> omega<span style="color:#555">/</span>(<span style="color:#f60">1</span> <span style="color:#555">-</span> alpha <span style="color:#555">-</span> <span style="color:#f60">0.5</span><span style="color:#555">*</span>gamma <span style="color:#555">-</span> beta)
+    
+    <span style="color:#09f;font-style:italic"># Vectorize the asymmtric indicator</span>
+    s[eps<span style="color:#555">&lt;</span><span style="color:#f60">0</span>] <span style="color:#555">=</span> <span style="color:#f60">1</span>
+    
+    <span style="color:#09f;font-style:italic"># loop over the garch filter </span>
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">1</span>, iT): 
+        sigma_2[i] <span style="color:#555">=</span> omega <span style="color:#555">+</span> alpha <span style="color:#555">*</span> eps[i<span style="color:#555">-</span><span style="color:#f60">1</span>]<span style="color:#555">**</span><span style="color:#f60">2</span> <span style="color:#555">+</span> gamma <span style="color:#555">*</span> s[i<span style="color:#555">-</span><span style="color:#f60">1</span>] <span style="color:#555">*</span> eps[i<span style="color:#555">-</span><span style="color:#f60">1</span>]<span style="color:#555">**</span><span style="color:#f60">2</span> <span style="color:#555">+</span> beta<span style="color:#555">*</span>sigma_2[i<span style="color:#555">-</span><span style="color:#f60">1</span>]
+    <span style="color:#069;font-weight:bold">return</span> sigma_2
+
+
+<span style="color:#99f">@jit</span>(nopython<span style="color:#555">=</span>True)
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">garch_loglikeJIT</span>(mu, omega, alpha, gamma, beta, returns):
+    iT <span style="color:#555">=</span> <span style="color:#366">len</span>(returns)
+    eps <span style="color:#555">=</span> returns <span style="color:#555">-</span> mu
+    sigma_2 <span style="color:#555">=</span> garch_filterJIT(omega, alpha, gamma, beta, eps)
+    loglike <span style="color:#555">=</span> ((iT<span style="color:#555">/</span><span style="color:#f60">2</span> <span style="color:#555">*</span> np<span style="color:#555">.</span>log(<span style="color:#f60">2</span> <span style="color:#555">*</span> np<span style="color:#555">.</span>pi) <span style="color:#555">+</span> iT<span style="color:#555">/</span><span style="color:#f60">2</span> <span style="color:#555">*</span> np<span style="color:#555">.</span>log(sigma_2[<span style="color:#f60">0</span>]) <span style="color:#555">+</span> <span style="color:#f60">1</span> <span style="color:#555">/</span>(<span style="color:#f60">2</span> <span style="color:#555">*</span> sigma_2[<span style="color:#f60">0</span>]) <span style="color:#555">*</span> np<span style="color:#555">.</span><span style="color:#366">sum</span>(eps <span style="color:#555">**</span> <span style="color:#f60">2</span>)))
+
+    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">-</span>loglike</code></pre></div>
+<h2 id="5-performance-comparison">5. Performance comparison</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">vP0 <span style="color:#555">=</span> (<span style="color:#f60">1e-2</span>, <span style="color:#f60">1e-05</span>, <span style="color:#f60">0.1</span>,<span style="color:#f60">0.15</span>,<span style="color:#f60">0.8</span>) <span style="color:#09f;font-style:italic"># starting values</span>
+likelihood <span style="color:#555">=</span> garch_loglike(<span style="color:#555">*</span>vP0, returns<span style="color:#555">.</span>values)
+likelihoodJIT <span style="color:#555">=</span> garch_loglikeJIT(<span style="color:#555">*</span>vP0, returns<span style="color:#555">.</span>values)
+<span style="color:#069;font-weight:bold">print</span>(f<span style="color:#c30">&#34;are the likelihoods the same? {likelihood==likelihoodJIT}&#34;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">are the likelihoods the same? True</pre></div>
+<p><strong>Time the python garch filter</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit garch_loglike(<span style="color:#555">*</span>vP0, returns<span style="color:#555">.</span>values)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">8.92 ms ± 71.1 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)</pre></div>
+<p><strong>TIme the numba garch filter</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit garch_loglikeJIT(<span style="color:#555">*</span>vP0, returns<span style="color:#555">.</span>values)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">23.7 µs ± 127 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(f<span style="color:#c30">&#34;Speed up: {round(8920/23.7,2)}x&#34;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Speed up: 376.37x</pre></div>
+<p><strong>We obtain 376.37 speed-up by simply adding the Numba decorator!!!</strong></p>
+
+<h2 id="6-optimize-the-parameters">6.Optimize the parameters</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">scipy.optimize</span> <span style="color:#069;font-weight:bold">import</span> approx_fprime, minimize</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">optimizeHelper</span>(vP, data):
+<span style="color:#09f;font-style:italic">#     vP = np.exp(vP)</span>
+    mu <span style="color:#555">=</span> vP[<span style="color:#f60">0</span>]
+    omega <span style="color:#555">=</span> vP[<span style="color:#f60">1</span>]
+    alpha <span style="color:#555">=</span> vP[<span style="color:#f60">2</span>]
+    gamma <span style="color:#555">=</span> vP[<span style="color:#f60">3</span>]
+    beta <span style="color:#555">=</span> vP[<span style="color:#f60">4</span>]
+    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">-</span>garch_loglikeJIT(mu, omega, alpha, gamma, beta, data)
+    
+nobs <span style="color:#555">=</span> <span style="color:#366">len</span>(returns<span style="color:#555">.</span>values)
+vP0 <span style="color:#555">=</span> (<span style="color:#f60">1e-3</span>, <span style="color:#f60">1e-05</span>, <span style="color:#f60">0.15</span>, <span style="color:#f60">0.1</span>,<span style="color:#f60">0.75</span>)
+func <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">lambda</span> params: optimizeHelper(params, returns<span style="color:#555">.</span>values) <span style="color:#555">/</span> nobs
+grad <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">lambda</span> params: approx_fprime(params, func, <span style="color:#f60">6.5e-7</span>) <span style="color:#555">/</span> nobs
+res <span style="color:#555">=</span> minimize(func, vP0, jac<span style="color:#555">=</span>grad, method <span style="color:#555">=</span> <span style="color:#c30">&#39;SLSQP&#39;</span>, options<span style="color:#555">=</span>{<span style="color:#c30">&#39;ftol&#39;</span>: <span style="color:#f60">1e-10</span>, <span style="color:#c30">&#39;maxiter&#39;</span>: <span style="color:#f60">200</span>, <span style="color:#c30">&#39;disp&#39;</span>:True})
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Optimized parameters:&#34;</span>,res<span style="color:#555">.</span>x)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Optimization terminated successfully.    (Exit mode 0)
+            Current function value: 2.0767197604147474
+            Iterations: 8
+            Function evaluations: 18
+            Gradient evaluations: 8
+Optimized parameters: [     0.001      0.339      0.132      0.091      0.732]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mu, omega, alpha, gamma, beta <span style="color:#555">=</span> res<span style="color:#555">.</span>x
+sigma2 <span style="color:#555">=</span> garch_filterJIT(omega, alpha, gamma, beta, returns<span style="color:#555">.</span>values<span style="color:#555">-</span> mu)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#555">=</span> plt<span style="color:#555">.</span>figure(figsize<span style="color:#555">=</span>(<span style="color:#f60">12</span>,<span style="color:#f60">5</span>))
+ax <span style="color:#555">=</span> fig<span style="color:#555">.</span>add_subplot(<span style="color:#f60">111</span>)
+ax<span style="color:#555">.</span>plot(returns<span style="color:#555">.</span>index, sigma2, linewidth<span style="color:#555">=</span><span style="color:#f60">0.7</span>, color<span style="color:#555">=</span> <span style="color:#c30">&#34;#40e0d0&#34;</span>, label<span style="color:#555">=</span><span style="color:#c30">&#39;MSFT Conditional Variance (GJR-GARCH)&#39;</span>)
+ax<span style="color:#555">.</span>set_ylabel(<span style="color:#c30">&#39;Variance (in %)&#39;</span>)
+plt<span style="color:#555">.</span>legend()</code></pre></div>
+<p><img src="/img/posts/GJR-GARCH/MSFTConditionalVar.png" alt="png" /></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,257 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Stock Summary</span></h2>
+    <span class="text-info">September 12, 2018 | Michael</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/java">java</a></li>
+    
+      <li><a class="tag" href="/tags/jquery">jQuery</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="fully-efficient-dfm-with-garch-1-1-prototype-jnj-as-illustration">Fully Efficient DFM with GARCH(1,1) prototype (JNJ as illustration)</h1>
+
+<p><strong>Model Documentation</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTLVZNS2hsYnlmT28" alt="" />
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTWnByYmpSNlJYb1k" alt="" /></p>
+
+<h1 id="0-parameters">0. Parameters</h1>
+
+<p>GARCH parameters</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#c30">&#39;omega&#39;</span>: <span style="color:#f60">0.0001</span> (fixed),   <span style="color:#c30">&#39;alpha&#39;</span>:<span style="color:#f60">0.75335567195082032</span>,  <span style="color:#c30">&#39;beta&#39;</span>: <span style="color:#f60">0.24459914836890723</span></code></pre></div>
+<p>Loading for latent error factor</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">DOTM Put <span style="color:#f60">1</span>  [ <span style="color:#f60">0.34593</span>] 
+DOTM Put <span style="color:#f60">2</span>  [ <span style="color:#f60">0.09793</span>] 
+DOTM Put <span style="color:#f60">3</span>  [ <span style="color:#f60">0.06754</span>] 
+OTM Put <span style="color:#f60">1</span>   [ <span style="color:#f60">0.25441</span>] 
+OTM Put <span style="color:#f60">2</span>   [ <span style="color:#f60">0.08145</span>] 
+OTM Put <span style="color:#f60">3</span>   [ <span style="color:#f60">0.03036</span>] 
+ATM Put <span style="color:#f60">1</span>   [ <span style="color:#f60">0.20045</span>] 
+ATM Put <span style="color:#f60">2</span>   [ <span style="color:#f60">0.07</span>   ] 
+ATM Put <span style="color:#f60">3</span>   [ <span style="color:#f60">0.02845</span>] 
+ATM Call <span style="color:#f60">1</span>  [ <span style="color:#f60">0.22505</span>] 
+ATM Call <span style="color:#f60">2</span>  [ <span style="color:#f60">0.0936</span> ] 
+ATM Call <span style="color:#f60">3</span>  [ <span style="color:#f60">0.06643</span>] 
+OTM Call <span style="color:#f60">1</span>  [ <span style="color:#f60">0.21288</span>] 
+OTM Call <span style="color:#f60">2</span>  [ <span style="color:#f60">0.08585</span>] 
+OTM Call <span style="color:#f60">3</span>  [ <span style="color:#f60">0.0696</span> ] 
+DOTM Call <span style="color:#f60">1</span> [ <span style="color:#f60">0.22998</span>] 
+DOTM Call <span style="color:#f60">2</span> [ <span style="color:#f60">0.09105</span>] 
+DOTM Call <span style="color:#f60">3</span> [ <span style="color:#f60">0.08369</span>]</code></pre></div>
+<h1 id="1-factors">1. Factors</h1>
+
+<p><img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTVzFNbERGTUo5Y2c" alt="" /></p>
+
+<h1 id="2-fit">2. Fit</h1>
+
+<p>Likelihood</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#c30">&#39;dfm-garch&#39;</span>: <span style="color:#f60">189593.08390802974</span>, <span style="color:#c30">&#39;dfm&#39;</span>:<span style="color:#f60">186762.2830423559</span></code></pre></div>
+<p>Below is the in-sample RMSE at stock level (JNJ)</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#c30">&#39;dfm-garch&#39;</span>: <span style="color:#f60">0.014111563467550176</span>, <span style="color:#c30">&#39;dfm&#39;</span>: <span style="color:#f60">0.015267540398543699</span></code></pre></div>
+<p>Below is the in-sample RMSE at option group level.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                dfm   dfm<span style="color:#555">-</span>garch   change(<span style="color:#555">%</span>)
+DOTM Put <span style="color:#f60">1</span>   <span style="color:#f60">0.037270</span>  <span style="color:#f60">0.034163</span>  <span style="color:#555">-</span><span style="color:#f60">8.337114</span>
+DOTM Put <span style="color:#f60">2</span>   <span style="color:#f60">0.020157</span>  <span style="color:#f60">0.020585</span>   <span style="color:#f60">2.122947</span>
+DOTM Put <span style="color:#f60">3</span>   <span style="color:#f60">0.013198</span>  <span style="color:#f60">0.008222</span> <span style="color:#555">-</span><span style="color:#f60">37.703092</span>
+OTM Put <span style="color:#f60">1</span>    <span style="color:#f60">0.018669</span>  <span style="color:#f60">0.017206</span>  <span style="color:#555">-</span><span style="color:#f60">7.839344</span>
+OTM Put <span style="color:#f60">2</span>    <span style="color:#f60">0.010029</span>  <span style="color:#f60">0.009605</span>  <span style="color:#555">-</span><span style="color:#f60">4.222386</span>
+OTM Put <span style="color:#f60">3</span>    <span style="color:#f60">0.006936</span>  <span style="color:#f60">0.006561</span>  <span style="color:#555">-</span><span style="color:#f60">5.398216</span>
+ATM Put <span style="color:#f60">1</span>    <span style="color:#f60">0.015056</span>  <span style="color:#f60">0.014808</span>  <span style="color:#555">-</span><span style="color:#f60">1.644943</span>
+ATM Put <span style="color:#f60">2</span>    <span style="color:#f60">0.008800</span>  <span style="color:#f60">0.007874</span> <span style="color:#555">-</span><span style="color:#f60">10.516285</span>
+ATM Put <span style="color:#f60">3</span>    <span style="color:#f60">0.007159</span>  <span style="color:#f60">0.006478</span>  <span style="color:#555">-</span><span style="color:#f60">9.517520</span>
+ATM Call <span style="color:#f60">1</span>   <span style="color:#f60">0.011826</span>  <span style="color:#f60">0.008853</span> <span style="color:#555">-</span><span style="color:#f60">25.133113</span>
+ATM Call <span style="color:#f60">2</span>   <span style="color:#f60">0.006519</span>  <span style="color:#f60">0.006323</span>  <span style="color:#555">-</span><span style="color:#f60">3.015472</span>
+ATM Call <span style="color:#f60">3</span>   <span style="color:#f60">0.005256</span>  <span style="color:#f60">0.005468</span>   <span style="color:#f60">4.032168</span>
+OTM Call <span style="color:#f60">1</span>   <span style="color:#f60">0.011546</span>  <span style="color:#f60">0.008785</span> <span style="color:#555">-</span><span style="color:#f60">23.910682</span>
+OTM Call <span style="color:#f60">2</span>   <span style="color:#f60">0.004930</span>  <span style="color:#f60">0.004686</span>  <span style="color:#555">-</span><span style="color:#f60">4.950154</span>
+OTM Call <span style="color:#f60">3</span>   <span style="color:#f60">0.002777</span>  <span style="color:#f60">0.003008</span>   <span style="color:#f60">8.300271</span>
+DOTM Call <span style="color:#f60">1</span>  <span style="color:#f60">0.028989</span>  <span style="color:#f60">0.027624</span>  <span style="color:#555">-</span><span style="color:#f60">4.710728</span>
+DOTM Call <span style="color:#f60">2</span>  <span style="color:#f60">0.011622</span>  <span style="color:#f60">0.011708</span>   <span style="color:#f60">0.742297</span>
+DOTM Call <span style="color:#f60">3</span>  <span style="color:#f60">0.004782</span>  <span style="color:#f60">0.003848</span> <span style="color:#555">-</span><span style="color:#f60">19.531603</span></code></pre></div>
+<h1 id="3-residuals">3. Residuals</h1>
+
+<h2 id="3-1-test-for-heteroskedasticity-engle-s-test-lag-5">3.1 Test for Heteroskedasticity (Engle&rsquo;s Test (lag:5))</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                 dfm  dfm<span style="color:#555">-</span>garch
+DOTM Put <span style="color:#f60">1</span>   <span style="color:#f60">1118.02</span>  <span style="color:#f60">1037.76</span>
+DOTM Put <span style="color:#f60">2</span>    <span style="color:#f60">927.66</span>  <span style="color:#f60">1006.00</span>
+DOTM Put <span style="color:#f60">3</span>   <span style="color:#f60">1352.34</span>   <span style="color:#f60">604.31</span>
+OTM Put <span style="color:#f60">1</span>     <span style="color:#f60">368.69</span>   <span style="color:#f60">331.49</span>
+OTM Put <span style="color:#f60">2</span>     <span style="color:#f60">815.47</span>   <span style="color:#f60">861.52</span>
+OTM Put <span style="color:#f60">3</span>     <span style="color:#f60">750.28</span>   <span style="color:#f60">835.02</span>
+ATM Put <span style="color:#f60">1</span>     <span style="color:#f60">359.93</span>   <span style="color:#f60">305.38</span>
+ATM Put <span style="color:#f60">2</span>     <span style="color:#f60">351.75</span>   <span style="color:#f60">375.46</span>
+ATM Put <span style="color:#f60">3</span>     <span style="color:#f60">464.19</span>   <span style="color:#f60">443.61</span>
+ATM Call <span style="color:#f60">1</span>    <span style="color:#f60">602.14</span>   <span style="color:#f60">442.56</span>
+ATM Call <span style="color:#f60">2</span>   <span style="color:#f60">1013.38</span>  <span style="color:#f60">1008.86</span>
+ATM Call <span style="color:#f60">3</span>    <span style="color:#f60">238.44</span>   <span style="color:#f60">224.34</span>
+OTM Call <span style="color:#f60">1</span>     <span style="color:#f60">58.01</span>    <span style="color:#f60">32.65</span>
+OTM Call <span style="color:#f60">2</span>    <span style="color:#f60">1225.8</span>   <span style="color:#f60">945.09</span>
+OTM Call <span style="color:#f60">3</span>    <span style="color:#f60">316.92</span>   <span style="color:#f60">350.64</span>
+DOTM Call <span style="color:#f60">1</span>     <span style="color:#f60">37.2</span>    <span style="color:#f60">37.06</span>
+DOTM Call <span style="color:#f60">2</span>   <span style="color:#f60">486.26</span>   <span style="color:#f60">489.04</span>
+DOTM Call <span style="color:#f60">3</span>   <span style="color:#f60">840.06</span>   <span style="color:#f60">448.54</span></code></pre></div>
+<h2 id="3-1-test-for-autocorrelation-ljung-box-test-lag-5">3.1 Test for Autocorrelation (Ljung–Box test (lag:5))</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                 dfm  dfm<span style="color:#555">-</span>garch
+DOTM Put <span style="color:#f60">1</span>   <span style="color:#f60">2748.78</span>  <span style="color:#f60">1369.93</span>
+DOTM Put <span style="color:#f60">2</span>   <span style="color:#f60">4704.91</span>  <span style="color:#f60">4924.51</span>
+DOTM Put <span style="color:#f60">3</span>   <span style="color:#f60">5789.49</span>   <span style="color:#f60">705.59</span>
+OTM Put <span style="color:#f60">1</span>    <span style="color:#f60">2381.74</span>  <span style="color:#f60">1227.54</span>
+OTM Put <span style="color:#f60">2</span>    <span style="color:#f60">1733.34</span>  <span style="color:#f60">1397.79</span>
+OTM Put <span style="color:#f60">3</span>    <span style="color:#f60">2040.99</span>  <span style="color:#f60">2015.29</span>
+ATM Put <span style="color:#f60">1</span>    <span style="color:#f60">2270.62</span>  <span style="color:#f60">1643.74</span>
+ATM Put <span style="color:#f60">2</span>    <span style="color:#f60">2124.54</span>  <span style="color:#f60">1175.75</span>
+ATM Put <span style="color:#f60">3</span>    <span style="color:#f60">3908.91</span>  <span style="color:#f60">3096.55</span>
+ATM Call <span style="color:#f60">1</span>   <span style="color:#f60">2114.04</span>  <span style="color:#f60">1216.28</span>
+ATM Call <span style="color:#f60">2</span>   <span style="color:#f60">2560.43</span>  <span style="color:#f60">1857.39</span>
+ATM Call <span style="color:#f60">3</span>    <span style="color:#f60">2082.1</span>   <span style="color:#f60">2332.1</span>
+OTM Call <span style="color:#f60">1</span>   <span style="color:#f60">2154.95</span>  <span style="color:#f60">1357.62</span>
+OTM Call <span style="color:#f60">2</span>    <span style="color:#f60">3853.9</span>  <span style="color:#f60">2800.13</span>
+OTM Call <span style="color:#f60">3</span>   <span style="color:#f60">1169.82</span>  <span style="color:#f60">1696.46</span>
+DOTM Call <span style="color:#f60">1</span>   <span style="color:#f60">854.23</span>   <span style="color:#f60">625.87</span>
+DOTM Call <span style="color:#f60">2</span>  <span style="color:#f60">4077.69</span>  <span style="color:#f60">4171.95</span>
+DOTM Call <span style="color:#f60">3</span>  <span style="color:#f60">6003.52</span>  <span style="color:#f60">2603.96</span></code></pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

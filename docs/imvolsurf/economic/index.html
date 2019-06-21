@@ -1,0 +1,199 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="straddle-strategy">Straddle strategy</h1>
+
+<p>In this version, I only implement the option straddle strategy to evaluate
+the economic significance of DFM and DFMX models.</p>
+
+<p>A trade is generated only if
+* Forecasted implied volatility increases (decreases) by more than 1% (-1%).
+* The option portfolio costs (gains in short position) at least 1$ to avoid
+extreme portfolio</p>
+
+<p>Transaction costs is considered by the best bid price and best offer price.
+For option predicted to buy (sell), I look for the best offer (bid) price, then in the
+next day I look for the best bid (offer) price to sell (buy) it. A value of 1000$
+option portfolio is invested and re-balanced on daily basis.</p>
+
+<p>If excluding the transaction costs, I simply take the mid-quote as option
+price for buy and sell. Note that in my thesis I only consider ATM options,
+in this version I consider all the available options.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Daily <span style="color:#069;font-weight:bold">return</span> without transaction costs 
+
+             DFM      DFMX     DFMX3i
+ticker                               
+AAPL    <span style="color:#f60">0.021578</span>  <span style="color:#f60">0.001035</span>   <span style="color:#f60">0.026916</span>
+CL      <span style="color:#f60">0.016368</span>  <span style="color:#f60">0.018658</span>   <span style="color:#f60">0.023016</span>
+CMCSA   <span style="color:#f60">0.014185</span>  <span style="color:#f60">0.024596</span>   <span style="color:#f60">0.016328</span>
+CVX     <span style="color:#f60">0.012849</span>  <span style="color:#f60">0.011086</span>   <span style="color:#f60">0.021563</span>
+DIS     <span style="color:#f60">0.016398</span>  <span style="color:#f60">0.014212</span>   <span style="color:#f60">0.014172</span>
+DOW     <span style="color:#f60">0.010720</span>  <span style="color:#f60">0.012822</span>   <span style="color:#f60">0.010764</span>
+FDX     <span style="color:#f60">0.024536</span>  <span style="color:#f60">0.022324</span>   <span style="color:#f60">0.009712</span>
+LLY     <span style="color:#f60">0.020318</span>  <span style="color:#f60">0.011282</span>   <span style="color:#f60">0.018278</span>
+MO      <span style="color:#f60">0.015462</span>  <span style="color:#f60">0.008491</span>   <span style="color:#f60">0.013134</span>
+NSC     <span style="color:#f60">0.016170</span>  <span style="color:#f60">0.004784</span>   <span style="color:#f60">0.022691</span>
+
+Daily <span style="color:#069;font-weight:bold">return</span> <span style="color:#069;font-weight:bold">with</span> transaction costs 
+
+             DFM      DFMX     DFMX3i
+ticker                               
+AAPL   <span style="color:#555">-</span><span style="color:#f60">0.122029</span> <span style="color:#555">-</span><span style="color:#f60">0.126755</span>  <span style="color:#555">-</span><span style="color:#f60">0.109209</span>
+CL     <span style="color:#555">-</span><span style="color:#f60">0.331004</span> <span style="color:#555">-</span><span style="color:#f60">0.278153</span>  <span style="color:#555">-</span><span style="color:#f60">0.327702</span>
+CMCSA  <span style="color:#555">-</span><span style="color:#f60">0.262986</span> <span style="color:#555">-</span><span style="color:#f60">0.256619</span>  <span style="color:#555">-</span><span style="color:#f60">0.251219</span>
+CVX    <span style="color:#555">-</span><span style="color:#f60">0.215189</span> <span style="color:#555">-</span><span style="color:#f60">0.206948</span>  <span style="color:#555">-</span><span style="color:#f60">0.190050</span>
+DIS    <span style="color:#555">-</span><span style="color:#f60">0.237475</span> <span style="color:#555">-</span><span style="color:#f60">0.222399</span>  <span style="color:#555">-</span><span style="color:#f60">0.234552</span>
+DOW    <span style="color:#555">-</span><span style="color:#f60">0.238421</span> <span style="color:#555">-</span><span style="color:#f60">0.193924</span>  <span style="color:#555">-</span><span style="color:#f60">0.237525</span>
+FDX    <span style="color:#555">-</span><span style="color:#f60">0.249230</span> <span style="color:#555">-</span><span style="color:#f60">0.196694</span>  <span style="color:#555">-</span><span style="color:#f60">0.242553</span>
+LLY    <span style="color:#555">-</span><span style="color:#f60">0.301601</span> <span style="color:#555">-</span><span style="color:#f60">0.343404</span>  <span style="color:#555">-</span><span style="color:#f60">0.303037</span>
+MO     <span style="color:#555">-</span><span style="color:#f60">0.217625</span> <span style="color:#555">-</span><span style="color:#f60">0.193722</span>  <span style="color:#555">-</span><span style="color:#f60">0.210372</span>
+NSC    <span style="color:#555">-</span><span style="color:#f60">0.344849</span> <span style="color:#555">-</span><span style="color:#f60">0.330743</span>  <span style="color:#555">-</span><span style="color:#f60">0.315905</span></code></pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

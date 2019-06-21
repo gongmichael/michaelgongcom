@@ -1,0 +1,201 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-in-sample-fit-performance-for-off-grid-contracts">1. In sample fit performance for off-grid contracts</h1>
+
+<p>This figure plots the in-sample RMSE for off-grid contracts on stock level. The right subplot normalize the RMSE of fully efficient DFM model to 1.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTNktuU1FISWU5VFk" alt="" /></p>
+
+<h1 id="2-out-of-sample-forecasting-performance-for-off-grid-contracts">2. Out of sample forecasting performance for off-grid contracts</h1>
+
+<h2 id="2-1-stock-level">2.1 Stock Level</h2>
+
+<p>The table below reports the out-of-sample RMSE for off-grid contracts. Model with lowest RMSE is highlighted with <code>*</code>.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">________________________________________________
+         fulDfm     ecoDfm    fulDfmX    ecoDfmX
+________________________________________________
+ticker
+JNJ     <span style="color:#f60">0.045933</span>   <span style="color:#f60">0.078299</span>  <span style="color:#f60">0.045880</span><span style="color:#555">*</span>  <span style="color:#f60">0.078150</span>
+IBM     <span style="color:#f60">0.084223</span>   <span style="color:#f60">0.111040</span>  <span style="color:#f60">0.083951</span><span style="color:#555">*</span>  <span style="color:#f60">0.111044</span>
+PEP     <span style="color:#f60">0.057679</span><span style="color:#555">*</span>  <span style="color:#f60">0.083626</span>  <span style="color:#f60">0.057842</span>   <span style="color:#f60">0.083309</span>
+UTX     <span style="color:#f60">0.082849</span>   <span style="color:#f60">0.110681</span>  <span style="color:#f60">0.082679</span><span style="color:#555">*</span>  <span style="color:#f60">0.110456</span>
+UNP     <span style="color:#f60">0.088248</span><span style="color:#555">*</span>  <span style="color:#f60">0.104763</span>  <span style="color:#f60">0.088262</span>   <span style="color:#f60">0.104547</span>
+OXY     <span style="color:#f60">0.071886</span>   <span style="color:#f60">0.090999</span>  <span style="color:#f60">0.071696</span><span style="color:#555">*</span>  <span style="color:#f60">0.090750</span>
+COST    <span style="color:#f60">0.084082</span>   <span style="color:#f60">0.105939</span>  <span style="color:#f60">0.083944</span><span style="color:#555">*</span>  <span style="color:#f60">0.103390</span>
+EMC     <span style="color:#f60">0.131499</span><span style="color:#555">*</span>  <span style="color:#f60">0.158458</span>  <span style="color:#f60">0.131504</span>   <span style="color:#f60">0.158055</span>
+BK      <span style="color:#f60">0.118521</span>   <span style="color:#f60">0.152506</span>  <span style="color:#f60">0.117932</span><span style="color:#555">*</span>  <span style="color:#f60">0.151922</span>
+DVN     <span style="color:#f60">0.080291</span>   <span style="color:#f60">0.100630</span>  <span style="color:#f60">0.080252</span><span style="color:#555">*</span>  <span style="color:#f60">0.100561</span>
+________________________________________________</code></pre></div>
+<p>The table below reports the out-of-sample MCP for off-grid contracts. Model with hgihest MCP is highlighted with <code>*</code>.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">________________________________________________
+         fulDfmM   ecoDfmM   fulDfmXM   ecoDfmXM
+________________________________________________
+ticker
+JNJ     <span style="color:#f60">0.516890</span><span style="color:#555">*</span>  <span style="color:#f60">0.475930</span>  <span style="color:#f60">0.516511</span>   <span style="color:#f60">0.475807</span>
+IBM     <span style="color:#f60">0.470956</span>   <span style="color:#f60">0.446953</span>  <span style="color:#f60">0.472807</span><span style="color:#555">*</span>  <span style="color:#f60">0.446075</span>
+PEP     <span style="color:#f60">0.504182</span>   <span style="color:#f60">0.484044</span>  <span style="color:#f60">0.504819</span><span style="color:#555">*</span>  <span style="color:#f60">0.484453</span>
+UTX     <span style="color:#f60">0.501541</span>   <span style="color:#f60">0.472095</span>  <span style="color:#f60">0.503101</span><span style="color:#555">*</span>  <span style="color:#f60">0.472858</span>
+UNP     <span style="color:#f60">0.493533</span>   <span style="color:#f60">0.468252</span>  <span style="color:#f60">0.495180</span><span style="color:#555">*</span>  <span style="color:#f60">0.468769</span>
+OXY     <span style="color:#f60">0.511913</span><span style="color:#555">*</span>  <span style="color:#f60">0.492069</span>  <span style="color:#f60">0.511890</span>   <span style="color:#f60">0.493348</span>
+COST    <span style="color:#f60">0.484712</span>   <span style="color:#f60">0.469654</span>  <span style="color:#f60">0.485755</span><span style="color:#555">*</span>  <span style="color:#f60">0.466830</span>
+EMC     <span style="color:#f60">0.496390</span>   <span style="color:#f60">0.478804</span>  <span style="color:#f60">0.496894</span><span style="color:#555">*</span>  <span style="color:#f60">0.479092</span>
+BK      <span style="color:#f60">0.496446</span>   <span style="color:#f60">0.461607</span>  <span style="color:#f60">0.500818</span><span style="color:#555">*</span>  <span style="color:#f60">0.463646</span>
+DVN     <span style="color:#f60">0.513112</span>   <span style="color:#f60">0.493093</span>  <span style="color:#f60">0.513187</span><span style="color:#555">*</span>  <span style="color:#f60">0.492565</span>
+________________________________________________</code></pre></div>
+<h2 id="2-2-option-groups-level">2.2 Option groups Level</h2>
+
+<p>The figure below plots the out-of-sample forecasting RMSE grouped by maturity.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTbW1oT3RXVWliems" alt="" /></p>
+
+<p>The figure below plots the out-of-sample forecasting RMSE grouped by delta decile.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTNFVQWGhiekY3dHM" alt="" /></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

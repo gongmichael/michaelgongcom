@@ -6,27 +6,27 @@
     <description>Recent content in cat1 on Michael Gong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Sep 2018 14:51:12 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 12 Sep 2018 14:51:12 +0600</lastBuildDate>
     
 	<atom:link href="https://michael-gong.com/categories/cat1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Selected Equity Options Summary</title>
-      <link>https://michael-gong.com/blogs/20171101/</link>
-      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      <title>Doz Method</title>
+      <link>https://michael-gong.com/imvolsurf/dozmethod/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://michael-gong.com/blogs/20171101/</guid>
-      <description>1. Selected Equity Options Summary Base on our previous research, we find that our models performs better in the first two decile of S&amp;amp;P 500.</description>
+      <guid>https://michael-gong.com/imvolsurf/dozmethod/</guid>
+      <description>1. RMSE against Doz iteration 2. Latent factors of Doz method (converged) 3.</description>
     </item>
     
     <item>
-      <title>Test Version 2: Add dummy for DOTM for Put option and DITM for Call option</title>
-      <link>https://michael-gong.com/blogs/20171024/</link>
-      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      <title>Garch 11 </title>
+      <link>https://michael-gong.com/imvolsurf/garch/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://michael-gong.com/blogs/20171024/</guid>
-      <description>Stock Summary By Size __________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq(%) Trading Volume Trading Dispersion __________________________________________________________________________________________________ SPX 1 0.</description>
+      <guid>https://michael-gong.com/imvolsurf/garch/</guid>
+      <description>Introducing GARCH(1,1) 1. Estimated Parameters w a b JNJ 0.</description>
     </item>
     
     <item>
@@ -39,58 +39,12 @@
     </item>
     
     <item>
-      <title>S&amp;P 500 Equity Summary Statistics</title>
-      <link>https://michael-gong.com/blogs/20170926/</link>
-      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/blogs/20170926/</guid>
-      <description>1.Summary Statistics    mean std   maturity cp_flag       10 C 0.</description>
-    </item>
-    
-    <item>
-      <title>Stock Summary</title>
-      <link>https://michael-gong.com/blogs/20171010/</link>
-      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/blogs/20171010/</guid>
-      <description>Stock Summary By Industry ___________________________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq Trading Volume ___________________________________________________________________________________________________________________ Manufacturing 183 0.</description>
-    </item>
-    
-    <item>
       <title>Stock Summary</title>
       <link>https://michael-gong.com/imvolsurf/archproto/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
       <guid>https://michael-gong.com/imvolsurf/archproto/</guid>
       <description>Fully Efficient DFM with GARCH(1,1) prototype (JNJ as illustration) Model Documentation 0.</description>
-    </item>
-    
-    <item>
-      <title>Zoom in significant deltaO stocks</title>
-      <link>https://michael-gong.com/blogs/20171107/</link>
-      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/blogs/20171107/</guid>
-      <description>1.Zoom in significant deltaO stocks 1.1 distribution of variable percentage significance ________________________________________________________________________ const delta_n matur_n delta2 inter deltaO delta2O maturS ________________________________________________________________________ count 88.</description>
-    </item>
-    
-    <item>
-      <title>Zoom in significant deltaO stocks</title>
-      <link>https://michael-gong.com/blogs/creating-a-new-theme/</link>
-      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/blogs/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo.</description>
-    </item>
-    
-    <item>
-      <title>Asymmetry</title>
-      <link>https://michael-gong.com/blogs/readme/</link>
-      <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/blogs/readme/</guid>
-      <description>Asymmetry fadfda
- Investigate the asymmetry of Implied Volatility Surface</description>
     </item>
     
     <item>

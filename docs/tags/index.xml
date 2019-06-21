@@ -6,51 +6,60 @@
     <description>Recent content in Tags on Michael Gong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Sep 2018 14:51:12 +0600</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jun 2019 12:52:36 +0600</lastBuildDate>
     
 	<atom:link href="https://michael-gong.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bamboo</title>
-      <link>https://michael-gong.com/tags/bamboo/</link>
-      <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
+      <title>GARCH</title>
+      <link>https://michael-gong.com/tags/garch/</link>
+      <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
       
-      <guid>https://michael-gong.com/tags/bamboo/</guid>
+      <guid>https://michael-gong.com/tags/garch/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>JSON</title>
-      <link>https://michael-gong.com/tags/json/</link>
-      <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
+      <title>Numba</title>
+      <link>https://michael-gong.com/tags/numba/</link>
+      <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
       
-      <guid>https://michael-gong.com/tags/json/</guid>
+      <guid>https://michael-gong.com/tags/numba/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>REST APIs</title>
-      <link>https://michael-gong.com/tags/rest-apis/</link>
-      <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
+      <title>Python</title>
+      <link>https://michael-gong.com/tags/python/</link>
+      <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
       
-      <guid>https://michael-gong.com/tags/rest-apis/</guid>
+      <guid>https://michael-gong.com/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Unicorn</title>
-      <link>https://michael-gong.com/tags/unicorn/</link>
-      <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
+      <title>MCS</title>
+      <link>https://michael-gong.com/tags/mcs/</link>
+      <pubDate>Tue, 12 Mar 2019 12:52:36 +0600</pubDate>
       
-      <guid>https://michael-gong.com/tags/unicorn/</guid>
+      <guid>https://michael-gong.com/tags/mcs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://michael-gong.com/tags/test/</link>
+      <pubDate>Tue, 12 Mar 2019 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jQuery</title>
       <link>https://michael-gong.com/tags/jquery/</link>
-      <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
       <guid>https://michael-gong.com/tags/jquery/</guid>
       <description></description>
@@ -59,63 +68,9 @@
     <item>
       <title>java</title>
       <link>https://michael-gong.com/tags/java/</link>
-      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
       <guid>https://michael-gong.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://michael-gong.com/tags/development/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://michael-gong.com/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://michael-gong.com/tags/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://michael-gong.com/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://michael-gong.com/tags/golang/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://michael-gong.com/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://michael-gong.com/tags/hugo/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://michael-gong.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>templates</title>
-      <link>https://michael-gong.com/tags/templates/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://michael-gong.com/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://michael-gong.com/tags/themes/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://michael-gong.com/tags/themes/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,280 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-out-of-sample-forecasting-performance">1. Out of Sample Forecasting Performance</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">___________________________________________________________
+                  Orginal             Set Insignificance <span style="color:#f60">0</span>
+            ____________________     ______________________
+            RMSE     MAE     MCP      RMSE     MAE     MCP
+___________________________________________________________
+EQT CS3   <span style="color:#f60">0.0470</span>  <span style="color:#f60">0.0316</span>  <span style="color:#f60">0.5375</span>     <span style="color:#f60">0.0470</span>  <span style="color:#f60">0.0316</span>  <span style="color:#f60">0.5377</span>
+    CS4   <span style="color:#f60">0.0462</span>  <span style="color:#f60">0.0285</span>  <span style="color:#f60">0.5571</span>     <span style="color:#f60">0.0462</span>  <span style="color:#f60">0.0285</span>  <span style="color:#f60">0.5568</span>
+    CS5   <span style="color:#f60">0.0459</span>  <span style="color:#f60">0.0282</span>  <span style="color:#f60">0.5580</span>     <span style="color:#f60">0.0459</span>  <span style="color:#f60">0.0282</span>  <span style="color:#f60">0.5581</span>
+    CS6   <span style="color:#f60">0.0461</span>  <span style="color:#f60">0.0281</span>  <span style="color:#f60">0.5577</span>     <span style="color:#f60">0.0462</span>  <span style="color:#f60">0.0282</span>  <span style="color:#f60">0.5576</span>
+    CS7   <span style="color:#f60">0.0460</span>  <span style="color:#f60">0.0282</span>  <span style="color:#f60">0.5582</span>     <span style="color:#f60">0.0464</span>  <span style="color:#f60">0.0285</span>  <span style="color:#f60">0.5573</span>
+    CS4A  <span style="color:#f60">0.0467</span>  <span style="color:#f60">0.0313</span>  <span style="color:#f60">0.5380</span>     <span style="color:#f60">0.0468</span>  <span style="color:#f60">0.0314</span>  <span style="color:#f60">0.5380</span>
+    CS5A  <span style="color:#f60">0.0460</span>  <span style="color:#f60">0.0282</span>  <span style="color:#f60">0.5578</span>     <span style="color:#f60">0.0462</span>  <span style="color:#f60">0.0283</span>  <span style="color:#f60">0.5573</span>
+    CS6A  <span style="color:#f60">0.0457</span><span style="color:#555">*</span> <span style="color:#f60">0.0280</span><span style="color:#555">*</span> <span style="color:#f60">0.5586</span><span style="color:#555">*</span>    <span style="color:#f60">0.0458</span><span style="color:#555">*</span> <span style="color:#f60">0.0281</span><span style="color:#555">*</span> <span style="color:#f60">0.5585</span><span style="color:#555">*</span>
+    CS7A  <span style="color:#f60">0.0469</span>  <span style="color:#f60">0.0282</span>  <span style="color:#f60">0.5584</span>     <span style="color:#f60">0.0469</span>  <span style="color:#f60">0.0282</span>  <span style="color:#f60">0.5584</span>
+    CS8A  <span style="color:#f60">0.0473</span>  <span style="color:#f60">0.0285</span>  <span style="color:#f60">0.5585</span>     <span style="color:#f60">0.0475</span>  <span style="color:#f60">0.0287</span>  <span style="color:#f60">0.5582</span>
+
+SPX CS3   <span style="color:#f60">0.0368</span>  <span style="color:#f60">0.0277</span>  <span style="color:#f60">0.5104</span>     <span style="color:#f60">0.0368</span>  <span style="color:#f60">0.0277</span>  <span style="color:#f60">0.5104</span>
+    CS4   <span style="color:#f60">0.0300</span>  <span style="color:#f60">0.0209</span>  <span style="color:#f60">0.5228</span>     <span style="color:#f60">0.0300</span>  <span style="color:#f60">0.0209</span>  <span style="color:#f60">0.5227</span>
+    CS5   <span style="color:#f60">0.0294</span>  <span style="color:#f60">0.0206</span>  <span style="color:#f60">0.5262</span>     <span style="color:#f60">0.0294</span>  <span style="color:#f60">0.0206</span>  <span style="color:#f60">0.5259</span>
+    CS6   <span style="color:#f60">0.0291</span>  <span style="color:#f60">0.0205</span>  <span style="color:#f60">0.5234</span>     <span style="color:#f60">0.0291</span>  <span style="color:#f60">0.0205</span>  <span style="color:#f60">0.5231</span>
+    CS7   <span style="color:#f60">0.0290</span>  <span style="color:#f60">0.0205</span>  <span style="color:#f60">0.5235</span>     <span style="color:#f60">0.0290</span>  <span style="color:#f60">0.0205</span>  <span style="color:#f60">0.5234</span>
+    CS4A  <span style="color:#f60">0.0367</span>  <span style="color:#f60">0.0278</span>  <span style="color:#f60">0.5117</span>     <span style="color:#f60">0.0367</span>  <span style="color:#f60">0.0278</span>  <span style="color:#f60">0.5116</span>
+    CS5A  <span style="color:#f60">0.0300</span>  <span style="color:#f60">0.0210</span>  <span style="color:#f60">0.5247</span>     <span style="color:#f60">0.0300</span>  <span style="color:#f60">0.0210</span>  <span style="color:#f60">0.5244</span>
+    CS6A  <span style="color:#f60">0.0295</span>  <span style="color:#f60">0.0207</span>  <span style="color:#f60">0.5277</span>     <span style="color:#f60">0.0295</span>  <span style="color:#f60">0.0207</span>  <span style="color:#f60">0.5272</span><span style="color:#555">*</span>
+    CS7A  <span style="color:#f60">0.0291</span>  <span style="color:#f60">0.0206</span>  <span style="color:#f60">0.5250</span>     <span style="color:#f60">0.0291</span>  <span style="color:#f60">0.0207</span>  <span style="color:#f60">0.5250</span>
+    CS8A  <span style="color:#f60">0.0290</span><span style="color:#555">*</span> <span style="color:#f60">0.0206</span>  <span style="color:#f60">0.5251</span><span style="color:#555">*</span>    <span style="color:#f60">0.0290</span><span style="color:#555">*</span> <span style="color:#f60">0.0205</span><span style="color:#555">*</span> <span style="color:#f60">0.5252</span>
+___________________________________________________________</code></pre></div>
+<h1 id="2-economic-significance-evaluation-straddle-before-transaction-cost">2. Economic Significance Evaluation (Straddle). Before transaction cost.</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Panel A: Average Trading Return
+_____________________________________________________________________________________________________
+           CS3      CS4      CS5      CS6      CS7      CS4A      CS5A      CS6A      CS7A      CS8A  
+_____________________________________________________________________________________________________  
+ticker
+BK       <span style="color:#f60">0.0356</span>   <span style="color:#f60">0.0829</span>   <span style="color:#f60">0.0816</span>   <span style="color:#f60">0.0837</span>   <span style="color:#f60">0.0753</span>    <span style="color:#f60">0.0438</span>    <span style="color:#f60">0.0705</span>    <span style="color:#f60">0.0525</span>    <span style="color:#f60">0.1120</span><span style="color:#555">*</span>   <span style="color:#f60">0.0896</span>
+COST     <span style="color:#f60">0.0631</span>   <span style="color:#f60">0.0484</span>   <span style="color:#f60">0.0826</span>   <span style="color:#f60">0.0624</span>   <span style="color:#f60">0.0652</span>    <span style="color:#f60">0.0427</span>    <span style="color:#f60">0.0555</span>    <span style="color:#f60">0.0843</span><span style="color:#555">*</span>   <span style="color:#f60">0.0323</span>    <span style="color:#f60">0.0264</span>
+DVN      <span style="color:#f60">0.0498</span>   <span style="color:#f60">0.0583</span>   <span style="color:#f60">0.0897</span>   <span style="color:#f60">0.0303</span>   <span style="color:#f60">0.0319</span>    <span style="color:#f60">0.0539</span>    <span style="color:#f60">0.0835</span>    <span style="color:#f60">0.1173</span><span style="color:#555">*</span>   <span style="color:#f60">0.0626</span>    <span style="color:#f60">0.0433</span>
+EMC      <span style="color:#f60">0.0104</span>   <span style="color:#f60">0.0540</span>   <span style="color:#f60">0.0564</span>   <span style="color:#f60">0.0442</span>   <span style="color:#f60">0.0626</span>    <span style="color:#f60">0.0113</span>    <span style="color:#f60">0.0610</span>    <span style="color:#f60">0.0599</span>    <span style="color:#f60">0.0545</span>    <span style="color:#f60">0.0830</span><span style="color:#555">*</span>
+IBM     <span style="color:#555">-</span><span style="color:#f60">0.0016</span>   <span style="color:#f60">0.1526</span><span style="color:#555">*</span>  <span style="color:#f60">0.1276</span>   <span style="color:#f60">0.0453</span>   <span style="color:#f60">0.0554</span>   <span style="color:#555">-</span><span style="color:#f60">0.0206</span>    <span style="color:#f60">0.0628</span>    <span style="color:#f60">0.0749</span>    <span style="color:#f60">0.0301</span>    <span style="color:#f60">0.1029</span>
+JNJ      <span style="color:#f60">0.0109</span>   <span style="color:#f60">0.0366</span>   <span style="color:#f60">0.0640</span>   <span style="color:#f60">0.0573</span>   <span style="color:#f60">0.0527</span>    <span style="color:#f60">0.0098</span>    <span style="color:#f60">0.0646</span>    <span style="color:#f60">0.0626</span>    <span style="color:#f60">0.0720</span>    <span style="color:#f60">0.0730</span><span style="color:#555">*</span>
+OXY      <span style="color:#f60">0.0127</span>   <span style="color:#f60">0.0619</span>   <span style="color:#f60">0.1476</span>   <span style="color:#f60">0.0988</span>   <span style="color:#f60">0.0613</span>    <span style="color:#f60">0.0544</span>    <span style="color:#f60">0.1147</span>    <span style="color:#f60">0.1100</span>    <span style="color:#f60">0.0128</span>    <span style="color:#f60">0.1181</span><span style="color:#555">*</span>
+PEP      <span style="color:#f60">0.0112</span>   <span style="color:#f60">0.0358</span>   <span style="color:#f60">0.0360</span>   <span style="color:#f60">0.0340</span>   <span style="color:#f60">0.0349</span>    <span style="color:#f60">0.0152</span>    <span style="color:#f60">0.0499</span><span style="color:#555">*</span>   <span style="color:#f60">0.0380</span>    <span style="color:#f60">0.0456</span>    <span style="color:#f60">0.0440</span>
+SPX     <span style="color:#555">-</span><span style="color:#f60">0.1304</span>   <span style="color:#f60">0.0198</span>  <span style="color:#555">-</span><span style="color:#f60">0.1269</span>   <span style="color:#f60">0.2433</span><span style="color:#555">*</span>  <span style="color:#f60">0.0021</span>   <span style="color:#555">-</span><span style="color:#f60">0.0672</span>   <span style="color:#555">-</span><span style="color:#f60">0.0115</span>   <span style="color:#555">-</span><span style="color:#f60">0.0317</span>   <span style="color:#555">-</span><span style="color:#f60">0.0002</span>    <span style="color:#f60">0.0117</span>
+UNP      <span style="color:#f60">0.0034</span>   <span style="color:#f60">0.0345</span>   <span style="color:#f60">0.0904</span>   <span style="color:#f60">0.0883</span>   <span style="color:#f60">0.0653</span>    <span style="color:#f60">0.0768</span>    <span style="color:#f60">0.0711</span>    <span style="color:#f60">0.1124</span><span style="color:#555">*</span>   <span style="color:#f60">0.0574</span>    <span style="color:#f60">0.0784</span>
+UTX      <span style="color:#f60">0.0215</span>   <span style="color:#f60">0.0597</span>   <span style="color:#f60">0.0585</span>   <span style="color:#f60">0.0627</span>   <span style="color:#f60">0.0736</span><span style="color:#555">*</span>   <span style="color:#f60">0.0314</span>    <span style="color:#f60">0.0554</span>    <span style="color:#f60">0.0509</span>    <span style="color:#f60">0.0471</span>    <span style="color:#f60">0.0544</span>
+_____________________________________________________________________________________________________
+Panel B: Sharpe Ratio
+_____________________________________________________________________________________________________
+           CS3      CS4      CS5      CS6      CS7      CS4A      CS5A      CS6A      CS7A      CS8A  
+_____________________________________________________________________________________________________  
+ticker
+BK       <span style="color:#f60">0.0622</span>   <span style="color:#f60">0.0997</span>   <span style="color:#f60">0.0996</span>   <span style="color:#f60">0.0973</span>   <span style="color:#f60">0.1109</span>    <span style="color:#f60">0.0587</span>    <span style="color:#f60">0.0873</span>    <span style="color:#f60">0.0390</span>    <span style="color:#f60">0.0889</span>    <span style="color:#f60">0.1207</span><span style="color:#555">*</span>
+COST     <span style="color:#f60">0.0303</span>   <span style="color:#f60">0.0585</span>   <span style="color:#f60">0.0610</span>   <span style="color:#f60">0.0456</span>   <span style="color:#f60">0.0841</span><span style="color:#555">*</span>   <span style="color:#f60">0.0238</span>    <span style="color:#f60">0.0459</span>    <span style="color:#f60">0.0798</span>    <span style="color:#f60">0.0416</span>    <span style="color:#f60">0.0405</span>
+DVN      <span style="color:#f60">0.0305</span>   <span style="color:#f60">0.0419</span>   <span style="color:#f60">0.0444</span>   <span style="color:#f60">0.0250</span>   <span style="color:#f60">0.0314</span>    <span style="color:#f60">0.0454</span>    <span style="color:#f60">0.0575</span>    <span style="color:#f60">0.0804</span><span style="color:#555">*</span>   <span style="color:#f60">0.0580</span>    <span style="color:#f60">0.0417</span>
+EMC      <span style="color:#f60">0.0327</span>   <span style="color:#f60">0.0942</span>   <span style="color:#f60">0.1382</span>   <span style="color:#f60">0.1110</span>   <span style="color:#f60">0.1294</span>    <span style="color:#f60">0.0270</span>    <span style="color:#f60">0.1521</span><span style="color:#555">*</span>   <span style="color:#f60">0.1230</span>    <span style="color:#f60">0.1482</span>    <span style="color:#f60">0.1175</span>
+IBM     <span style="color:#555">-</span><span style="color:#f60">0.0027</span>   <span style="color:#f60">0.0431</span>   <span style="color:#f60">0.0626</span><span style="color:#555">*</span>  <span style="color:#f60">0.0495</span>   <span style="color:#f60">0.0333</span>   <span style="color:#555">-</span><span style="color:#f60">0.0175</span>    <span style="color:#f60">0.0445</span>    <span style="color:#f60">0.0259</span>    <span style="color:#f60">0.0136</span>    <span style="color:#f60">0.0420</span>
+JNJ      <span style="color:#f60">0.0277</span>   <span style="color:#f60">0.0382</span>   <span style="color:#f60">0.0692</span>   <span style="color:#f60">0.1022</span><span style="color:#555">*</span>  <span style="color:#f60">0.0824</span>    <span style="color:#f60">0.0179</span>    <span style="color:#f60">0.0768</span>    <span style="color:#f60">0.0703</span>    <span style="color:#f60">0.0617</span>    <span style="color:#f60">0.0863</span>
+OXY      <span style="color:#f60">0.0092</span>   <span style="color:#f60">0.0499</span>   <span style="color:#f60">0.0718</span>   <span style="color:#f60">0.0611</span>   <span style="color:#f60">0.0625</span>    <span style="color:#f60">0.0558</span>    <span style="color:#f60">0.0616</span>    <span style="color:#f60">0.0755</span><span style="color:#555">*</span>   <span style="color:#f60">0.0085</span>    <span style="color:#f60">0.0341</span>
+PEP      <span style="color:#f60">0.0245</span>   <span style="color:#f60">0.0559</span>   <span style="color:#f60">0.0557</span>   <span style="color:#f60">0.0665</span>   <span style="color:#f60">0.0594</span>    <span style="color:#f60">0.0299</span>    <span style="color:#f60">0.0286</span>    <span style="color:#f60">0.0604</span>    <span style="color:#f60">0.0607</span>    <span style="color:#f60">0.0673</span><span style="color:#555">*</span>
+SPX     <span style="color:#555">-</span><span style="color:#f60">0.0131</span>   <span style="color:#f60">0.0161</span>  <span style="color:#555">-</span><span style="color:#f60">0.0207</span>   <span style="color:#f60">0.0298</span><span style="color:#555">*</span>  <span style="color:#f60">0.0030</span>   <span style="color:#555">-</span><span style="color:#f60">0.0237</span>   <span style="color:#555">-</span><span style="color:#f60">0.0101</span>   <span style="color:#555">-</span><span style="color:#f60">0.0175</span>   <span style="color:#555">-</span><span style="color:#f60">0.0002</span>    <span style="color:#f60">0.0141</span>
+UNP      <span style="color:#f60">0.0024</span>   <span style="color:#f60">0.0210</span>   <span style="color:#f60">0.0498</span>   <span style="color:#f60">0.0662</span>   <span style="color:#f60">0.0687</span>    <span style="color:#f60">0.0261</span>    <span style="color:#f60">0.0562</span>    <span style="color:#f60">0.0686</span>    <span style="color:#f60">0.0753</span>    <span style="color:#f60">0.0786</span><span style="color:#555">*</span>
+UTX      <span style="color:#f60">0.0384</span>   <span style="color:#f60">0.0560</span>   <span style="color:#f60">0.0553</span>   <span style="color:#f60">0.0916</span>   <span style="color:#f60">0.0518</span>    <span style="color:#f60">0.0455</span>    <span style="color:#f60">0.0557</span>    <span style="color:#f60">0.0458</span>    <span style="color:#f60">0.0789</span>    <span style="color:#f60">0.1080</span><span style="color:#555">*</span>
+_____________________________________________________________________________________________________</code></pre></div>
+<p>Average over different assets:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">_______________________
+Model   Return   Sharpe
+_______________________
+CS3     <span style="color:#f60">0.0079</span>   <span style="color:#f60">0.0220</span>
+CS4     <span style="color:#f60">0.0586</span>   <span style="color:#f60">0.0522</span>
+CS5     <span style="color:#f60">0.0645</span>   <span style="color:#f60">0.0624</span>
+CS6     <span style="color:#f60">0.0773</span><span style="color:#555">*</span>  <span style="color:#f60">0.0678</span>
+CS7     <span style="color:#f60">0.0528</span>   <span style="color:#f60">0.0652</span>
+CS4A    <span style="color:#f60">0.0229</span>   <span style="color:#f60">0.0263</span>
+CS5A    <span style="color:#f60">0.0616</span>   <span style="color:#f60">0.0597</span>
+CS6A    <span style="color:#f60">0.0665</span>   <span style="color:#f60">0.0592</span>
+CS7A    <span style="color:#f60">0.0478</span>   <span style="color:#f60">0.0577</span>
+CS8A    <span style="color:#f60">0.0659</span>   <span style="color:#f60">0.0682</span><span style="color:#555">*</span>
+_______________________</code></pre></div>
+<h1 id="3-economic-significance-evaluation-straddle-after-transaction-cost">3. Economic Significance Evaluation (Straddle). After transaction cost.</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Panel A: Average Trading Return
+_____________________________________________________________________________________________________
+           CS3      CS4      CS5      CS6      CS7      CS4A      CS5A      CS6A      CS7A      CS8A  
+_____________________________________________________________________________________________________  
+ticker
+BK      <span style="color:#555">-</span><span style="color:#f60">0.6375</span>  <span style="color:#555">-</span><span style="color:#f60">0.7444</span>  <span style="color:#555">-</span><span style="color:#f60">0.8378</span>  <span style="color:#555">-</span><span style="color:#f60">0.6939</span>  <span style="color:#555">-</span><span style="color:#f60">0.6776</span>   <span style="color:#555">-</span><span style="color:#f60">0.6621</span>   <span style="color:#555">-</span><span style="color:#f60">0.6640</span>   <span style="color:#555">-</span><span style="color:#f60">0.6860</span>   <span style="color:#555">-</span><span style="color:#f60">0.6094</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.6160</span>
+COST    <span style="color:#555">-</span><span style="color:#f60">0.5156</span>  <span style="color:#555">-</span><span style="color:#f60">0.3309</span>  <span style="color:#555">-</span><span style="color:#f60">0.3754</span>  <span style="color:#555">-</span><span style="color:#f60">0.3719</span>  <span style="color:#555">-</span><span style="color:#f60">0.3781</span>   <span style="color:#555">-</span><span style="color:#f60">0.4659</span>   <span style="color:#555">-</span><span style="color:#f60">0.3141</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.3277</span>   <span style="color:#555">-</span><span style="color:#f60">0.3301</span>   <span style="color:#555">-</span><span style="color:#f60">0.3205</span>
+DVN     <span style="color:#555">-</span><span style="color:#f60">0.4594</span>  <span style="color:#555">-</span><span style="color:#f60">0.4654</span>  <span style="color:#555">-</span><span style="color:#f60">0.3815</span>  <span style="color:#555">-</span><span style="color:#f60">0.3385</span>  <span style="color:#555">-</span><span style="color:#f60">0.3958</span>   <span style="color:#555">-</span><span style="color:#f60">0.4166</span>   <span style="color:#555">-</span><span style="color:#f60">0.3534</span>   <span style="color:#555">-</span><span style="color:#f60">0.3120</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.3848</span>   <span style="color:#555">-</span><span style="color:#f60">0.3936</span>
+EMC     <span style="color:#555">-</span><span style="color:#f60">0.4869</span>  <span style="color:#555">-</span><span style="color:#f60">0.3871</span>  <span style="color:#555">-</span><span style="color:#f60">0.3767</span>  <span style="color:#555">-</span><span style="color:#f60">0.3990</span>  <span style="color:#555">-</span><span style="color:#f60">0.3786</span>   <span style="color:#555">-</span><span style="color:#f60">0.4352</span>   <span style="color:#555">-</span><span style="color:#f60">0.4026</span>   <span style="color:#555">-</span><span style="color:#f60">0.4120</span>   <span style="color:#555">-</span><span style="color:#f60">0.3757</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.3758</span>
+IBM     <span style="color:#555">-</span><span style="color:#f60">0.4422</span>  <span style="color:#555">-</span><span style="color:#f60">0.3327</span>  <span style="color:#555">-</span><span style="color:#f60">0.2401</span><span style="color:#555">*</span> <span style="color:#555">-</span><span style="color:#f60">0.3499</span>  <span style="color:#555">-</span><span style="color:#f60">0.3733</span>   <span style="color:#555">-</span><span style="color:#f60">0.4736</span>   <span style="color:#555">-</span><span style="color:#f60">0.3186</span>   <span style="color:#555">-</span><span style="color:#f60">0.3059</span>   <span style="color:#555">-</span><span style="color:#f60">0.3334</span>   <span style="color:#555">-</span><span style="color:#f60">0.3271</span>
+JNJ     <span style="color:#555">-</span><span style="color:#f60">0.2513</span>  <span style="color:#555">-</span><span style="color:#f60">0.2511</span>  <span style="color:#555">-</span><span style="color:#f60">0.2374</span>  <span style="color:#555">-</span><span style="color:#f60">0.2326</span>  <span style="color:#555">-</span><span style="color:#f60">0.2334</span>   <span style="color:#555">-</span><span style="color:#f60">0.2633</span>   <span style="color:#555">-</span><span style="color:#f60">0.2392</span>   <span style="color:#555">-</span><span style="color:#f60">0.2356</span>   <span style="color:#555">-</span><span style="color:#f60">0.2678</span>   <span style="color:#555">-</span><span style="color:#f60">0.2318</span><span style="color:#555">*</span>
+OXY     <span style="color:#555">-</span><span style="color:#f60">0.5084</span>  <span style="color:#555">-</span><span style="color:#f60">0.5691</span>  <span style="color:#555">-</span><span style="color:#f60">0.4298</span>  <span style="color:#555">-</span><span style="color:#f60">0.4690</span>  <span style="color:#555">-</span><span style="color:#f60">0.4638</span>   <span style="color:#555">-</span><span style="color:#f60">0.4760</span>   <span style="color:#555">-</span><span style="color:#f60">0.3981</span>   <span style="color:#555">-</span><span style="color:#f60">0.4710</span>   <span style="color:#555">-</span><span style="color:#f60">0.5240</span>   <span style="color:#555">-</span><span style="color:#f60">0.3870</span><span style="color:#555">*</span>
+PEP     <span style="color:#555">-</span><span style="color:#f60">0.2828</span>  <span style="color:#555">-</span><span style="color:#f60">0.2792</span>  <span style="color:#555">-</span><span style="color:#f60">0.2794</span>  <span style="color:#555">-</span><span style="color:#f60">0.2492</span>  <span style="color:#555">-</span><span style="color:#f60">0.2294</span>   <span style="color:#555">-</span><span style="color:#f60">0.3124</span>   <span style="color:#555">-</span><span style="color:#f60">0.2967</span>   <span style="color:#555">-</span><span style="color:#f60">0.3114</span>   <span style="color:#555">-</span><span style="color:#f60">0.2616</span>   <span style="color:#555">-</span><span style="color:#f60">0.2252</span><span style="color:#555">*</span>
+SPX     <span style="color:#555">-</span><span style="color:#f60">0.8132</span>  <span style="color:#555">-</span><span style="color:#f60">0.3356</span>  <span style="color:#555">-</span><span style="color:#f60">0.3451</span>  <span style="color:#555">-</span><span style="color:#f60">1.0431</span>  <span style="color:#555">-</span><span style="color:#f60">0.3996</span>   <span style="color:#555">-</span><span style="color:#f60">0.5335</span>   <span style="color:#555">-</span><span style="color:#f60">0.3123</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.3805</span>   <span style="color:#555">-</span><span style="color:#f60">0.5421</span>   <span style="color:#555">-</span><span style="color:#f60">0.6768</span>
+UNP     <span style="color:#555">-</span><span style="color:#f60">0.4092</span>  <span style="color:#555">-</span><span style="color:#f60">0.5072</span>  <span style="color:#555">-</span><span style="color:#f60">0.4407</span>  <span style="color:#555">-</span><span style="color:#f60">0.3365</span>  <span style="color:#555">-</span><span style="color:#f60">0.3604</span>   <span style="color:#555">-</span><span style="color:#f60">0.4331</span>   <span style="color:#555">-</span><span style="color:#f60">0.3480</span>   <span style="color:#555">-</span><span style="color:#f60">0.3832</span>   <span style="color:#555">-</span><span style="color:#f60">0.3721</span>   <span style="color:#555">-</span><span style="color:#f60">0.2953</span><span style="color:#555">*</span>
+UTX     <span style="color:#555">-</span><span style="color:#f60">0.3734</span>  <span style="color:#555">-</span><span style="color:#f60">0.3368</span>  <span style="color:#555">-</span><span style="color:#f60">0.4478</span>  <span style="color:#555">-</span><span style="color:#f60">0.3203</span>  <span style="color:#555">-</span><span style="color:#f60">0.3508</span>   <span style="color:#555">-</span><span style="color:#f60">0.4041</span>   <span style="color:#555">-</span><span style="color:#f60">0.4291</span>   <span style="color:#555">-</span><span style="color:#f60">0.3575</span>   <span style="color:#555">-</span><span style="color:#f60">0.3107</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.3568</span>
+_____________________________________________________________________________________________________
+Panel B: Sharpe Ratio
+_____________________________________________________________________________________________________
+           CS3      CS4      CS5      CS6      CS7      CS4A      CS5A      CS6A      CS7A      CS8A  
+_____________________________________________________________________________________________________  
+ticker
+BK      <span style="color:#555">-</span><span style="color:#f60">0.3535</span>  <span style="color:#555">-</span><span style="color:#f60">0.3169</span>  <span style="color:#555">-</span><span style="color:#f60">0.2472</span><span style="color:#555">*</span> <span style="color:#555">-</span><span style="color:#f60">0.3344</span>  <span style="color:#555">-</span><span style="color:#f60">0.3554</span>   <span style="color:#555">-</span><span style="color:#f60">0.3267</span>   <span style="color:#555">-</span><span style="color:#f60">0.3150</span>   <span style="color:#555">-</span><span style="color:#f60">0.2811</span>   <span style="color:#555">-</span><span style="color:#f60">0.3002</span>   <span style="color:#555">-</span><span style="color:#f60">0.3167</span>
+COST    <span style="color:#555">-</span><span style="color:#f60">0.2040</span>  <span style="color:#555">-</span><span style="color:#f60">0.2947</span>  <span style="color:#555">-</span><span style="color:#f60">0.2533</span>  <span style="color:#555">-</span><span style="color:#f60">0.2016</span>  <span style="color:#555">-</span><span style="color:#f60">0.2136</span>   <span style="color:#555">-</span><span style="color:#f60">0.2946</span>   <span style="color:#555">-</span><span style="color:#f60">0.3290</span>   <span style="color:#555">-</span><span style="color:#f60">0.2842</span>   <span style="color:#555">-</span><span style="color:#f60">0.2563</span>   <span style="color:#555">-</span><span style="color:#f60">0.2017</span><span style="color:#555">*</span>
+DVN     <span style="color:#555">-</span><span style="color:#f60">0.2398</span>  <span style="color:#555">-</span><span style="color:#f60">0.1745</span>  <span style="color:#555">-</span><span style="color:#f60">0.2077</span>  <span style="color:#555">-</span><span style="color:#f60">0.2893</span>  <span style="color:#555">-</span><span style="color:#f60">0.2236</span>   <span style="color:#555">-</span><span style="color:#f60">0.2577</span>   <span style="color:#555">-</span><span style="color:#f60">0.2289</span>   <span style="color:#555">-</span><span style="color:#f60">0.2405</span>   <span style="color:#555">-</span><span style="color:#f60">0.1744</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.2107</span>
+EMC     <span style="color:#555">-</span><span style="color:#f60">0.2989</span>  <span style="color:#555">-</span><span style="color:#f60">0.3801</span>  <span style="color:#555">-</span><span style="color:#f60">0.4679</span>  <span style="color:#555">-</span><span style="color:#f60">0.3414</span>  <span style="color:#555">-</span><span style="color:#f60">0.4035</span>   <span style="color:#555">-</span><span style="color:#f60">0.5214</span>   <span style="color:#555">-</span><span style="color:#f60">0.3322</span>   <span style="color:#555">-</span><span style="color:#f60">0.3737</span>   <span style="color:#555">-</span><span style="color:#f60">0.3711</span>   <span style="color:#555">-</span><span style="color:#f60">0.1888</span><span style="color:#555">*</span>
+IBM     <span style="color:#555">-</span><span style="color:#f60">0.2684</span>  <span style="color:#555">-</span><span style="color:#f60">0.2022</span>  <span style="color:#555">-</span><span style="color:#f60">0.0597</span><span style="color:#555">*</span> <span style="color:#555">-</span><span style="color:#f60">0.1584</span>  <span style="color:#555">-</span><span style="color:#f60">0.1366</span>   <span style="color:#555">-</span><span style="color:#f60">0.2043</span>   <span style="color:#555">-</span><span style="color:#f60">0.1911</span>   <span style="color:#555">-</span><span style="color:#f60">0.1557</span>   <span style="color:#555">-</span><span style="color:#f60">0.1386</span>   <span style="color:#555">-</span><span style="color:#f60">0.1477</span>
+JNJ     <span style="color:#555">-</span><span style="color:#f60">0.3602</span>  <span style="color:#555">-</span><span style="color:#f60">0.1918</span>  <span style="color:#555">-</span><span style="color:#f60">0.1658</span>  <span style="color:#555">-</span><span style="color:#f60">0.2100</span>  <span style="color:#555">-</span><span style="color:#f60">0.2398</span>   <span style="color:#555">-</span><span style="color:#f60">0.2864</span>   <span style="color:#555">-</span><span style="color:#f60">0.2683</span>   <span style="color:#555">-</span><span style="color:#f60">0.2523</span>   <span style="color:#555">-</span><span style="color:#f60">0.1489</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.2365</span>
+OXY     <span style="color:#555">-</span><span style="color:#f60">0.2446</span>  <span style="color:#555">-</span><span style="color:#f60">0.1370</span>  <span style="color:#555">-</span><span style="color:#f60">0.1174</span><span style="color:#555">*</span> <span style="color:#555">-</span><span style="color:#f60">0.1494</span>  <span style="color:#555">-</span><span style="color:#f60">0.1770</span>   <span style="color:#555">-</span><span style="color:#f60">0.2185</span>   <span style="color:#555">-</span><span style="color:#f60">0.1907</span>   <span style="color:#555">-</span><span style="color:#f60">0.1517</span>   <span style="color:#555">-</span><span style="color:#f60">0.1595</span>   <span style="color:#555">-</span><span style="color:#f60">0.2425</span>
+PEP     <span style="color:#555">-</span><span style="color:#f60">0.3892</span>  <span style="color:#555">-</span><span style="color:#f60">0.3136</span>  <span style="color:#555">-</span><span style="color:#f60">0.2937</span>  <span style="color:#555">-</span><span style="color:#f60">0.3149</span>  <span style="color:#555">-</span><span style="color:#f60">0.3542</span>   <span style="color:#555">-</span><span style="color:#f60">0.3665</span>   <span style="color:#555">-</span><span style="color:#f60">0.2872</span>   <span style="color:#555">-</span><span style="color:#f60">0.2757</span>   <span style="color:#555">-</span><span style="color:#f60">0.2656</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.3061</span>
+SPX     <span style="color:#555">-</span><span style="color:#f60">0.0777</span>  <span style="color:#555">-</span><span style="color:#f60">0.1183</span>  <span style="color:#555">-</span><span style="color:#f60">0.1183</span>  <span style="color:#555">-</span><span style="color:#f60">0.0400</span><span style="color:#555">*</span> <span style="color:#555">-</span><span style="color:#f60">0.1107</span>   <span style="color:#555">-</span><span style="color:#f60">0.0856</span>   <span style="color:#555">-</span><span style="color:#f60">0.1011</span>   <span style="color:#555">-</span><span style="color:#f60">0.1499</span>   <span style="color:#555">-</span><span style="color:#f60">0.0638</span>   <span style="color:#555">-</span><span style="color:#f60">0.0610</span>
+UNP     <span style="color:#555">-</span><span style="color:#f60">0.2400</span>  <span style="color:#555">-</span><span style="color:#f60">0.1768</span>  <span style="color:#555">-</span><span style="color:#f60">0.2245</span>  <span style="color:#555">-</span><span style="color:#f60">0.2151</span>  <span style="color:#555">-</span><span style="color:#f60">0.2350</span>   <span style="color:#555">-</span><span style="color:#f60">0.2116</span>   <span style="color:#555">-</span><span style="color:#f60">0.1710</span><span style="color:#555">*</span>  <span style="color:#555">-</span><span style="color:#f60">0.2141</span>   <span style="color:#555">-</span><span style="color:#f60">0.1767</span>   <span style="color:#555">-</span><span style="color:#f60">0.1856</span>
+UTX     <span style="color:#555">-</span><span style="color:#f60">0.3589</span>  <span style="color:#555">-</span><span style="color:#f60">0.2529</span>  <span style="color:#555">-</span><span style="color:#f60">0.1476</span>  <span style="color:#555">-</span><span style="color:#f60">0.2715</span>  <span style="color:#555">-</span><span style="color:#f60">0.2049</span>   <span style="color:#555">-</span><span style="color:#f60">0.2465</span>   <span style="color:#555">-</span><span style="color:#f60">0.1254</span>   <span style="color:#555">-</span><span style="color:#f60">0.2273</span>   <span style="color:#555">-</span><span style="color:#f60">0.2037</span>   <span style="color:#555">-</span><span style="color:#f60">0.1156</span><span style="color:#555">*</span>
+_____________________________________________________________________________________________________</code></pre></div>
+<p>Average over different assets:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">_______________________
+Model   Return   Sharpe
+_______________________
+CS3    <span style="color:#555">-</span><span style="color:#f60">0.4709</span>  <span style="color:#555">-</span><span style="color:#f60">0.2759</span>
+CS4    <span style="color:#555">-</span><span style="color:#f60">0.4127</span>  <span style="color:#555">-</span><span style="color:#f60">0.2324</span>
+CS5    <span style="color:#555">-</span><span style="color:#f60">0.3992</span>  <span style="color:#555">-</span><span style="color:#f60">0.2094</span>
+CS6    <span style="color:#555">-</span><span style="color:#f60">0.4367</span>  <span style="color:#555">-</span><span style="color:#f60">0.2296</span>
+CS7    <span style="color:#555">-</span><span style="color:#f60">0.3855</span>  <span style="color:#555">-</span><span style="color:#f60">0.2413</span>
+CS4A   <span style="color:#555">-</span><span style="color:#f60">0.4432</span>  <span style="color:#555">-</span><span style="color:#f60">0.2745</span>
+CS5A   <span style="color:#555">-</span><span style="color:#f60">0.3705</span>  <span style="color:#555">-</span><span style="color:#f60">0.2309</span>
+CS6A   <span style="color:#555">-</span><span style="color:#f60">0.3803</span><span style="color:#555">*</span> <span style="color:#555">-</span><span style="color:#f60">0.2369</span>
+CS7A   <span style="color:#555">-</span><span style="color:#f60">0.3920</span>  <span style="color:#555">-</span><span style="color:#f60">0.2054</span>
+CS8A   <span style="color:#555">-</span><span style="color:#f60">0.3824</span>  <span style="color:#555">-</span><span style="color:#f60">0.2012</span><span style="color:#555">*</span>
+_______________________</code></pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

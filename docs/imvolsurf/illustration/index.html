@@ -1,0 +1,290 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="illustration-using-one-stock-johnson-johnson-jnj">Illustration using one stock (Johnson &amp; Johnson:JNJ)</h1>
+
+<p><strong>Overview of last two meetings</strong>
+* Meeting with @Dick
+ + Issues: Identification of both constants in measurement equation and state equation.
+ + Solved: Removing the state constants is enough to identify DFMX.
+ + Remain: Strange identification (let row 6,9,10,12 unchanged) strategy yields higher likelihood.</p>
+
+<ul>
+<li>Meeting with @Michel
+
+<ul>
+<li>Issues: Strange identification with higher likelihood: too restrictive loading of economic DFMX?</li>
+<li>Solved: Implementing a fully efficient DFMX with/without restricted measurement constants</li>
+<li>Remain: ?</li>
+</ul></li>
+</ul>
+
+<p>In this update, I implemented the following two variants of DFMX:</p>
+
+<p><strong>Version 1:</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTVm54YVRxb1pFdE0" alt="" />
+<strong>Version 2:</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTbXNJaEw4Uk11dEU" alt="" /></p>
+
+<p>Below is the summary of the number of parameters of DFM and DFMX:
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTNzFnX0hkUndYc2c" alt="" />
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTRGdXLUwzcm5OMGM" alt="" /></p>
+
+<p>In the rest of reports, the following abbreviations stands for:
+* <code>ecoDfm</code>: Economic restricted DFM
+* <code>fulDfm</code>: Fully efficient DFM
+* <code>ecoDfmX1</code>: Econoimc restricted DFMX version 1
+* <code>ecoDfmX2</code>: Econoimc restricted DFMX version 2
+* <code>fulDfmX1</code>: Fully efficient DFMX version 1
+* <code>fulDfmX2</code>: Fully efficient DFMX version 2</p>
+
+<p>Before I reports the results, below is some remarks of this update:
+* Estimation is not a problem anymore. I choosed a better BFGS library
+and implemented the univariate treatment. Now the estimation time of fully
+efficient DFM is down to 5~10 seconds, and that of fully efficient DFMX version 2
+is about 30~40 seconds. Of course, I tripple checked the new BFGS library.
+With the new library, the likelihood uses ~<sup>1</sup>&frasl;<sub>20</sub> amount of time to climb to point
+where previous library stops. And the likelihood provided by the new library is
+never lower than the one provide by old library.</p>
+
+<ul>
+<li><p>Because performance of estimation dramatically increase, every DFMX model in this
+update is in <strong>one-step</strong> manner. The stopping criteria is set to &ldquo;extreme&rdquo;. That is,
+the decrease of likelihood is less than the machine precision(10E-16) <strong>and</strong> the norm
+of gradient is less than 10E-2.</p></li>
+
+<li><p>The standard error of parameters might be not robust. Since the inverse hessian is
+approximiated by BFGS algorithm, which is based the calculation of gradient vector.
+However, our calculation of gradient vertor uses central difference, with naive step
+size of 10E-8, which might result in inaccurate gradient.</p></li>
+</ul>
+
+<h1 id="1-summary-of-dfm-and-dfmx">1. Summary of DFM and DFMX</h1>
+
+<p>The table below shows the summary statistics of estimation:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">__________________________________________________________________________________
+                ecoDfm      fulDfm    ecoDfmX1    ecoDfmX2    fulDfmX1    fulDfmX2
+__________________________________________________________________________________
+No<span style="color:#555">.</span> pars            <span style="color:#f60">36</span>          <span style="color:#f60">78</span>          <span style="color:#f60">75</span>          <span style="color:#f60">90</span>         <span style="color:#f60">159</span>         <span style="color:#f60">174</span>    
+aic        <span style="color:#555">-</span><span style="color:#f60">350936.232</span> <span style="color:#555">-</span><span style="color:#f60">373342.656</span> <span style="color:#555">-</span><span style="color:#f60">744876.158</span> <span style="color:#555">-</span><span style="color:#f60">778835.226</span> <span style="color:#555">-</span><span style="color:#f60">812162.803</span> <span style="color:#555">-</span><span style="color:#f60">813701.047</span>
+bic        <span style="color:#555">-</span><span style="color:#f60">350708.954</span> <span style="color:#555">-</span><span style="color:#f60">372857.387</span> <span style="color:#555">-</span><span style="color:#f60">744409.317</span> <span style="color:#555">-</span><span style="color:#f60">778276.246</span> <span style="color:#555">-</span><span style="color:#f60">811179.980</span> <span style="color:#555">-</span><span style="color:#f60">812626.084</span>
+loglike     <span style="color:#f60">175505.116</span>  <span style="color:#f60">186750.328</span>  <span style="color:#f60">372514.079</span>  <span style="color:#f60">389508.613</span>  <span style="color:#f60">406241.401</span>  <span style="color:#f60">407025.524</span>
+LR<span style="color:#555">-</span>stats                 <span style="color:#f60">22490.424</span>               <span style="color:#f60">33989.069</span>   <span style="color:#f60">33465.576</span>    <span style="color:#f60">1568.245</span>
+alpha1                                <span style="color:#f60">0.590</span><span style="color:#555">***</span>    <span style="color:#f60">0.594</span><span style="color:#555">***</span>    <span style="color:#f60">0.569</span><span style="color:#555">***</span>    <span style="color:#f60">0.585</span><span style="color:#555">***</span>
+beta1                                 <span style="color:#f60">0.589</span><span style="color:#555">***</span>    <span style="color:#f60">0.589</span><span style="color:#555">***</span>    <span style="color:#f60">0.372</span><span style="color:#555">***</span>    <span style="color:#f60">0.423</span><span style="color:#555">***</span>
+gamma1                                <span style="color:#f60">0.263</span><span style="color:#555">***</span>    <span style="color:#f60">0.282</span><span style="color:#555">***</span>    <span style="color:#f60">0.372</span><span style="color:#555">***</span>    <span style="color:#f60">0.375</span><span style="color:#555">***</span>
+F(p<span style="color:#555">-</span>value)                            <span style="color:#f60">0.000</span>       <span style="color:#f60">0.000</span>       <span style="color:#f60">0.000</span>       <span style="color:#f60">0.000</span>
+__________________________________________________________________________________</code></pre></div>
+<ul>
+<li><code>No.pars</code>: Number of parameters</li>
+<li><code>aic</code>: Akaike information criterion</li>
+<li><code>bic</code>: Bayesian information criterion</li>
+<li><code>loglike</code>: log likelihood</li>
+<li><code>LR-stats</code>: Likelihood ratio test statistics testing against one left model.</li>
+<li><code>alpha1</code>: The level scaling factor</li>
+<li><code>beta1</code>: The term scaling factor</li>
+<li><code>gamma1</code>: The smile scaling factor</li>
+<li><code>***</code>: coefficient significant at 1% level. (The parameter covariance matrix
+is approximiated by the inverse Hessian provided by BFGS algorithm)</li>
+<li><code>F(p-value)</code>: The p-value of F statistics testing the null hypothesis that
+<code>alpha1</code>, <code>beta1</code>, and <code>gamma1</code> are <em>jointly</em> zeros.</li>
+</ul>
+
+<h1 id="2-dfm-smoothed-factors">2. DFM smoothed factors</h1>
+
+<p>The figure below plots the smoothed latent factors of <code>ecoDfm</code> and <code>fulDfm</code>.
+The <code>Level</code> and <code>Term</code> factors are similar, and the <code>Smile</code> factor of these
+models are different to some extent. The reason might be the strong restriction
+imposed by <code>ecoDfm</code> (as we can see in the following loading matrix plot).
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTM2JSYlZFalRnTjg" alt="" /></p>
+
+<h1 id="3-dfmx-smoothed-factors">3. DFMX smoothed factors</h1>
+
+<p>The figure below plots the smoothed latent factors of DFMX models. Except for
+<code>Smile</code> factor, we cannot tell difference between <code>ecoDfmX</code> and <code>fulDfmX</code>.
+Besides, visually speaking, version 1 and version 2 are quite similar for
+both economic DFMX and fully efficient DFMX.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTWkllcTVoenRNaTg" alt="" /></p>
+
+<h1 id="4-loading-matrix">4. Loading matrix</h1>
+
+<p>The figure below plots the loading matrix of DFMX models. Here we can see
+that the smile loading of fully efficient DFMX dramatically different from
+that of economic restricted DFMX. This is why we observe different <code>Smile</code>
+factor above. Although the <code>Level</code> loading are also quite different, but the
+scale is muc smaller compared with the <code>Smile</code> loading.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTNDk0bTdva19PNXM" alt="" /></p>
+
+<p>Full parameters can be viewed here:
+* <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20170222/Figs/ecoDfm.md">ecoDfm</a>
+* <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20170222/Figs/fulDfm.md">fulDfm</a>
+* <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20170222/Figs/ecoDfmX1.md">ecoDfmX1</a>
+* <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20170222/Figs/ecoDfmX2.md">ecoDfmX2</a>
+* <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20170222/Figs/fulDfmX1.md">fulDfmX1</a>
+* <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20170222/Figs/fulDfmX2.md">fulDfmX2</a></p>
+
+<h1 id="5-variance-decmposition">5. Variance Decmposition</h1>
+
+<p>The figure belows shows the variance decomposition, which reports the
+percentage of the variance of idiosyncratic factors explained by index factors.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTY2JNZWM2bmNybWc" alt="" /></p>
+
+<h1 id="6-fit">6. Fit</h1>
+
+<p>Finally, the two figure below show the in-sample fit in terms of RMSE. The
+first figure shows RMSE at aggregate level (pooling multivariate time series),
+and the second figure shows the RMSE over implied volatility surface. Clearly,
+fully efficient DFMX version 2 is winner here (not surprise due to its number
+of parameters).
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTOFJmbEpkckw1ZzQ" alt="" />
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTdjVQX0N0bXV1NVk" alt="" /></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -49,7 +49,6 @@
         </div>
       </div>
 
-      {{$base := $.Site.BaseURL}}
       {{ with .Site.GetPage "/blogs"}}
         {{ $featuredPages := where .Pages "Params.featured" true }}
         <div class="row">

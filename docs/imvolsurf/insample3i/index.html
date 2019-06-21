@@ -1,0 +1,230 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-estimation-results">1.Estimation results</h1>
+
+<p>Below is the estimated parameters of <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20161206/Model.md">model (15)</a>.
+For identification, delta_l is fixed to 1. Transition matrix and state covariance matrix are set to block diagonal.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#f60">1</span>) Parameters <span style="color:#069;font-weight:bold">for</span> scaling equity loadings
+<span style="color:#555">=====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+<span style="color:#555">..</span>       alpha0    alpha1    beta0    beta1    gamma0    gamma1
+<span style="color:#555">=====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+AAPL      <span style="color:#f60">0.236</span>     <span style="color:#f60">0.770</span>    <span style="color:#f60">0.001</span>    <span style="color:#f60">0.458</span>    <span style="color:#555">-</span><span style="color:#f60">0.008</span>     <span style="color:#f60">0.422</span>
+CVX       <span style="color:#f60">0.068</span>     <span style="color:#f60">0.958</span>    <span style="color:#f60">0.013</span>    <span style="color:#f60">0.847</span>     <span style="color:#f60">0.003</span>     <span style="color:#f60">0.588</span>
+DIS       <span style="color:#f60">0.05</span>      <span style="color:#f60">0.862</span>    <span style="color:#f60">0.002</span>    <span style="color:#f60">0.722</span>     <span style="color:#f60">0.010</span>     <span style="color:#f60">0.480</span>
+CMCSA     <span style="color:#f60">0.016</span>     <span style="color:#f60">0.874</span>    <span style="color:#f60">0.005</span>    <span style="color:#f60">0.688</span>    <span style="color:#555">-</span><span style="color:#f60">0.000</span>     <span style="color:#f60">0.366</span>
+MO        <span style="color:#f60">0.106</span>     <span style="color:#f60">0.585</span>    <span style="color:#f60">0.007</span>    <span style="color:#f60">0.400</span>     <span style="color:#f60">0.009</span>     <span style="color:#f60">0.429</span>
+LLY       <span style="color:#f60">0.087</span>     <span style="color:#f60">0.632</span>   <span style="color:#555">-</span><span style="color:#f60">0.010</span>    <span style="color:#f60">0.480</span>     <span style="color:#f60">0.013</span>     <span style="color:#f60">0.289</span>
+CL        <span style="color:#f60">0.072</span>     <span style="color:#f60">0.510</span>    <span style="color:#f60">0.007</span>    <span style="color:#f60">0.409</span>     <span style="color:#f60">0.005</span>     <span style="color:#f60">0.232</span>
+DOW       <span style="color:#f60">0.028</span>     <span style="color:#f60">1.015</span>   <span style="color:#555">-</span><span style="color:#f60">0.003</span>    <span style="color:#f60">0.812</span>     <span style="color:#f60">0.004</span>     <span style="color:#f60">0.252</span>
+FDX       <span style="color:#f60">0.075</span>     <span style="color:#f60">0.802</span>    <span style="color:#f60">0.001</span>    <span style="color:#f60">0.658</span>     <span style="color:#f60">0.005</span>     <span style="color:#f60">0.425</span>
+NSC       <span style="color:#f60">0.082</span>     <span style="color:#f60">0.775</span>   <span style="color:#555">-</span><span style="color:#f60">0.002</span>    <span style="color:#f60">0.687</span>    <span style="color:#555">-</span><span style="color:#f60">0.003</span>     <span style="color:#f60">0.288</span>
+<span style="color:#555">=====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+
+
+(<span style="color:#f60">2</span>) Summary <span style="color:#069;font-weight:bold">for</span> idiosyncratic state equation parameters
+
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">=====</span>   <span style="color:#555">=====================</span>   <span style="color:#555">======================</span>
+              vD           mT                       mQ (x1E3) 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">=====</span>   <span style="color:#555">======</span>  <span style="color:#555">=====</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  
+mean  level  <span style="color:#f60">0.001</span>    <span style="color:#f60">0.992</span>  <span style="color:#f60">0.035</span>  <span style="color:#555">-</span><span style="color:#f60">0.004</span>    <span style="color:#f60">0.051</span>  <span style="color:#555">-</span><span style="color:#f60">0.011</span>   <span style="color:#f60">0.003</span> 
+      term  <span style="color:#555">-</span><span style="color:#f60">0.000</span>   <span style="color:#555">-</span><span style="color:#f60">0.001</span>  <span style="color:#f60">0.953</span>   <span style="color:#f60">0.004</span>   <span style="color:#555">-</span><span style="color:#f60">0.011</span>   <span style="color:#f60">0.005</span>  <span style="color:#555">-</span><span style="color:#f60">0.001</span> 
+      smile  <span style="color:#f60">0.000</span>    <span style="color:#f60">0.002</span>  <span style="color:#f60">0.004</span>   <span style="color:#f60">0.986</span>    <span style="color:#f60">0.003</span>  <span style="color:#555">-</span><span style="color:#f60">0.001</span>   <span style="color:#f60">0.003</span> 
+                                                                   
+std   level  <span style="color:#f60">0.000</span>    <span style="color:#f60">0.004</span>  <span style="color:#f60">0.037</span>   <span style="color:#f60">0.021</span>    <span style="color:#f60">0.024</span>   <span style="color:#f60">0.006</span>   <span style="color:#f60">0.004</span> 
+      term   <span style="color:#f60">0.000</span>    <span style="color:#f60">0.001</span>  <span style="color:#f60">0.009</span>   <span style="color:#f60">0.004</span>    <span style="color:#f60">0.006</span>   <span style="color:#f60">0.003</span>   <span style="color:#f60">0.001</span> 
+      smile  <span style="color:#f60">0.000</span>    <span style="color:#f60">0.001</span>  <span style="color:#f60">0.005</span>   <span style="color:#f60">0.005</span>    <span style="color:#f60">0.004</span>   <span style="color:#f60">0.001</span>   <span style="color:#f60">0.002</span> 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">=====</span>   <span style="color:#555">======</span>  <span style="color:#555">=====</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span> </code></pre></div>
+<p>Detail parameters click <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20161206/Par3i.md">here</a>.</p>
+
+<h1 id="2-latent-factors">2.Latent factors</h1>
+
+<p>The figure below plots the latent factors of economic restricted DFMX model.
+* Separate plot for each stock click <a href="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/dfmxFactors_sep3i.png">here</a>.
+<img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/dfmxFactors3i.png" alt="" /></p>
+
+<h1 id="3-in-sample-fit">3.In sample fit</h1>
+
+<p>The figure below plots the in sample RMSE of DFM and DFMX model aggregate at stock level.
+* DFMX has slightly higher RMSE than DFM does. It might come from the collapse of idiosyncratic factors.
+<img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/RMSEIS3i.png" alt="" />
+* RMSE of entire surface click <a href="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/HMIS3i.png">here</a>.</p>
+
+<h1 id="4-correlation">4.Correlation</h1>
+
+<p>The figure below plots the correlation matrix of DFMX latent factors to investigate whether the idiosyncratic factor picks up
+the same information as index factros do.
+* In general, the correlations between idiosyncratic factor and index factors are not high.
+<img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/corr3i.png" alt="" /></p>
+
+<h1 id="5-r-square">5.R square</h1>
+
+<p>To investigate how important of each factor, I run the following regression</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161121/regression.png" alt="" /></p>
+
+<p>where IV_{i,\tau,m,t} is the implied volatility of stock <code>i</code> in group <code>\tau,m</code> at
+time <code>t</code>. <code>f_{i,j,t}</code> is the <code>j</code>th factor of stock <code>i</code> at time <code>t</code>. In our case,
+<code>j</code> refers to <code>idio</code>,<code>level</code>,<code>term</code>,and <code>smile</code>, and <code>\tau,m</code> refers to <code>2, DOTM Put</code>
+etc.</p>
+
+<p>The following figure plots the average r-square over option groups of each stocks. R square of entire surface click
+<a href="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/rsquaredsurf3i.png">here</a>.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/rsquared3i.png" alt="" /></p>
+
+<h1 id="5-variance-decomposition">5.Variance decomposition</h1>
+
+<p><img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/vardecompDoc.png" alt="" />
+* The following table reports the percentage of variance explained by index factors for each stock.
+<img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/vardecomp3i.png" alt="" /></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

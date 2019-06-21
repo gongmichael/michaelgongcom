@@ -1,0 +1,317 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-dfm-in-sample-analysis">1.DFM In-sample Analysis</h1>
+
+<h2 id="1-1-likelihood-change">1.1 Likelihood change</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">====</span>  <span style="color:#555">======</span>  <span style="color:#555">=======</span>  <span style="color:#555">======</span>
+<span style="color:#555">..</span>       dfm    dfmTV    diff
+<span style="color:#555">====</span>  <span style="color:#555">======</span>  <span style="color:#555">=======</span>  <span style="color:#555">======</span>
+XOM   <span style="color:#f60">170849</span>   <span style="color:#f60">175721</span>    <span style="color:#f60">4872</span>
+INTC  <span style="color:#f60">151422</span>   <span style="color:#f60">155933</span>    <span style="color:#f60">4510</span>
+UNH   <span style="color:#f60">155657</span>   <span style="color:#f60">160427</span>    <span style="color:#f60">4770</span>
+DD    <span style="color:#f60">167804</span>   <span style="color:#f60">174027</span>    <span style="color:#f60">6222</span>
+COF   <span style="color:#f60">134624</span>   <span style="color:#f60">145016</span>   <span style="color:#f60">10392</span>
+SPX   <span style="color:#f60">190523</span>   <span style="color:#f60">195910</span>    <span style="color:#f60">5386</span>
+<span style="color:#555">====</span>  <span style="color:#555">======</span>  <span style="color:#555">=======</span>  <span style="color:#555">======</span></code></pre></div>
+<h2 id="1-2-parameters">1.2 Parameters</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dfm 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======================</span>   <span style="color:#555">======================</span>
+              vD              mT                    mQ (x1E3) 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  
+mean  level  <span style="color:#f60">0.0004</span>  <span style="color:#f60">0.9972</span>  <span style="color:#f60">0.0747</span>  <span style="color:#f60">0.0069</span>   <span style="color:#f60">1.5372</span> <span style="color:#555">-</span><span style="color:#f60">0.3412</span>  <span style="color:#f60">0.0401</span> 
+      term   <span style="color:#f60">0.0005</span> <span style="color:#555">-</span><span style="color:#f60">0.0019</span>  <span style="color:#f60">0.9456</span> <span style="color:#555">-</span><span style="color:#f60">0.0010</span>  <span style="color:#555">-</span><span style="color:#f60">0.3412</span>  <span style="color:#f60">0.1101</span> <span style="color:#555">-</span><span style="color:#f60">0.0174</span> 
+      smile <span style="color:#555">-</span><span style="color:#f60">0.0002</span>  <span style="color:#f60">0.0037</span> <span style="color:#555">-</span><span style="color:#f60">0.0060</span>  <span style="color:#f60">0.9712</span>   <span style="color:#f60">0.0401</span> <span style="color:#555">-</span><span style="color:#f60">0.0174</span>  <span style="color:#f60">0.0739</span> 
+                                                               
+std   level  <span style="color:#f60">0.0014</span>  <span style="color:#f60">0.0070</span>  <span style="color:#f60">0.0525</span>  <span style="color:#f60">0.0205</span>   <span style="color:#f60">0.4887</span>  <span style="color:#f60">0.0985</span>  <span style="color:#f60">0.0689</span> 
+      term   <span style="color:#f60">0.0006</span>  <span style="color:#f60">0.0025</span>  <span style="color:#f60">0.0186</span>  <span style="color:#f60">0.0099</span>   <span style="color:#f60">0.0985</span>  <span style="color:#f60">0.0563</span>  <span style="color:#f60">0.0241</span> 
+      smile  <span style="color:#f60">0.0004</span>  <span style="color:#f60">0.0030</span>  <span style="color:#f60">0.0088</span>  <span style="color:#f60">0.0185</span>   <span style="color:#f60">0.0689</span>  <span style="color:#f60">0.0241</span>  <span style="color:#f60">0.0639</span> 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span> 
+
+dfmTV
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======================</span>   <span style="color:#555">======================</span>
+              vD              mT                    mQ (x1E3) 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  
+mean  level  <span style="color:#f60">0.0003</span>  <span style="color:#f60">0.9982</span>  <span style="color:#f60">0.085</span>   <span style="color:#f60">0.0019</span>   <span style="color:#f60">1.4859</span> <span style="color:#555">-</span><span style="color:#f60">0.3278</span>  <span style="color:#f60">0.0183</span> 
+      term   <span style="color:#f60">0.0006</span> <span style="color:#555">-</span><span style="color:#f60">0.0024</span>  <span style="color:#f60">0.9462</span>  <span style="color:#f60">0.0031</span>  <span style="color:#555">-</span><span style="color:#f60">0.3278</span>  <span style="color:#f60">0.1035</span> <span style="color:#555">-</span><span style="color:#f60">0.0083</span> 
+      smile <span style="color:#555">-</span><span style="color:#f60">0.0007</span>  <span style="color:#f60">0.0049</span>  <span style="color:#f60">0.0067</span>  <span style="color:#f60">0.9745</span>   <span style="color:#f60">0.0183</span> <span style="color:#555">-</span><span style="color:#f60">0.0083</span>  <span style="color:#f60">0.0861</span> 
+                                                               
+std   level  <span style="color:#f60">0.0015</span>  <span style="color:#f60">0.0074</span>  <span style="color:#f60">0.0570</span>  <span style="color:#f60">0.0205</span>   <span style="color:#f60">0.4480</span>  <span style="color:#f60">0.1187</span>  <span style="color:#f60">0.0866</span> 
+      term   <span style="color:#f60">0.0006</span>  <span style="color:#f60">0.0025</span>  <span style="color:#f60">0.0179</span>  <span style="color:#f60">0.0106</span>   <span style="color:#f60">0.1187</span>  <span style="color:#f60">0.0633</span>  <span style="color:#f60">0.0106</span> 
+      smile  <span style="color:#f60">0.0012</span>  <span style="color:#f60">0.0048</span>  <span style="color:#f60">0.0299</span>  <span style="color:#f60">0.0104</span>   <span style="color:#f60">0.0866</span>  <span style="color:#f60">0.0106</span>  <span style="color:#f60">0.0816</span> 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span> </code></pre></div>
+<h2 id="1-3-factors">1.3 Factors</h2>
+
+<p><img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTRGd3UkZCSDJEWTQ" alt="" /></p>
+
+<h1 id="2-dfmx-2-steps-in-sample-analysis">2. DFMX (2 steps) In-sample Analysis</h1>
+
+<p><strong>Estimation Procedure</strong>
+* Estimate equity DFM and index DFM respectively.
+* Use OLS to get parameters in equation (5)-(7).
+* Obtain the residuals of OLS regression, compute the first 3
+principal components. Regress the principal components on OLS
+residuals to get the loading matrix. Rotate the loading matrix to
+economic restricted loading times scaling factors (alpha, beta, and
+gamma).
+* Use OLS on the rotated principal components to get the starting
+values of state dynamics.
+* In order to identify the idiosyncratic factors and index factors,
+the scaling factors are assumed to <strong>not</strong> affect the 6,9,10,and 11
+measurement equations.
+* First, I estimated the DFMX model with constant loadings (taking
+average), and then use the parameters of optimized constant DFMX as
+starting valurs for time varying loading DFMX.
+* The BFGS algorithm stopping criteria is set as the decrease of
+negative log-Likelihood function less than 1E3 * eps (eps: machine
+precision, which is 1.622*1E-16 on my machine). <strong>AND</strong> the norm of
+gradient vector is less than the norm of parameters. In this setup,
+we are pursuing the <em>extreme</em> precision of estimation.</p>
+
+<h2 id="2-1-likelihood-change">2.1 Likelihood change</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">====</span>  <span style="color:#555">======</span>   <span style="color:#555">=======</span>  <span style="color:#555">======</span>      <span style="color:#555">======</span>  <span style="color:#555">========</span>  <span style="color:#555">======</span>
+<span style="color:#555">..</span>       dfm     dfmTV    diff        dfmX    dfmXTV    diff
+<span style="color:#555">====</span>  <span style="color:#555">======</span>   <span style="color:#555">=======</span>  <span style="color:#555">======</span>      <span style="color:#555">======</span>  <span style="color:#555">========</span>  <span style="color:#555">======</span>
+XOM   <span style="color:#f60">170849</span>    <span style="color:#f60">175721</span>    <span style="color:#f60">4872</span>      <span style="color:#f60">174363</span>    <span style="color:#f60">179057</span>    <span style="color:#f60">4694</span>
+INTC  <span style="color:#f60">151422</span>    <span style="color:#f60">155933</span>    <span style="color:#f60">4510</span>      <span style="color:#f60">154819</span>    <span style="color:#f60">160203</span>    <span style="color:#f60">5383</span>
+UNH   <span style="color:#f60">155657</span>    <span style="color:#f60">160427</span>    <span style="color:#f60">4770</span>      <span style="color:#f60">157956</span>    <span style="color:#f60">163590</span>    <span style="color:#f60">5634</span>
+DD    <span style="color:#f60">167804</span>    <span style="color:#f60">174027</span>    <span style="color:#f60">6222</span>      <span style="color:#f60">171197</span>    <span style="color:#f60">177630</span>    <span style="color:#f60">6433</span>
+COF   <span style="color:#f60">134624</span>    <span style="color:#f60">145016</span>   <span style="color:#f60">10392</span>      <span style="color:#f60">136855</span>    <span style="color:#f60">147355</span>   <span style="color:#f60">10500</span>
+<span style="color:#555">====</span>  <span style="color:#555">======</span>   <span style="color:#555">=======</span>  <span style="color:#555">======</span>      <span style="color:#555">======</span>  <span style="color:#555">========</span>  <span style="color:#555">======</span></code></pre></div>
+<h2 id="2-2-parameters">2.2 Parameters</h2>
+
+<p>The table below reports the parameters of constant loading DFMX and
+time varying loading DFMX.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dfmX 
+<span style="color:#555">====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+        alpha0    alpha1    beta0    beta1    gamma0    gamma1
+<span style="color:#555">====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+XOM     <span style="color:#f60">0.0026</span>    <span style="color:#f60">1.0124</span>  <span style="color:#555">-</span><span style="color:#f60">0.0008</span>   <span style="color:#f60">0.9339</span>   <span style="color:#555">-</span><span style="color:#f60">0.0047</span>    <span style="color:#f60">0.8516</span>
+INTC    <span style="color:#f60">0.0037</span>    <span style="color:#f60">1.0216</span>   <span style="color:#f60">0.0000</span>   <span style="color:#f60">1.0332</span>    <span style="color:#f60">0.0039</span>    <span style="color:#f60">0.8056</span>
+UNH     <span style="color:#f60">0.0047</span>    <span style="color:#f60">1.0072</span>   <span style="color:#f60">0.0005</span>   <span style="color:#f60">0.9094</span>    <span style="color:#f60">0.0004</span>    <span style="color:#f60">0.8933</span>
+DD      <span style="color:#f60">0.0029</span>    <span style="color:#f60">1.0143</span>  <span style="color:#555">-</span><span style="color:#f60">0.0006</span>   <span style="color:#f60">0.9798</span>   <span style="color:#555">-</span><span style="color:#f60">0.0030</span>    <span style="color:#f60">0.9430</span>
+COF     <span style="color:#f60">0.0108</span>    <span style="color:#f60">0.9952</span>  <span style="color:#555">-</span><span style="color:#f60">0.0018</span>   <span style="color:#f60">1.0623</span>    <span style="color:#f60">0.0001</span>    <span style="color:#f60">0.8389</span>
+<span style="color:#555">====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======================</span>   <span style="color:#555">======================</span>
+              vD              mT                    mQ (x1E3) 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  
+mean  level  <span style="color:#f60">0.0007</span>  <span style="color:#f60">0.9916</span>  <span style="color:#f60">0.0862</span> <span style="color:#555">-</span><span style="color:#f60">0.0148</span>   <span style="color:#f60">0.8045</span> <span style="color:#555">-</span><span style="color:#f60">0.2021</span>  <span style="color:#f60">0.0482</span> 
+      term  <span style="color:#555">-</span><span style="color:#f60">0.0000</span> <span style="color:#555">-</span><span style="color:#f60">0.0006</span>  <span style="color:#f60">0.9325</span>  <span style="color:#f60">0.0016</span>  <span style="color:#555">-</span><span style="color:#f60">0.2021</span>  <span style="color:#f60">0.0924</span> <span style="color:#555">-</span><span style="color:#f60">0.0210</span> 
+      smile <span style="color:#555">-</span><span style="color:#f60">0.0001</span>  <span style="color:#f60">0.0024</span>  <span style="color:#f60">0.0053</span>  <span style="color:#f60">0.9744</span>   <span style="color:#f60">0.0482</span> <span style="color:#555">-</span><span style="color:#f60">0.0210</span>  <span style="color:#f60">0.0863</span>  
+                                                               
+std   level  <span style="color:#f60">0.0004</span>  <span style="color:#f60">0.0083</span>  <span style="color:#f60">0.0412</span>  <span style="color:#f60">0.0208</span>   <span style="color:#f60">0.3878</span>  <span style="color:#f60">0.1085</span>  <span style="color:#f60">0.0256</span> 
+      term   <span style="color:#f60">0.0001</span>  <span style="color:#f60">0.0018</span>  <span style="color:#f60">0.0161</span>  <span style="color:#f60">0.0109</span>   <span style="color:#f60">0.1085</span>  <span style="color:#f60">0.0669</span>  <span style="color:#f60">0.0327</span> 
+      smile  <span style="color:#f60">0.0002</span>  <span style="color:#f60">0.0015</span>  <span style="color:#f60">0.0127</span>  <span style="color:#f60">0.0130</span>   <span style="color:#f60">0.0256</span>  <span style="color:#f60">0.0327</span>  <span style="color:#f60">0.0726</span> 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span> 
+
+
+dfmXTV
+<span style="color:#555">====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+<span style="color:#555">..</span>      alpha0    alpha1    beta0    beta1    gamma0    gamma1
+<span style="color:#555">====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+XOM     <span style="color:#f60">0.0027</span>    <span style="color:#f60">1.0106</span>  <span style="color:#555">-</span><span style="color:#f60">0.0003</span>   <span style="color:#f60">0.9249</span>    <span style="color:#f60">0.0019</span>    <span style="color:#f60">0.8214</span>
+INTC    <span style="color:#f60">0.0035</span>    <span style="color:#f60">1.0233</span>  <span style="color:#555">-</span><span style="color:#f60">0.0000</span>   <span style="color:#f60">1.0472</span>    <span style="color:#f60">0.0036</span>    <span style="color:#f60">0.8803</span>
+UNH     <span style="color:#f60">0.0032</span>    <span style="color:#f60">1.0140</span>   <span style="color:#f60">0.0007</span>   <span style="color:#f60">0.9416</span>    <span style="color:#f60">0.0023</span>    <span style="color:#f60">0.9054</span>
+DD      <span style="color:#f60">0.0028</span>    <span style="color:#f60">1.0140</span>  <span style="color:#555">-</span><span style="color:#f60">0.0001</span>   <span style="color:#f60">0.9577</span>    <span style="color:#f60">0.0024</span>    <span style="color:#f60">0.8932</span>
+COF     <span style="color:#f60">0.0030</span>    <span style="color:#f60">1.0293</span>  <span style="color:#555">-</span><span style="color:#f60">0.0002</span>   <span style="color:#f60">0.7655</span>    <span style="color:#f60">0.0004</span>    <span style="color:#f60">0.8976</span>
+<span style="color:#555">====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">=======</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>
+
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======================</span>   <span style="color:#555">======================</span>
+              vD              mT                    mQ (x1E3) 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  
+mean  level  <span style="color:#f60">0.0006</span>  <span style="color:#f60">0.9922</span>  <span style="color:#f60">0.0761</span> <span style="color:#555">-</span><span style="color:#f60">0.0251</span>   <span style="color:#f60">0.8016</span> <span style="color:#555">-</span><span style="color:#f60">0.1935</span>  <span style="color:#f60">0.0612</span> 
+      term   <span style="color:#f60">0.0001</span> <span style="color:#555">-</span><span style="color:#f60">0.0008</span>  <span style="color:#f60">0.9405</span>  <span style="color:#f60">0.0035</span>  <span style="color:#555">-</span><span style="color:#f60">0.1935</span>  <span style="color:#f60">0.0859</span> <span style="color:#555">-</span><span style="color:#f60">0.0098</span> 
+      smile <span style="color:#555">-</span><span style="color:#f60">0.0003</span>  <span style="color:#f60">0.0038</span>  <span style="color:#f60">0.0048</span>  <span style="color:#f60">0.9596</span>   <span style="color:#f60">0.0612</span> <span style="color:#555">-</span><span style="color:#f60">0.0098</span>  <span style="color:#f60">0.1238</span> 
+                                                               
+std   level  <span style="color:#f60">0.0004</span>  <span style="color:#f60">0.0087</span>  <span style="color:#f60">0.0369</span>  <span style="color:#f60">0.0180</span>   <span style="color:#f60">0.3641</span>  <span style="color:#f60">0.1065</span>  <span style="color:#f60">0.0294</span> 
+      term   <span style="color:#f60">0.0002</span>  <span style="color:#f60">0.0021</span>  <span style="color:#f60">0.0094</span>  <span style="color:#f60">0.0079</span>   <span style="color:#f60">0.1065</span>  <span style="color:#f60">0.0647</span>  <span style="color:#f60">0.0118</span> 
+      smile  <span style="color:#f60">0.0003</span>  <span style="color:#f60">0.0026</span>  <span style="color:#f60">0.0228</span>  <span style="color:#f60">0.0336</span>   <span style="color:#f60">0.0294</span>  <span style="color:#f60">0.0118</span>  <span style="color:#f60">0.1100</span> 
+<span style="color:#555">====</span>  <span style="color:#555">====</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span>   <span style="color:#555">======</span>  <span style="color:#555">======</span>  <span style="color:#555">======</span> </code></pre></div>
+<h2 id="2-3-dfmx-factors">2.3 DFMX factors</h2>
+
+<p>The figure below plots the DFMX factors. The solid line is the
+constant DFMX factors, and the dash line is the time varying loading
+DFMX factors. I also plot the time varying DFM factors of SPX (which
+is the exogenous variable in two-step DFMX setup).
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTSDhpVjMyNkZock0" alt="" /></p>
+
+<h1 id="3-variance-decomposition">3. Variance Decomposition</h1>
+
+<p>The figure below plots th variance decomposition of time varying DFMX model.(The
+reference click <a href="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/vardecompDoc.png">here</a>).
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTSnMyZTFYNmY3V1E" alt="" /></p>
+
+<h1 id="4-fit">4. Fit</h1>
+
+<h2 id="4-1-on-grid-fit">4.1 On grid fit</h2>
+
+<p>In this section, I plot the fit on grid, which is the fit of selected contracts.</p>
+
+<p>Aggregate fit over stocks and models.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTLU1SUzhMSEtQdnc" alt="" /></p>
+
+<p>Fit of different IVS regions.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTMUUxNXNWQ05ubzg" alt="" /></p>
+
+<h2 id="4-2-off-grid-fit">4.2 Off grid fit</h2>
+
+<p>In this section, I calculate the fit of <strong>ALL</strong> available contracts (We
+train the models by selected contracts, and use parameters to calculate
+the fitted values of all available contracts).</p>
+
+<p>Aggregate off grid fit over stocks and models.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTNkhaUUEzQ25KblU" alt="" /></p>
+
+<p>Off grid fit of different regions of IVS.
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTUEFwQWxiLUtWbEk" alt="" /></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

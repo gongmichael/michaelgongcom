@@ -3,89 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://michael-gong.com/blogs/real-science/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/blogs/are-you-doing-the-right-way/</loc>
-    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/bamboo/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://michael-gong.com/blogs/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
+    <lastmod>2019-06-01T12:52:36+06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/tags/json/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
+    <loc>https://michael-gong.com/tags/garch/</loc>
+    <lastmod>2019-06-01T12:52:36+06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://michael-gong.com/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
+    <lastmod>2019-06-01T12:52:36+06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/tags/rest-apis/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
+    <loc>https://michael-gong.com/tags/numba/</loc>
+    <lastmod>2019-06-01T12:52:36+06:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/python/</loc>
+    <lastmod>2019-06-01T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/blogs/gjr-garch/</loc>
+    <lastmod>2019-06-01T12:52:36+06:00</lastmod>
   </url>
   
   <url>
     <loc>https://michael-gong.com/tags/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
+    <lastmod>2019-06-01T12:52:36+06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/tags/unicorn/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
+    <loc>https://michael-gong.com/tags/mcs/</loc>
+    <lastmod>2019-03-12T12:52:36+06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/tags/jquery/</loc>
-    <lastmod>2018-09-18T14:51:12+06:00</lastmod>
+    <loc>https://michael-gong.com/blogs/model-confidence-set/</loc>
+    <lastmod>2019-03-12T12:52:36+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/test/</loc>
+    <lastmod>2019-03-12T12:52:36+06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://michael-gong.com/categories/</loc>
-    <lastmod>2018-09-13T14:51:12+06:00</lastmod>
+    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/blogs/20171101/</loc>
-    <lastmod>2018-09-13T14:51:12+06:00</lastmod>
+    <loc>https://michael-gong.com/imvolsurf/dozmethod/</loc>
+    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/blogs/20171024/</loc>
-    <lastmod>2018-09-13T14:51:12+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/categories/cat1/</loc>
-    <lastmod>2018-09-13T14:51:12+06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/java/</loc>
-    <lastmod>2018-09-13T14:51:12+06:00</lastmod>
-    <priority>0</priority>
+    <loc>https://michael-gong.com/imvolsurf/garch/</loc>
+    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
   </url>
   
   <url>
@@ -100,48 +88,26 @@
   </url>
   
   <url>
-    <loc>https://michael-gong.com/blogs/20170926/</loc>
-    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/blogs/20171010/</loc>
-    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://michael-gong.com/imvolsurf/archproto/</loc>
     <lastmod>2018-09-12T14:51:12+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/blogs/simple-image-post/</loc>
-    <lastmod>2018-09-12T12:52:36+06:00</lastmod>
+    <loc>https://michael-gong.com/categories/cat1/</loc>
+    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/blogs/featuresofcoderportfolio/</loc>
-    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+    <loc>https://michael-gong.com/tags/jquery/</loc>
+    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://michael-gong.com/blogs/theme-demo/</loc>
-    <lastmod>2018-03-12T12:52:36+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/blogs/20171107/</loc>
-    <lastmod>2018-02-12T14:51:12+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/blogs/creating-a-new-theme/</loc>
-    <lastmod>2018-02-12T14:51:12+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/blogs/readme/</loc>
-    <lastmod>2017-09-12T14:51:12+06:00</lastmod>
+    <loc>https://michael-gong.com/tags/java/</loc>
+    <lastmod>2018-09-12T14:51:12+06:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -155,69 +121,6 @@
   </url>
   
   <url>
-    <loc>https://michael-gong.com/blogs/hugo-template-primer/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/categories/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/blogs/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/categories/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/blogs/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://michael-gong.com/imvolsurf/csevaluate/</loc>
     <priority>0</priority>
   </url>
@@ -228,17 +131,7 @@
   </url>
   
   <url>
-    <loc>https://michael-gong.com/imvolsurf/dozmethod/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://michael-gong.com/imvolsurf/ecevaluate/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://michael-gong.com/imvolsurf/garch/</loc>
     <priority>0</priority>
   </url>
   

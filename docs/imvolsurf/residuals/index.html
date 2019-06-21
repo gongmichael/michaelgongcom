@@ -1,0 +1,206 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="residuals-properties">Residuals properties</h1>
+
+<h1 id="0-a-illustration-plot-of-residuals">0. A illustration plot of residuals</h1>
+
+<p><img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTYTFob0VMZ0hCWkU" alt="" /></p>
+
+<h1 id="1-test-for-heteroskedasticity">1. Test for heteroskedasticity</h1>
+
+<ul>
+<li>I use Engle’s Test for Autoregressive Conditional Heteroscedasticity. The max lag is set to 5 (1 week).</li>
+</ul>
+
+<p>Below is the test result. I have 10 equity stocks, and the table below report the <em>average</em> Lagrange multiplier test statistics, the parenthesis reports the number of stocks that have significant statistics.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                  ecoDfm       fulDfm     ecoDfmX1     ecoDfmX2     fulDfmX1     fulDfmX2
+DOTM Put <span style="color:#f60">1</span>   <span style="color:#f60">1344.22</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">822.17</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1356.17</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">992.12</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">819.72</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">741.82</span>(<span style="color:#f60">10</span>)
+DOTM Put <span style="color:#f60">2</span>   <span style="color:#f60">2496.23</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1606.67</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2457.24</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2051.56</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1596.02</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1502.21</span>(<span style="color:#f60">10</span>)
+DOTM Put <span style="color:#f60">3</span>   <span style="color:#f60">2828.88</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1885.97</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2800.08</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2276.02</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1850.77</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1806.67</span>(<span style="color:#f60">10</span>)
+OTM Put <span style="color:#f60">1</span>    <span style="color:#f60">1145.31</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">641.94</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">1133.9</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1165.34</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">635.14</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">575.1</span>(<span style="color:#f60">10</span>)
+OTM Put <span style="color:#f60">2</span>    <span style="color:#f60">1172.91</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">989.94</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1153.74</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">965.81</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1014.23</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1006.29</span>(<span style="color:#f60">10</span>)
+OTM Put <span style="color:#f60">3</span>    <span style="color:#f60">1250.21</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">710.25</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1137.52</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">352.78</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">733.15</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">713.59</span>(<span style="color:#f60">10</span>)
+ATM Put <span style="color:#f60">1</span>     <span style="color:#f60">883.67</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">547.87</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">877.89</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">956.62</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">537.31</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">524.55</span>(<span style="color:#f60">10</span>)
+ATM Put <span style="color:#f60">2</span>     <span style="color:#f60">334.17</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">642.96</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">291.37</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">270.83</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">649.24</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">672.06</span>(<span style="color:#f60">10</span>)
+ATM Put <span style="color:#f60">3</span>     <span style="color:#f60">359.43</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">437.63</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">338.72</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">336.53</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">455.34</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">481.37</span>(<span style="color:#f60">10</span>)
+ATM Call <span style="color:#f60">1</span>     <span style="color:#f60">907.2</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">562.88</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">921.61</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1007.65</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">559.38</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">514.41</span>(<span style="color:#f60">10</span>)
+ATM Call <span style="color:#f60">2</span>   <span style="color:#f60">1101.44</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">962.27</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1104.87</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">732.08</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">960.88</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">929.83</span>(<span style="color:#f60">10</span>)
+ATM Call <span style="color:#f60">3</span>    <span style="color:#f60">682.12</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">518.14</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">733.36</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">423.27</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">522.31</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">477.3</span>(<span style="color:#f60">10</span>)
+OTM Call <span style="color:#f60">1</span>     <span style="color:#f60">935.51</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">582.72</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">949.09</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">965.59</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">578.27</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">508.21</span>(<span style="color:#f60">9</span>)
+OTM Call <span style="color:#f60">2</span>   <span style="color:#f60">1144.16</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1123.85</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1109.29</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1060.98</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1112.64</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1062.36</span>(<span style="color:#f60">10</span>)
+OTM Call <span style="color:#f60">3</span>    <span style="color:#f60">437.11</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">388.43</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">417.19</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">413.42</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">420.8</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">485.4</span>(<span style="color:#f60">10</span>)
+DOTM Call <span style="color:#f60">1</span>   <span style="color:#f60">659.68</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">539.52</span>(<span style="color:#f60">9</span>)   <span style="color:#f60">659.51</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">553.78</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">541.84</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">527.06</span>(<span style="color:#f60">9</span>)
+DOTM Call <span style="color:#f60">2</span>   <span style="color:#f60">884.09</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">871.15</span>(<span style="color:#f60">9</span>)   <span style="color:#f60">868.33</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">779.74</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">870.93</span>(<span style="color:#f60">9</span>)    <span style="color:#f60">831.66</span>(<span style="color:#f60">9</span>)
+DOTM Call <span style="color:#f60">3</span>  <span style="color:#f60">1345.13</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1180.65</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1288.17</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1066.39</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1169.36</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1239.16</span>(<span style="color:#f60">10</span>)</code></pre></div>
+<h1 id="2-test-for-auto-correlation">2. Test for auto-correlation</h1>
+
+<p>I use Ljung-Box test for no autocorrelation. The lag for Ljung-Box test is 5. Below is the test result, and the number of stocks with significant statistics is shown in parenthesis.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                   ecoDfm       fulDfm      ecoDfmX1      ecoDfmX2     fulDfmX1     fulDfmX2
+DOTM Put <span style="color:#f60">1</span>    <span style="color:#f60">6425.74</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">4497.31</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">6383.47</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">6253.79</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">4487.64</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3270.66</span>(<span style="color:#f60">10</span>)
+DOTM Put <span style="color:#f60">2</span>   <span style="color:#f60">12226.29</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">7843.68</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">11947.13</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">11631.94</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">7791.08</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">6746.58</span>(<span style="color:#f60">10</span>)
+DOTM Put <span style="color:#f60">3</span>   <span style="color:#f60">15008.28</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">9754.23</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">14750.98</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">14459.55</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">9692.43</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">8164.74</span>(<span style="color:#f60">10</span>)
+OTM Put <span style="color:#f60">1</span>     <span style="color:#f60">6609.62</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2570.61</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">6591.75</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">6798.84</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">2561.1</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1762.13</span>(<span style="color:#f60">10</span>)
+OTM Put <span style="color:#f60">2</span>     <span style="color:#f60">4473.17</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3108.79</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">3950.7</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">3358.06</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3090.22</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3121.45</span>(<span style="color:#f60">10</span>)
+OTM Put <span style="color:#f60">3</span>     <span style="color:#f60">4497.89</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1576.55</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">3812.01</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">1910.74</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1558.79</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1321.16</span>(<span style="color:#f60">10</span>)
+ATM Put <span style="color:#f60">1</span>     <span style="color:#f60">5033.28</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1460.09</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">5023.01</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">5378.29</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1416.11</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1039.77</span>(<span style="color:#f60">10</span>)
+ATM Put <span style="color:#f60">2</span>     <span style="color:#f60">2289.43</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3375.34</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">1965.05</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">2271.15</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3339.97</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3126.12</span>(<span style="color:#f60">10</span>)
+ATM Put <span style="color:#f60">3</span>     <span style="color:#f60">2083.89</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2507.48</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">1996.39</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">2788.75</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2504.91</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2332.88</span>(<span style="color:#f60">10</span>)
+ATM Call <span style="color:#f60">1</span>     <span style="color:#f60">4238.1</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1440.41</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">4312.87</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">4716.88</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1406.59</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1008.33</span>(<span style="color:#f60">10</span>)
+ATM Call <span style="color:#f60">2</span>    <span style="color:#f60">3874.84</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3428.99</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">3829.21</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">3796.21</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3410.36</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3203.36</span>(<span style="color:#f60">10</span>)
+ATM Call <span style="color:#f60">3</span>    <span style="color:#f60">2982.82</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1900.72</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">2861.69</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">3412.31</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1864.16</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1659.56</span>(<span style="color:#f60">10</span>)
+OTM Call <span style="color:#f60">1</span>    <span style="color:#f60">4788.39</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3026.79</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">4780.25</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">5274.3</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3027.25</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">2257.7</span>(<span style="color:#f60">10</span>)
+OTM Call <span style="color:#f60">2</span>    <span style="color:#f60">4935.01</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">4875.56</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">4459.92</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">4808.99</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">4819.05</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">4595.18</span>(<span style="color:#f60">10</span>)
+OTM Call <span style="color:#f60">3</span>    <span style="color:#f60">1721.63</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">989.96</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">705.49</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">1439.94</span>(<span style="color:#f60">10</span>)    <span style="color:#f60">959.8</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">1515.58</span>(<span style="color:#f60">10</span>)
+DOTM Call <span style="color:#f60">1</span>   <span style="color:#f60">3467.55</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3152.68</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">3399.92</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">3499.71</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">3155.51</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">2522.06</span>(<span style="color:#f60">10</span>)
+DOTM Call <span style="color:#f60">2</span>   <span style="color:#f60">5127.03</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">5469.45</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">4923.87</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">5147.17</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">5451.02</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">4994.22</span>(<span style="color:#f60">10</span>)
+DOTM Call <span style="color:#f60">3</span>   <span style="color:#f60">7051.34</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">7471.19</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">6600.21</span>(<span style="color:#f60">10</span>)   <span style="color:#f60">6693.99</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">7484.35</span>(<span style="color:#f60">10</span>)  <span style="color:#f60">7818.21</span>(<span style="color:#f60">10</span>)</code></pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

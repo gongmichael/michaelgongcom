@@ -1,0 +1,367 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-data-sources">1. Data Sources</h1>
+
+<p>In order to investigate the put call parity violation, the data comes from 3 dataset, all of them come from OptionMetrics.</p>
+
+<ol>
+<li>Option Prices data</li>
+<li>ZeroCoupon rate</li>
+<li>Security prices</li>
+</ol>
+
+<h3 id="1-1-zero-coupon-rate-overview">1.1 Zero Coupon rate overview</h3>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">       date  days      rate
+<span style="color:#f60">0</span>  <span style="color:#f60">20020104</span>    <span style="color:#f60">11</span>  <span style="color:#f60">1.869341</span>
+<span style="color:#f60">1</span>  <span style="color:#f60">20020104</span>    <span style="color:#f60">12</span>  <span style="color:#f60">1.869925</span>
+<span style="color:#f60">2</span>  <span style="color:#f60">20020104</span>    <span style="color:#f60">47</span>  <span style="color:#f60">1.899345</span>
+<span style="color:#f60">3</span>  <span style="color:#f60">20020104</span>    <span style="color:#f60">75</span>  <span style="color:#f60">1.910800</span>
+<span style="color:#f60">4</span>  <span style="color:#f60">20020104</span>   <span style="color:#f60">103</span>  <span style="color:#f60">1.942172</span>
+<span style="color:#f60">5</span>  <span style="color:#f60">20020104</span>   <span style="color:#f60">131</span>  <span style="color:#f60">1.988259</span>
+<span style="color:#f60">6</span>  <span style="color:#f60">20020104</span>   <span style="color:#f60">166</span>  <span style="color:#f60">2.049509</span>
+<span style="color:#f60">7</span>  <span style="color:#f60">20020104</span>   <span style="color:#f60">257</span>  <span style="color:#f60">2.189949</span>
+<span style="color:#f60">8</span>  <span style="color:#f60">20020104</span>   <span style="color:#f60">348</span>  <span style="color:#f60">2.404405</span>
+<span style="color:#f60">9</span>  <span style="color:#f60">20020104</span>   <span style="color:#f60">439</span>  <span style="color:#f60">2.666471</span></code></pre></div>
+<p>I linearly (extra-)interpolate the zero coupon rate for maturities from 7 days to 240 days.</p>
+
+<h3 id="1-2-security-price">1.2 Security price</h3>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    secid      date ticker      low     high     <span style="color:#366">open</span>    close   volume  <span style="color:#069;font-weight:bold">return</span>  shrout
+<span style="color:#f60">0</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020104</span>     BK  <span style="color:#f60">42.2650</span>  <span style="color:#f60">42.9800</span>  <span style="color:#f60">42.4500</span>  <span style="color:#f60">42.6100</span>  <span style="color:#f60">1758300</span>  <span style="color:#f60">0.0169</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">1</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020107</span>     BK  <span style="color:#f60">43.0000</span>  <span style="color:#f60">44.1500</span>  <span style="color:#f60">43.9000</span>  <span style="color:#f60">43.9500</span>  <span style="color:#f60">3617800</span>  <span style="color:#f60">0.0314</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">2</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020108</span>     BK  <span style="color:#f60">42.9000</span>  <span style="color:#f60">44.0000</span>  <span style="color:#f60">43.7500</span>  <span style="color:#f60">43.3300</span>  <span style="color:#f60">2302400</span> <span style="color:#555">-</span><span style="color:#f60">0.0141</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">3</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020109</span>     BK  <span style="color:#f60">43.1000</span>  <span style="color:#f60">44.2500</span>  <span style="color:#f60">43.3300</span>  <span style="color:#f60">43.4600</span>  <span style="color:#f60">1867300</span>  <span style="color:#f60">0.0030</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">4</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020110</span>     BK  <span style="color:#f60">43.6500</span>  <span style="color:#f60">45.7000</span>  <span style="color:#f60">43.9000</span>  <span style="color:#f60">45.3500</span>  <span style="color:#f60">4951700</span>  <span style="color:#f60">0.0435</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">5</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020111</span>     BK  <span style="color:#f60">44.8000</span>  <span style="color:#f60">46.5000</span>  <span style="color:#f60">45.3500</span>  <span style="color:#f60">44.9000</span>  <span style="color:#f60">3099500</span> <span style="color:#555">-</span><span style="color:#f60">0.0099</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">6</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020114</span>     BK  <span style="color:#f60">43.7500</span>  <span style="color:#f60">44.3700</span>  <span style="color:#f60">44.3600</span>  <span style="color:#f60">44.0100</span>  <span style="color:#f60">3225500</span> <span style="color:#555">-</span><span style="color:#f60">0.0198</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">7</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020115</span>     BK  <span style="color:#f60">43.6000</span>  <span style="color:#f60">44.8300</span>  <span style="color:#f60">44.1000</span>  <span style="color:#f60">43.7500</span>  <span style="color:#f60">4052500</span> <span style="color:#555">-</span><span style="color:#f60">0.0059</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">8</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020116</span>     BK  <span style="color:#f60">42.7400</span>  <span style="color:#f60">43.9000</span>  <span style="color:#f60">43.5800</span>  <span style="color:#f60">42.8400</span>  <span style="color:#f60">2393100</span> <span style="color:#555">-</span><span style="color:#f60">0.0165</span>  <span style="color:#f60">736464</span>
+<span style="color:#f60">9</span>  <span style="color:#f60">101981</span>  <span style="color:#f60">20020117</span>     BK  <span style="color:#f60">42.7500</span>  <span style="color:#f60">43.5000</span>  <span style="color:#f60">43.3400</span>  <span style="color:#f60">42.7600</span>  <span style="color:#f60">3056400</span> <span style="color:#555">-</span><span style="color:#f60">0.0019</span>  <span style="color:#f60">736464</span></code></pre></div>
+<p>I use the close price as security price.</p>
+
+<h1 id="2-data-screen">2. Data Screen</h1>
+
+<p>Below is the number of observations remains after each filter for <strong>Equity</strong> options.</p>
+
+<table>
+<thead>
+<tr>
+<th>Filters</th>
+<th>Observations</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Original</td>
+<td>8,644,884</td>
+</tr>
+
+<tr>
+<td>1.Excluding missing delta or imvol</td>
+<td>7,301,667</td>
+</tr>
+
+<tr>
+<td>2.Excluding imvol above 1.0</td>
+<td>7,021,054</td>
+</tr>
+
+<tr>
+<td>3.Exluding mid-quote below $0.05</td>
+<td>6,008,209</td>
+</tr>
+
+<tr>
+<td>4.Exluding maturity outside [7,240]</td>
+<td>4,138,933</td>
+</tr>
+</tbody>
+</table>
+
+<p>Applying the same filters to SPX index options, the index options has <strong>4,007,858</strong> observations.
+Therefore, after applying the 4 filters mentioned above, we have <strong>8,146,791</strong> observations remains.</p>
+
+<h1 id="3-new-filters">3. New filters</h1>
+
+<h3 id="3-1-bid-ask-spread">3.1 Bid-Ask Spread</h3>
+
+<p><img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTMGNTQUFJTU9zeDQ" alt="" /></p>
+
+<p>Zoom in the extreme out-of-money region:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">         Index call                     Equity call
+______________________________    ___________________________
+delta decile            spread    delta decile         spread
+(<span style="color:#555">-</span><span style="color:#f60">0.000442</span>, <span style="color:#f60">0.00235</span>]    <span style="color:#f60">0.9913</span>    (<span style="color:#f60">0.00418</span>, <span style="color:#f60">0.0147</span>]    <span style="color:#f60">0.8668</span>
+(<span style="color:#f60">0.00235</span>, <span style="color:#f60">0.00336</span>]      <span style="color:#f60">0.9728</span>    (<span style="color:#f60">0.0147</span>, <span style="color:#f60">0.02</span>]       <span style="color:#f60">0.7564</span>
+(<span style="color:#f60">0.00336</span>, <span style="color:#f60">0.00437</span>]      <span style="color:#f60">0.9286</span>    (<span style="color:#f60">0.02</span>, <span style="color:#f60">0.0248</span>]       <span style="color:#f60">0.6908</span>
+(<span style="color:#f60">0.00437</span>, <span style="color:#f60">0.00535</span>]      <span style="color:#f60">0.8966</span>    (<span style="color:#f60">0.0248</span>, <span style="color:#f60">0.0294</span>]     <span style="color:#f60">0.6618</span>
+(<span style="color:#f60">0.00535</span>, <span style="color:#f60">0.00636</span>]      <span style="color:#f60">0.8791</span>    (<span style="color:#f60">0.0294</span>, <span style="color:#f60">0.0338</span>]     <span style="color:#f60">0.6390</span>
+(<span style="color:#f60">0.00636</span>, <span style="color:#f60">0.00748</span>]      <span style="color:#f60">0.8707</span>    (<span style="color:#f60">0.0338</span>, <span style="color:#f60">0.038</span>]      <span style="color:#f60">0.6372</span>
+(<span style="color:#f60">0.00748</span>, <span style="color:#f60">0.00874</span>]      <span style="color:#f60">0.8603</span>    (<span style="color:#f60">0.038</span>, <span style="color:#f60">0.0422</span>]      <span style="color:#f60">0.6322</span>
+(<span style="color:#f60">0.00874</span>, <span style="color:#f60">0.0102</span>]       <span style="color:#f60">0.8373</span>    (<span style="color:#f60">0.0422</span>, <span style="color:#f60">0.0465</span>]     <span style="color:#f60">0.6144</span>
+(<span style="color:#f60">0.0102</span>, <span style="color:#f60">0.012</span>]         <span style="color:#f60">0.7980</span>    (<span style="color:#f60">0.0465</span>, <span style="color:#f60">0.0513</span>]     <span style="color:#f60">0.5803</span>
+(<span style="color:#f60">0.012</span>, <span style="color:#f60">0.0142</span>]         <span style="color:#f60">0.7540</span>    (<span style="color:#f60">0.0513</span>, <span style="color:#f60">0.0564</span>]     <span style="color:#f60">0.5496</span>
+______________________________    ___________________________
+
+         Index Put                     Equity Put
+______________________________    ___________________________
+(<span style="color:#555">-</span><span style="color:#f60">0.00344</span>, <span style="color:#555">-</span><span style="color:#f60">0.00307</span>]    <span style="color:#f60">0.7271</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0302</span>, <span style="color:#555">-</span><span style="color:#f60">0.0277</span>]   <span style="color:#f60">0.4778</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.00307</span>, <span style="color:#555">-</span><span style="color:#f60">0.00272</span>]    <span style="color:#f60">0.7408</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0277</span>, <span style="color:#555">-</span><span style="color:#f60">0.0253</span>]   <span style="color:#f60">0.4869</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.00272</span>, <span style="color:#555">-</span><span style="color:#f60">0.0024</span>]     <span style="color:#f60">0.7476</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0253</span>, <span style="color:#555">-</span><span style="color:#f60">0.0229</span>]   <span style="color:#f60">0.4914</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.0024</span>, <span style="color:#555">-</span><span style="color:#f60">0.00208</span>]     <span style="color:#f60">0.7507</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0229</span>, <span style="color:#555">-</span><span style="color:#f60">0.0205</span>]   <span style="color:#f60">0.4916</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.00208</span>, <span style="color:#555">-</span><span style="color:#f60">0.00179</span>]    <span style="color:#f60">0.7636</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0205</span>, <span style="color:#555">-</span><span style="color:#f60">0.0182</span>]   <span style="color:#f60">0.4982</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.00179</span>, <span style="color:#555">-</span><span style="color:#f60">0.00151</span>]    <span style="color:#f60">0.7743</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0182</span>, <span style="color:#555">-</span><span style="color:#f60">0.0158</span>]   <span style="color:#f60">0.5100</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.00151</span>, <span style="color:#555">-</span><span style="color:#f60">0.00126</span>]    <span style="color:#f60">0.7910</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0158</span>, <span style="color:#555">-</span><span style="color:#f60">0.0135</span>]   <span style="color:#f60">0.5207</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.00126</span>, <span style="color:#555">-</span><span style="color:#f60">0.001</span>]      <span style="color:#f60">0.8379</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0135</span>, <span style="color:#555">-</span><span style="color:#f60">0.011</span>]    <span style="color:#f60">0.5404</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.001</span>, <span style="color:#555">-</span><span style="color:#f60">0.000724</span>]     <span style="color:#f60">0.8818</span>    (<span style="color:#555">-</span><span style="color:#f60">0.011</span>, <span style="color:#555">-</span><span style="color:#f60">0.0083</span>]    <span style="color:#f60">0.5605</span>
+(<span style="color:#555">-</span><span style="color:#f60">0.000724</span>, <span style="color:#555">-</span><span style="color:#f60">0.000168</span>]  <span style="color:#f60">0.9230</span>    (<span style="color:#555">-</span><span style="color:#f60">0.0083</span>, <span style="color:#555">-</span><span style="color:#f60">0.00196</span>]  <span style="color:#f60">0.5975</span>
+______________________________    ___________________________</code></pre></div>
+<p>As shown, I think excluding |delta|&lt;0.01 for index option and |delta|&lt;0.02 for equity options can supress the bid-ask spread to reasonable level.</p>
+
+<table>
+<thead>
+<tr>
+<th>Filters</th>
+<th>Observations</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Apply 4 filters</td>
+<td>8,146,791</td>
+</tr>
+
+<tr>
+<td>Excluding extreme out-of-money option</td>
+<td>7,402,859</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="3-2-put-call-parity">3.2 Put-call parity</h3>
+
+<p>In order to investigate the put call parity, we need to find the each put call pair for the same maturity and strike price.
+Out of 7,402,859 contracts, I found 6,180,488 contracts that can paired with each other.</p>
+
+<table>
+<thead>
+<tr>
+<th>Filters</th>
+<th>Observations</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Apply 5 filters</td>
+<td>7,402,859</td>
+</tr>
+
+<tr>
+<td>Excluding contracts that cannot be paired</td>
+<td>6,180,488</td>
+</tr>
+</tbody>
+</table>
+
+<p>Below is a snapshot of paired dataset:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  ticker       date   strike maturity      bid      ask   midquo   imvol   delta  optionid cp_flag
+<span style="color:#f60">0</span>     BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">25.0000</span>      <span style="color:#f60">197</span>  <span style="color:#f60">17.5000</span>  <span style="color:#f60">17.8000</span>  <span style="color:#f60">17.6500</span>  <span style="color:#f60">0.3568</span>  <span style="color:#f60">0.9886</span>  <span style="color:#f60">20522069</span>       C
+<span style="color:#f60">1</span>     BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">25.0000</span>      <span style="color:#f60">197</span>   <span style="color:#f60">0.1500</span>   <span style="color:#f60">0.2500</span>   <span style="color:#f60">0.2000</span>  <span style="color:#f60">0.4344</span> <span style="color:#555">-</span><span style="color:#f60">0.0332</span>  <span style="color:#f60">20522076</span>       P
+<span style="color:#f60">2</span>     BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">30.0000</span>      <span style="color:#f60">106</span>  <span style="color:#f60">12.5000</span>  <span style="color:#f60">12.8000</span>  <span style="color:#f60">12.6500</span>  <span style="color:#f60">0.3146</span>  <span style="color:#f60">0.9877</span>  <span style="color:#f60">20429450</span>       C
+<span style="color:#f60">3</span>     BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">30.0000</span>      <span style="color:#f60">106</span>   <span style="color:#f60">0.1500</span>   <span style="color:#f60">0.3000</span>   <span style="color:#f60">0.2250</span>  <span style="color:#f60">0.4262</span> <span style="color:#555">-</span><span style="color:#f60">0.0504</span>  <span style="color:#f60">20429457</span>       P
+<span style="color:#f60">4</span>     BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">30.0000</span>      <span style="color:#f60">169</span>   <span style="color:#f60">9.5000</span>   <span style="color:#f60">9.7000</span>   <span style="color:#f60">9.6000</span>  <span style="color:#f60">0.3329</span>  <span style="color:#f60">0.9007</span>  <span style="color:#f60">20502627</span>       C
+<span style="color:#f60">5</span>     BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">30.0000</span>      <span style="color:#f60">169</span>   <span style="color:#f60">0.3500</span>   <span style="color:#f60">0.4500</span>   <span style="color:#f60">0.4000</span>  <span style="color:#f60">0.3234</span> <span style="color:#555">-</span><span style="color:#f60">0.0914</span>  <span style="color:#f60">20502630</span>       P</code></pre></div>
+<p><strong>calculate the put call parity</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">parity[<span style="color:#c30">&#39;C-P&#39;</span>] <span style="color:#555">=</span> parity[<span style="color:#c30">&#39;ask&#39;</span>][<span style="color:#c30">&#39;C&#39;</span>] <span style="color:#555">-</span> parity[<span style="color:#c30">&#39;bid&#39;</span>][<span style="color:#c30">&#39;P&#39;</span>]
+parity[<span style="color:#c30">&#39;S-DK&#39;</span>] <span style="color:#555">=</span> parity[<span style="color:#c30">&#39;prc&#39;</span>] <span style="color:#555">-</span> parity[<span style="color:#c30">&#39;brate&#39;</span>]<span style="color:#555">*</span>parity[<span style="color:#c30">&#39;strike&#39;</span>]
+parity[<span style="color:#c30">&#39;diff&#39;</span>] <span style="color:#555">=</span> <span style="color:#366">abs</span>((parity[<span style="color:#c30">&#39;C-P&#39;</span>]<span style="color:#555">-</span>parity[<span style="color:#c30">&#39;S-DK&#39;</span>])<span style="color:#555">/</span>parity[<span style="color:#c30">&#39;S-DK&#39;</span>])</code></pre></div>
+<p>snapshot of the put call parity</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">       ticker       date   strike maturity      bid              ask              C<span style="color:#555">-</span>P     S<span style="color:#555">-</span>DK    diff
+cp_flag                                            C       P        C       P
+<span style="color:#f60">0</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">25.0000</span>      <span style="color:#f60">197</span>  <span style="color:#f60">17.5000</span>  <span style="color:#f60">0.1500</span>  <span style="color:#f60">17.8000</span>  <span style="color:#f60">0.2500</span>  <span style="color:#f60">17.6500</span>  <span style="color:#f60">18.1236</span>  <span style="color:#f60">0.0261</span>
+<span style="color:#f60">1</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">30.0000</span>      <span style="color:#f60">106</span>  <span style="color:#f60">12.5000</span>  <span style="color:#f60">0.1500</span>  <span style="color:#f60">12.8000</span>  <span style="color:#f60">0.3000</span>  <span style="color:#f60">12.6500</span>  <span style="color:#f60">13.1830</span>  <span style="color:#f60">0.0404</span>
+<span style="color:#f60">2</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">30.0000</span>      <span style="color:#f60">169</span>   <span style="color:#f60">9.5000</span>  <span style="color:#f60">0.3500</span>   <span style="color:#f60">9.7000</span>  <span style="color:#f60">0.4500</span>   <span style="color:#f60">9.3500</span>  <span style="color:#f60">13.2138</span>  <span style="color:#f60">0.2924</span>
+<span style="color:#f60">3</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">30.0000</span>      <span style="color:#f60">197</span>  <span style="color:#f60">12.9000</span>  <span style="color:#f60">0.4500</span>  <span style="color:#f60">13.1000</span>  <span style="color:#f60">0.5500</span>  <span style="color:#f60">12.6500</span>  <span style="color:#f60">13.2263</span>  <span style="color:#f60">0.0436</span>
+<span style="color:#f60">4</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">32.5000</span>       <span style="color:#f60">71</span>   <span style="color:#f60">6.8000</span>  <span style="color:#f60">0.1500</span>   <span style="color:#f60">7.0000</span>  <span style="color:#f60">0.2500</span>   <span style="color:#f60">6.8500</span>  <span style="color:#f60">10.7189</span>  <span style="color:#f60">0.3609</span>
+<span style="color:#f60">5</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">32.5000</span>      <span style="color:#f60">169</span>   <span style="color:#f60">7.4000</span>  <span style="color:#f60">0.7000</span>   <span style="color:#f60">7.5000</span>  <span style="color:#f60">0.8000</span>   <span style="color:#f60">6.8000</span>  <span style="color:#f60">10.7642</span>  <span style="color:#f60">0.3683</span>
+<span style="color:#f60">6</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">35.0000</span>       <span style="color:#f60">71</span>   <span style="color:#f60">4.6000</span>  <span style="color:#f60">0.4500</span>   <span style="color:#f60">4.8000</span>  <span style="color:#f60">0.5500</span>   <span style="color:#f60">4.3500</span>   <span style="color:#f60">8.2657</span>  <span style="color:#f60">0.4737</span>
+<span style="color:#f60">7</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">35.0000</span>      <span style="color:#f60">106</span>   <span style="color:#f60">8.0000</span>  <span style="color:#f60">0.6000</span>   <span style="color:#f60">8.3000</span>  <span style="color:#f60">0.7000</span>   <span style="color:#f60">7.7000</span>   <span style="color:#f60">8.2785</span>  <span style="color:#f60">0.0699</span>
+<span style="color:#f60">8</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">35.0000</span>      <span style="color:#f60">169</span>   <span style="color:#f60">5.4000</span>  <span style="color:#f60">1.2000</span>   <span style="color:#f60">5.6000</span>  <span style="color:#f60">1.3000</span>   <span style="color:#f60">4.4000</span>   <span style="color:#f60">8.3145</span>  <span style="color:#f60">0.4708</span>
+<span style="color:#f60">9</span>           BK <span style="color:#f60">2002</span><span style="color:#555">-</span><span style="color:#f60">01</span><span style="color:#555">-</span><span style="color:#f60">04</span>  <span style="color:#f60">35.0000</span>      <span style="color:#f60">197</span>   <span style="color:#f60">8.6000</span>  <span style="color:#f60">1.2000</span>   <span style="color:#f60">8.9000</span>  <span style="color:#f60">1.3000</span>   <span style="color:#f60">7.7000</span>   <span style="color:#f60">8.3290</span>  <span style="color:#f60">0.0755</span></code></pre></div>
+<p>Below is the plot the put-call parity difference against delta
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTMFhTdVp6bm5tenM" alt="" />
+The light grey dash line the 2.5. As shown, there are lot of speculations around ATM regions, and the violations of put-call parity is mostly severe in the ATM region. I set 2.5 as the threshold. If the difference of put call parity is larger than threshold, then drop the pair of contracts.</p>
+
+<table>
+<thead>
+<tr>
+<th>Filters</th>
+<th>Observations</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Apply 6 filters</td>
+<td>6,180,488</td>
+</tr>
+
+<tr>
+<td>Excluding put call pairs with put-call parity difference larger than 2.5</td>
+<td>6,040,856</td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

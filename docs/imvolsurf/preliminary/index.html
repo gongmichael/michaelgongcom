@@ -1,0 +1,210 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary"></span></h2>
+    <span class="text-info">January 1, 0001 | </span>
+    <ul class="tags">
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-descriptive-plot">1. Descriptive plot</h1>
+
+<p>Below is the descriptive plotting of data. The term is defined as the difference of implied volatility between
+longest maturity and shortest maturity options. The smile structure is defined as the difference of implied
+volatility between DOTM Put and DOTM Call. The top 3 sub-plots average time series over stocks, and the
+bottom 3 sub-plots average time series over option groups.
+<img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/descriptive.png" alt="" /></p>
+
+<h1 id="2-economic-restricted-dfm-latent-factors">2. Economic restricted DFM latent factors</h1>
+
+<p>The following figure plots the fully optimized economic restricted DFM for each stock.
+<img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/dfmRestrFactors.png" alt="" /></p>
+
+<h1 id="3-relationship-between-equity-latent-factors-and-index-latent-factors">3. Relationship between equity latent factors and index latent factors</h1>
+
+<p>The following table shows the regression results of equation (5)-(7) (see <a href="https://github.com/gongmichael/ImvolSurf/blob/master/imvolsurf/meeting/20161206/Model.md">model documentation</a>).</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">=====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=========</span>  <span style="color:#555">========</span>  <span style="color:#555">=========</span>  <span style="color:#555">========</span>
+         alpha0    alpha1      beta0     beta1     gamma0    gamma1
+<span style="color:#555">=====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=========</span>  <span style="color:#555">========</span>  <span style="color:#555">=========</span>  <span style="color:#555">========</span>
+AAPL   <span style="color:#f60">0.232</span><span style="color:#555">***</span>  <span style="color:#f60">0.795</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.004</span><span style="color:#555">***</span>  <span style="color:#f60">0.531</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.010</span><span style="color:#555">***</span>  <span style="color:#f60">0.942</span><span style="color:#555">***</span>
+CVX    <span style="color:#f60">0.058</span><span style="color:#555">***</span>  <span style="color:#f60">0.929</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.001</span><span style="color:#555">***</span>  <span style="color:#f60">0.739</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.007</span><span style="color:#555">***</span>  <span style="color:#f60">0.986</span><span style="color:#555">***</span>
+DIS    <span style="color:#f60">0.050</span><span style="color:#555">***</span>  <span style="color:#f60">1.185</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.003</span><span style="color:#555">***</span>  <span style="color:#f60">0.961</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.002</span><span style="color:#555">***</span>  <span style="color:#f60">0.911</span><span style="color:#555">***</span>
+CMCSA  <span style="color:#f60">0.014</span><span style="color:#555">***</span>  <span style="color:#f60">1.535</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.001</span><span style="color:#555">***</span>  <span style="color:#f60">1.026</span><span style="color:#555">***</span>   <span style="color:#f60">0.002</span><span style="color:#555">***</span>  <span style="color:#f60">1.000</span><span style="color:#555">***</span>
+MO     <span style="color:#f60">0.109</span><span style="color:#555">***</span>  <span style="color:#f60">0.625</span><span style="color:#555">***</span>   <span style="color:#f60">0.001</span><span style="color:#555">***</span>  <span style="color:#f60">0.534</span><span style="color:#555">***</span>   <span style="color:#f60">0.015</span><span style="color:#555">***</span>  <span style="color:#f60">0.435</span><span style="color:#555">***</span>
+LLY    <span style="color:#f60">0.094</span><span style="color:#555">***</span>  <span style="color:#f60">0.79</span><span style="color:#555">***</span>   <span style="color:#555">-</span><span style="color:#f60">0.002</span><span style="color:#555">***</span>  <span style="color:#f60">0.575</span><span style="color:#555">***</span>   <span style="color:#f60">0.013</span><span style="color:#555">***</span>  <span style="color:#f60">0.404</span><span style="color:#555">***</span>
+CL     <span style="color:#f60">0.066</span><span style="color:#555">***</span>  <span style="color:#f60">0.685</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.000</span>     <span style="color:#f60">0.434</span><span style="color:#555">***</span>   <span style="color:#f60">0.001</span><span style="color:#555">***</span>  <span style="color:#f60">0.593</span><span style="color:#555">***</span>
+DOW    <span style="color:#f60">0.030</span><span style="color:#555">***</span>  <span style="color:#f60">1.518</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.005</span><span style="color:#555">***</span>  <span style="color:#f60">0.915</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.002</span><span style="color:#555">***</span>  <span style="color:#f60">1.056</span><span style="color:#555">***</span>
+FDX    <span style="color:#f60">0.063</span><span style="color:#555">***</span>  <span style="color:#f60">1.134</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.003</span><span style="color:#555">***</span>  <span style="color:#f60">0.698</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.004</span><span style="color:#555">***</span>  <span style="color:#f60">0.973</span><span style="color:#555">***</span>
+NSC    <span style="color:#f60">0.083</span><span style="color:#555">***</span>  <span style="color:#f60">1.138</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.003</span><span style="color:#555">***</span>  <span style="color:#f60">0.865</span><span style="color:#555">***</span>  <span style="color:#555">-</span><span style="color:#f60">0.005</span><span style="color:#555">***</span>  <span style="color:#f60">1.091</span><span style="color:#555">***</span>
+<span style="color:#555">=====</span>  <span style="color:#555">========</span>  <span style="color:#555">========</span>  <span style="color:#555">=========</span>  <span style="color:#555">========</span>  <span style="color:#555">=========</span>  <span style="color:#555">========</span></code></pre></div>
+<p>The following figure plots the residual from regression (5)-(7), and the percentage of variance explained
+by first principal is also depicted in each sub-plots.
+<img src="https://dl.dropboxusercontent.com/u/97697694/ImvolSurf/Update20161206/resid.png" alt="" /></p>
+
+<h1 id="4-investigation-whether-we-can-restrict-mt-to-diagonal">4. Investigation whether we can restrict mT to diagonal</h1>
+
+<p>If we can restrict the transition matrix mT in state equation to diagonal, then we can further reduce the computation
+burden. The table below reports the log-likelihood of (<strong>economic restricted</strong>) DFM and DFM with diagonal mT, respectively,
+and also shows likelihood ratio test and AIC results.
+* LR test shows that we reject the digonal mT version of DFM
+* AIC confirms the rejection
+* In the rest of works, I do not restrict the transition matrix of economic restricted DFM to diagonal. (<strong>Caveats:</strong> DFMX
+still has block diagonal structure of transition matrix).</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">=====</span>  <span style="color:#555">======</span>  <span style="color:#555">==========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">===========</span>  <span style="color:#555">=========</span>  <span style="color:#555">==============</span>
+<span style="color:#555">..</span>        DFM    DFMdiagT      diff       LR      p<span style="color:#555">-</span>value    DFM_AIC    DFMdiagT_AIC
+<span style="color:#555">=====</span>  <span style="color:#555">======</span>  <span style="color:#555">==========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">===========</span>  <span style="color:#555">=========</span>  <span style="color:#555">==============</span>
+AAPL   <span style="color:#f60">162420</span>      <span style="color:#f60">162404</span>  <span style="color:#f60">15.9359</span>   <span style="color:#f60">31.8717</span>  <span style="color:#f60">1.72677e-05</span>    <span style="color:#555">-</span><span style="color:#f60">324768</span>         <span style="color:#555">-</span><span style="color:#f60">324748</span>
+CVX    <span style="color:#f60">178149</span>      <span style="color:#f60">178108</span>  <span style="color:#f60">40.3204</span>   <span style="color:#f60">80.6407</span>  <span style="color:#f60">2.66454e-15</span>    <span style="color:#555">-</span><span style="color:#f60">356225</span>         <span style="color:#555">-</span><span style="color:#f60">356157</span>
+DIS    <span style="color:#f60">161679</span>      <span style="color:#f60">161658</span>  <span style="color:#f60">20.2688</span>   <span style="color:#f60">40.5377</span>  <span style="color:#f60">3.57086e-07</span>    <span style="color:#555">-</span><span style="color:#f60">323285</span>         <span style="color:#555">-</span><span style="color:#f60">323257</span>
+CMCSA  <span style="color:#f60">152295</span>      <span style="color:#f60">152274</span>  <span style="color:#f60">21.0861</span>   <span style="color:#f60">42.1722</span>  <span style="color:#f60">1.70026e-07</span>    <span style="color:#555">-</span><span style="color:#f60">304519</span>         <span style="color:#555">-</span><span style="color:#f60">304488</span>
+MO     <span style="color:#f60">150572</span>      <span style="color:#f60">150563</span>   <span style="color:#f60">8.5696</span>   <span style="color:#f60">17.1391</span>  <span style="color:#f60">0.008785420</span>    <span style="color:#555">-</span><span style="color:#f60">301072</span>         <span style="color:#555">-</span><span style="color:#f60">301067</span>
+LLY    <span style="color:#f60">163659</span>      <span style="color:#f60">163635</span>  <span style="color:#f60">23.2980</span>   <span style="color:#f60">46.5959</span>  <span style="color:#f60">2.25249e-08</span>    <span style="color:#555">-</span><span style="color:#f60">327245</span>         <span style="color:#555">-</span><span style="color:#f60">327211</span>
+CL     <span style="color:#f60">179288</span>      <span style="color:#f60">179261</span>  <span style="color:#f60">27.6979</span>   <span style="color:#f60">55.3957</span>  <span style="color:#f60">3.85631e-10</span>    <span style="color:#555">-</span><span style="color:#f60">358505</span>         <span style="color:#555">-</span><span style="color:#f60">358461</span>
+DOW    <span style="color:#f60">150453</span>      <span style="color:#f60">150417</span>  <span style="color:#f60">36.5697</span>   <span style="color:#f60">73.1395</span>  <span style="color:#f60">9.27036e-14</span>    <span style="color:#555">-</span><span style="color:#f60">300835</span>         <span style="color:#555">-</span><span style="color:#f60">300773</span>
+FDX    <span style="color:#f60">177178</span>      <span style="color:#f60">177159</span>  <span style="color:#f60">19.1824</span>   <span style="color:#f60">38.3648</span>  <span style="color:#f60">9.53158e-07</span>    <span style="color:#555">-</span><span style="color:#f60">354284</span>         <span style="color:#555">-</span><span style="color:#f60">354258</span>
+NSC    <span style="color:#f60">162507</span>      <span style="color:#f60">162484</span>  <span style="color:#f60">22.7190</span>   <span style="color:#f60">45.4381</span>  <span style="color:#f60">3.82982e-08</span>    <span style="color:#555">-</span><span style="color:#f60">324942</span>         <span style="color:#555">-</span><span style="color:#f60">324909</span>
+SPX    <span style="color:#f60">194588</span>      <span style="color:#f60">194564</span>  <span style="color:#f60">24.1380</span>   <span style="color:#f60">48.2760</span>  <span style="color:#f60">1.04070e-08</span>    <span style="color:#555">-</span><span style="color:#f60">389104</span>         <span style="color:#555">-</span><span style="color:#f60">389068</span>
+<span style="color:#555">=====</span>  <span style="color:#555">======</span>  <span style="color:#555">==========</span>  <span style="color:#555">========</span>  <span style="color:#555">=======</span>  <span style="color:#555">===========</span>  <span style="color:#555">=========</span>  <span style="color:#555">==============</span></code></pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

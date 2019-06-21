@@ -1,3 +1,13 @@
+---
+title: "Garch 11 "
+date: 2018-09-12T14:51:12+06:00
+author: Michael
+description: Uses Async call to lucene index for super fast autocompletion to address performance issue loading config.
+featured: false
+categories: ["cat1"]
+tags: ["java","jQuery"]
+---
+
 # Introducing GARCH(1,1)
 
 ## 1. Estimated Parameters

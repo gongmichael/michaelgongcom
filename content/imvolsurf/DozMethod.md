@@ -1,3 +1,13 @@
+---
+title: "Doz Method"
+date: 2018-09-12T14:51:12+06:00
+author: Michael
+description: Uses Async call to lucene index for super fast autocompletion to address performance issue loading config.
+featured: false
+categories: ["cat1"]
+tags: ["java","jQuery"]
+---
+
 # 1. RMSE against Doz iteration
 ![](https://drive.google.com/uc?export=view&id=0B9DzYBQbrkqTZGNJelFZMS1zUTA)
 
