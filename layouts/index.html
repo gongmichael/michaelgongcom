@@ -48,7 +48,8 @@
           </div>
         </div>
       </div>
-    
+
+      {{$base := $.Site.BaseURL}}
       {{ with .Site.GetPage "/blogs"}}
         {{ $featuredPages := where .Pages "Params.featured" true }}
         <div class="row">
@@ -69,7 +70,7 @@
                         <a class="btn btn-outline-primary btn-sm" role="button" href="{{.RelPermalink}}">Continue reading</a>
                       </div>
                       {{ if .Params.thumbnail}}
-                      <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src="{{.Params.thumbnail | absURL}}" style="width: 200px; height: 200px;">
+                      <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src="{{$.Site.BaseURL}}{{.Params.thumbnail}}" style="width: 200px; height: 200px;">
                       {{ end }}
                   </div>
               </div>
