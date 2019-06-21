@@ -1,0 +1,11 @@
+<section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">{{ .Title }}</span></h2>
+    <span class="text-info">{{ .Date.Format "January 2, 2006" }} | {{.Params.author}}</span>
+    {{ partial "techtags" . }}
+    <br classmy-4>
+    {{ .Content }}
+    {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
+    
+  </div>
+</section>

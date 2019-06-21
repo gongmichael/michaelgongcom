@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael&#39;s Hugo Learn</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Michael&#39;s Hugo Learn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Sep 2018 14:51:12 +0600</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Are You Doing the Right Way</title>
+      <link>http://example.org/blogs/are-you-doing-the-right-way/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/are-you-doing-the-right-way/</guid>
+      <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
+    </item>
+    
+    <item>
+      <title>Selected Equity Options Summary</title>
+      <link>http://example.org/blogs/20171101/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171101/</guid>
+      <description>1. Selected Equity Options Summary Base on our previous research, we find that our models performs better in the first two decile of S&amp;amp;P 500. Thus, in this version of results update, we restrict our attension to the top largest 100 stocks of S&amp;amp;P 100:
+ 1 Calculate the market capitalization of all S&amp;amp;P 500 stocks at the end of 2014, December 31. 2 Sort the stocks tickers by their market cap in descending order and select the top 100 largest stocks.</description>
+    </item>
+    
+    <item>
+      <title>Test Version 2: Add dummy for DOTM for Put option and DITM for Call option</title>
+      <link>http://example.org/blogs/20171024/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171024/</guid>
+      <description>Stock Summary By Size __________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq(%) Trading Volume Trading Dispersion __________________________________________________________________________________________________ SPX 1 0.226 1051.033 1.000 485.848 0.396 D1 46 0.284 131.054 0.999 306.024 0.590 D2 49 0.322 110.825 0.989 77.152 0.403 D3 48 0.325 93.376 0.993 67.958 0.362 D4 48 0.333 89.434 0.983 43.914 0.288 D5 49 0.344 74.517 0.971 25.830 0.257 D6 48 0.350 66.455 0.937 30.132 0.238 D7 48 0.</description>
+    </item>
+    
+    <item>
+      <title>S&amp;P 500 Equity Summary Statistics</title>
+      <link>http://example.org/blogs/20170926/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20170926/</guid>
+      <description>1.Summary Statistics    mean std   maturity cp_flag       10 C 0.198 0.124   P 0.199 0.117   30 C 0.185 0.096   P 0.187 0.097   60 C 0.187 0.088   P 0.189 0.090   91 C 0.189 0.083   P 0.191 0.086   122 C 0.191 0.079   P 0.193 0.</description>
+    </item>
+    
+    <item>
+      <title>Stock Summary</title>
+      <link>http://example.org/blogs/20171010/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171010/</guid>
+      <description>Stock Summary By Industry ___________________________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq Trading Volume ___________________________________________________________________________________________________________________ Manufacturing 183 0.336 86.400 0.970 72.292 Retail Trade 41 0.335 101.757 0.989 64.404 Wholesale Trade 13 0.324 63.988 0.949 13.172 Services 54 0.364 100.044 0.954 68.669 Transportation, Communications, Electric 66 0.319 72.050 0.944 39.522 Finance, Insurance and Real Estate 96 0.352 74.215 0.938 68.267 Mining 23 0.398 107.367 0.978 67.122 Nonclassifiable 2 0.331 38.</description>
+    </item>
+    
+    <item>
+      <title>Simple Image Post</title>
+      <link>http://example.org/blogs/simple-image-post/</link>
+      <pubDate>Wed, 12 Sep 2018 12:52:36 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/simple-image-post/</guid>
+      <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
+    </item>
+    
+    <item>
+      <title>CoderPortfolioの特徴</title>
+      <link>http://example.org/blogs/featuresofcoderportfolio.ja/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/featuresofcoderportfolio.ja/</guid>
+      <description>変更点 ShortCode &amp;ldquo;private content&amp;rdquo;を追加しました 綺麗なサイトを崩さずに、あなたの個人的なコンテンツ（趣味や感情）を簡単に伝えることができます。
+実際の動きについては、&amp;rdquo;テーマデモ&amp;rdquo;をご覧ください。
+リンクに赤い下線のアニメーションを追加しました サイトがよりカラフルに美しくなりました。
+SNSシェアのボタンを追加しました あなたの記事がより影響力を持つようになりました。
+コードのハイライトを変更しました 日本のサービス Qiita のハイライトを参照しました。
+とても優しく美しいハイライトです。
+ヘッダーに影を追加しました より境界線がはっきりしました。
+ShortCode &amp;ldquo;portfolio&amp;rdquo;を追加しました あなたの作品を綺麗に表示できるようになりました。 実際の動きについては、&amp;rdquo;テーマデモ&amp;rdquo;をご覧ください。</description>
+    </item>
+    
+    <item>
+      <title>Features Of CoderPortfolio</title>
+      <link>http://example.org/blogs/featuresofcoderportfolio/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/featuresofcoderportfolio/</guid>
+      <description>Change Point &amp;ldquo;private content&amp;rdquo; short code added. It is now possible to communicate your personal hobby and your own content.
+You can use it easily. Please see &amp;ldquo;theme-demo&amp;rdquo; for details and demo.
+An animation of red underline was added to Anchor. The site became a little fun and colorful.
+The button of the SNS share was added. It became to have an influence when writing articles more.
+Changed the color scheme of code highlight.</description>
+    </item>
+    
+    <item>
+      <title>Zoom in significant deltaO stocks</title>
+      <link>http://example.org/blogs/20171107/</link>
+      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171107/</guid>
+      <description>1.Zoom in significant deltaO stocks 1.1 distribution of variable percentage significance ________________________________________________________________________ const delta_n matur_n delta2 inter deltaO delta2O maturS ________________________________________________________________________ count 88.000 88.000 88.000 88.000 88.000 88.000 88.000 88.000 mean 0.997 0.528 0.520 0.331 0.480 0.273 0.612 0.513 std 0.007 0.138 0.095 0.113 0.102 0.101 0.083 0.120 min 0.968 0.198 0.193 0.129 0.264 0.096 0.349 0.210 25% 0.997 0.434 0.472 0.256 0.417 0.208 0.565 0.433 50% 1.000 0.539 0.</description>
+    </item>
+    
+    <item>
+      <title>Asymmetry</title>
+      <link>http://example.org/blogs/readme/</link>
+      <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/readme/</guid>
+      <description> Asymmetry fadfda
+ Investigate the asymmetry of Implied Volatility Surface
+ </description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>http://example.org/blogs/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>http://example.org/blogs/hugo-template-primer/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/hugo-template-primer/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>http://example.org/blogs/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at installing hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>http://example.org/blogs/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/resume/</guid>
+      <description>Home  Xun (Michael) Gong     Home  About  Education  Publications  Experience  Skills       Xun (Michael) Gong  Rotterdam, NL · gong@-remove-ese.eur.nl     PhD student of Econometric Institute, Erasmus University Rotterdam. Primary research areas are financial time series modelling, volatility modelling, and artificial neural network.
+                             Education Rochester Institute of Technology Bachelor of Science Management Information Systems  2006 - 2008   Clinton Community College Associate of Applied Science Computer Information Systems  2004 - 2006     Publications Talk - Organically DevOps: Building Quality and Security into the Software Supply Chain at Liberty Mutual This talk looked at Liberty Mutual’s transformation to Continuous Integration, Continuous Delivery, and DevOps.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Michael's Hugo Learn"
+
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+# pygmentsUseClasses = true
+PygmentsStyle = "manni"
+summarylength = 10
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+    author = "Michael"
+
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Blogs"
+    url = "blogs"
+    weight = 2
+
+[[menu.main]]
+    name = "Researches"
+    url = "researches"
+    weight = 3
+
+[[menu.main]]
+    name = "Resume"
+    url = "resume"
+    weight = 4
+

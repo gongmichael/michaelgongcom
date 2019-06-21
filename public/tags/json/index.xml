@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on Michael&#39;s Hugo Learn</title>
+    <link>http://example.org/tags/json/</link>
+    <description>Recent content in Json on Michael&#39;s Hugo Learn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Sep 2018 14:51:12 +0600</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Are You Doing the Right Way</title>
+      <link>http://example.org/blogs/are-you-doing-the-right-way/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/are-you-doing-the-right-way/</guid>
+      <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
+    </item>
+    
+    <item>
+      <title>Selected Equity Options Summary</title>
+      <link>http://example.org/blogs/20171101/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171101/</guid>
+      <description>1. Selected Equity Options Summary Base on our previous research, we find that our models performs better in the first two decile of S&amp;amp;P 500. Thus, in this version of results update, we restrict our attension to the top largest 100 stocks of S&amp;amp;P 100:
+ 1 Calculate the market capitalization of all S&amp;amp;P 500 stocks at the end of 2014, December 31. 2 Sort the stocks tickers by their market cap in descending order and select the top 100 largest stocks.</description>
+    </item>
+    
+    <item>
+      <title>Test Version 2: Add dummy for DOTM for Put option and DITM for Call option</title>
+      <link>http://example.org/blogs/20171024/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171024/</guid>
+      <description>Stock Summary By Size __________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq(%) Trading Volume Trading Dispersion __________________________________________________________________________________________________ SPX 1 0.226 1051.033 1.000 485.848 0.396 D1 46 0.284 131.054 0.999 306.024 0.590 D2 49 0.322 110.825 0.989 77.152 0.403 D3 48 0.325 93.376 0.993 67.958 0.362 D4 48 0.333 89.434 0.983 43.914 0.288 D5 49 0.344 74.517 0.971 25.830 0.257 D6 48 0.350 66.455 0.937 30.132 0.238 D7 48 0.</description>
+    </item>
+    
+    <item>
+      <title>S&amp;P 500 Equity Summary Statistics</title>
+      <link>http://example.org/blogs/20170926/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20170926/</guid>
+      <description>1.Summary Statistics    mean std   maturity cp_flag       10 C 0.198 0.124   P 0.199 0.117   30 C 0.185 0.096   P 0.187 0.097   60 C 0.187 0.088   P 0.189 0.090   91 C 0.189 0.083   P 0.191 0.086   122 C 0.191 0.079   P 0.193 0.</description>
+    </item>
+    
+    <item>
+      <title>Stock Summary</title>
+      <link>http://example.org/blogs/20171010/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171010/</guid>
+      <description>Stock Summary By Industry ___________________________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq Trading Volume ___________________________________________________________________________________________________________________ Manufacturing 183 0.336 86.400 0.970 72.292 Retail Trade 41 0.335 101.757 0.989 64.404 Wholesale Trade 13 0.324 63.988 0.949 13.172 Services 54 0.364 100.044 0.954 68.669 Transportation, Communications, Electric 66 0.319 72.050 0.944 39.522 Finance, Insurance and Real Estate 96 0.352 74.215 0.938 68.267 Mining 23 0.398 107.367 0.978 67.122 Nonclassifiable 2 0.331 38.</description>
+    </item>
+    
+    <item>
+      <title>Zoom in significant deltaO stocks</title>
+      <link>http://example.org/blogs/20171107/</link>
+      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171107/</guid>
+      <description>1.Zoom in significant deltaO stocks 1.1 distribution of variable percentage significance ________________________________________________________________________ const delta_n matur_n delta2 inter deltaO delta2O maturS ________________________________________________________________________ count 88.000 88.000 88.000 88.000 88.000 88.000 88.000 88.000 mean 0.997 0.528 0.520 0.331 0.480 0.273 0.612 0.513 std 0.007 0.138 0.095 0.113 0.102 0.101 0.083 0.120 min 0.968 0.198 0.193 0.129 0.264 0.096 0.349 0.210 25% 0.997 0.434 0.472 0.256 0.417 0.208 0.565 0.433 50% 1.000 0.539 0.</description>
+    </item>
+    
+    <item>
+      <title>Asymmetry</title>
+      <link>http://example.org/blogs/readme/</link>
+      <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/readme/</guid>
+      <description> Asymmetry fadfda
+ Investigate the asymmetry of Implied Volatility Surface
+ </description>
+    </item>
+    
+  </channel>
+</rss>

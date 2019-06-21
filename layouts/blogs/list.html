@@ -1,0 +1,87 @@
+
+<html lang="en">
+    {{ partial "head" . }}
+
+<body id="page-top">
+    {{/*  <main class="container-fluid">  */}}
+        {{ partial "nav.html" .}}
+        <br>
+        <br>
+        <br>
+    
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            <h2 class="section-heading">My Blogs</h2>
+            <hr class="my-4">
+            </div>
+        </div>
+        </div>
+    
+        {{ $featuredPages := where .Pages "Params.featured" true }}
+        {{ $nonefeaturedPages := where .Pages "Params.featured" false }}
+        <div class="row">
+          {{ range $featuredPages.ByPublishDate.Reverse}}
+              {{ .Scratch.Set "totruncated" 400 }}
+              {{if .Params.thumbnail}}
+                {{.Scratch.Set "totruncated" 100}}
+              {{end}}
+              {{$vvvv := .Scratch.Get "totruncated" }}
+              <div class="col-sm-3">
+                  <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                      <div class="card-body d-flex flex-column align-items-start">
+                        <h6 class="mb-0">
+                            <a class="text-dark" href="{{.URL}}"><strong>{{.Title}}</strong></a>
+                        </h6>
+                        {{ if isset .Params "tags" }}
+                            <ul class="tags">
+                                {{ range first 3 .Params.tags }}
+                                <li><a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
+
+                        <div class="mb-1 text-muted small">{{.Date.Format "Jan 2, 2006"}}</div>
+                        <p class="card-text mb-auto">{{.Summary | truncate $vvvv}}</p>
+                        <a class="btn btn-outline-primary btn-sm" role="button" href="{{.URL}}">Continue reading</a>
+                      </div>
+                      {{ if .Params.thumbnail}}
+                      <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src="{{.Params.thumbnail}}" style="width: 200px; height: 200px;">
+                      {{ end }}
+                  </div>
+              </div>
+          {{ end }}
+        </div>
+    
+        <div class="row">
+          {{ range $nonefeaturedPages.ByPublishDate.Reverse}}
+              {{ .Scratch.Set "totruncated" 100 }}
+              {{if .Params.thumbnail}}
+                {{.Scratch.Set "totruncated" 100}}
+              {{end}}
+              {{$vvvv := .Scratch.Get "totruncated" }}
+              <div class="col-sm-3">
+                  <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                      <div class="card-body d-flex flex-column align-items-start">
+                        <h6 class="mb-0">
+                            <a class="text-dark" href="{{.URL}}"><strong>{{.Title}}</strong></a>
+                        </h6>
+                        <div class="mb-1 text-muted small">{{.Date.Format "Jan 2, 2006"}}</div>
+                        <p class="card-text mb-auto">{{.Summary | truncate $vvvv}}</p>
+                        <a class="btn btn-outline-primary btn-sm" role="button" href="{{.URL}}">Continue reading</a>
+                      </div>
+                      {{ if .Params.thumbnail}}
+                      <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src="{{.Params.thumbnail}}" style="width: 200px; height: 200px;">
+                      {{ end }}
+                  </div>
+              </div>
+          {{ end }}
+        </div>
+    
+    
+        {{partial "footer" .}}
+    {{/*  </main>  */}}
+</body>
+</html>
+
+
