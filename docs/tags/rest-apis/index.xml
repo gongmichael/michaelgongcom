@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>REST APIs on Michael&#39;s Hugo Learn</title>
+    <title>REST APIs on Michael Gong</title>
     <link>https://michael-gong.com/tags/rest-apis/</link>
-    <description>Recent content in REST APIs on Michael&#39;s Hugo Learn</description>
+    <description>Recent content in REST APIs on Michael Gong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Sep 2018 14:51:12 +0600</lastBuildDate>

@@ -1,6 +1,6 @@
 baseURL = "https://michael-gong.com/"
 languageCode = "en-us"
-title = "Michael's Hugo Learn"
+title = "Michael Gong"
 
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
@@ -15,7 +15,6 @@ publishDir = "docs"
 
 [params]
     author = "Michael"
-
 
 [[menu.main]]
     name = "Home"
