@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bamboo on Michael&#39;s Hugo Learn</title>
-    <link>http://example.org/tags/bamboo/</link>
+    <link>https://gongmichael.github.io/michaelgongcom/tags/bamboo/</link>
     <description>Recent content in Bamboo on Michael&#39;s Hugo Learn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Sep 2018 14:51:12 +0600</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/bamboo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gongmichael.github.io/michaelgongcom/tags/bamboo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Models with DPCP</title>
-      <link>http://example.org/blogs/real-science/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/real-science/</link>
       <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/real-science/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/real-science/</guid>
       <description>import numpy as np import pandas as pd import itertools as it import gc import sys,os import yaml import matplotlib.</description>
     </item>
     
     <item>
       <title>Are You Doing the Right Way</title>
-      <link>http://example.org/blogs/are-you-doing-the-right-way/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/are-you-doing-the-right-way/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/are-you-doing-the-right-way/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/are-you-doing-the-right-way/</guid>
       <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
     </item>
     
     <item>
       <title>Selected Equity Options Summary</title>
-      <link>http://example.org/blogs/20171101/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171101/</link>
       <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/20171101/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171101/</guid>
       <description>1. Selected Equity Options Summary Base on our previous research, we find that our models performs better in the first two decile of S&amp;amp;P 500.</description>
     </item>
     
     <item>
       <title>Test Version 2: Add dummy for DOTM for Put option and DITM for Call option</title>
-      <link>http://example.org/blogs/20171024/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171024/</link>
       <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/20171024/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171024/</guid>
       <description>Stock Summary By Size __________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq(%) Trading Volume Trading Dispersion __________________________________________________________________________________________________ SPX 1 0.</description>
     </item>
     
     <item>
       <title>S&amp;P 500 Equity Summary Statistics</title>
-      <link>http://example.org/blogs/20170926/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/20170926/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/20170926/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20170926/</guid>
       <description>1.Summary Statistics    mean std   maturity cp_flag       10 C 0.</description>
     </item>
     
     <item>
       <title>Stock Summary</title>
-      <link>http://example.org/blogs/20171010/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171010/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/20171010/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171010/</guid>
       <description>Stock Summary By Industry ___________________________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq Trading Volume ___________________________________________________________________________________________________________________ Manufacturing 183 0.</description>
     </item>
     
     <item>
       <title>Zoom in significant deltaO stocks</title>
-      <link>http://example.org/blogs/20171107/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/20171107/</link>
       <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/20171107/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/20171107/</guid>
       <description>1.Zoom in significant deltaO stocks 1.1 distribution of variable percentage significance ________________________________________________________________________ const delta_n matur_n delta2 inter deltaO delta2O maturS ________________________________________________________________________ count 88.</description>
     </item>
     
     <item>
       <title>Zoom in significant deltaO stocks</title>
-      <link>http://example.org/blogs/creating-a-new-theme/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/creating-a-new-theme/</link>
       <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/creating-a-new-theme/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo.</description>
     </item>
     
     <item>
       <title>Asymmetry</title>
-      <link>http://example.org/blogs/readme/</link>
+      <link>https://gongmichael.github.io/michaelgongcom/blogs/readme/</link>
       <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
       
-      <guid>http://example.org/blogs/readme/</guid>
+      <guid>https://gongmichael.github.io/michaelgongcom/blogs/readme/</guid>
       <description>Asymmetry fadfda
  Investigate the asymmetry of Implied Volatility Surface</description>
     </item>
