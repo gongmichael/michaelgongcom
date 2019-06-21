@@ -7,6 +7,7 @@ pygmentscodefencesguesssyntax = true
 # pygmentsUseClasses = true
 PygmentsStyle = "manni"
 summarylength = 10
+publishDir = "docs"
 
 [taxonomies]
   category = "categories"

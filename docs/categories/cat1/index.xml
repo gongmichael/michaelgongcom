@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cat1 on Michael&#39;s Hugo Learn</title>
+    <link>http://example.org/categories/cat1/</link>
+    <description>Recent content in cat1 on Michael&#39;s Hugo Learn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Sep 2018 14:51:12 +0600</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/cat1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selected Equity Options Summary</title>
+      <link>http://example.org/blogs/20171101/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171101/</guid>
+      <description>1. Selected Equity Options Summary Base on our previous research, we find that our models performs better in the first two decile of S&amp;amp;P 500.</description>
+    </item>
+    
+    <item>
+      <title>Test Version 2: Add dummy for DOTM for Put option and DITM for Call option</title>
+      <link>http://example.org/blogs/20171024/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171024/</guid>
+      <description>Stock Summary By Size __________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq(%) Trading Volume Trading Dispersion __________________________________________________________________________________________________ SPX 1 0.</description>
+    </item>
+    
+    <item>
+      <title>Option contracts availability </title>
+      <link>http://example.org/imvolsurf/availability/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/availability/</guid>
+      <description>Option contracts availability 1 Contracts scatter plot The following figure plots the option contracts against its delta and maturity.</description>
+    </item>
+    
+    <item>
+      <title>S&amp;P 500 Equity Summary Statistics</title>
+      <link>http://example.org/blogs/20170926/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20170926/</guid>
+      <description>1.Summary Statistics    mean std   maturity cp_flag       10 C 0.</description>
+    </item>
+    
+    <item>
+      <title>Stock Summary</title>
+      <link>http://example.org/blogs/20171010/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171010/</guid>
+      <description>Stock Summary By Industry ___________________________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq Trading Volume ___________________________________________________________________________________________________________________ Manufacturing 183 0.</description>
+    </item>
+    
+    <item>
+      <title>Stock Summary</title>
+      <link>http://example.org/imvolsurf/archproto/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/archproto/</guid>
+      <description>Fully Efficient DFM with GARCH(1,1) prototype (JNJ as illustration) Model Documentation 0.</description>
+    </item>
+    
+    <item>
+      <title>Zoom in significant deltaO stocks</title>
+      <link>http://example.org/blogs/20171107/</link>
+      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171107/</guid>
+      <description>1.Zoom in significant deltaO stocks 1.1 distribution of variable percentage significance ________________________________________________________________________ const delta_n matur_n delta2 inter deltaO delta2O maturS ________________________________________________________________________ count 88.</description>
+    </item>
+    
+    <item>
+      <title>Zoom in significant deltaO stocks</title>
+      <link>http://example.org/blogs/creating-a-new-theme/</link>
+      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Asymmetry</title>
+      <link>http://example.org/blogs/readme/</link>
+      <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/readme/</guid>
+      <description>Asymmetry fadfda
+ Investigate the asymmetry of Implied Volatility Surface</description>
+    </item>
+    
+    <item>
+      <title>Option contracts availability </title>
+      <link>http://example.org/imvolsurf/crosssection/</link>
+      <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/crosssection/</guid>
+      <description>1. Likelihood of models ______________________________________________________________________________ ecoDfm fulDfm ecoDfmX1 ecoDfmX2 fulDfmX1 fulDfmX2 ______________________________________________________________________________ JNJ aic -350936.</description>
+    </item>
+    
+    <item>
+      <title>Residual Properties</title>
+      <link>http://example.org/imvolsurf/residualeval/</link>
+      <pubDate>Sun, 12 Mar 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/residualeval/</guid>
+      <description>Residual Properties 1. Heteroskedasticity The figure below plot the EWMA of residuals.</description>
+    </item>
+    
+  </channel>
+</rss>

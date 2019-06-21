@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael&#39;s Hugo Learn</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Michael&#39;s Hugo Learn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Sep 2018 14:51:12 +0600</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Models with DPCP</title>
+      <link>http://example.org/blogs/real-science/</link>
+      <pubDate>Tue, 18 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/real-science/</guid>
+      <description>import numpy as np import pandas as pd import itertools as it import gc import sys,os import yaml import matplotlib.</description>
+    </item>
+    
+    <item>
+      <title>Are You Doing the Right Way</title>
+      <link>http://example.org/blogs/are-you-doing-the-right-way/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/are-you-doing-the-right-way/</guid>
+      <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
+    </item>
+    
+    <item>
+      <title>Selected Equity Options Summary</title>
+      <link>http://example.org/blogs/20171101/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171101/</guid>
+      <description>1. Selected Equity Options Summary Base on our previous research, we find that our models performs better in the first two decile of S&amp;amp;P 500.</description>
+    </item>
+    
+    <item>
+      <title>Test Version 2: Add dummy for DOTM for Put option and DITM for Call option</title>
+      <link>http://example.org/blogs/20171024/</link>
+      <pubDate>Thu, 13 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171024/</guid>
+      <description>Stock Summary By Size __________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq(%) Trading Volume Trading Dispersion __________________________________________________________________________________________________ SPX 1 0.</description>
+    </item>
+    
+    <item>
+      <title>Option contracts availability </title>
+      <link>http://example.org/imvolsurf/availability/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/availability/</guid>
+      <description>Option contracts availability 1 Contracts scatter plot The following figure plots the option contracts against its delta and maturity.</description>
+    </item>
+    
+    <item>
+      <title>S&amp;P 500 Equity Summary Statistics</title>
+      <link>http://example.org/blogs/20170926/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20170926/</guid>
+      <description>1.Summary Statistics    mean std   maturity cp_flag       10 C 0.</description>
+    </item>
+    
+    <item>
+      <title>Stock Summary</title>
+      <link>http://example.org/blogs/20171010/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171010/</guid>
+      <description>Stock Summary By Industry ___________________________________________________________________________________________________________________ No. Stocks Mean Imvol Average Contract Trading Freq Trading Volume ___________________________________________________________________________________________________________________ Manufacturing 183 0.</description>
+    </item>
+    
+    <item>
+      <title>Stock Summary</title>
+      <link>http://example.org/imvolsurf/archproto/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/archproto/</guid>
+      <description>Fully Efficient DFM with GARCH(1,1) prototype (JNJ as illustration) Model Documentation 0.</description>
+    </item>
+    
+    <item>
+      <title>Simple Image Post</title>
+      <link>http://example.org/blogs/simple-image-post/</link>
+      <pubDate>Wed, 12 Sep 2018 12:52:36 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/simple-image-post/</guid>
+      <description>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</description>
+    </item>
+    
+    <item>
+      <title>Features Of CoderPortfolio</title>
+      <link>http://example.org/blogs/featuresofcoderportfolio/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/featuresofcoderportfolio/</guid>
+      <description>Change Point &amp;ldquo;private content&amp;rdquo; short code added. It is now possible to communicate your personal hobby and your own content.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Demo</title>
+      <link>http://example.org/blogs/theme-demo/</link>
+      <pubDate>Mon, 12 Mar 2018 12:52:36 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/theme-demo/</guid>
+      <description>Style Demo h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading This is bold text</description>
+    </item>
+    
+    <item>
+      <title>Zoom in significant deltaO stocks</title>
+      <link>http://example.org/blogs/20171107/</link>
+      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/20171107/</guid>
+      <description>1.Zoom in significant deltaO stocks 1.1 distribution of variable percentage significance ________________________________________________________________________ const delta_n matur_n delta2 inter deltaO delta2O maturS ________________________________________________________________________ count 88.</description>
+    </item>
+    
+    <item>
+      <title>Zoom in significant deltaO stocks</title>
+      <link>http://example.org/blogs/creating-a-new-theme/</link>
+      <pubDate>Mon, 12 Feb 2018 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Asymmetry</title>
+      <link>http://example.org/blogs/readme/</link>
+      <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/blogs/readme/</guid>
+      <description>Asymmetry fadfda
+ Investigate the asymmetry of Implied Volatility Surface</description>
+    </item>
+    
+    <item>
+      <title>Option contracts availability </title>
+      <link>http://example.org/imvolsurf/crosssection/</link>
+      <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/crosssection/</guid>
+      <description>1. Likelihood of models ______________________________________________________________________________ ecoDfm fulDfm ecoDfmX1 ecoDfmX2 fulDfmX1 fulDfmX2 ______________________________________________________________________________ JNJ aic -350936.</description>
+    </item>
+    
+    <item>
+      <title>Residual Properties</title>
+      <link>http://example.org/imvolsurf/residualeval/</link>
+      <pubDate>Sun, 12 Mar 2017 14:51:12 +0600</pubDate>
+      
+      <guid>http://example.org/imvolsurf/residualeval/</guid>
+      <description>Residual Properties 1. Heteroskedasticity The figure below plot the EWMA of residuals.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>http://example.org/blogs/hugo-template-primer/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/hugo-template-primer/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>http://example.org/blogs/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>http://example.org/blogs/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogs/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/csevaluate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/csevaluate/</guid>
+      <description>Bernales Guidolin 2014 Table 2 The table below shows the replication of Bernales Guidolin regression in Panel A.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/csevalute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/csevalute/</guid>
+      <description>1. In sample regression statistics (for ALL options) In this version, I delete contracts with maturity less than 11 days</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/dozmethod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/dozmethod/</guid>
+      <description>1. RMSE against Doz iteration 2. Latent factors of Doz method (converged) 3.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/ecevaluate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/ecevaluate/</guid>
+      <description>Economic Significance evaluation I setup a option straddle strategy to evaluate the economic significance of DFM and DFMX models.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/garch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/garch/</guid>
+      <description>Introducing GARCH(1,1) 1. Estimated Parameters w a b JNJ 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/isevaluate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/isevaluate/</guid>
+      <description>1.DFM In-sample Analysis 1.1 Likelihood change ==== ====== ======= ====== .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/modelredocument/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/modelredocument/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/newscreen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/newscreen/</guid>
+      <description>1. Data Sources In order to investigate the put call parity violation, the data comes from 3 dataset, all of them come from OptionMetrics.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/offgridfit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/offgridfit/</guid>
+      <description>1. In sample fit performance for off-grid contracts This figure plots the in-sample RMSE for off-grid contracts on stock level.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/oosevaluate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/oosevaluate/</guid>
+      <description>1. Out of Sample Forecasting Performance ___________________________________________________________ Orginal Set Insignificance 0 ____________________ ______________________ RMSE MAE MCP RMSE MAE MCP ___________________________________________________________ EQT CS3 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/osevaluate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/osevaluate/</guid>
+      <description>Out-of-sample performace evaluation  I estimated 4 models: fully efficient DFM (fulDfm), economic restricted DFM (ecoDfm), fully efficient DFMX(fulDfmX), and economic restricted DFMX (ecoDfmX).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/prevaluate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/prevaluate/</guid>
+      <description>1.Data Description I choose the second largest stocks in each quintile of S&amp;amp;P 100 index.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/par/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/par/</guid>
+      <description>AAPL vC:
+[[ 0.22281611] [ 0.25816104] [ 0.27871024] [ 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/par3i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/par3i/</guid>
+      <description>AAPL vC:
+[[ 0.22240501] [ 0.22405836] [ 0.225774 ] [ 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/par_revisit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/par_revisit/</guid>
+      <description>AAPL vC:
+[[ 0.22313105] [ 0.22443361] [ 0.22519078] [ 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/par_revisit1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/par_revisit1/</guid>
+      <description>AAPL vC:
+[[ 0.23994076] [ 0.22454118] [ 0.21558772] [ 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/readme/</guid>
+      <description>Data Description 7Firms.h Created on 2016/11/03  This file contains the screened data from 7FirmsInterpolated.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/smallcap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/smallcap/</guid>
+      <description>Small Cap Stock analysis (RHI) Estmiation results ecoDfm fulDfm ecoDfmX1 ecoDfmX2 fulDfmX1 fulDfmX2 No.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/ecodfm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/ecodfm/</guid>
+      <description>ecoDfm system matrices vC [[[ 0.00e+00] [ 0.00e+00] [ 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/ecodfmx1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/ecodfmx1/</guid>
+      <description>ecoDfmX1 system matrices vC [[[ 8.45e-02] [ 8.49e-02] [ 8.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/ecodfmx2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/ecodfmx2/</guid>
+      <description>ecoDfmX2 system matrices vC [[[ 9.84e-02] [ 1.02e-01] [ 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/economic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/economic/</guid>
+      <description>Straddle strategy In this version, I only implement the option straddle strategy to evaluate the economic significance of DFM and DFMX models.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/fuldfm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/fuldfm/</guid>
+      <description>fulDfm system matrices vC [[[ 0.00e+00] [ 0.00e+00] [ 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/fuldfmx1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/fuldfmx1/</guid>
+      <description>fulDfmX1 system matrices vC [[[ 1.09e-01] [ 1.14e-01] [ 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/fuldfmx2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/fuldfmx2/</guid>
+      <description>fulDfmX2 system matrices vC [[[ 1.06e-01] [ 9.73e-02] [ 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/illustration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/illustration/</guid>
+      <description>Illustration using one stock (Johnson &amp;amp; Johnson:JNJ) Overview of last two meetings * Meeting with @Dick + Issues: Identification of both constants in measurement equation and state equation.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/insample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/insample/</guid>
+      <description>1.Estimation results Below is the estimated parameters of model (15).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/insample3i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/insample3i/</guid>
+      <description>1.Estimation results Below is the estimated parameters of model (15).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/outsample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/outsample/</guid>
+      <description>1.Out of sample forecasting performance statistics aggregated The figure below plots the out of sample forecasting error (RMSE) and mean correct prediction.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/params/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/params/</guid>
+      <description>&amp;rdquo;&amp;lsquo;python vC [[[ 1.06e-01] [ 9.73e-02] [ 1.14e-01] [ 7.00e-02] [ 6.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/preliminary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/preliminary/</guid>
+      <description>1. Descriptive plot Below is the descriptive plotting of data.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/residuals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/residuals/</guid>
+      <description>Residuals properties 0. A illustration plot of residuals 1. Test for heteroskedasticity  I use Engle’s Test for Autoregressive Conditional Heteroscedasticity.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/update/</guid>
+      <description>1. Fit errors of different trainning sample In this update, I&amp;rsquo;ve tried 3 different grouping, and investigate their in-sample properties.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/imvolsurf/update_v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/imvolsurf/update_v1/</guid>
+      <description>(2) Re-estimated DFMX model (equation 9 - 12) (2.1) plot of factors (2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/resume/</guid>
+      <description>Home  Xun (Michael) Gong     Home  About  Education  Publications  Experience  Skills       Xun (Michael) Gong  Rotterdam, NL · gong@-remove-ese.</description>
+    </item>
+    
+  </channel>
+</rss>

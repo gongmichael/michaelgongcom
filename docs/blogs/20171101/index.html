@@ -1,0 +1,318 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael&#39;s Hugo Learn</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="http://example.org/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="http://example.org/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="http://example.org/css/creative.css" rel="stylesheet">
+    <link href="http://example.org/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="http://example.org/reference.bib"></bibtex>
+
+
+    <base href="http://example.org/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/imvolsurf">IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Selected Equity Options Summary</span></h2>
+    <span class="text-info">September 13, 2018 | Michael</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/java">java</a></li>
+    
+      <li><a class="tag" href="/tags/jquery">jQuery</a></li>
+    
+      <li><a class="tag" href="/tags/rest-apis">REST APIs</a></li>
+    
+      <li><a class="tag" href="/tags/bamboo">Bamboo</a></li>
+    
+      <li><a class="tag" href="/tags/json">JSON</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-selected-equity-options-summary">1. Selected Equity Options Summary</h1>
+
+<p>Base on our previous research, we find that our models performs better in the first two decile of S&amp;P 500. Thus, in this version of results update, we restrict our attension to the top largest 100 stocks of S&amp;P 100:</p>
+
+<ul>
+<li>1 Calculate the market capitalization of all S&amp;P 500 stocks at the end of 2014, December 31.</li>
+<li>2 Sort the stocks tickers by their market cap in descending order and select the top 100 largest stocks.</li>
+<li>3 Divide the <strong>100 stocks into 10 deciles.</strong></li>
+<li>4 Perform data screending procedures.</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">numpy</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">np</span></code></pre></div>
+<blockquote>
+<p>Below is the summary of selected equity options</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">__________________________________________________________________________________________________
+     No<span style="color:#555">.</span> Stocks  Mean Imvol  Average Contract  Trading Freq(<span style="color:#555">%</span>)  Trading Volume  Trading Dispersion
+__________________________________________________________________________________________________
+SPX           <span style="color:#f60">1</span>       <span style="color:#f60">0.226</span>          <span style="color:#f60">1051.033</span>            <span style="color:#f60">1.000</span>         <span style="color:#f60">485.848</span>               <span style="color:#f60">0.396</span>
+
+D1            <span style="color:#f60">8</span>       <span style="color:#f60">0.298</span>           <span style="color:#f60">159.255</span>            <span style="color:#f60">1.000</span>         <span style="color:#f60">457.608</span>               <span style="color:#f60">0.689</span>
+D2           <span style="color:#f60">10</span>       <span style="color:#f60">0.259</span>           <span style="color:#f60">139.025</span>            <span style="color:#f60">0.999</span>         <span style="color:#f60">326.940</span>               <span style="color:#f60">0.626</span>
+D3           <span style="color:#f60">10</span>       <span style="color:#f60">0.299</span>           <span style="color:#f60">113.835</span>            <span style="color:#f60">0.997</span>         <span style="color:#f60">478.158</span>               <span style="color:#f60">0.588</span>
+D4           <span style="color:#f60">10</span>       <span style="color:#f60">0.278</span>           <span style="color:#f60">114.813</span>            <span style="color:#f60">0.999</span>         <span style="color:#f60">150.185</span>               <span style="color:#f60">0.503</span>
+D5            <span style="color:#f60">8</span>       <span style="color:#f60">0.306</span>           <span style="color:#f60">139.777</span>            <span style="color:#f60">1.000</span>          <span style="color:#f60">92.867</span>               <span style="color:#f60">0.522</span>
+D6           <span style="color:#f60">10</span>       <span style="color:#f60">0.298</span>           <span style="color:#f60">105.791</span>            <span style="color:#f60">1.000</span>         <span style="color:#f60">121.219</span>               <span style="color:#f60">0.504</span>
+D7           <span style="color:#f60">10</span>       <span style="color:#f60">0.291</span>           <span style="color:#f60">135.624</span>            <span style="color:#f60">0.999</span>          <span style="color:#f60">62.211</span>               <span style="color:#f60">0.400</span>
+D8            <span style="color:#f60">9</span>       <span style="color:#f60">0.316</span>            <span style="color:#f60">93.550</span>            <span style="color:#f60">0.989</span>          <span style="color:#f60">91.392</span>               <span style="color:#f60">0.431</span>
+D9            <span style="color:#f60">7</span>       <span style="color:#f60">0.360</span>           <span style="color:#f60">153.492</span>            <span style="color:#f60">0.999</span>          <span style="color:#f60">89.073</span>               <span style="color:#f60">0.425</span>
+D10           <span style="color:#f60">4</span>       <span style="color:#f60">0.293</span>            <span style="color:#f60">66.093</span>            <span style="color:#f60">0.996</span>          <span style="color:#f60">33.206</span>               <span style="color:#f60">0.352</span>
+
+<span style="color:#366">sum</span><span style="color:#555">/</span>avg      <span style="color:#f60">87</span>       <span style="color:#f60">0.293</span>           <span style="color:#f60">206.572</span>            <span style="color:#f60">0.998</span>         <span style="color:#f60">217.155</span>               <span style="color:#f60">0.494</span>
+__________________________________________________________________________________________________</code></pre></div>
+<h1 id="2-cross-sectional-regression-factors-summary">2. Cross Sectional Regression Factors Summary</h1>
+
+<p>According to our discussion, we implement two versions of cross-sectional regression.</p>
+
+<p>Build on top of Bernales and Guidolin 5 Factors model:
+* version 1: Add dummy variables of delta_n, delta2 for DOTM, OTM options for <strong>all call and put</strong>.
+* version 2: Add dummy variables of delta_n, delta2 for <strong>DOTM and OTM of put</strong>, and <strong>DITM and ITM of call</strong></p>
+
+<p>Thus, version 1 dedicates to investigate the put-call parity and liquidity related issues, and version 2 attempts to investigate the asymmetry of the IVS over two regions.</p>
+
+<p>Summary of regression factors:
+* The results of version 2 only better for index options, while the version 1 results seem to be good for both equity and index options.
+* For index options, our deltaO and delta2O have high percentage significance for both versions.
+* For equity options, the percentage significance of CS8 of version 2 is down to 27.2%.</p>
+
+<h4 id="below-is-the-factor-summary-for-version-1">Below is the factor summary for version 1</h4>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">_______________________________________________________________________________________________________________________________________
+               CS5                            CS6                            CS7                            CS8                        
+              mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct   mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct   mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct   mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct
+_______________________________________________________________________________________________________________________________________
+EQT const   <span style="color:#555">-</span><span style="color:#f60">1.332</span>  <span style="color:#f60">0.293</span>   <span style="color:#f60">98.072</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.336</span>  <span style="color:#f60">0.294</span>  <span style="color:#f60">108.468</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.337</span>  <span style="color:#f60">0.295</span>  <span style="color:#f60">110.933</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.339</span>  <span style="color:#f60">0.292</span>   <span style="color:#f60">99.683</span>   <span style="color:#f60">0.998</span>
+    matur_n  <span style="color:#f60">0.005</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">4.692</span>   <span style="color:#f60">0.725</span>  <span style="color:#f60">0.005</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">5.174</span>   <span style="color:#f60">0.753</span>  <span style="color:#f60">0.005</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">5.283</span>   <span style="color:#f60">0.759</span>  <span style="color:#f60">0.006</span>  <span style="color:#f60">0.037</span>    <span style="color:#f60">2.848</span>   <span style="color:#f60">0.554</span>
+    delta_n  <span style="color:#f60">0.158</span>  <span style="color:#f60">0.091</span>   <span style="color:#f60">17.614</span>   <span style="color:#f60">0.962</span>  <span style="color:#f60">0.144</span>  <span style="color:#f60">0.117</span>   <span style="color:#f60">14.177</span>   <span style="color:#f60">0.940</span>  <span style="color:#f60">0.144</span>  <span style="color:#f60">0.122</span>   <span style="color:#f60">14.132</span>   <span style="color:#f60">0.941</span>  <span style="color:#f60">0.144</span>  <span style="color:#f60">0.121</span>   <span style="color:#f60">15.024</span>   <span style="color:#f60">0.943</span>
+    delta2   <span style="color:#f60">0.073</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">6.198</span>   <span style="color:#f60">0.906</span>  <span style="color:#f60">0.078</span>  <span style="color:#f60">0.046</span>    <span style="color:#f60">7.069</span>   <span style="color:#f60">0.943</span>  <span style="color:#f60">0.078</span>  <span style="color:#f60">0.052</span>    <span style="color:#f60">6.228</span>   <span style="color:#f60">0.918</span>  <span style="color:#f60">0.078</span>  <span style="color:#f60">0.051</span>    <span style="color:#f60">6.552</span>   <span style="color:#f60">0.923</span>
+    inter    <span style="color:#f60">0.009</span>  <span style="color:#f60">0.027</span>    <span style="color:#f60">2.070</span>   <span style="color:#f60">0.465</span>  <span style="color:#f60">0.009</span>  <span style="color:#f60">0.027</span>    <span style="color:#f60">2.297</span>   <span style="color:#f60">0.508</span>  <span style="color:#f60">0.009</span>  <span style="color:#f60">0.027</span>    <span style="color:#f60">2.346</span>   <span style="color:#f60">0.517</span>  <span style="color:#f60">0.009</span>  <span style="color:#f60">0.025</span>    <span style="color:#f60">2.464</span>   <span style="color:#f60">0.528</span>
+    deltaO                                  <span style="color:#f60">0.030</span>  <span style="color:#f60">0.081</span>    <span style="color:#f60">4.105</span>   <span style="color:#f60">0.709</span>  <span style="color:#f60">0.031</span>  <span style="color:#f60">0.094</span>    <span style="color:#f60">4.382</span>   <span style="color:#f60">0.725</span>  <span style="color:#f60">0.031</span>  <span style="color:#f60">0.093</span>    <span style="color:#f60">4.654</span>   <span style="color:#f60">0.738</span>
+    delta2O                                                                <span style="color:#f60">0.004</span>  <span style="color:#f60">0.040</span>    <span style="color:#f60">1.776</span>   <span style="color:#f60">0.417</span>  <span style="color:#f60">0.003</span>  <span style="color:#f60">0.037</span>    <span style="color:#f60">1.877</span>   <span style="color:#f60">0.441</span>
+    maturS                                                                                               <span style="color:#555">-</span><span style="color:#f60">0.003</span>  <span style="color:#f60">0.095</span>    <span style="color:#f60">2.981</span>   <span style="color:#f60">0.549</span>
+    R2       <span style="color:#f60">0.744</span>  <span style="color:#f60">0.184</span>                   <span style="color:#f60">0.802</span>  <span style="color:#f60">0.135</span>                   <span style="color:#f60">0.814</span>  <span style="color:#f60">0.128</span>                   <span style="color:#f60">0.834</span>  <span style="color:#f60">0.122</span>                 
+SPX const   <span style="color:#555">-</span><span style="color:#f60">1.658</span>  <span style="color:#f60">0.293</span>  <span style="color:#f60">332.681</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.661</span>  <span style="color:#f60">0.294</span>  <span style="color:#f60">368.930</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.661</span>  <span style="color:#f60">0.294</span>  <span style="color:#f60">372.903</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.655</span>  <span style="color:#f60">0.285</span>  <span style="color:#f60">335.955</span>   <span style="color:#f60">1.000</span>
+    matur_n  <span style="color:#f60">0.028</span>  <span style="color:#f60">0.059</span>   <span style="color:#f60">18.321</span>   <span style="color:#f60">0.931</span>  <span style="color:#f60">0.028</span>  <span style="color:#f60">0.059</span>   <span style="color:#f60">20.115</span>   <span style="color:#f60">0.940</span>  <span style="color:#f60">0.028</span>  <span style="color:#f60">0.058</span>   <span style="color:#f60">20.320</span>   <span style="color:#f60">0.942</span>  <span style="color:#f60">0.022</span>  <span style="color:#f60">0.044</span>   <span style="color:#f60">12.393</span>   <span style="color:#f60">0.894</span>
+    delta_n  <span style="color:#f60">0.309</span>  <span style="color:#f60">0.110</span>   <span style="color:#f60">83.904</span>   <span style="color:#f60">0.999</span>  <span style="color:#f60">0.299</span>  <span style="color:#f60">0.140</span>   <span style="color:#f60">72.540</span>   <span style="color:#f60">0.990</span>  <span style="color:#f60">0.301</span>  <span style="color:#f60">0.145</span>   <span style="color:#f60">69.550</span>   <span style="color:#f60">0.991</span>  <span style="color:#f60">0.301</span>  <span style="color:#f60">0.145</span>   <span style="color:#f60">72.498</span>   <span style="color:#f60">0.991</span>
+    delta2   <span style="color:#f60">0.085</span>  <span style="color:#f60">0.042</span>   <span style="color:#f60">21.676</span>   <span style="color:#f60">0.975</span>  <span style="color:#f60">0.090</span>  <span style="color:#f60">0.039</span>   <span style="color:#f60">24.328</span>   <span style="color:#f60">0.986</span>  <span style="color:#f60">0.093</span>  <span style="color:#f60">0.038</span>   <span style="color:#f60">21.570</span>   <span style="color:#f60">0.992</span>  <span style="color:#f60">0.094</span>  <span style="color:#f60">0.038</span>   <span style="color:#f60">22.489</span>   <span style="color:#f60">0.992</span>
+    inter    <span style="color:#f60">0.010</span>  <span style="color:#f60">0.026</span>    <span style="color:#f60">6.726</span>   <span style="color:#f60">0.849</span>  <span style="color:#f60">0.010</span>  <span style="color:#f60">0.025</span>    <span style="color:#f60">7.478</span>   <span style="color:#f60">0.860</span>  <span style="color:#f60">0.010</span>  <span style="color:#f60">0.026</span>    <span style="color:#f60">7.558</span>   <span style="color:#f60">0.866</span>  <span style="color:#f60">0.010</span>  <span style="color:#f60">0.026</span>    <span style="color:#f60">7.936</span>   <span style="color:#f60">0.867</span>
+    deltaO                                  <span style="color:#f60">0.021</span>  <span style="color:#f60">0.087</span>   <span style="color:#f60">12.282</span>   <span style="color:#f60">0.913</span>  <span style="color:#f60">0.018</span>  <span style="color:#f60">0.100</span>   <span style="color:#f60">12.728</span>   <span style="color:#f60">0.919</span>  <span style="color:#f60">0.017</span>  <span style="color:#f60">0.100</span>   <span style="color:#f60">13.305</span>   <span style="color:#f60">0.922</span>
+    delta2O                                                               <span style="color:#555">-</span><span style="color:#f60">0.007</span>  <span style="color:#f60">0.021</span>    <span style="color:#f60">3.380</span>   <span style="color:#f60">0.630</span> <span style="color:#555">-</span><span style="color:#f60">0.007</span>  <span style="color:#f60">0.021</span>    <span style="color:#f60">3.522</span>   <span style="color:#f60">0.641</span>
+    maturS                                                                                                <span style="color:#f60">0.021</span>  <span style="color:#f60">0.071</span>    <span style="color:#f60">7.532</span>   <span style="color:#f60">0.823</span>
+    R2       <span style="color:#f60">0.878</span>  <span style="color:#f60">0.116</span>                   <span style="color:#f60">0.915</span>  <span style="color:#f60">0.054</span>                   <span style="color:#f60">0.918</span>  <span style="color:#f60">0.051</span>                   <span style="color:#f60">0.924</span>  <span style="color:#f60">0.049</span>        
+_______________________________________________________________________________________________________________________________________</code></pre></div>
+<h4 id="below-is-the-factor-summary-for-version-2">Below is the factor summary for version 2</h4>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">_______________________________________________________________________________________________________________________________________
+               CS5                            CS6                            CS7                            CS8                        
+              mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct   mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct   mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct   mean    std   t<span style="color:#555">-</span>test sig<span style="color:#555">-</span>pct
+_______________________________________________________________________________________________________________________________________
+EQT const   <span style="color:#555">-</span><span style="color:#f60">1.332</span>  <span style="color:#f60">0.293</span>   <span style="color:#f60">98.072</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.335</span>  <span style="color:#f60">0.296</span>   <span style="color:#f60">67.581</span>   <span style="color:#f60">0.999</span> <span style="color:#555">-</span><span style="color:#f60">1.330</span>  <span style="color:#f60">0.299</span>   <span style="color:#f60">69.085</span>   <span style="color:#f60">0.998</span> <span style="color:#555">-</span><span style="color:#f60">1.333</span>  <span style="color:#f60">0.298</span>   <span style="color:#f60">66.534</span>   <span style="color:#f60">0.997</span>
+    matur_n  <span style="color:#f60">0.005</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">4.692</span>   <span style="color:#f60">0.725</span>  <span style="color:#f60">0.005</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">4.678</span>   <span style="color:#f60">0.723</span>  <span style="color:#f60">0.005</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">4.938</span>   <span style="color:#f60">0.729</span>  <span style="color:#f60">0.006</span>  <span style="color:#f60">0.037</span>    <span style="color:#f60">2.643</span>   <span style="color:#f60">0.518</span>
+    delta_n  <span style="color:#f60">0.158</span>  <span style="color:#f60">0.091</span>   <span style="color:#f60">17.614</span>   <span style="color:#f60">0.962</span>  <span style="color:#f60">0.148</span>  <span style="color:#f60">0.146</span>    <span style="color:#f60">2.899</span>   <span style="color:#f60">0.684</span>  <span style="color:#f60">0.113</span>  <span style="color:#f60">0.165</span>    <span style="color:#f60">2.078</span>   <span style="color:#f60">0.512</span>  <span style="color:#f60">0.111</span>  <span style="color:#f60">0.165</span>    <span style="color:#f60">2.202</span>   <span style="color:#f60">0.527</span>
+    delta2   <span style="color:#f60">0.073</span>  <span style="color:#f60">0.047</span>    <span style="color:#f60">6.198</span>   <span style="color:#f60">0.906</span>  <span style="color:#f60">0.070</span>  <span style="color:#f60">0.100</span>    <span style="color:#f60">2.141</span>   <span style="color:#f60">0.532</span>  <span style="color:#f60">0.043</span>  <span style="color:#f60">0.128</span>    <span style="color:#f60">1.436</span>   <span style="color:#f60">0.317</span>  <span style="color:#f60">0.042</span>  <span style="color:#f60">0.126</span>    <span style="color:#f60">1.488</span>   <span style="color:#f60">0.329</span>
+    inter    <span style="color:#f60">0.009</span>  <span style="color:#f60">0.027</span>    <span style="color:#f60">2.070</span>   <span style="color:#f60">0.465</span>  <span style="color:#f60">0.009</span>  <span style="color:#f60">0.027</span>    <span style="color:#f60">2.058</span>   <span style="color:#f60">0.461</span>  <span style="color:#f60">0.010</span>  <span style="color:#f60">0.027</span>    <span style="color:#f60">2.140</span>   <span style="color:#f60">0.470</span>  <span style="color:#f60">0.010</span>  <span style="color:#f60">0.027</span>    <span style="color:#f60">2.234</span>   <span style="color:#f60">0.477</span>
+    deltaO                                  <span style="color:#f60">0.015</span>  <span style="color:#f60">0.260</span>    <span style="color:#f60">1.057</span>   <span style="color:#f60">0.197</span> <span style="color:#555">-</span><span style="color:#f60">0.072</span>  <span style="color:#f60">0.374</span>    <span style="color:#f60">1.231</span>   <span style="color:#f60">0.259</span> <span style="color:#555">-</span><span style="color:#f60">0.067</span>  <span style="color:#f60">0.307</span>    <span style="color:#f60">1.284</span>   <span style="color:#f60">0.272</span>
+    delta2O                                                                <span style="color:#f60">0.150</span>  <span style="color:#f60">0.279</span>    <span style="color:#f60">2.992</span>   <span style="color:#f60">0.602</span>  <span style="color:#f60">0.149</span>  <span style="color:#f60">0.240</span>    <span style="color:#f60">3.161</span>   <span style="color:#f60">0.613</span>
+    maturS                                                                                               <span style="color:#555">-</span><span style="color:#f60">0.004</span>  <span style="color:#f60">0.096</span>    <span style="color:#f60">2.789</span>   <span style="color:#f60">0.511</span>
+    R2       <span style="color:#f60">0.744</span>  <span style="color:#f60">0.184</span>                   <span style="color:#f60">0.749</span>  <span style="color:#f60">0.181</span>                   <span style="color:#f60">0.767</span>  <span style="color:#f60">0.180</span>                   <span style="color:#f60">0.786</span>  <span style="color:#f60">0.174</span>                 
+SPX const   <span style="color:#555">-</span><span style="color:#f60">1.658</span>  <span style="color:#f60">0.293</span>  <span style="color:#f60">332.681</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.666</span>  <span style="color:#f60">0.294</span>  <span style="color:#f60">253.478</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.677</span>  <span style="color:#f60">0.305</span>  <span style="color:#f60">276.188</span>   <span style="color:#f60">1.000</span> <span style="color:#555">-</span><span style="color:#f60">1.670</span>  <span style="color:#f60">0.295</span>  <span style="color:#f60">264.959</span>   <span style="color:#f60">1.000</span>
+    matur_n  <span style="color:#f60">0.028</span>  <span style="color:#f60">0.059</span>   <span style="color:#f60">18.321</span>   <span style="color:#f60">0.931</span>  <span style="color:#f60">0.028</span>  <span style="color:#f60">0.059</span>   <span style="color:#f60">18.409</span>   <span style="color:#f60">0.931</span>  <span style="color:#f60">0.030</span>  <span style="color:#f60">0.059</span>   <span style="color:#f60">21.259</span>   <span style="color:#f60">0.938</span>  <span style="color:#f60">0.024</span>  <span style="color:#f60">0.045</span>   <span style="color:#f60">13.140</span>   <span style="color:#f60">0.886</span>
+    delta_n  <span style="color:#f60">0.309</span>  <span style="color:#f60">0.110</span>   <span style="color:#f60">83.904</span>   <span style="color:#f60">0.999</span>  <span style="color:#f60">0.271</span>  <span style="color:#f60">0.099</span>   <span style="color:#f60">15.443</span>   <span style="color:#f60">0.967</span>  <span style="color:#f60">0.181</span>  <span style="color:#f60">0.073</span>   <span style="color:#f60">10.342</span>   <span style="color:#f60">0.953</span>  <span style="color:#f60">0.181</span>  <span style="color:#f60">0.073</span>   <span style="color:#f60">10.894</span>   <span style="color:#f60">0.954</span>
+    delta2   <span style="color:#f60">0.085</span>  <span style="color:#f60">0.042</span>   <span style="color:#f60">21.676</span>   <span style="color:#f60">0.975</span>  <span style="color:#f60">0.066</span>  <span style="color:#f60">0.053</span>    <span style="color:#f60">6.452</span>   <span style="color:#f60">0.874</span>  <span style="color:#f60">0.014</span>  <span style="color:#f60">0.057</span>    <span style="color:#f60">3.373</span>   <span style="color:#f60">0.691</span>  <span style="color:#f60">0.015</span>  <span style="color:#f60">0.057</span>    <span style="color:#f60">3.542</span>   <span style="color:#f60">0.694</span>
+    inter    <span style="color:#f60">0.010</span>  <span style="color:#f60">0.026</span>    <span style="color:#f60">6.726</span>   <span style="color:#f60">0.849</span>  <span style="color:#f60">0.011</span>  <span style="color:#f60">0.026</span>    <span style="color:#f60">6.785</span>   <span style="color:#f60">0.853</span>  <span style="color:#f60">0.013</span>  <span style="color:#f60">0.026</span>    <span style="color:#f60">8.022</span>   <span style="color:#f60">0.883</span>  <span style="color:#f60">0.014</span>  <span style="color:#f60">0.026</span>    <span style="color:#f60">8.426</span>   <span style="color:#f60">0.889</span>
+    deltaO                                  <span style="color:#f60">0.065</span>  <span style="color:#f60">0.103</span>    <span style="color:#f60">3.053</span>   <span style="color:#f60">0.615</span> <span style="color:#555">-</span><span style="color:#f60">0.021</span>  <span style="color:#f60">0.133</span>    <span style="color:#f60">3.276</span>   <span style="color:#f60">0.638</span> <span style="color:#555">-</span><span style="color:#f60">0.021</span>  <span style="color:#f60">0.133</span>    <span style="color:#f60">3.421</span>   <span style="color:#f60">0.656</span>
+    delta2O                                                                <span style="color:#f60">0.273</span>  <span style="color:#f60">0.191</span>   <span style="color:#f60">14.004</span>   <span style="color:#f60">0.864</span>  <span style="color:#f60">0.272</span>  <span style="color:#f60">0.191</span>   <span style="color:#f60">14.660</span>   <span style="color:#f60">0.869</span>
+    maturS                                                                                                <span style="color:#f60">0.022</span>  <span style="color:#f60">0.071</span>    <span style="color:#f60">7.686</span>   <span style="color:#f60">0.801</span>
+    R2       <span style="color:#f60">0.878</span>  <span style="color:#f60">0.116</span>                   <span style="color:#f60">0.880</span>  <span style="color:#f60">0.115</span>                   <span style="color:#f60">0.893</span>  <span style="color:#f60">0.118</span>                   <span style="color:#f60">0.900</span>  <span style="color:#f60">0.116</span>                 
+_______________________________________________________________________________________________________________________________________</code></pre></div>
+<h4 id="the-figure-below-plot-the-factors-of-version-1">The figure below plot the factors of version 1</h4>
+
+<p><img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTeFhMQjRVQ3lQOVE" alt="" /></p>
+
+<h4 id="the-figure-below-plot-the-factors-of-version-2">The figure below plot the factors of version 2</h4>
+
+<p><img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTRUZjWWQ3WmxLX1E" alt="" /></p>
+
+<p>**The time series plots of both version show that the factors of version 1 have higher percentage significance across stocks.</p>
+
+<h1 id="3-ivs-fit">3. IVS Fit</h1>
+
+<p>The table below shows the in-sample fit aggregate by size deciles of both version. It seems that version 1 has lower in-sample RMSE.</p>
+
+<p>Summary of insample fit:
+* Version 1 has lower fit error than version 2.
+* The relative RMSE of version 1 decreased significantly in financial crisis period, while the performance of version 2 general remain stable over time.
+* For version 2, simply add deltaO (CS6) barely change the fit.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">_______________________________________________________________________________
+             Version <span style="color:#f60">1</span>                      Version <span style="color:#f60">2</span>
+      __________________________    __________________________    _____________
+        CS5    CS6    CS7    CS8      CS5    CS6    CS7    CS8    spread    PCP
+_______________________________________________________________________________
+SPX   <span style="color:#f60">0.024</span>  <span style="color:#f60">0.022</span>  <span style="color:#f60">0.022</span>  <span style="color:#f60">0.021</span>    <span style="color:#f60">0.024</span>  <span style="color:#f60">0.024</span>  <span style="color:#f60">0.022</span>  <span style="color:#f60">0.021</span>     <span style="color:#f60">0.100</span>  <span style="color:#f60">0.175</span>
+D1    <span style="color:#f60">0.033</span>  <span style="color:#f60">0.031</span>  <span style="color:#f60">0.030</span>  <span style="color:#f60">0.028</span>    <span style="color:#f60">0.033</span>  <span style="color:#f60">0.033</span>  <span style="color:#f60">0.032</span>  <span style="color:#f60">0.030</span>     <span style="color:#f60">0.076</span>  <span style="color:#f60">0.132</span>
+D2    <span style="color:#f60">0.034</span>  <span style="color:#f60">0.032</span>  <span style="color:#f60">0.031</span>  <span style="color:#f60">0.030</span>    <span style="color:#f60">0.034</span>  <span style="color:#f60">0.034</span>  <span style="color:#f60">0.033</span>  <span style="color:#f60">0.031</span>     <span style="color:#f60">0.097</span>  <span style="color:#f60">0.171</span>
+D3    <span style="color:#f60">0.038</span>  <span style="color:#f60">0.035</span>  <span style="color:#f60">0.034</span>  <span style="color:#f60">0.032</span>    <span style="color:#f60">0.038</span>  <span style="color:#f60">0.037</span>  <span style="color:#f60">0.036</span>  <span style="color:#f60">0.035</span>     <span style="color:#f60">0.113</span>  <span style="color:#f60">0.141</span>
+D4    <span style="color:#f60">0.041</span>  <span style="color:#f60">0.038</span>  <span style="color:#f60">0.037</span>  <span style="color:#f60">0.035</span>    <span style="color:#f60">0.041</span>  <span style="color:#f60">0.041</span>  <span style="color:#f60">0.039</span>  <span style="color:#f60">0.038</span>     <span style="color:#f60">0.148</span>  <span style="color:#f60">0.169</span>
+D5    <span style="color:#f60">0.037</span>  <span style="color:#f60">0.034</span>  <span style="color:#f60">0.033</span>  <span style="color:#f60">0.032</span>    <span style="color:#f60">0.037</span>  <span style="color:#f60">0.037</span>  <span style="color:#f60">0.036</span>  <span style="color:#f60">0.035</span>     <span style="color:#f60">0.118</span>  <span style="color:#f60">0.135</span>
+D6    <span style="color:#f60">0.040</span>  <span style="color:#f60">0.035</span>  <span style="color:#f60">0.034</span>  <span style="color:#f60">0.033</span>    <span style="color:#f60">0.040</span>  <span style="color:#f60">0.040</span>  <span style="color:#f60">0.038</span>  <span style="color:#f60">0.037</span>     <span style="color:#f60">0.115</span>  <span style="color:#f60">0.157</span>
+D7    <span style="color:#f60">0.036</span>  <span style="color:#f60">0.033</span>  <span style="color:#f60">0.032</span>  <span style="color:#f60">0.030</span>    <span style="color:#f60">0.036</span>  <span style="color:#f60">0.036</span>  <span style="color:#f60">0.034</span>  <span style="color:#f60">0.032</span>     <span style="color:#f60">0.127</span>  <span style="color:#f60">0.128</span>
+D8    <span style="color:#f60">0.042</span>  <span style="color:#f60">0.038</span>  <span style="color:#f60">0.037</span>  <span style="color:#f60">0.036</span>    <span style="color:#f60">0.042</span>  <span style="color:#f60">0.042</span>  <span style="color:#f60">0.040</span>  <span style="color:#f60">0.039</span>     <span style="color:#f60">0.141</span>  <span style="color:#f60">0.168</span>
+D9    <span style="color:#f60">0.048</span>  <span style="color:#f60">0.044</span>  <span style="color:#f60">0.043</span>  <span style="color:#f60">0.040</span>    <span style="color:#f60">0.048</span>  <span style="color:#f60">0.048</span>  <span style="color:#f60">0.047</span>  <span style="color:#f60">0.044</span>     <span style="color:#f60">0.120</span>  <span style="color:#f60">0.114</span>
+D10   <span style="color:#f60">0.033</span>  <span style="color:#f60">0.030</span>  <span style="color:#f60">0.029</span>  <span style="color:#f60">0.028</span>    <span style="color:#f60">0.033</span>  <span style="color:#f60">0.032</span>  <span style="color:#f60">0.031</span>  <span style="color:#f60">0.030</span>     <span style="color:#f60">0.133</span>  <span style="color:#f60">0.165</span>
+_______________________________________________________________________________</code></pre></div>
+<p>The figure below plots the relative RMSE of version 1
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTTXRGWGpTR3Vfbjg" alt="" />
+The figure below plots the relative RMSE of version 2
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTYTVBcC11enFfaWc" alt="" /></p>
+
+<p>The relative RMSE time series plots show promising performance of version 1, especially in financial crisis period, which is relatively easy to motivate.</p>
+
+<h1 id="4-out-of-sample-forecasting">4. Out of sample forecasting</h1>
+
+<p>In below, I report 4 figures of out of sample RMSE. I still have many others results, but I think following 4 are most interesting one.</p>
+
+<p>Summary of out of sample forecasting:
+* Version 1 has lower RMSE and higher MCPDC (not shown) than version 2 does.
+* Relative out of sample performance of CS8 is better at DOTM and OTM regions.
+* CS8 of version 2 only shines for index options.</p>
+
+<p><strong>The figure below plots the out of sample RMSE of version 1 at option groups level</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTaXRUekJkRlE3aEE" alt="" />
+<strong>The figure below plots the out of sample RMSE of version 2 at option groups level</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTa3FsRHMwOTF4ems" alt="" /></p>
+
+<p><strong>The figure below plots the relative out of sample RMSE of version 1 at option groups and size level</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTcl9nOTgwY0I1Mjg" alt="" />
+<strong>The figure below plots the relative out of sample RMSE of version 2 at option groups and size level</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=0B9DzYBQbrkqTai1CaGJMcVgwREE" alt="" /></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="http://example.org/vendor/jquery/jquery.min.js"></script>
+<script src="http://example.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="http://example.org/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="http://example.org/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="http://example.org/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="http://example.org/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
