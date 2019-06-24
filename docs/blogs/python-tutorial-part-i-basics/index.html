@@ -1,0 +1,555 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Python Tutorial Part I--Basics</span></h2>
+    <span class="text-info">April 1, 2017 | Michael Gong</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/python">Python</a></li>
+    
+      <li><a class="tag" href="/tags/tutorial">Tutorial</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">this</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!</pre></div>
+<h1 id="1-variable">1. Variable</h1>
+
+<h2 id="1-1-numerical-variable">1.1 Numerical variable</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#555">=</span> <span style="color:#f60">3</span>
+b <span style="color:#555">=</span> <span style="color:#f60">5</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(a<span style="color:#555">+</span>b)
+<span style="color:#069;font-weight:bold">print</span>(a<span style="color:#555">-</span>b)
+<span style="color:#069;font-weight:bold">print</span>(a<span style="color:#555">*</span>b)
+<span style="color:#069;font-weight:bold">print</span>(a<span style="color:#555">/</span>b)
+<span style="color:#069;font-weight:bold">print</span>(a<span style="color:#555">**</span><span style="color:#f60">2</span> <span style="color:#555">+</span> b<span style="color:#555">%</span><span style="color:#f60">2</span>) <span style="color:#09f;font-style:italic"># ** is the power operator, % is the mod operator</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">8
+-2
+15
+0.6
+10</pre></div>
+<h2 id="1-2-string-variable">1.2 String variable</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c <span style="color:#555">=</span> <span style="color:#c30">&#39;hello world&#39;</span>
+<span style="color:#069;font-weight:bold">print</span>(c)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hello world</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;hello&#39;</span> <span style="color:#555">+</span> <span style="color:#c30">&#39; world&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hello world</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(c <span style="color:#555">+</span> <span style="color:#c30">&#39; &#39;</span> <span style="color:#555">+</span> <span style="color:#366">str</span>(a)) <span style="color:#09f;font-style:italic">#string concatenation and type broadcasting</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hello world 3</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#366">dir</span>(c)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[&#39;__add__&#39;,
+ &#39;__class__&#39;,
+ &#39;__contains__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getitem__&#39;,
+ &#39;__getnewargs__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__len__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__mod__&#39;,
+ &#39;__mul__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__rmod__&#39;,
+ &#39;__rmul__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;capitalize&#39;,
+ &#39;casefold&#39;,
+ &#39;center&#39;,
+ &#39;count&#39;,
+ &#39;encode&#39;,
+ &#39;endswith&#39;,
+ &#39;expandtabs&#39;,
+ &#39;find&#39;,
+ &#39;format&#39;,
+ &#39;format_map&#39;,
+ &#39;index&#39;,
+ &#39;isalnum&#39;,
+ &#39;isalpha&#39;,
+ &#39;isdecimal&#39;,
+ &#39;isdigit&#39;,
+ &#39;isidentifier&#39;,
+ &#39;islower&#39;,
+ &#39;isnumeric&#39;,
+ &#39;isprintable&#39;,
+ &#39;isspace&#39;,
+ &#39;istitle&#39;,
+ &#39;isupper&#39;,
+ &#39;join&#39;,
+ &#39;ljust&#39;,
+ &#39;lower&#39;,
+ &#39;lstrip&#39;,
+ &#39;maketrans&#39;,
+ &#39;partition&#39;,
+ &#39;replace&#39;,
+ &#39;rfind&#39;,
+ &#39;rindex&#39;,
+ &#39;rjust&#39;,
+ &#39;rpartition&#39;,
+ &#39;rsplit&#39;,
+ &#39;rstrip&#39;,
+ &#39;split&#39;,
+ &#39;splitlines&#39;,
+ &#39;startswith&#39;,
+ &#39;strip&#39;,
+ &#39;swapcase&#39;,
+ &#39;title&#39;,
+ &#39;translate&#39;,
+ &#39;upper&#39;,
+ &#39;zfill&#39;]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c<span style="color:#555">.</span>upper()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#39;HELLO WORLD&#39;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c<span style="color:#555">.</span>replace(<span style="color:#c30">&#39;e&#39;</span>,<span style="color:#c30">&#39;i&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#39;hillo world&#39;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c<span style="color:#555">.</span>split(<span style="color:#c30">&#39; &#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[&#39;hello&#39;, &#39;world&#39;]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># string formatting</span>
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;the value is </span><span style="color:#a00">%d</span><span style="color:#c30">&#34;</span><span style="color:#555">%</span>(<span style="color:#f60">4</span>))
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;another value is {}&#34;</span><span style="color:#555">.</span>format(<span style="color:#f60">5</span>))
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;we can also format it as {1} and {0}&#34;</span><span style="color:#555">.</span>format(<span style="color:#f60">2</span>,<span style="color:#f60">1</span>))
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;the way I like, {first} and {second}&#34;</span><span style="color:#555">.</span>format(first<span style="color:#555">=</span><span style="color:#f60">1</span>,second<span style="color:#555">=</span><span style="color:#f60">2</span>))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">the value is 4
+another value is 5
+we can also format it as 1 and 2
+the way I like, 1 and 2</pre></div>
+<p><strong>More string formating, visit <a href="https://pyformat.info/">here</a></strong></p>
+
+<h2 id="1-3-relational-operator">1.3 Relational operator</h2>
+
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Task Performed</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>==</td>
+<td>True, if it is equal</td>
+</tr>
+
+<tr>
+<td>!=</td>
+<td>True, if not equal to</td>
+</tr>
+
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a,b <span style="color:#555">=</span> <span style="color:#f60">1</span>,<span style="color:#f60">3</span> 
+<span style="color:#069;font-weight:bold">print</span>(a<span style="color:#555">==</span>b)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">False</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(a <span style="color:#555">==</span> <span style="color:#f60">1</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">True</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(c <span style="color:#555">==</span> <span style="color:#c30">&#39;hello world&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">True</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(a <span style="color:#000;font-weight:bold">is</span> <span style="color:#f60">1</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">True</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># caveat to use &#34;is&#34;, it compares the memory location rather than the value</span>
+a <span style="color:#555">=</span> <span style="color:#f60">257</span>
+b <span style="color:#555">=</span> <span style="color:#f60">256</span>
+<span style="color:#069;font-weight:bold">print</span>(a <span style="color:#000;font-weight:bold">is</span> <span style="color:#f60">257</span>)
+<span style="color:#069;font-weight:bold">print</span>(b <span style="color:#000;font-weight:bold">is</span> <span style="color:#f60">256</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">False
+True</pre></div>
+<h1 id="2-containers-list-tuple-and-dictionary">2. Containers: list, tuple, and dictionary</h1>
+
+<h2 id="2-1-list">2.1 List</h2>
+
+<p><strong>list is contructed by bracket [] .</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mylist <span style="color:#555">=</span> [<span style="color:#c30">&#39;apple&#39;</span>, <span style="color:#c30">&#39;orange&#39;</span>, <span style="color:#f60">1</span>, <span style="color:#f60">23</span>]
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">type</span>(mylist))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;class &#39;list&#39;&gt;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># indexing and slicing</span>
+<span style="color:#069;font-weight:bold">print</span>(mylist[<span style="color:#f60">0</span>],mylist[<span style="color:#555">-</span><span style="color:#f60">1</span>])
+<span style="color:#069;font-weight:bold">print</span>(mylist[<span style="color:#f60">1</span>:])
+<span style="color:#069;font-weight:bold">print</span>(mylist[:<span style="color:#555">-</span><span style="color:#f60">1</span>])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">apple 23
+[&#39;orange&#39;, 1, 23]
+[&#39;apple&#39;, &#39;orange&#39;, 1]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># append list</span>
+mylist<span style="color:#555">.</span>append(<span style="color:#c30">&#39;new element&#39;</span>)
+<span style="color:#069;font-weight:bold">print</span>(mylist)
+<span style="color:#09f;font-style:italic"># delete the last element</span>
+last_element <span style="color:#555">=</span> mylist<span style="color:#555">.</span>pop()
+<span style="color:#069;font-weight:bold">print</span>(last_element)
+<span style="color:#069;font-weight:bold">print</span>(mylist)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[&#39;apple&#39;, &#39;orange&#39;, 1, 23, &#39;new element&#39;]
+new element
+[&#39;apple&#39;, &#39;orange&#39;, 1, 23]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># list comprehension</span>
+mylist <span style="color:#555">=</span> [i <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">0</span>, <span style="color:#f60">10</span>)]
+<span style="color:#069;font-weight:bold">print</span>(mylist)
+mylist <span style="color:#555">=</span> [<span style="color:#c30">&#39;var&#39;</span><span style="color:#555">+</span><span style="color:#366">str</span>(i) <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">0</span>,<span style="color:#f60">3</span>)]
+<span style="color:#069;font-weight:bold">print</span>(mylist)
+mylist <span style="color:#555">=</span> [(i,j) <span style="color:#069;font-weight:bold">for</span> (i,j) <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">zip</span>(<span style="color:#366">range</span>(<span style="color:#f60">0</span>,<span style="color:#f60">3</span>),<span style="color:#366">range</span>(<span style="color:#f60">2</span>,<span style="color:#f60">5</span>))]
+<span style="color:#069;font-weight:bold">print</span>(mylist)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[&#39;var0&#39;, &#39;var1&#39;, &#39;var2&#39;]
+[(0, 2), (1, 3), (2, 4)]</pre></div>
+<h2 id="2-2-tuple">2.2 Tuple</h2>
+
+<p>**tuple is constructed by parenthesis () **</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mytuple <span style="color:#555">=</span> (<span style="color:#c30">&#39;apple&#39;</span>,<span style="color:#c30">&#39;orange&#39;</span>,<span style="color:#f60">1</span>,<span style="color:#f60">23</span>)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">type</span>(mytuple))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;class &#39;tuple&#39;&gt;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># indexing and slicing</span>
+<span style="color:#069;font-weight:bold">print</span>(mylist[<span style="color:#f60">0</span>],mylist[<span style="color:#555">-</span><span style="color:#f60">1</span>])
+<span style="color:#069;font-weight:bold">print</span>(mylist[<span style="color:#f60">1</span>:])
+<span style="color:#069;font-weight:bold">print</span>(mylist[:<span style="color:#555">-</span><span style="color:#f60">1</span>])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">apple 23
+[&#39;orange&#39;, 1, 23]
+[&#39;apple&#39;, &#39;orange&#39;, 1]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># tuple is immutable (can&#39;t be changed)</span>
+mytuple[<span style="color:#f60">0</span>] <span style="color:#555">=</span> <span style="color:#f60">3</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-86-9ba0fd94a241&gt; in &lt;module&gt;()
+      1 # tuple is immutable (can&#39;t be changed)
+----&gt; 2 mytuple[0] = 3
+
+
+TypeError: &#39;tuple&#39; object does not support item assignment</pre></div>
+<h2 id="2-3-dictionary">2.3 Dictionary</h2>
+
+<p>**dictionary is constructed by curly bracket {} **</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mydict <span style="color:#555">=</span> {<span style="color:#c30">&#39;first&#39;</span>:<span style="color:#f60">12</span>,<span style="color:#c30">&#39;second&#39;</span>:<span style="color:#f60">32</span>,<span style="color:#c30">&#39;third&#39;</span>:<span style="color:#c30">&#39;string&#39;</span>}
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">type</span>(mydict))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;class &#39;dict&#39;&gt;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mydict[<span style="color:#c30">&#39;first&#39;</span>])
+<span style="color:#069;font-weight:bold">print</span>(mydict[<span style="color:#c30">&#39;third&#39;</span>])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">12
+string</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># adding new entry</span>
+mydict[<span style="color:#c30">&#39;new_entry&#39;</span>] <span style="color:#555">=</span> <span style="color:#f60">43</span>
+<span style="color:#069;font-weight:bold">print</span>(mydict)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{&#39;second&#39;: 32, &#39;third&#39;: &#39;string&#39;, &#39;first&#39;: 12, &#39;new_entry&#39;: 43}</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># print keys</span>
+<span style="color:#069;font-weight:bold">print</span>(mydict<span style="color:#555">.</span>keys())
+<span style="color:#09f;font-style:italic"># print values</span>
+<span style="color:#069;font-weight:bold">print</span>(mydict<span style="color:#555">.</span>values())
+<span style="color:#09f;font-style:italic"># print items</span>
+<span style="color:#069;font-weight:bold">print</span>(mydict<span style="color:#555">.</span>items())</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">dict_keys([&#39;second&#39;, &#39;third&#39;, &#39;first&#39;, &#39;new_entry&#39;])
+dict_values([32, &#39;string&#39;, 12, 43])
+dict_items([(&#39;second&#39;, 32), (&#39;third&#39;, &#39;string&#39;), (&#39;first&#39;, 12), (&#39;new_entry&#39;, 43)])</pre></div>
+<p>model1, model2</p>
+
+<p>fct1 = model1.forecasts()
+fct2 = model2.forecasts()</p>
+
+<p>models = [model1, model2]</p>
+
+<p>for model in models:
+    fct = model.forecasts()</p>
+
+<h2 id="2-4-iteration-throught-containers">2.4 Iteration throught containers</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">4</span>):
+    <span style="color:#069;font-weight:bold">print</span>(mylist[i])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mylist <span style="color:#555">=</span> [<span style="color:#c30">&#39;apple&#39;</span>, <span style="color:#c30">&#39;orange&#39;</span>, <span style="color:#f60">1</span>, <span style="color:#f60">23</span>]
+<span style="color:#069;font-weight:bold">for</span> element <span style="color:#000;font-weight:bold">in</span> mylist:
+    <span style="color:#069;font-weight:bold">print</span>(element)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">apple
+orange
+1
+23</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mytuple <span style="color:#555">=</span> (<span style="color:#c30">&#39;apple&#39;</span>,<span style="color:#c30">&#39;orange&#39;</span>,<span style="color:#f60">1</span>,<span style="color:#f60">23</span>)
+<span style="color:#069;font-weight:bold">for</span> element <span style="color:#000;font-weight:bold">in</span> mytuple:
+    <span style="color:#069;font-weight:bold">print</span>(element)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">apple
+orange
+1
+23</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mydict <span style="color:#555">=</span> {<span style="color:#c30">&#39;first&#39;</span>:<span style="color:#f60">12</span>,<span style="color:#c30">&#39;second&#39;</span>:<span style="color:#f60">32</span>,<span style="color:#c30">&#39;third&#39;</span>:<span style="color:#c30">&#39;string&#39;</span>}
+<span style="color:#069;font-weight:bold">for</span> key,item <span style="color:#000;font-weight:bold">in</span> mydict<span style="color:#555">.</span>items():
+    <span style="color:#069;font-weight:bold">print</span>(key,item)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">second 32
+third string
+first 12</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># &#34;in&#34; operator</span>
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;apple&#39;</span> <span style="color:#000;font-weight:bold">in</span> mylist)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;fruit&#39;</span> <span style="color:#000;font-weight:bold">in</span> mytuple)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">True
+False</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># sometimes the index of iteration is useful</span>
+
+<span style="color:#09f;font-style:italic"># ugly way</span>
+i <span style="color:#555">=</span> <span style="color:#f60">0</span>
+<span style="color:#069;font-weight:bold">for</span> element <span style="color:#000;font-weight:bold">in</span> mylist:
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;{} element is {}&#39;</span><span style="color:#555">.</span>format(i,element))
+    i <span style="color:#555">+=</span> <span style="color:#f60">1</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">0 element is apple
+1 element is orange
+2 element is 1
+3 element is 23</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># Pythonic way</span>
+<span style="color:#069;font-weight:bold">for</span> i, element <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">enumerate</span>(mylist):
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;{} element is {}&#39;</span><span style="color:#555">.</span>format(i,element))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">0 element is apple
+1 element is orange
+2 element is 1
+3 element is 23</pre></div>
+<h1 id="3-function">3. Function</h1>
+
+<p><strong>basic syntax</strong></p>
+
+<p>def funcname(arg1, arg2,&hellip; argN, *args, ***kwargs):</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#39;&#39;&#39; Document String&#39;&#39;&#39;
+
+statements
+
+
+return &lt;value&gt;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># basic syntax</span>
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">add</span>(a,b):
+    <span style="color:#c30">&#39;&#39;&#39;This function perform addition&#39;&#39;&#39;</span>
+    result <span style="color:#555">=</span> a <span style="color:#555">+</span> b
+    <span style="color:#069;font-weight:bold">return</span> result
+
+help(add)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Help on function add in module __main__:
+
+add(a, b)
+    This function perform addition</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c <span style="color:#555">=</span> add(<span style="color:#f60">1</span>,<span style="color:#f60">2</span>)
+<span style="color:#069;font-weight:bold">print</span>(c)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">3</pre></div>
+<p><strong>default arguments</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">my_add</span>(a,b<span style="color:#555">=</span><span style="color:#f60">1</span>):
+    <span style="color:#069;font-weight:bold">return</span> a<span style="color:#555">+</span>b
+c <span style="color:#555">=</span> my_add(<span style="color:#f60">2</span>)
+<span style="color:#069;font-weight:bold">print</span>(c)
+d <span style="color:#555">=</span> my_add(<span style="color:#f60">2</span>,<span style="color:#f60">5</span>) <span style="color:#09f;font-style:italic"># default parameters b get overwritten</span>
+<span style="color:#069;font-weight:bold">print</span>(d)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">3
+7</pre></div>
+<p><strong>arbitary arguments</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">my_add2</span>(a,b<span style="color:#555">=</span><span style="color:#f60">1</span>,<span style="color:#555">*</span>args):
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;args type:&#34;</span>,<span style="color:#366">type</span>(args))
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;lenght of arguments:&#34;</span>,<span style="color:#366">len</span>(args))
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;a:&#39;</span>,a)
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;b:&#39;</span>,b)
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;arguments are:&#34;</span>,args)
+c <span style="color:#555">=</span> my_add2(<span style="color:#f60">1</span>,<span style="color:#f60">4</span>,<span style="color:#f60">3</span>,<span style="color:#f60">4</span>,<span style="color:#f60">5</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">args type: &lt;class &#39;tuple&#39;&gt;
+lenght of arguments: 3
+a: 1
+b: 4
+arguments are: (3, 4, 5)</pre></div>
+<p><strong>key words</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">my_add3</span>(a,b<span style="color:#555">=</span><span style="color:#f60">1</span>,<span style="color:#555">*</span>args,<span style="color:#555">**</span>kwargs):
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;args type:&#34;</span>,<span style="color:#366">type</span>(args))
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;kwargs type&#34;</span>,<span style="color:#366">type</span>(kwargs))
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;lenght of arguments&#34;</span>,<span style="color:#366">len</span>(args))
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;a:&#39;</span>,a)
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;b:&#39;</span>,b)
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;arguments are:&#34;</span>,args)
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;key words:&#39;</span>,kwargs)
+my_add3(<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">3</span>,<span style="color:#f60">4</span>,<span style="color:#f60">5</span>,option<span style="color:#555">=</span><span style="color:#f60">3</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">args type: &lt;class &#39;tuple&#39;&gt;
+kwargs type &lt;class &#39;dict&#39;&gt;
+lenght of arguments 3
+a: 1
+b: 2
+arguments are: (3, 4, 5)
+key words: {&#39;option&#39;: 3}</pre></div>
+<p><strong>local variable and global variable</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">my_add4</span>(a,b<span style="color:#555">=</span><span style="color:#f60">3</span>):
+    c <span style="color:#555">=</span> a<span style="color:#555">+</span>b <span style="color:#09f;font-style:italic"># c is local variable</span>
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;a+b:&#34;</span>,c)
+    <span style="color:#09f;font-style:italic"># print(&#39;d:&#39;,var)</span>
+
+a,b <span style="color:#555">=</span> <span style="color:#f60">1</span>,<span style="color:#f60">4</span> <span style="color:#09f;font-style:italic"># this is the global variables</span>
+my_add4(a,b)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">a+b: 5</pre></div>
+<h1 id="4-build-in-function">4. Build-in function</h1>
+
+<h2 id="4-1-range">4.1 range</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">range</span>(<span style="color:#f60">0</span>,<span style="color:#f60">10</span>)) <span style="color:#09f;font-style:italic"># range function return a generator</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">range(0, 10)</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">list</span>(<span style="color:#366">range</span>(<span style="color:#f60">0</span>,<span style="color:#f60">10</span>)))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</pre></div>
+<h2 id="4-2-map">4.2 map</h2>
+
+<p>Understand the usage of map is useful for parallel processing
+basic syntax</p>
+
+<p>ret = map(function, sequence)</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">myfunc</span>(a):
+    <span style="color:#069;font-weight:bold">return</span> a <span style="color:#555">+</span> <span style="color:#f60">1</span>
+
+iterbles <span style="color:#555">=</span> [i <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">0</span>,<span style="color:#f60">10</span>)]
+result <span style="color:#555">=</span> <span style="color:#366">map</span>(myfunc,iterbles)
+<span style="color:#069;font-weight:bold">print</span>(result)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">list</span>(result))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;map object at 0x7f6d405ce390&gt;
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</pre></div>
+<h1 id="5-flow-control">5. Flow control</h1>
+
+<p><strong>if</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#555">=</span> <span style="color:#f60">12</span>
+<span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">&gt;</span><span style="color:#f60">10</span>:
+    <span style="color:#069;font-weight:bold">print</span> (<span style="color:#c30">&#34;Hello&#34;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Hello</pre></div>
+<p>** if else **</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#555">=</span> <span style="color:#f60">9</span>
+<span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">&gt;</span><span style="color:#f60">10</span>:
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Hello&#34;</span>)
+<span style="color:#069;font-weight:bold">else</span>:
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;world&#34;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">world</pre></div>
+<p><strong>if elif else</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#555">=</span> <span style="color:#f60">9</span>
+x <span style="color:#555">=</span> <span style="color:#f60">9</span>
+<span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">&gt;</span><span style="color:#f60">10</span>:
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Hello&#34;</span>)
+<span style="color:#069;font-weight:bold">elif</span> x<span style="color:#555">&gt;</span><span style="color:#f60">0</span> <span style="color:#000;font-weight:bold">and</span> x<span style="color:#555">&lt;</span><span style="color:#f60">10</span>:
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;x is between (0,10)&#34;</span>)
+<span style="color:#069;font-weight:bold">else</span>:
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;world&#34;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">x is between (0,10)</pre></div>
+<p>** while **</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#555">=</span> <span style="color:#f60">4</span>
+<span style="color:#069;font-weight:bold">while</span> x <span style="color:#555">&gt;</span><span style="color:#f60">0</span>:
+    <span style="color:#069;font-weight:bold">print</span>(x)
+    x <span style="color:#555">-=</span> <span style="color:#f60">1</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">4
+3
+2
+1</pre></div>
+<p>** while break**</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#555">=</span> <span style="color:#f60">5</span> 
+<span style="color:#069;font-weight:bold">while</span> x <span style="color:#555">&gt;</span> <span style="color:#f60">0</span>:
+    <span style="color:#069;font-weight:bold">print</span>(x)
+    <span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">==</span> <span style="color:#f60">3</span>:
+        <span style="color:#069;font-weight:bold">break</span>
+    x <span style="color:#555">-=</span> <span style="color:#f60">1</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">5
+4
+3</pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

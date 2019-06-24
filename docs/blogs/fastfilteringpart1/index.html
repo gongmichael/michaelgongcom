@@ -1,0 +1,344 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Fast Kalman Filtering with univariate treatment Part I---Basics</span></h2>
+    <span class="text-info">June 1, 2018 | Michael Gong</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/numba">Numba</a></li>
+    
+      <li><a class="tag" href="/tags/garch">GARCH</a></li>
+    
+      <li><a class="tag" href="/tags/python">Python</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="fast-kalman-filtering-with-univariate-treatment-part-i-basics">Fast Kalman Filtering with univariate treatment Part I&mdash;Basics</h1>
+
+<h2 id="1-introduction">1. Introduction</h2>
+
+<h3 id="1-1-classic-gaussian-kalman-filter">1.1 Classic Gaussian Kalman Filter</h3>
+
+<p>In the standard multivariate linear state space model, the measurement vector $y_t$ depends linearly on the unobserved state vector $\alpha_t$. If we assume the Gaussian distribution of the measurement and state disturbanceds, the signal extraction can be done using classic Gaussian Kalman Filter. However, when the dimension of the measurement vector $y_t$, or its dimension is time-varying, the signal extraction is usually infeasible or unstable since we need to invert the measurement covariance at each Kalman recursion. To avoid the measurement covariance inversion, Koopman and Durbin (2000, Journal of Time Series Analysis) proposed a fast filtering technique called univariate treatment. In the first part of this series, I will present the problem and give a quick implementation of the Kalman Filtering with univariate treatment.</p>
+
+<p>I follow the syntax of Koopman and Durbin, the general state space model can be defined as</p>
+
+<p>$$y_{t}  =  Z f_{t}  +  \epsilon_{t}   \quad  \epsilon_{t} \sim N(0,H) $$
+$$f_{t}  = d + T f_{t-1} +  \eta_{t} \quad   \eta_{t} \sim N(0,Q) $$</p>
+
+<p>then the latent factor $f_t$ can be evaluated recursively by the Kalman Filter algorithm:</p>
+
+<p>$$v_t = y_t -Z f_t , \quad F_t = ZP_tZ&rsquo; + H$$
+$$f_{t|t} = f_t + P_tZ&rsquo;F_t^{-1}v_t, \quad  f_{t+1} = T f_{t|t} + d$$
+$$P_{t|t} = P_t - P_tZ&rsquo;F_t^{-1}ZP_t, \quad P_{t+1} = TP_{t|t}T&rsquo; + Q$$</p>
+
+<p>The problem of the classic Kalman Filter is that we need to invert the covariance matrix $F_t$ at each time step. If the dimension of $y_t$ is high, the inversion of a big matrix is slow and numerically unstable.</p>
+
+<h3 id="1-2-univariate-treatment">1.2 Univariate Treatment</h3>
+
+<p>The basic idea of univariate treatment is to introduce the elements of the measurements one at a time into the filtering and smoothing process. We can write univariate representation of the measurement equation as follow:</p>
+
+<p>$$    y_{j,t} =  Z_{j,t}f_{t} + \epsilon_{j,t} \quad \text{for} \quad j = 1, &hellip;, N_t, \ t = 1, &hellip;., T$$</p>
+
+<p>where $j$ is the observation index, and $N_t$ is the dimension of $y_t$.  The Kalman filtering and predicting of the univariate representation can be computed recursively:</p>
+
+<p>$$  f_{j+1,t} = f_{j,t} + K_{j,t}v_{j,t}, \quad P_{j+1,t} = P_{j,t} - K_{j,t}F_{j,t}K^{&lsquo;}_{j,t}$$
+$$  f_{j,t+1} = d+ T f_{N_{t+1},t}, \quad P_{1, t+1} = T P_{N_{t+1},t}T&rsquo; +Q $$</p>
+
+<p>where $P_{t}$ is the conditional variance of $f_{t}$, $\sigma^2_{j,t}$ is the squared $j$th diagonal element of $H_{t}$, and</p>
+
+<p>$$ v_{j,t} = y_{j,t} - Z_{j,t}f_{j,t}, \quad F_{j,t} = Z_{j,t}P_{j,t}Z&rsquo;P_{j,t} + \sigma^2_{j,t}, \quad K_{j,t} = P_{j,t}Z&rsquo;_{j,t}F^{-1}_{j,t}$$</p>
+
+<p>The univariate recursion algorithm makes factor extraction and estimation feasible because the prediction error $v_{j,t}$ and the measurement covariance $F_{j,t}$ are two scalars, which avoid big matrix inversion ($F^{-1}_{j,t}$) in the classic Kalman recursion.</p>
+
+<h2 id="2-quick-python-implementation">2. Quick Python Implementation</h2>
+
+<p>Let&rsquo;s take a look of how to implement the Kalman Filtering with univariate treatment</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">UniFilter</span>(a1, p1, Z, H, vD, mT, mQ, Y, sizes):
+    <span style="color:#c30">&#39;&#39;&#39;
+</span><span style="color:#c30">    a1: initial state mean
+</span><span style="color:#c30">    p1: initial state variance 
+</span><span style="color:#c30">    Z:  measurement loading, 3d numpy array
+</span><span style="color:#c30">    H:  measurement disturbance covariance, 3d numpy array
+</span><span style="color:#c30">    vD: vector of state constant
+</span><span style="color:#c30">    mT: transition matrix
+</span><span style="color:#c30">    mQ: state disturbance matrix
+</span><span style="color:#c30">    Y:  3d numpy array of measurements
+</span><span style="color:#c30">    sizes: dimension of Y at each time t
+</span><span style="color:#c30">    &#39;&#39;&#39;</span>
+
+    r <span style="color:#555">=</span> a1<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    N, M <span style="color:#555">=</span> Y<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>], Y<span style="color:#555">.</span>shape[<span style="color:#f60">1</span>]
+
+    <span style="color:#09f;font-style:italic"># allocate memory and initialize</span>
+    aF <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((r, N), dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>float64)
+    pF <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((N, r, r), dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>float64)
+    aP <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((r, N <span style="color:#555">+</span> <span style="color:#f60">1</span>), dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>float64)
+    pP <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((N <span style="color:#555">+</span> <span style="color:#f60">1</span>, r, r), dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>float64)
+
+    aP[:, <span style="color:#f60">0</span>] <span style="color:#555">=</span> a1<span style="color:#555">.</span>ravel()<span style="color:#555">.</span>copy()
+    pP[<span style="color:#f60">0</span>] <span style="color:#555">=</span> p1<span style="color:#555">.</span>copy()
+
+    a <span style="color:#555">=</span> a1
+    p <span style="color:#555">=</span> p1
+    v <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((M, N), dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>float64)
+    F <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((M, N), dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>float64)
+    K <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((N, r, M), dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>float64)
+    
+    <span style="color:#09f;font-style:italic"># Time filtering</span>
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(N):
+        mY, mZ, mH <span style="color:#555">=</span> Y[i]<span style="color:#555">.</span>ravel(),  Z[i], H[i]<span style="color:#555">.</span>ravel()
+        m <span style="color:#555">=</span> sizes[i]
+        
+        <span style="color:#09f;font-style:italic"># Observation filtering</span>
+        <span style="color:#069;font-weight:bold">for</span> j <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(m):
+            mZp <span style="color:#555">=</span> mZ[j, :]
+            v[j, i] <span style="color:#555">=</span> mY[j] <span style="color:#555">-</span> np<span style="color:#555">.</span>dot(mZp, a) 
+            F[j, i] <span style="color:#555">=</span> mZp <span style="color:#99f">@p</span> <span style="color:#99f">@mZp.T</span> <span style="color:#555">+</span> mH[j]
+            K[i][:, j] <span style="color:#555">=</span> ((p <span style="color:#99f">@mZp.T</span>) <span style="color:#555">/</span> F[j, i])<span style="color:#555">.</span>ravel()
+            <span style="color:#069;font-weight:bold">if</span> F[j, i] <span style="color:#555">&gt;</span> <span style="color:#f60">0</span>:
+                a <span style="color:#555">=</span> a <span style="color:#555">+</span> K[i][:, j] <span style="color:#555">*</span> v[j, i]
+                p <span style="color:#555">=</span> p <span style="color:#555">-</span> F[j, i] <span style="color:#555">*</span> np<span style="color:#555">.</span>outer(K[i][:, j],K[i][:, j])
+        aF[:, i] <span style="color:#555">=</span> a<span style="color:#555">.</span>ravel()
+        pF[i] <span style="color:#555">=</span> p
+        a <span style="color:#555">=</span> mT <span style="color:#99f">@a</span> <span style="color:#555">+</span> vD
+        p <span style="color:#555">=</span> mT <span style="color:#99f">@p</span> <span style="color:#99f">@mT.T</span> <span style="color:#555">+</span> mQ
+
+        aP[:, i<span style="color:#555">+</span><span style="color:#f60">1</span>] <span style="color:#555">=</span> a<span style="color:#555">.</span>ravel()
+        pP[i<span style="color:#555">+</span><span style="color:#f60">1</span>] <span style="color:#555">=</span> p
+
+    <span style="color:#069;font-weight:bold">return</span> aF, pF, aP[:, <span style="color:#f60">1</span>:], pP[<span style="color:#f60">1</span>:]</code></pre></div>
+<p><strong>Let&rsquo;s generate some data and test the univariate filter</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">genStates</span>(vD, mT, mQ, N):
+    eta <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>multivariate_normal(vD, mQ, [N])
+    
+    f <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros_like(eta)
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">1</span>,N<span style="color:#555">-</span><span style="color:#f60">1</span>):
+        f[i<span style="color:#555">+</span><span style="color:#f60">1</span>] <span style="color:#555">=</span> vD <span style="color:#555">+</span> mT<span style="color:#99f">@f</span>[i] <span style="color:#555">+</span> eta[i]
+    <span style="color:#069;font-weight:bold">return</span> f
+
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">genMeasure</span>(mZ, mH, f):
+    N <span style="color:#555">=</span> f<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    M <span style="color:#555">=</span> mZ<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    y <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([M, N])
+    eps <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>multivariate_normal(np<span style="color:#555">.</span>zeros(M), mH, [N])
+    y <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros_like(eps)<span style="color:#555">.</span>T
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">1</span>, N<span style="color:#555">-</span><span style="color:#f60">1</span>):
+        y[:,i] <span style="color:#555">=</span> mZ<span style="color:#99f">@f</span>[i] <span style="color:#555">+</span> eps[i]
+    <span style="color:#069;font-weight:bold">return</span> y
+
+N <span style="color:#555">=</span> <span style="color:#f60">200</span>
+r <span style="color:#555">=</span> <span style="color:#f60">4</span>
+m <span style="color:#555">=</span> <span style="color:#f60">10</span>
+mZ <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(m,r)
+mH <span style="color:#555">=</span> np<span style="color:#555">.</span>diag(np<span style="color:#555">.</span>random<span style="color:#555">.</span>normal(<span style="color:#f60">0</span>,<span style="color:#f60">1</span>,m)<span style="color:#555">**</span><span style="color:#f60">2</span>)
+
+vD <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(<span style="color:#f60">4</span>)
+mT <span style="color:#555">=</span> np<span style="color:#555">.</span>eye(r) <span style="color:#555">*</span> <span style="color:#f60">0.97</span>
+mQ <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>normal(<span style="color:#f60">0</span>,<span style="color:#f60">1</span>,[r,r])
+mQ <span style="color:#555">=</span> mQ<span style="color:#555">.</span>T<span style="color:#99f">@mQ</span>
+
+f <span style="color:#555">=</span> genStates(vD,mT,mQ,N)
+y <span style="color:#555">=</span> genMeasure(mZ,mH,f)</code></pre></div>
+<p><strong>Prepare the data such that they fit the dimension requirement</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a1 <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(r)
+p1 <span style="color:#555">=</span> np<span style="color:#555">.</span>eye(r)
+Z <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N,m,r])
+H <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N,m,m])
+Y <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N,m,<span style="color:#f60">1</span>])
+<span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(N):
+    Z[i], H[i],Y[i] <span style="color:#555">=</span> mZ,mH,y[:,[i]]
+sizes <span style="color:#555">=</span> np<span style="color:#555">.</span>ones(N,dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>int32)<span style="color:#555">*</span>r
+
+<span style="color:#09f;font-style:italic"># Filtering</span>
+aF,pF,aP,pP <span style="color:#555">=</span> UniFilter(a1, p1, Z, H, vD, mT, mQ, Y, sizes)</code></pre></div>
+<p><strong>Let&rsquo;s plot the filtered states against the true (simulated) states</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#555">=</span> plt<span style="color:#555">.</span>figure(figsize<span style="color:#555">=</span>(<span style="color:#f60">12</span>,<span style="color:#f60">10</span>))
+<span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(r):
+    ax <span style="color:#555">=</span> fig<span style="color:#555">.</span>add_subplot(<span style="color:#f60">2</span>,<span style="color:#f60">2</span>,i<span style="color:#555">+</span><span style="color:#f60">1</span>)
+    ax<span style="color:#555">.</span>plot(aF[i,:], label<span style="color:#555">=</span>f<span style="color:#c30">&#34;filtered state&#34;</span>)
+    ax<span style="color:#555">.</span>plot(f[:,i], label<span style="color:#555">=</span>f<span style="color:#c30">&#34;True state&#34;</span>)
+    ax<span style="color:#555">.</span>set_title(f<span style="color:#c30">&#34;{i+1}th factor&#34;</span>)
+    plt<span style="color:#555">.</span>legend()</code></pre></div>
+<p><img src="/img/posts/FastFiltering1/output_9_0.png" alt="png" /></p>
+
+<p>We see that the univariate filter successfully extract the true states from the nosiy measurement</p>
+
+<h2 id="3-problem-of-current-implementaion">3. Problem of current implementaion</h2>
+
+<p>We see that the univariate filter implemented in pure Python/Numpy environment successfully extract the true factors. However, since Python is a interpreted language, if the time seires is too long or the state dimension is too large, the pure Python loop would be very time consuming! Below the standard Kalman Filtering, let&rsquo;s compare the performance!</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">KalmanFilter</span>(a1, p1,  mZ, mH, vD, mT, mQ, mY):
+    m <span style="color:#555">=</span> mY<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    N <span style="color:#555">=</span> mY<span style="color:#555">.</span>shape[<span style="color:#f60">1</span>]
+    r <span style="color:#555">=</span> a1<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    a <span style="color:#555">=</span> a1<span style="color:#555">.</span>copy()
+    P <span style="color:#555">=</span> p1<span style="color:#555">.</span>copy()
+    aF <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, r, <span style="color:#f60">1</span>])
+    pF <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, r, r])
+    aP <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, r, <span style="color:#f60">1</span>])
+    pP <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, r, r])
+
+    F <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, m, m])
+    v <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, m, <span style="color:#f60">1</span>])
+    K <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, r, m])
+    L <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N, r, r])
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">0</span>, N):
+        v[i] <span style="color:#555">=</span> mY[:, [i]] <span style="color:#555">-</span> mZ<span style="color:#99f">@a</span> 
+        F[i] <span style="color:#555">=</span> mZ<span style="color:#99f">@P@mZ.T</span> <span style="color:#555">+</span> mH
+
+        invF <span style="color:#555">=</span> np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>inv(F[i])
+        K[i] <span style="color:#555">=</span> mT<span style="color:#99f">@P@mZ.T@invF</span>
+
+        aF[i] <span style="color:#555">=</span> a <span style="color:#555">+</span> P<span style="color:#99f">@mZ.T@invF@v</span>[i]
+        pF[i] <span style="color:#555">=</span> P <span style="color:#555">-</span> P<span style="color:#99f">@mZ.T@invF@mZ@P</span>
+
+        aP[i] <span style="color:#555">=</span> mT<span style="color:#99f">@a</span> <span style="color:#555">+</span> vD
+        pP[i] <span style="color:#555">=</span> mT<span style="color:#99f">@P@mT.T</span> <span style="color:#555">+</span> mQ
+    <span style="color:#069;font-weight:bold">return</span> aF, pF, aP, pP</code></pre></div>
+<p><strong>Time the filtering time-elapse</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit aF, pF, aP, pP <span style="color:#555">=</span> KalmanFilter(a1[:,None],p1,mZ,mH,vD[:,None],mT,mQ,y)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">12.6 ms ± 312 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit aF, pF, aP, pP <span style="color:#555">=</span> UniFilter(a1, p1, Z, H, vD, mT, mQ, Y, sizes)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">18.8 ms ± 205 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)</pre></div>
+<p><strong>As we see, the univariate filter actually runs slower than the standard filter!</strong> In the Part II of this series, we will turn to C++ implementation to truely utilize the advantage of univariate filter!</p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

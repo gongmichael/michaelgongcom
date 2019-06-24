@@ -1,0 +1,1517 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Python Tutorial Part III--Clean OptionMetrics</span></h2>
+    <span class="text-info">April 7, 2017 | Michael Gong</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/python">Python</a></li>
+    
+      <li><a class="tag" href="/tags/tutorial">Tutorial</a></li>
+    
+      <li><a class="tag" href="/tags/optionmetrics">OptionMetrics</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-clean-optionmetrics-dataset">1. Clean OptionMetrics dataset</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pandas</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">pd</span> 
+<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">numpy</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">np</span> 
+<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">matplotlib.pyplot</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">plt</span> 
+<span style="color:#555">%</span>matplotlib inline</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw <span style="color:#555">=</span> pd<span style="color:#555">.</span>read_csv(<span style="color:#c30">&#39;5Firms.csv.zip&#39;</span>,parse_dates<span style="color:#555">=</span>[<span style="color:#f60">2</span>,<span style="color:#f60">3</span>])
+raw<span style="color:#555">.</span>drop(columns<span style="color:#555">=</span>[<span style="color:#c30">&#39;secid&#39;</span>,<span style="color:#c30">&#39;issuer&#39;</span>,<span style="color:#c30">&#39;exercise_style&#39;</span>,<span style="color:#c30">&#39;last_date&#39;</span>],inplace<span style="color:#555">=</span>True)
+raw<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>exdate</th>
+      <th>cp_flag</th>
+      <th>strike_price</th>
+      <th>best_bid</th>
+      <th>best_offer</th>
+      <th>volume</th>
+      <th>open_interest</th>
+      <th>imvol</th>
+      <th>delta</th>
+      <th>optionid</th>
+      <th>ticker</th>
+      <th>index_flag</th>
+      <th>midquo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>14</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>34.000</td>
+      <td>9.300</td>
+      <td>10.250</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.529</td>
+      <td>0.988</td>
+      <td>70433772</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>9.775</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>35.000</td>
+      <td>8.600</td>
+      <td>9.200</td>
+      <td>0</td>
+      <td>1237</td>
+      <td>0.666</td>
+      <td>0.948</td>
+      <td>45658102</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>8.900</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>36.000</td>
+      <td>7.350</td>
+      <td>8.300</td>
+      <td>0</td>
+      <td>10</td>
+      <td>0.515</td>
+      <td>0.965</td>
+      <td>67966062</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>7.825</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>37.000</td>
+      <td>6.800</td>
+      <td>7.050</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0.550</td>
+      <td>0.929</td>
+      <td>70433773</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>6.925</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>38.000</td>
+      <td>5.850</td>
+      <td>6.000</td>
+      <td>0</td>
+      <td>589</td>
+      <td>0.481</td>
+      <td>0.921</td>
+      <td>54279804</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>5.925</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw<span style="color:#555">.</span>info()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 4467804 entries, 14 to 5719675
+Data columns (total 14 columns):
+date             datetime64[ns]
+exdate           datetime64[ns]
+cp_flag          object
+strike_price     float64
+best_bid         float64
+best_offer       float64
+volume           int64
+open_interest    int64
+imvol            float64
+delta            float64
+optionid         int64
+ticker           object
+index_flag       int64
+midquo           float64
+dtypes: datetime64[ns](2), float64(6), int64(4), object(2)
+memory usage: 511.3+ MB</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># change the implied volatility name (it&#39;s too long)</span>
+raw<span style="color:#555">.</span>rename(columns<span style="color:#555">=</span>{<span style="color:#c30">&#39;impl_volatility&#39;</span>: <span style="color:#c30">&#39;imvol&#39;</span>}, inplace<span style="color:#555">=</span>True)
+<span style="color:#09f;font-style:italic"># transform the strike price and calculate the mid quotes</span>
+raw[<span style="color:#c30">&#39;strike_price&#39;</span>] <span style="color:#555">=</span> raw[<span style="color:#c30">&#39;strike_price&#39;</span>] <span style="color:#555">/</span> <span style="color:#f60">1000.0</span>
+raw[<span style="color:#c30">&#39;midquo&#39;</span>] <span style="color:#555">=</span> (raw[<span style="color:#c30">&#39;best_bid&#39;</span>] <span style="color:#555">+</span> raw[<span style="color:#c30">&#39;best_offer&#39;</span>]) <span style="color:#555">/</span> <span style="color:#f60">2</span>
+raw<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>exdate</th>
+      <th>cp_flag</th>
+      <th>strike_price</th>
+      <th>best_bid</th>
+      <th>best_offer</th>
+      <th>volume</th>
+      <th>open_interest</th>
+      <th>imvol</th>
+      <th>delta</th>
+      <th>optionid</th>
+      <th>ticker</th>
+      <th>index_flag</th>
+      <th>midquo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>14</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.034</td>
+      <td>9.300</td>
+      <td>10.250</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.529</td>
+      <td>0.988</td>
+      <td>70433772</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>9.775</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.035</td>
+      <td>8.600</td>
+      <td>9.200</td>
+      <td>0</td>
+      <td>1237</td>
+      <td>0.666</td>
+      <td>0.948</td>
+      <td>45658102</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>8.900</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.036</td>
+      <td>7.350</td>
+      <td>8.300</td>
+      <td>0</td>
+      <td>10</td>
+      <td>0.515</td>
+      <td>0.965</td>
+      <td>67966062</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>7.825</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.037</td>
+      <td>6.800</td>
+      <td>7.050</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0.550</td>
+      <td>0.929</td>
+      <td>70433773</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>6.925</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.038</td>
+      <td>5.850</td>
+      <td>6.000</td>
+      <td>0</td>
+      <td>589</td>
+      <td>0.481</td>
+      <td>0.921</td>
+      <td>54279804</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>5.925</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># drop contracts with NaN implied volatility or Nan delta</span>
+raw<span style="color:#555">.</span>dropna(subset<span style="color:#555">=</span>[<span style="color:#c30">&#39;imvol&#39;</span>], how<span style="color:#555">=</span><span style="color:#c30">&#39;any&#39;</span>, inplace<span style="color:#555">=</span>True)
+raw<span style="color:#555">.</span>dropna(subset<span style="color:#555">=</span>[<span style="color:#c30">&#39;delta&#39;</span>], how<span style="color:#555">=</span><span style="color:#c30">&#39;any&#39;</span>, inplace<span style="color:#555">=</span>True)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># Exclude implied volatility above 150%</span>
+raw <span style="color:#555">=</span> raw[raw[<span style="color:#c30">&#39;imvol&#39;</span>] <span style="color:#555">&lt;</span> <span style="color:#f60">1.5</span>]
+<span style="color:#09f;font-style:italic"># Exclude price below 0.05</span>
+raw <span style="color:#555">=</span> raw[raw[<span style="color:#c30">&#39;best_offer&#39;</span>] <span style="color:#555">&gt;</span> <span style="color:#f60">0.05</span>]
+raw<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>exdate</th>
+      <th>cp_flag</th>
+      <th>strike_price</th>
+      <th>best_bid</th>
+      <th>best_offer</th>
+      <th>volume</th>
+      <th>open_interest</th>
+      <th>imvol</th>
+      <th>delta</th>
+      <th>optionid</th>
+      <th>ticker</th>
+      <th>index_flag</th>
+      <th>midquo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>14</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.034</td>
+      <td>9.300</td>
+      <td>10.250</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.529</td>
+      <td>0.988</td>
+      <td>70433772</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>9.775</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.035</td>
+      <td>8.600</td>
+      <td>9.200</td>
+      <td>0</td>
+      <td>1237</td>
+      <td>0.666</td>
+      <td>0.948</td>
+      <td>45658102</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>8.900</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.036</td>
+      <td>7.350</td>
+      <td>8.300</td>
+      <td>0</td>
+      <td>10</td>
+      <td>0.515</td>
+      <td>0.965</td>
+      <td>67966062</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>7.825</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.037</td>
+      <td>6.800</td>
+      <td>7.050</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0.550</td>
+      <td>0.929</td>
+      <td>70433773</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>6.925</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.038</td>
+      <td>5.850</td>
+      <td>6.000</td>
+      <td>0</td>
+      <td>589</td>
+      <td>0.481</td>
+      <td>0.921</td>
+      <td>54279804</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>5.925</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># calculate maturity</span>
+raw[<span style="color:#c30">&#39;maturity&#39;</span>] <span style="color:#555">=</span> ((raw[<span style="color:#c30">&#39;exdate&#39;</span>] <span style="color:#555">-</span> raw[<span style="color:#c30">&#39;date&#39;</span>]) <span style="color:#555">/</span> np<span style="color:#555">.</span>timedelta64(<span style="color:#f60">1</span>, <span style="color:#c30">&#39;D&#39;</span>))<span style="color:#555">.</span>astype(<span style="color:#366">int</span>)
+<span style="color:#09f;font-style:italic"># Exclude contracts with maturity longer than 240 days and shorter than 7 days</span>
+raw <span style="color:#555">=</span> raw[(raw[<span style="color:#c30">&#39;maturity&#39;</span>] <span style="color:#555">&lt;=</span> <span style="color:#f60">360</span>) <span style="color:#555">&amp;</span> (raw[<span style="color:#c30">&#39;maturity&#39;</span>] <span style="color:#555">&gt;=</span> <span style="color:#f60">7</span>)]
+raw<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>exdate</th>
+      <th>cp_flag</th>
+      <th>strike_price</th>
+      <th>best_bid</th>
+      <th>best_offer</th>
+      <th>volume</th>
+      <th>open_interest</th>
+      <th>imvol</th>
+      <th>delta</th>
+      <th>optionid</th>
+      <th>ticker</th>
+      <th>index_flag</th>
+      <th>midquo</th>
+      <th>maturity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>14</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.034</td>
+      <td>9.300</td>
+      <td>10.250</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.529</td>
+      <td>0.988</td>
+      <td>70433772</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>9.775</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.035</td>
+      <td>8.600</td>
+      <td>9.200</td>
+      <td>0</td>
+      <td>1237</td>
+      <td>0.666</td>
+      <td>0.948</td>
+      <td>45658102</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>8.900</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.036</td>
+      <td>7.350</td>
+      <td>8.300</td>
+      <td>0</td>
+      <td>10</td>
+      <td>0.515</td>
+      <td>0.965</td>
+      <td>67966062</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>7.825</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.037</td>
+      <td>6.800</td>
+      <td>7.050</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0.550</td>
+      <td>0.929</td>
+      <td>70433773</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>6.925</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2012-01-03</td>
+      <td>2012-01-21</td>
+      <td>C</td>
+      <td>0.038</td>
+      <td>5.850</td>
+      <td>6.000</td>
+      <td>0</td>
+      <td>589</td>
+      <td>0.481</td>
+      <td>0.921</td>
+      <td>54279804</td>
+      <td>COF</td>
+      <td>0</td>
+      <td>5.925</td>
+      <td>18</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># save the cleaned raw data, because it is time-consuming to processing, next time we just need to load it</span>
+hdf <span style="color:#555">=</span> pd<span style="color:#555">.</span>HDFStore(<span style="color:#c30">&#39;hdf.h5&#39;</span>)
+hdf[<span style="color:#c30">&#39;raw&#39;</span>] <span style="color:#555">=</span> raw
+hdf<span style="color:#555">.</span>close()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># if next time we start from here</span>
+<span style="color:#09f;font-style:italic"># hdf = pd.HDFStore(&#39;hdf.h5&#39;)</span>
+<span style="color:#09f;font-style:italic"># raw = hdf[&#39;raw&#39;]</span>
+<span style="color:#09f;font-style:italic"># hdf.close()</span></code></pre></div>
+<h1 id="2-some-summary-statistics">2. Some summary statistics</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># select variable we want </span>
+clean <span style="color:#555">=</span> raw[[<span style="color:#c30">&#39;date&#39;</span>, <span style="color:#c30">&#39;ticker&#39;</span>, <span style="color:#c30">&#39;imvol&#39;</span>, <span style="color:#c30">&#39;delta&#39;</span>, <span style="color:#c30">&#39;maturity&#39;</span>, <span style="color:#c30">&#39;cp_flag&#39;</span>]]<span style="color:#555">.</span>reset_index(drop<span style="color:#555">=</span>True)
+clean<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>ticker</th>
+      <th>imvol</th>
+      <th>delta</th>
+      <th>maturity</th>
+      <th>cp_flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.529</td>
+      <td>0.988</td>
+      <td>18</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.666</td>
+      <td>0.948</td>
+      <td>18</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.515</td>
+      <td>0.965</td>
+      <td>18</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.550</td>
+      <td>0.929</td>
+      <td>18</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.481</td>
+      <td>0.921</td>
+      <td>18</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;stocks ticker:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>,clean[<span style="color:#c30">&#39;ticker&#39;</span>]<span style="color:#555">.</span>unique())
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;maturity range:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>,clean[<span style="color:#c30">&#39;maturity&#39;</span>]<span style="color:#555">.</span><span style="color:#366">min</span>(),clean[<span style="color:#c30">&#39;maturity&#39;</span>]<span style="color:#555">.</span><span style="color:#366">max</span>())
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;delta range:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>,clean[<span style="color:#c30">&#39;delta&#39;</span>]<span style="color:#555">.</span><span style="color:#366">min</span>(),clean[<span style="color:#c30">&#39;delta&#39;</span>]<span style="color:#555">.</span><span style="color:#366">max</span>())</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">stocks ticker:
+ [&#39;COF&#39; &#39;DD&#39; &#39;XOM&#39; &#39;INTC&#39; &#39;SPX&#39; &#39;UNH&#39;]
+maturity range:
+ 7 360
+delta range:
+ -0.999934 0.999999</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">stats <span style="color:#555">=</span> clean<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;cp_flag&#39;</span>])[[<span style="color:#c30">&#39;imvol&#39;</span>,<span style="color:#c30">&#39;delta&#39;</span>]]<span style="color:#555">.</span>describe()
+stats</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th colspan="8" halign="left">imvol</th>
+      <th colspan="8" halign="left">delta</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>ticker</th>
+      <th>cp_flag</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">COF</th>
+      <th>C</th>
+      <td>100419.000</td>
+      <td>0.295</td>
+      <td>0.146</td>
+      <td>0.063</td>
+      <td>0.199</td>
+      <td>0.249</td>
+      <td>0.341</td>
+      <td>1.000</td>
+      <td>100419.000</td>
+      <td>0.523</td>
+      <td>0.359</td>
+      <td>0.008</td>
+      <td>0.130</td>
+      <td>0.577</td>
+      <td>0.884</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>108812.000</td>
+      <td>0.319</td>
+      <td>0.144</td>
+      <td>0.057</td>
+      <td>0.213</td>
+      <td>0.280</td>
+      <td>0.386</td>
+      <td>1.000</td>
+      <td>108812.000</td>
+      <td>-0.372</td>
+      <td>0.340</td>
+      <td>-1.000</td>
+      <td>-0.710</td>
+      <td>-0.240</td>
+      <td>-0.059</td>
+      <td>-0.003</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">DD</th>
+      <th>C</th>
+      <td>125769.000</td>
+      <td>0.264</td>
+      <td>0.138</td>
+      <td>0.063</td>
+      <td>0.178</td>
+      <td>0.217</td>
+      <td>0.299</td>
+      <td>0.999</td>
+      <td>125769.000</td>
+      <td>0.553</td>
+      <td>0.366</td>
+      <td>0.008</td>
+      <td>0.146</td>
+      <td>0.639</td>
+      <td>0.917</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>134941.000</td>
+      <td>0.262</td>
+      <td>0.105</td>
+      <td>0.047</td>
+      <td>0.187</td>
+      <td>0.233</td>
+      <td>0.313</td>
+      <td>0.999</td>
+      <td>134941.000</td>
+      <td>-0.392</td>
+      <td>0.352</td>
+      <td>-1.000</td>
+      <td>-0.760</td>
+      <td>-0.255</td>
+      <td>-0.063</td>
+      <td>-0.004</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">INTC</th>
+      <th>C</th>
+      <td>113863.000</td>
+      <td>0.306</td>
+      <td>0.150</td>
+      <td>0.084</td>
+      <td>0.218</td>
+      <td>0.248</td>
+      <td>0.331</td>
+      <td>1.000</td>
+      <td>113863.000</td>
+      <td>0.577</td>
+      <td>0.349</td>
+      <td>0.015</td>
+      <td>0.209</td>
+      <td>0.660</td>
+      <td>0.922</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>127602.000</td>
+      <td>0.293</td>
+      <td>0.113</td>
+      <td>0.074</td>
+      <td>0.221</td>
+      <td>0.260</td>
+      <td>0.334</td>
+      <td>1.000</td>
+      <td>127602.000</td>
+      <td>-0.505</td>
+      <td>0.359</td>
+      <td>-1.000</td>
+      <td>-0.882</td>
+      <td>-0.514</td>
+      <td>-0.122</td>
+      <td>-0.007</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">SPX</th>
+      <th>C</th>
+      <td>1240711.000</td>
+      <td>0.245</td>
+      <td>0.151</td>
+      <td>0.050</td>
+      <td>0.139</td>
+      <td>0.202</td>
+      <td>0.297</td>
+      <td>1.000</td>
+      <td>1240711.000</td>
+      <td>0.674</td>
+      <td>0.361</td>
+      <td>0.001</td>
+      <td>0.373</td>
+      <td>0.869</td>
+      <td>0.970</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>1344534.000</td>
+      <td>0.259</td>
+      <td>0.135</td>
+      <td>0.033</td>
+      <td>0.157</td>
+      <td>0.233</td>
+      <td>0.326</td>
+      <td>1.000</td>
+      <td>1344534.000</td>
+      <td>-0.251</td>
+      <td>0.328</td>
+      <td>-1.000</td>
+      <td>-0.419</td>
+      <td>-0.066</td>
+      <td>-0.010</td>
+      <td>-0.000</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">UNH</th>
+      <th>C</th>
+      <td>86588.000</td>
+      <td>0.280</td>
+      <td>0.133</td>
+      <td>0.076</td>
+      <td>0.204</td>
+      <td>0.236</td>
+      <td>0.303</td>
+      <td>1.000</td>
+      <td>86588.000</td>
+      <td>0.536</td>
+      <td>0.364</td>
+      <td>0.007</td>
+      <td>0.141</td>
+      <td>0.600</td>
+      <td>0.904</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>92393.000</td>
+      <td>0.290</td>
+      <td>0.118</td>
+      <td>0.066</td>
+      <td>0.213</td>
+      <td>0.255</td>
+      <td>0.333</td>
+      <td>0.999</td>
+      <td>92393.000</td>
+      <td>-0.395</td>
+      <td>0.352</td>
+      <td>-1.000</td>
+      <td>-0.759</td>
+      <td>-0.271</td>
+      <td>-0.058</td>
+      <td>-0.003</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">XOM</th>
+      <th>C</th>
+      <td>112332.000</td>
+      <td>0.240</td>
+      <td>0.140</td>
+      <td>0.034</td>
+      <td>0.156</td>
+      <td>0.187</td>
+      <td>0.265</td>
+      <td>1.000</td>
+      <td>112332.000</td>
+      <td>0.535</td>
+      <td>0.358</td>
+      <td>0.006</td>
+      <td>0.148</td>
+      <td>0.601</td>
+      <td>0.889</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>126483.000</td>
+      <td>0.244</td>
+      <td>0.110</td>
+      <td>0.039</td>
+      <td>0.169</td>
+      <td>0.213</td>
+      <td>0.287</td>
+      <td>0.999</td>
+      <td>126483.000</td>
+      <td>-0.418</td>
+      <td>0.353</td>
+      <td>-1.000</td>
+      <td>-0.796</td>
+      <td>-0.316</td>
+      <td>-0.073</td>
+      <td>-0.003</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="3-transform-regression-variables">3. Transform regression variables</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># constant</span>
+clean[<span style="color:#c30">&#39;const&#39;</span>] <span style="color:#555">=</span> <span style="color:#f60">1</span>
+<span style="color:#09f;font-style:italic"># scaled moneyness</span>
+clean[<span style="color:#c30">&#39;delta_n&#39;</span>] <span style="color:#555">=</span> clean[<span style="color:#c30">&#39;delta&#39;</span>]
+clean<span style="color:#555">.</span>loc[(clean[<span style="color:#c30">&#39;cp_flag&#39;</span>]<span style="color:#555">==</span><span style="color:#c30">&#39;P&#39;</span>),<span style="color:#c30">&#39;delta_n&#39;</span>] <span style="color:#555">=</span> <span style="color:#f60">1</span> <span style="color:#555">+</span> clean<span style="color:#555">.</span>loc[(clean[<span style="color:#c30">&#39;cp_flag&#39;</span>]<span style="color:#555">==</span><span style="color:#c30">&#39;P&#39;</span>),<span style="color:#c30">&#39;delta&#39;</span>]
+clean[<span style="color:#c30">&#39;delta_n&#39;</span>] <span style="color:#555">=</span> clean[<span style="color:#c30">&#39;delta_n&#39;</span>] <span style="color:#555">-</span> <span style="color:#f60">0.5</span>
+<span style="color:#09f;font-style:italic"># scaled maturity</span>
+clean[<span style="color:#c30">&#39;matur_n&#39;</span>] <span style="color:#555">=</span> clean[<span style="color:#c30">&#39;maturity&#39;</span>]<span style="color:#555">/</span><span style="color:#f60">360</span> <span style="color:#555">-</span> <span style="color:#f60">0.5</span>
+<span style="color:#09f;font-style:italic"># quadratic term of moneyness</span>
+clean[<span style="color:#c30">&#39;delta2&#39;</span>] <span style="color:#555">=</span> clean[<span style="color:#c30">&#39;delta_n&#39;</span>]<span style="color:#555">**</span><span style="color:#f60">2</span>
+<span style="color:#09f;font-style:italic"># interaction between maturity and moneyness</span>
+clean[<span style="color:#c30">&#39;inter&#39;</span>] <span style="color:#555">=</span> clean[<span style="color:#c30">&#39;delta_n&#39;</span>]<span style="color:#555">*</span>clean[<span style="color:#c30">&#39;matur_n&#39;</span>]
+clean<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>ticker</th>
+      <th>imvol</th>
+      <th>delta</th>
+      <th>maturity</th>
+      <th>cp_flag</th>
+      <th>const</th>
+      <th>delta_n</th>
+      <th>matur_n</th>
+      <th>delta2</th>
+      <th>inter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.529</td>
+      <td>0.988</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.488</td>
+      <td>-0.450</td>
+      <td>0.239</td>
+      <td>-0.220</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.666</td>
+      <td>0.948</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.448</td>
+      <td>-0.450</td>
+      <td>0.201</td>
+      <td>-0.202</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.515</td>
+      <td>0.965</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.465</td>
+      <td>-0.450</td>
+      <td>0.216</td>
+      <td>-0.209</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.550</td>
+      <td>0.929</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.429</td>
+      <td>-0.450</td>
+      <td>0.184</td>
+      <td>-0.193</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.481</td>
+      <td>0.921</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.421</td>
+      <td>-0.450</td>
+      <td>0.177</td>
+      <td>-0.189</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="4-cross-section-regression">4. Cross-section regression</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">statsmodels.api</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">sm</span></code></pre></div>
+<h2 id="4-1-straightforward-way">4.1 straightforward way</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tickers <span style="color:#555">=</span> clean[<span style="color:#c30">&#39;ticker&#39;</span>]<span style="color:#555">.</span>unique()
+ticker <span style="color:#555">=</span> tickers[<span style="color:#f60">0</span>]
+
+tmp <span style="color:#555">=</span> clean[clean[<span style="color:#c30">&#39;ticker&#39;</span>]<span style="color:#555">==</span>ticker]
+dates <span style="color:#555">=</span> tmp[<span style="color:#c30">&#39;date&#39;</span>]<span style="color:#555">.</span>unique()
+tmp <span style="color:#555">=</span> tmp[tmp[<span style="color:#c30">&#39;date&#39;</span>]<span style="color:#555">==</span>dates[<span style="color:#f60">0</span>]]
+tmp<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>ticker</th>
+      <th>imvol</th>
+      <th>delta</th>
+      <th>maturity</th>
+      <th>cp_flag</th>
+      <th>const</th>
+      <th>delta_n</th>
+      <th>matur_n</th>
+      <th>delta2</th>
+      <th>inter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.529</td>
+      <td>0.988</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.488</td>
+      <td>-0.450</td>
+      <td>0.239</td>
+      <td>-0.220</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.666</td>
+      <td>0.948</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.448</td>
+      <td>-0.450</td>
+      <td>0.201</td>
+      <td>-0.202</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.515</td>
+      <td>0.965</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.465</td>
+      <td>-0.450</td>
+      <td>0.216</td>
+      <td>-0.209</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.550</td>
+      <td>0.929</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.429</td>
+      <td>-0.450</td>
+      <td>0.184</td>
+      <td>-0.193</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2012-01-03</td>
+      <td>COF</td>
+      <td>0.481</td>
+      <td>0.921</td>
+      <td>18</td>
+      <td>C</td>
+      <td>1</td>
+      <td>0.421</td>
+      <td>-0.450</td>
+      <td>0.177</td>
+      <td>-0.189</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">exogs <span style="color:#555">=</span> [<span style="color:#c30">&#39;const&#39;</span>,<span style="color:#c30">&#39;delta_n&#39;</span>,<span style="color:#c30">&#39;matur_n&#39;</span>,<span style="color:#c30">&#39;delta2&#39;</span>,<span style="color:#c30">&#39;inter&#39;</span>]
+mB <span style="color:#555">=</span> np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>lstsq(tmp[exogs],tmp[<span style="color:#c30">&#39;imvol&#39;</span>])[<span style="color:#f60">0</span>]</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mB</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">array([     0.272,      0.176,     -0.170,      0.920,      0.054])</pre></div>
+<h2 id="4-2-more-concise-way">4.2 More concise way</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">CrossReg</span>(df,exogs):
+    mod <span style="color:#555">=</span> sm<span style="color:#555">.</span>OLS(df[<span style="color:#c30">&#39;imvol&#39;</span>],df[exogs])<span style="color:#555">.</span>fit()
+    ind <span style="color:#555">=</span> pd<span style="color:#555">.</span>MultiIndex<span style="color:#555">.</span>from_product([[<span style="color:#c30">&#39;params&#39;</span>,<span style="color:#c30">&#39;tvalues&#39;</span>],exogs])
+    ret <span style="color:#555">=</span> pd<span style="color:#555">.</span>Series(index<span style="color:#555">=</span>ind)
+    ret<span style="color:#555">.</span>loc[<span style="color:#c30">&#39;params&#39;</span>] <span style="color:#555">=</span> mod<span style="color:#555">.</span>params<span style="color:#555">.</span>values
+    ret<span style="color:#555">.</span>loc[<span style="color:#c30">&#39;tvalues&#39;</span>] <span style="color:#555">=</span> mod<span style="color:#555">.</span>tvalues<span style="color:#555">.</span>values
+    ret<span style="color:#555">.</span>loc[<span style="color:#c30">&#39;r2&#39;</span>] <span style="color:#555">=</span> mod<span style="color:#555">.</span>rsquared
+    <span style="color:#069;font-weight:bold">return</span> ret 
+
+exogs <span style="color:#555">=</span> [<span style="color:#c30">&#39;const&#39;</span>,<span style="color:#c30">&#39;delta_n&#39;</span>,<span style="color:#c30">&#39;matur_n&#39;</span>,<span style="color:#c30">&#39;delta2&#39;</span>,<span style="color:#c30">&#39;inter&#39;</span>]
+mB <span style="color:#555">=</span> clean<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;date&#39;</span>])<span style="color:#555">.</span><span style="color:#366">apply</span>(<span style="color:#069;font-weight:bold">lambda</span> x:CrossReg(x,exogs))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mB<span style="color:#555">.</span>loc[<span style="color:#c30">&#39;SPX&#39;</span>][<span style="color:#c30">&#39;params&#39;</span>]<span style="color:#555">.</span>plot()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f2d109103c8&gt;</pre></div>
+<p><img src="/img/posts/PyTutorial3/output_24_1.png" alt="png" /></p>
+
+<h2 id="4-3-need-for-speed">4.3 Need for speed</h2>
+
+<h3 id="4-3-1-just-for-coefficients-sequential">4.3.1 Just for coefficients, sequential</h3>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">CrossRegSpeed</span>(df,exogs):
+    mB <span style="color:#555">=</span> np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>lstsq(df[exogs],df[<span style="color:#c30">&#39;imvol&#39;</span>])[<span style="color:#f60">0</span>]
+    <span style="color:#069;font-weight:bold">return</span> pd<span style="color:#555">.</span>Series(mB,index<span style="color:#555">=</span>exogs)
+mB <span style="color:#555">=</span> clean<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;date&#39;</span>])<span style="color:#555">.</span><span style="color:#366">apply</span>(<span style="color:#069;font-weight:bold">lambda</span> x:CrossRegSpeed(x,exogs))</code></pre></div>
+<h3 id="4-3-2-just-for-coefficients-parallel">4.3.2 Just for coefficients, parallel</h3>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">multiprocessing</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">mp</span>
+<span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">functools</span> <span style="color:#069;font-weight:bold">import</span> partial
+
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">CrossRegParHelper</span>(ticker):
+    tmp <span style="color:#555">=</span> DATA[DATA[<span style="color:#c30">&#39;ticker&#39;</span>]<span style="color:#555">==</span>ticker]
+    mB <span style="color:#555">=</span> tmp<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;date&#39;</span>])<span style="color:#555">.</span><span style="color:#366">apply</span>(<span style="color:#069;font-weight:bold">lambda</span> x:CrossRegSpeed(x,EXOGS))
+    mB[<span style="color:#c30">&#39;ticker&#39;</span>] <span style="color:#555">=</span> ticker
+    <span style="color:#069;font-weight:bold">return</span> mB
+
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">CrossRegPar</span>(data,exogs):
+    <span style="color:#069;font-weight:bold">global</span> DATA, EXOGS
+    DATA <span style="color:#555">=</span> data 
+    EXOGS <span style="color:#555">=</span> exogs
+    pool <span style="color:#555">=</span> mp<span style="color:#555">.</span>Pool(processes<span style="color:#555">=</span><span style="color:#f60">12</span>)
+    results <span style="color:#555">=</span> pool<span style="color:#555">.</span><span style="color:#366">map</span>(CrossRegParHelper, tickers)
+    pool<span style="color:#555">.</span>close()
+    pool<span style="color:#555">.</span>join()
+    mB <span style="color:#555">=</span> pd<span style="color:#555">.</span>concat(results)
+    <span style="color:#069;font-weight:bold">return</span> mB
+
+mB <span style="color:#555">=</span> CrossRegPar(clean,exogs)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit clean<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;date&#39;</span>])<span style="color:#555">.</span><span style="color:#366">apply</span>(<span style="color:#069;font-weight:bold">lambda</span> x:CrossRegSpeed(x,exogs))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">8 s ± 33.4 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit CrossRegPar(clean,exogs)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">4.2 s ± 51.4 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</pre></div>
+<h3 id="4-3-3-jit-compilation">4.3.3 JIT compilation</h3>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">numba</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">nb</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">clean<span style="color:#555">.</span>sort_values(by<span style="color:#555">=</span>[<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;date&#39;</span>],inplace<span style="color:#555">=</span>True)
+locs <span style="color:#555">=</span> clean<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;date&#39;</span>])<span style="color:#555">.</span>size()<span style="color:#555">.</span>values<span style="color:#555">.</span>cumsum()
+locs <span style="color:#555">=</span> np<span style="color:#555">.</span>insert(locs,<span style="color:#f60">0</span>,<span style="color:#f60">0</span>)
+mY <span style="color:#555">=</span> clean[[<span style="color:#c30">&#39;imvol&#39;</span>]]<span style="color:#555">.</span>values
+mX <span style="color:#555">=</span> clean[exogs]<span style="color:#555">.</span>values</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#99f">@nb.jit</span>
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">CrossRegJIT</span>(mX,mY,locs):
+    N <span style="color:#555">=</span> locs<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    mB <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros((mX<span style="color:#555">.</span>shape[<span style="color:#f60">1</span>],N<span style="color:#555">-</span><span style="color:#f60">1</span>))
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">0</span>,N<span style="color:#555">-</span><span style="color:#f60">1</span>):
+        b <span style="color:#555">=</span> np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>lstsq(mX[locs[i]:locs[i<span style="color:#555">+</span><span style="color:#f60">1</span>]],mY[locs[i]:locs[i<span style="color:#555">+</span><span style="color:#f60">1</span>]])[<span style="color:#f60">0</span>]
+        mB[:,[i]] <span style="color:#555">=</span> b
+    <span style="color:#069;font-weight:bold">return</span> mB
+
+mB <span style="color:#555">=</span> CrossRegJIT(mX,mY,locs)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit CrossRegJIT(mX,mY,locs)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">702 ms ± 6.65 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mB <span style="color:#555">=</span> pd<span style="color:#555">.</span>DataFrame(mB<span style="color:#555">.</span>T,index<span style="color:#555">=</span>clean<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;date&#39;</span>])<span style="color:#555">.</span>size()<span style="color:#555">.</span>index,columns<span style="color:#555">=</span>exogs)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mB<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>const</th>
+      <th>delta_n</th>
+      <th>matur_n</th>
+      <th>delta2</th>
+      <th>inter</th>
+      <th>ticker</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2012-01-03</th>
+      <td>0.272</td>
+      <td>0.176</td>
+      <td>-0.170</td>
+      <td>0.920</td>
+      <td>0.054</td>
+      <td>COF</td>
+    </tr>
+    <tr>
+      <th>2012-01-04</th>
+      <td>0.288</td>
+      <td>0.079</td>
+      <td>-0.090</td>
+      <td>1.023</td>
+      <td>-0.263</td>
+      <td>COF</td>
+    </tr>
+    <tr>
+      <th>2012-01-05</th>
+      <td>0.288</td>
+      <td>0.160</td>
+      <td>-0.129</td>
+      <td>0.776</td>
+      <td>-0.110</td>
+      <td>COF</td>
+    </tr>
+    <tr>
+      <th>2012-01-06</th>
+      <td>0.251</td>
+      <td>0.246</td>
+      <td>-0.149</td>
+      <td>1.189</td>
+      <td>0.076</td>
+      <td>COF</td>
+    </tr>
+    <tr>
+      <th>2012-01-09</th>
+      <td>0.267</td>
+      <td>0.176</td>
+      <td>-0.167</td>
+      <td>0.881</td>
+      <td>0.312</td>
+      <td>COF</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="5-principal-component-analysis">5. Principal Component Analysis</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mB<span style="color:#555">.</span>reset_index(inplace<span style="color:#555">=</span>True)
+level <span style="color:#555">=</span> pd<span style="color:#555">.</span>pivot_table(mB,index<span style="color:#555">=</span><span style="color:#c30">&#39;date&#39;</span>,columns<span style="color:#555">=</span><span style="color:#c30">&#39;ticker&#39;</span>,values<span style="color:#555">=</span><span style="color:#c30">&#39;const&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">level<span style="color:#555">.</span>plot()</code></pre></div>
+<p><img src="/img/posts/PyTutorial3/output_41_1.png" alt="png" /></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">sklearn</span> <span style="color:#069;font-weight:bold">import</span> preprocessing
+<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">scipy</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">sp</span>
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">pcaAnalysis</span>(mX, iPC, useCov<span style="color:#555">=</span><span style="color:#f60">1</span>):
+    <span style="color:#069;font-weight:bold">if</span> useCov:
+        <span style="color:#09f;font-style:italic"># mCov = np.cov(mX, rowvar = 0)</span>
+        de_meanX <span style="color:#555">=</span> mX <span style="color:#555">-</span> np<span style="color:#555">.</span>tile(np<span style="color:#555">.</span>mean(mX, axis<span style="color:#555">=</span><span style="color:#f60">0</span>), [mX<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>], <span style="color:#f60">1</span>])
+        mCov <span style="color:#555">=</span> np<span style="color:#555">.</span>dot(de_meanX<span style="color:#555">.</span>transpose(), de_meanX) <span style="color:#555">/</span> mX<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+
+        eigval, eigvec <span style="color:#555">=</span> sp<span style="color:#555">.</span>linalg<span style="color:#555">.</span>eigh(mCov)
+        eigidx <span style="color:#555">=</span> np<span style="color:#555">.</span>argsort(eigval)
+        maxidx <span style="color:#555">=</span> eigidx[::<span style="color:#555">-</span><span style="color:#f60">1</span>]
+        sorted_vec <span style="color:#555">=</span> eigvec[:, maxidx]
+
+        mPC <span style="color:#555">=</span> np<span style="color:#555">.</span>dot(de_meanX, sorted_vec)
+        <span style="color:#069;font-weight:bold">return</span> mPC[:, <span style="color:#f60">0</span>:iPC], (eigval[maxidx] <span style="color:#555">/</span> np<span style="color:#555">.</span><span style="color:#366">sum</span>(eigval))[<span style="color:#f60">0</span>:iPC]
+
+    <span style="color:#069;font-weight:bold">else</span>:
+        mCoef <span style="color:#555">=</span> np<span style="color:#555">.</span>corrcoef(mX, rowvar<span style="color:#555">=</span><span style="color:#f60">0</span>)
+        scaled_X <span style="color:#555">=</span> preprocessing<span style="color:#555">.</span>scale(mX)
+        eigval, eigvec <span style="color:#555">=</span> sp<span style="color:#555">.</span>linalg<span style="color:#555">.</span>eigh(mCoef)
+
+        eigidx <span style="color:#555">=</span> np<span style="color:#555">.</span>argsort(eigval)
+        maxidx <span style="color:#555">=</span> eigidx[::<span style="color:#555">-</span><span style="color:#f60">1</span>]
+        sorted_vec <span style="color:#555">=</span> eigvec[:, maxidx]
+
+        mPC <span style="color:#555">=</span> np<span style="color:#555">.</span>dot(scaled_X, sorted_vec)
+        <span style="color:#069;font-weight:bold">return</span> preprocessing<span style="color:#555">.</span>scale(mPC[:, <span style="color:#f60">0</span>:iPC]), (eigval[maxidx] <span style="color:#555">/</span>
+                                                    np<span style="color:#555">.</span><span style="color:#366">sum</span>(eigval))[<span style="color:#f60">0</span>:iPC]</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">mPC,pct <span style="color:#555">=</span> pcaAnalysis(level<span style="color:#555">.</span>values[:<span style="color:#f60">500</span>],<span style="color:#f60">3</span>)
+pct</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">array([  7.22e-01,   9.53e-02,   6.82e-02])</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#555">.</span>plot(mPC)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[&lt;matplotlib.lines.Line2D at 0x7f054028cb70&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7f054028c518&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7f054028cf28&gt;]</pre></div>
+<p><img src="/img/posts/PyTutorial3/output_44_1.png" alt="png" /></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

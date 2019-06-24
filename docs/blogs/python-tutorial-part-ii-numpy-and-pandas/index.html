@@ -1,0 +1,1558 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Python Tutorial Part II--Numpy and Pandas</span></h2>
+    <span class="text-info">April 3, 2017 | Michael Gong</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/python">Python</a></li>
+    
+      <li><a class="tag" href="/tags/tutorial">Tutorial</a></li>
+    
+      <li><a class="tag" href="/tags/numpy">Numpy</a></li>
+    
+      <li><a class="tag" href="/tags/pandas">Pandas</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="1-numpy-scipy">1. Numpy/Scipy</h1>
+
+<p>NumPy and SciPy are open-source add-on modules to Python that provide common mathematical and numerical routines in pre-compiled, fast functions. These are growing into
+highly mature packages that provide functionality that meets, or perhaps exceeds, that
+associated with common commercial software like MatLab.</p>
+
+<p>The NumPy (Numeric Python)
+package provides basic routines for manipulating large arrays and matrices of numeric data.</p>
+
+<p>The SciPy (Scientific Python) package extends the functionality of NumPy with a substantial
+collection of useful algorithms, like minimization, Fourier transformation, regression, and other
+applied mathematical techniques.</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">numpy</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">np</span> </code></pre></div>
+<p><strong>Matlab to Numpy translation</strong>
+click <a href="https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html">here</a></p>
+
+<p><strong>Numpy Complete documentation</strong>
+click <a href="https://docs.scipy.org/doc/numpy-dev/reference/index.html">here</a></p>
+
+<p><strong>Scipy Complete documentation</strong>
+click <a href="https://docs.scipy.org/doc/scipy/reference/">here</a></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>__version__)
+np<span style="color:#555">.</span>__config__<span style="color:#555">.</span>show()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1.11.2
+openblas_lapack_info:
+  NOT AVAILABLE
+blas_mkl_info:
+    libraries = [&#39;mkl_intel_lp64&#39;, &#39;mkl_intel_thread&#39;, &#39;mkl_core&#39;, &#39;iomp5&#39;, &#39;pthread&#39;]
+    include_dirs = [&#39;/home/michael/anaconda3/include&#39;]
+    define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
+    library_dirs = [&#39;/home/michael/anaconda3/lib&#39;]
+lapack_mkl_info:
+    libraries = [&#39;mkl_intel_lp64&#39;, &#39;mkl_intel_thread&#39;, &#39;mkl_core&#39;, &#39;iomp5&#39;, &#39;pthread&#39;]
+    include_dirs = [&#39;/home/michael/anaconda3/include&#39;]
+    define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
+    library_dirs = [&#39;/home/michael/anaconda3/lib&#39;]
+blas_opt_info:
+    libraries = [&#39;mkl_intel_lp64&#39;, &#39;mkl_intel_thread&#39;, &#39;mkl_core&#39;, &#39;iomp5&#39;, &#39;pthread&#39;]
+    include_dirs = [&#39;/home/michael/anaconda3/include&#39;]
+    define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
+    library_dirs = [&#39;/home/michael/anaconda3/lib&#39;]
+lapack_opt_info:
+    libraries = [&#39;mkl_intel_lp64&#39;, &#39;mkl_intel_thread&#39;, &#39;mkl_core&#39;, &#39;iomp5&#39;, &#39;pthread&#39;]
+    include_dirs = [&#39;/home/michael/anaconda3/include&#39;]
+    define_macros = [(&#39;SCIPY_MKL_H&#39;, None), (&#39;HAVE_CBLAS&#39;, None)]
+    library_dirs = [&#39;/home/michael/anaconda3/lib&#39;]</pre></div>
+<h2 id="1-1-array-creation">1.1 Array creation</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#555">=</span> np<span style="color:#555">.</span>array([<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">3</span>])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">type</span>(a))
+<span style="color:#069;font-weight:bold">print</span>(a)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;class &#39;numpy.ndarray&#39;&gt;
+[1 2 3]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">b <span style="color:#555">=</span> np<span style="color:#555">.</span>array([[<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">3</span>],[<span style="color:#f60">3</span>,<span style="color:#f60">4</span>,<span style="color:#f60">5</span>]])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;this is b</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#34;</span>,b)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;the shape of b is:&#34;</span>,b<span style="color:#555">.</span>shape)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;the dimension of b is:&#34;</span>,b<span style="color:#555">.</span>ndim)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;number of elements of b:&#34;</span>, b<span style="color:#555">.</span>size)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">this is b
+ [[1 2 3]
+ [3 4 5]]
+the shape of b is: (2, 3)
+the dimension of b is: 2
+number of elements of b: 6</pre></div>
+<p>** A little bit introduction of object oriented programming**</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#555">=</span> np<span style="color:#555">.</span>array([<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">3</span>,<span style="color:#f60">3</span>,<span style="color:#f60">4</span>,<span style="color:#f60">5</span>,<span style="color:#f60">5</span>,<span style="color:#f60">6</span>,<span style="color:#f60">7</span>])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;the type of a:&#34;</span>,<span style="color:#366">type</span>(a))
+b <span style="color:#555">=</span> a<span style="color:#555">.</span>reshape(<span style="color:#f60">3</span>,<span style="color:#f60">3</span>)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;the type of b:&#34;</span>,<span style="color:#366">type</span>(b))
+c1 <span style="color:#555">=</span> b<span style="color:#555">**</span><span style="color:#f60">2</span>
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;the type of c:&#34;</span>,<span style="color:#366">type</span>(c1))
+
+<span style="color:#09f;font-style:italic"># we can write:</span>
+c2 <span style="color:#555">=</span> np<span style="color:#555">.</span>array([<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">3</span>,<span style="color:#f60">3</span>,<span style="color:#f60">4</span>,<span style="color:#f60">5</span>,<span style="color:#f60">5</span>,<span style="color:#f60">6</span>,<span style="color:#f60">7</span>])<span style="color:#555">.</span>reshape(<span style="color:#f60">3</span>,<span style="color:#f60">3</span>)<span style="color:#555">**</span><span style="color:#f60">2</span>
+
+<span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>allclose(c1,c2))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">the type of a: &lt;class &#39;numpy.ndarray&#39;&gt;
+the type of b: &lt;class &#39;numpy.ndarray&#39;&gt;
+the type of c: &lt;class &#39;numpy.ndarray&#39;&gt;
+True</pre></div>
+<h2 id="1-2-array-operation">1.2 Array operation</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># generate random ndarray</span>
+mA <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>randint(<span style="color:#f60">1</span>,<span style="color:#f60">10</span>,size<span style="color:#555">=</span>(<span style="color:#f60">3</span>,<span style="color:#f60">3</span>))
+mB <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>randint(<span style="color:#f60">1</span>,<span style="color:#f60">10</span>,size<span style="color:#555">=</span>(<span style="color:#f60">3</span>,<span style="color:#f60">3</span>))
+vC <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>randint(<span style="color:#f60">1</span>,<span style="color:#f60">10</span>,size<span style="color:#555">=</span>(<span style="color:#f60">3</span>,<span style="color:#f60">1</span>))
+vD <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>randint(<span style="color:#f60">1</span>,<span style="color:#f60">10</span>,size<span style="color:#555">=</span>(<span style="color:#f60">1</span>,<span style="color:#f60">3</span>))
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;mA:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#34;</span>,mA)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;mB:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#34;</span>,mB)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;vC:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#34;</span>,vC)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;vD:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#34;</span>,vD)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">mA:
+ [[8 9 6]
+ [1 3 7]
+ [5 3 2]]
+mB:
+ [[6 7 1]
+ [3 2 4]
+ [5 8 2]]
+vC:
+ [[9]
+ [1]
+ [2]]
+vD:
+ [[3 6 8]]</pre></div>
+<h3 id="element-wise-operation">element-wise operation *,/,+,-</h3>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">+</span>mB)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[14 16  7]
+ [ 4  5 11]
+ [10 11  4]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">-</span>mB)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 2  2  5]
+ [-2  1  3]
+ [ 0 -5  0]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">/</span>mB)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 1.33333333  1.28571429  6.        ]
+ [ 0.33333333  1.5         1.75      ]
+ [ 1.          0.375       1.        ]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">*</span>mB)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[48 63  6]
+ [ 3  6 28]
+ [25 24  4]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">-</span>vC)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[-1  0 -3]
+ [ 0  2  6]
+ [ 3  1  0]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">-</span>vD)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 5  3 -2]
+ [-2 -3 -1]
+ [ 2 -3 -6]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">*</span>mB<span style="color:#555">-</span>vC <span style="color:#555">+</span> mB<span style="color:#555">**</span><span style="color:#f60">2</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 75 103  -2]
+ [ 11   9  43]
+ [ 48  86   6]]</pre></div>
+<h3 id="matrix-operation">Matrix operation</h3>
+
+<p><strong>Matrix mupliplication @</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># The matrix multiplication is done by @ operation (in python 3.0+), in python 2.*, it is done by &#34;dot&#34; method</span>
+<span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#99f">@mB</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[105 122  56]
+ [ 50  69  27]
+ [ 49  57  21]]</pre></div>
+<p><strong>Matrix transpose T</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(mA<span style="color:#555">.</span>T)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[8 1 5]
+ [9 3 3]
+ [6 7 2]]</pre></div>
+<p><strong>Matrix inversion &ldquo;inv&rdquo;</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>inv(mA))
+<span style="color:#09f;font-style:italic"># to make it easier to type, we import the &#34;inv&#34; function alone</span>
+<span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">numpy.linalg</span> <span style="color:#069;font-weight:bold">import</span> inv
+<span style="color:#069;font-weight:bold">print</span>(inv(mA))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ -1.42857143e-01   6.93889390e-18   4.28571429e-01]
+ [  3.14285714e-01  -1.33333333e-01  -4.76190476e-01]
+ [ -1.14285714e-01   2.00000000e-01   1.42857143e-01]]
+[[ -1.42857143e-01   6.93889390e-18   4.28571429e-01]
+ [  3.14285714e-01  -1.33333333e-01  -4.76190476e-01]
+ [ -1.14285714e-01   2.00000000e-01   1.42857143e-01]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># again, we can benefit from the OOP design</span>
+ret <span style="color:#555">=</span> mA<span style="color:#555">.</span>T<span style="color:#99f">@inv</span>(mB) <span style="color:#555">-</span> vC <span style="color:#555">+</span> mB<span style="color:#555">.</span>T<span style="color:#99f">@vC</span> <span style="color:#555">-</span> vD
+<span style="color:#069;font-weight:bold">print</span>(ret)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 57.5         53.89285714  47.46428571]
+ [ 80.          75.28571429  69.42857143]
+ [ 12.75         9.23214286   7.16071429]]</pre></div>
+<h2 id="1-3-slicing">1.3 Slicing</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">A <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(<span style="color:#f60">3</span>,<span style="color:#f60">3</span>)
+<span style="color:#069;font-weight:bold">print</span>(A)
+<span style="color:#069;font-weight:bold">print</span>(A[:,[<span style="color:#f60">0</span>]])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 0.07731399  0.10377817  0.1793915 ]
+ [ 0.84609483  0.65710391  0.17246314]
+ [ 0.7439164   0.89687702  0.1211748 ]]
+[[ 0.07731399]
+ [ 0.84609483]
+ [ 0.7439164 ]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># slicing is done through bracket []</span>
+<span style="color:#069;font-weight:bold">print</span>(mA)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;the first element is:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>,mA[<span style="color:#f60">0</span>,<span style="color:#f60">0</span>])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;the first column is:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>,mA[:,[<span style="color:#f60">0</span>]])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;the first two columns are:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>,mA[:,:<span style="color:#f60">2</span>])
+
+<span style="color:#09f;font-style:italic"># boolean and integer indexing</span>
+indexB <span style="color:#555">=</span> np<span style="color:#555">.</span>array([True, False, True])
+indexI <span style="color:#555">=</span> np<span style="color:#555">.</span>array([<span style="color:#f60">1</span>,<span style="color:#f60">0</span>,<span style="color:#f60">1</span>])
+array <span style="color:#555">=</span> np<span style="color:#555">.</span>array([<span style="color:#f60">1</span>,<span style="color:#f60">2</span>,<span style="color:#f60">3</span>])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Boolean indexing result:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#34;</span> ,array[indexB])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Integer indexing result:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#34;</span>, array[indexI])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[8 9 6]
+ [1 3 7]
+ [5 3 2]]
+the first element is:
+ 8
+the first column is:
+ [[8]
+ [1]
+ [5]]
+the first two columns are:
+ [[8 9]
+ [1 3]
+ [5 3]]
+Boolean indexing result:
+ [1 3]
+Integer indexing result:
+ [2 1 2]</pre></div>
+<h2 id="1-4-frequently-used-numpy-function">1.4 Frequently used Numpy function</h2>
+
+<ul>
+<li>diag: create diagonal matrix from vector</li>
+<li>diagonal: extract the diagonal element</li>
+<li>eye: identity matrix</li>
+<li>zeros: matrix filled with zero</li>
+<li>ones: matrix filled with one</li>
+<li>reshape: reshape the matrix</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">vY <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(<span style="color:#f60">3</span>)
+<span style="color:#069;font-weight:bold">print</span>(vY<span style="color:#555">.</span>shape,<span style="color:#366">type</span>(vY))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">(3,) &lt;class &#39;numpy.ndarray&#39;&gt;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>diag(vY))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 0.36944492  0.          0.        ]
+ [ 0.          0.46322172  0.        ]
+ [ 0.          0.          0.80256682]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>diagonal(np<span style="color:#555">.</span>diag(vY)))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[ 0.36944492  0.46322172  0.80256682]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>eye(<span style="color:#f60">3</span>))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 1.  0.  0.]
+ [ 0.  1.  0.]
+ [ 0.  0.  1.]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>zeros([<span style="color:#f60">3</span>,<span style="color:#f60">3</span>]))
+<span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>ones([<span style="color:#f60">3</span>,<span style="color:#f60">3</span>]))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[ 0.  0.  0.]
+ [ 0.  0.  0.]
+ [ 0.  0.  0.]]
+[[ 1.  1.  1.]
+ [ 1.  1.  1.]
+ [ 1.  1.  1.]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>zeros_like(vY))
+<span style="color:#069;font-weight:bold">print</span>(np<span style="color:#555">.</span>zeros_like(np<span style="color:#555">.</span>diag(vY)))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[ 0.  0.  0.]
+[[ 0.  0.  0.]
+ [ 0.  0.  0.]
+ [ 0.  0.  0.]]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># benefits of the OOS design</span>
+<span style="color:#069;font-weight:bold">print</span>((np<span style="color:#555">.</span>diag(vY)<span style="color:#555">+</span>np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(<span style="color:#f60">3</span>,<span style="color:#f60">3</span>))<span style="color:#555">.</span>reshape(<span style="color:#f60">9</span>,<span style="color:#f60">1</span>)<span style="color:#555">.</span><span style="color:#366">max</span>()<span style="color:#555">**</span><span style="color:#f60">2</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1.38636810344</pre></div>
+<h2 id="1-5-some-example-and-exercises">1.5 Some example and exercises</h2>
+
+<p>(1) <strong>Subtract the mean of each row of a matrix</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(<span style="color:#f60">3</span>,<span style="color:#f60">3</span>)
+b <span style="color:#555">=</span> a <span style="color:#555">-</span> a<span style="color:#555">.</span>mean(axis<span style="color:#555">=</span><span style="color:#f60">1</span>) <span style="color:#09f;font-style:italic">#np.mean(a,axis=1)</span>
+<span style="color:#069;font-weight:bold">print</span>(b)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[[-0.27371758 -0.13738752  0.631215  ]
+ [-0.25698583 -0.11128908  0.68699173]
+ [-0.30855162  0.03770426 -0.26797938]]</pre></div>
+<p>(2) <strong>compute the moving average of an array</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">moving_average</span>(vY,window):
+    T <span style="color:#555">=</span> vY<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    ret <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(T <span style="color:#555">-</span> window)
+    <span style="color:#069;font-weight:bold">for</span> j,t <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">enumerate</span>(<span style="color:#366">range</span>(window,T)):
+        ret[j] <span style="color:#555">=</span> vY[t<span style="color:#555">-</span>window:t]<span style="color:#555">.</span>mean()
+    <span style="color:#069;font-weight:bold">return</span> ret 
+
+vY <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(<span style="color:#f60">20</span>)
+window <span style="color:#555">=</span> <span style="color:#f60">5</span>
+ret <span style="color:#555">=</span> moving_average(vY,window)
+<span style="color:#069;font-weight:bold">print</span>(ret)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[ 0.31439101  0.3067207   0.2612112   0.4488305   0.51791912  0.40021872
+  0.5155174   0.60879213  0.60470478  0.58250843  0.57880459  0.60341439
+  0.62814638  0.6328429   0.73670997]</pre></div>
+<p>(3) <strong>find the closest point</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">find_closePointV1</span>(points,target):
+    min_distance <span style="color:#555">=</span> <span style="color:#f60">1</span>
+    point_index <span style="color:#555">=</span> <span style="color:#f60">0</span>
+    <span style="color:#069;font-weight:bold">for</span> i,point <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">enumerate</span>(points):
+        distance <span style="color:#555">=</span> ((point<span style="color:#555">-</span>target)<span style="color:#555">**</span><span style="color:#f60">2</span>)<span style="color:#555">.</span><span style="color:#366">sum</span>()
+        <span style="color:#069;font-weight:bold">if</span> distance <span style="color:#555">&lt;</span> min_distance:
+            min_distance <span style="color:#555">=</span> distance
+            point_index <span style="color:#555">=</span> i
+    <span style="color:#069;font-weight:bold">return</span> min_distance,point_index
+    
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">find_closePointV2</span>(points,target):
+    distances <span style="color:#555">=</span> ((points<span style="color:#555">-</span>target)<span style="color:#555">**</span><span style="color:#f60">2</span>)<span style="color:#555">.</span><span style="color:#366">sum</span>(axis<span style="color:#555">=</span><span style="color:#f60">1</span>)
+    min_distance <span style="color:#555">=</span> distances<span style="color:#555">.</span><span style="color:#366">min</span>()
+    point_index <span style="color:#555">=</span> distances<span style="color:#555">.</span>argmin()
+    <span style="color:#069;font-weight:bold">return</span> min_distance,point_index</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">points <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(<span style="color:#f60">2000</span>,<span style="color:#f60">2</span>)
+target <span style="color:#555">=</span> np<span style="color:#555">.</span>array([<span style="color:#f60">0.5</span>,<span style="color:#f60">0.5</span>])
+min_distance1,point_index1 <span style="color:#555">=</span> find_closePointV1(points,target)
+min_distance2,point_index2 <span style="color:#555">=</span> find_closePointV2(points,target)
+
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Version 1 the minimum distance:&#34;</span>,min_distance1)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Version 1 the point with minimum distance&#34;</span>,points[point_index1])
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Version 2 the minimum distance:&#34;</span>,min_distance2)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Version 2 the point with minimum distance&#34;</span>,points[point_index2])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Version 1 the minimum distance: 0.000113540004683
+Version 1 the point with minimum distance [ 0.50663792  0.50833535]
+Version 2 the minimum distance: 0.000113540004683
+Version 2 the point with minimum distance [ 0.50663792  0.50833535]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># version 1 and version 2 have huge performance difference</span>
+<span style="color:#555">%</span>timeit find_closePointV1(points,target)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">100 loops, best of 3: 5.76 ms per loop</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit find_closePointV2(points,target)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">The slowest run took 4.57 times longer than the fastest. This could mean that an intermediate result is being cached.
+10000 loops, best of 3: 46.9 µs per loop</pre></div>
+<p>(4) <strong>One line code of simulation of Pi</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">N <span style="color:#555">=</span> <span style="color:#f60">1000000</span>
+pi <span style="color:#555">=</span> <span style="color:#f60">4</span><span style="color:#555">*</span>((np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(N,<span style="color:#f60">2</span>)<span style="color:#555">**</span><span style="color:#f60">2</span>)<span style="color:#555">.</span><span style="color:#366">sum</span>(axis<span style="color:#555">=</span><span style="color:#f60">1</span>)<span style="color:#555">&lt;</span><span style="color:#f60">1</span>)<span style="color:#555">.</span><span style="color:#366">sum</span>()<span style="color:#555">/</span>N
+<span style="color:#069;font-weight:bold">print</span>(pi)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">3.141164</pre></div>
+<h1 id="2-pandas">2. Pandas</h1>
+
+<p>Pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.</p>
+
+<ul>
+<li>Use Pandas as possible as you can!</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">pandas</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">pd</span></code></pre></div>
+<h2 id="2-1-object-creation">2.1 ** Object creation**</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">index <span style="color:#555">=</span> [i <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">4</span>)]
+columns <span style="color:#555">=</span> [<span style="color:#c30">&#39;A&#39;</span>,<span style="color:#c30">&#39;B&#39;</span>,<span style="color:#c30">&#39;C&#39;</span>,<span style="color:#c30">&#39;D&#39;</span>,<span style="color:#c30">&#39;E&#39;</span>]
+data <span style="color:#555">=</span> pd<span style="color:#555">.</span>DataFrame(np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(<span style="color:#f60">4</span>,<span style="color:#f60">5</span>),index<span style="color:#555">=</span>index,columns<span style="color:#555">=</span>columns)
+<span style="color:#069;font-weight:bold">print</span>(data)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">          A         B         C         D         E
+0  0.377511  0.935913  0.484039  0.494305  0.017102
+1  0.674354  0.961497  0.719836  0.463993  0.966345
+2  0.113718  0.558731  0.725746  0.287497  0.447674
+3  0.799740  0.051104  0.585415  0.475480  0.651220</pre></div>
+<h2 id="2-2-selction">2.2 ** Selction**</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data[<span style="color:#c30">&#39;A&#39;</span>]</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">0    0.582853
+1    0.205175
+2    0.142668
+3    0.517169
+Name: A, dtype: float64</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data[[<span style="color:#c30">&#39;A&#39;</span>,<span style="color:#c30">&#39;B&#39;</span>]]</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.582853</td>
+      <td>0.050482</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.205175</td>
+      <td>0.676394</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.142668</td>
+      <td>0.728272</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.517169</td>
+      <td>0.224242</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data[<span style="color:#f60">0</span>:<span style="color:#f60">3</span>]</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.582853</td>
+      <td>0.050482</td>
+      <td>0.257578</td>
+      <td>0.340971</td>
+      <td>0.907032</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.205175</td>
+      <td>0.676394</td>
+      <td>0.830756</td>
+      <td>0.963753</td>
+      <td>0.675394</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.142668</td>
+      <td>0.728272</td>
+      <td>0.353043</td>
+      <td>0.082804</td>
+      <td>0.585398</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># Label based selection</span>
+data<span style="color:#555">.</span>loc[<span style="color:#f60">3</span>,<span style="color:#c30">&#39;B&#39;</span>]</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">0.22424205926919127</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#555">.</span>loc[<span style="color:#f60">0</span>:<span style="color:#f60">2</span>,[<span style="color:#c30">&#39;A&#39;</span>,<span style="color:#c30">&#39;B&#39;</span>]]</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.582853</td>
+      <td>0.050482</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.205175</td>
+      <td>0.676394</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.142668</td>
+      <td>0.728272</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># integer based selection</span>
+data<span style="color:#555">.</span>iloc[<span style="color:#f60">1</span>:<span style="color:#f60">4</span>,<span style="color:#f60">0</span>:<span style="color:#f60">2</span>]</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0.205175</td>
+      <td>0.676394</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.142668</td>
+      <td>0.728272</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.517169</td>
+      <td>0.224242</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#555">.</span>iloc[<span style="color:#f60">1</span>:<span style="color:#f60">3</span>,:]</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0.205175</td>
+      <td>0.676394</td>
+      <td>0.830756</td>
+      <td>0.963753</td>
+      <td>0.675394</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.142668</td>
+      <td>0.728272</td>
+      <td>0.353043</td>
+      <td>0.082804</td>
+      <td>0.585398</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#555">.</span>ix[<span style="color:#f60">1</span>:<span style="color:#f60">3</span>]</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0.205175</td>
+      <td>0.676394</td>
+      <td>0.830756</td>
+      <td>0.963753</td>
+      <td>0.675394</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.142668</td>
+      <td>0.728272</td>
+      <td>0.353043</td>
+      <td>0.082804</td>
+      <td>0.585398</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.517169</td>
+      <td>0.224242</td>
+      <td>0.585978</td>
+      <td>0.654013</td>
+      <td>0.965902</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># Boolean indexing</span>
+indexB <span style="color:#555">=</span> data[<span style="color:#c30">&#39;A&#39;</span>] <span style="color:#555">&gt;</span> <span style="color:#f60">0.2</span>
+<span style="color:#069;font-weight:bold">print</span>(indexB)
+<span style="color:#069;font-weight:bold">print</span>(data[indexB])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">0     True
+1     True
+2    False
+3     True
+Name: A, dtype: bool
+          A         B         C         D         E
+0  0.582853  0.050482  0.257578  0.340971  0.907032
+1  0.205175  0.676394  0.830756  0.963753  0.675394
+3  0.517169  0.224242  0.585978  0.654013  0.965902</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># or conveniently </span>
+<span style="color:#069;font-weight:bold">print</span>(data[data[<span style="color:#c30">&#39;A&#39;</span>]<span style="color:#555">&gt;</span><span style="color:#f60">0.2</span>])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">          A         B         C         D         E
+0  0.582853  0.050482  0.257578  0.340971  0.907032
+1  0.205175  0.676394  0.830756  0.963753  0.675394
+3  0.517169  0.224242  0.585978  0.654013  0.965902</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># OOP</span>
+data[data[<span style="color:#c30">&#39;A&#39;</span>]<span style="color:#555">&gt;</span><span style="color:#f60">0.2</span>][<span style="color:#c30">&#39;C&#39;</span>]<span style="color:#555">.</span>ix[<span style="color:#f60">0</span>]</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">0.25757750460410422</pre></div>
+<h2 id="2-3-arithmatic-operations">2.3 Arithmatic operations</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data[<span style="color:#c30">&#39;F&#39;</span>] <span style="color:#555">=</span> (data[<span style="color:#c30">&#39;A&#39;</span>] <span style="color:#555">+</span> data[<span style="color:#c30">&#39;B&#39;</span>])<span style="color:#555">/</span>data[<span style="color:#c30">&#39;C&#39;</span>] <span style="color:#555">-</span> data[<span style="color:#c30">&#39;D&#39;</span>]<span style="color:#555">*</span>data[<span style="color:#c30">&#39;E&#39;</span>]
+<span style="color:#069;font-weight:bold">print</span>(data)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">          A         B         C         D         E           F
+0  0.772780  0.251506  0.638696  0.712863  0.639697    1.147697
+1  0.723921  0.383294  0.007697  0.661608  0.638037  143.427074
+2  0.808509  0.679512  0.296928  0.872748  0.898736    4.227009
+3  0.226408  0.768940  0.292466  0.896504  0.974840    2.529343</pre></div>
+<h2 id="2-4-apply">2.4 Apply</h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">func</span>(series):
+    <span style="color:#069;font-weight:bold">return</span> series<span style="color:#555">.</span><span style="color:#366">sum</span>()<span style="color:#555">/</span>series<span style="color:#555">.</span>std()
+ret <span style="color:#555">=</span> data<span style="color:#555">.</span><span style="color:#366">apply</span>(func,axis<span style="color:#555">=</span><span style="color:#f60">1</span>)
+data[<span style="color:#c30">&#39;ret&#39;</span>] <span style="color:#555">=</span> data<span style="color:#555">.</span><span style="color:#366">apply</span>(func,axis<span style="color:#555">=</span><span style="color:#f60">1</span>)
+
+<span style="color:#069;font-weight:bold">print</span>(ret)
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>)
+<span style="color:#069;font-weight:bold">print</span>(data)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">0    5.779099
+1    2.757361
+2    6.135847
+3    5.855379
+dtype: float64
+
+
+          A         B         C         D         E           F       ret
+0  0.772780  0.251506  0.638696  0.712863  0.639697    1.147697  5.779099
+1  0.723921  0.383294  0.007697  0.661608  0.638037  143.427074  2.757361
+2  0.808509  0.679512  0.296928  0.872748  0.898736    4.227009  6.135847
+3  0.226408  0.768940  0.292466  0.896504  0.974840    2.529343  5.855379</pre></div>
+<h2 id="2-5-groupby">2.5 Groupby</h2>
+
+<p><strong>This is a extremely useful object, please go through the detail <a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html">cookbook</a></strong></p>
+
+<p>By “group by” we are referring to a process involving one or more of the following steps</p>
+
+<ul>
+<li>Splitting the data into groups based on some criteria</li>
+<li>Applying a function to each group independently</li>
+<li>Combining the results into a data structure</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#555">=</span> pd<span style="color:#555">.</span>DataFrame({<span style="color:#c30">&#39;A&#39;</span> : [<span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;bar&#39;</span>, <span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;bar&#39;</span>,
+                          <span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;bar&#39;</span>, <span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;foo&#39;</span>],
+                   <span style="color:#c30">&#39;B&#39;</span> : [<span style="color:#c30">&#39;one&#39;</span>, <span style="color:#c30">&#39;one&#39;</span>, <span style="color:#c30">&#39;two&#39;</span>, <span style="color:#c30">&#39;three&#39;</span>,
+                          <span style="color:#c30">&#39;two&#39;</span>, <span style="color:#c30">&#39;two&#39;</span>, <span style="color:#c30">&#39;one&#39;</span>, <span style="color:#c30">&#39;three&#39;</span>],
+                   <span style="color:#c30">&#39;C&#39;</span> : np<span style="color:#555">.</span>random<span style="color:#555">.</span>randn(<span style="color:#f60">8</span>),
+                   <span style="color:#c30">&#39;D&#39;</span> : np<span style="color:#555">.</span>random<span style="color:#555">.</span>randn(<span style="color:#f60">8</span>)})
+data</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>foo</td>
+      <td>one</td>
+      <td>0.785</td>
+      <td>-0.553</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>bar</td>
+      <td>one</td>
+      <td>0.724</td>
+      <td>1.079</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>foo</td>
+      <td>two</td>
+      <td>-1.760</td>
+      <td>-0.818</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>bar</td>
+      <td>three</td>
+      <td>0.721</td>
+      <td>0.440</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>foo</td>
+      <td>two</td>
+      <td>0.026</td>
+      <td>0.068</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>bar</td>
+      <td>two</td>
+      <td>0.442</td>
+      <td>0.321</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>foo</td>
+      <td>one</td>
+      <td>-0.328</td>
+      <td>0.176</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>foo</td>
+      <td>three</td>
+      <td>-0.473</td>
+      <td>-1.483</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">groupA <span style="color:#555">=</span> data<span style="color:#555">.</span>groupby(<span style="color:#c30">&#39;A&#39;</span>)
+groupAB <span style="color:#555">=</span> data<span style="color:#555">.</span>groupby([<span style="color:#c30">&#39;A&#39;</span>,<span style="color:#c30">&#39;B&#39;</span>])
+<span style="color:#069;font-weight:bold">print</span>(groupA)
+<span style="color:#069;font-weight:bold">print</span>(groupAB)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7eff7ff467b8&gt;
+&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7eff7ff46128&gt;</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># GroupBy object attributes</span>
+groupA<span style="color:#555">.</span>groups</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{&#39;bar&#39;: Int64Index([1, 3, 5], dtype=&#39;int64&#39;),
+ &#39;foo&#39;: Int64Index([0, 2, 4, 6, 7], dtype=&#39;int64&#39;)}</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># some statistics</span>
+<span style="color:#09f;font-style:italic"># Std</span>
+<span style="color:#069;font-weight:bold">print</span>(groupAB<span style="color:#555">.</span>std())
+<span style="color:#09f;font-style:italic"># Mean</span>
+<span style="color:#069;font-weight:bold">print</span>(groupAB<span style="color:#555">.</span>mean())
+<span style="color:#09f;font-style:italic"># Sum</span>
+<span style="color:#069;font-weight:bold">print</span>(groupAB<span style="color:#555">.</span><span style="color:#366">sum</span>())</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">                  C         D
+A   B                        
+bar one         NaN       NaN
+    three       NaN       NaN
+    two         NaN       NaN
+foo one    0.287689  0.533024
+    three       NaN       NaN
+    two    0.259739  0.182370
+                  C         D
+A   B                        
+bar one    0.093289 -1.435398
+    three  1.610691  0.099456
+    two    1.674365 -1.969331
+foo one   -0.433944  0.118717
+    three  0.640498  0.695818
+    two    1.002847 -0.708532
+                  C         D
+A   B                        
+bar one    0.093289 -1.435398
+    three  1.610691  0.099456
+    two    1.674365 -1.969331
+foo one   -0.867888  0.237433
+    three  0.640498  0.695818
+    two    2.005694 -1.417063</pre></div>
+<p><strong>Iteration through groups</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">for</span> group_name, group_data <span style="color:#000;font-weight:bold">in</span> groupA:
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;group name: &#39;</span>,group_name)
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;group data:</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>,group_data)
+    <span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#39;</span><span style="color:#c30;font-weight:bold">\n</span><span style="color:#c30">&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">group name:  bar
+group data:
+      A      B         C         D
+1  bar    one -1.763415 -1.015387
+3  bar  three -1.104977 -2.578075
+5  bar    two -1.650251 -0.601321
+
+
+group name:  foo
+group data:
+      A      B         C         D
+0  foo    one  0.738800  0.320824
+2  foo    two -0.866414 -0.223506
+4  foo    two  0.009047 -0.798006
+6  foo    one  0.209088 -0.120664
+7  foo  three -0.470803  0.823928</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># you can flexibly run function on group data, for example: OLS regression</span>
+beta <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(<span style="color:#f60">2</span>)
+<span style="color:#069;font-weight:bold">for</span> i, (group_name,group_data) <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">enumerate</span>(groupA):
+    mY <span style="color:#555">=</span> group_data[[<span style="color:#c30">&#39;C&#39;</span>]]<span style="color:#555">.</span>values
+    mX <span style="color:#555">=</span> group_data[[<span style="color:#c30">&#39;D&#39;</span>]]<span style="color:#555">.</span>values
+    beta[i] <span style="color:#555">=</span> np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>lstsq(mX,mY)[<span style="color:#f60">0</span>]
+<span style="color:#069;font-weight:bold">print</span>(beta)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[ 0.7005281   0.00695643]</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># the method above is very flexible, you can use another useful method: group apply</span>
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">myfunc</span>(group_data):
+    <span style="color:#069;font-weight:bold">print</span>(group_data)
+    mY <span style="color:#555">=</span> group_data[[<span style="color:#c30">&#39;C&#39;</span>]]<span style="color:#555">.</span>values
+    mX <span style="color:#555">=</span> group_data[[<span style="color:#c30">&#39;D&#39;</span>]]<span style="color:#555">.</span>values
+    <span style="color:#069;font-weight:bold">return</span> np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>lstsq(mX,mY)[<span style="color:#f60">0</span>]
+
+groupA<span style="color:#555">.</span><span style="color:#366">apply</span>(myfunc)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">       B         C         D
+1    one -1.763415 -1.015387
+3  three -1.104977 -2.578075
+5    two -1.650251 -0.601321
+       B         C         D
+1    one -1.763415 -1.015387
+3  three -1.104977 -2.578075
+5    two -1.650251 -0.601321
+       B         C         D
+0    one  0.738800  0.320824
+2    two -0.866414 -0.223506
+4    two  0.009047 -0.798006
+6    one  0.209088 -0.120664
+7  three -0.470803  0.823928
+
+
+
+
+
+A
+bar      [[0.700528102717]]
+foo    [[0.00695642969842]]
+dtype: object</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">myfunc</span>(group_data):
+    mY <span style="color:#555">=</span> group_data[[<span style="color:#c30">&#39;C&#39;</span>]]<span style="color:#555">.</span>values
+    mX <span style="color:#555">=</span> group_data[[<span style="color:#c30">&#39;D&#39;</span>]]<span style="color:#555">.</span>values
+    <span style="color:#069;font-weight:bold">return</span> <span style="color:#366">float</span>(np<span style="color:#555">.</span>linalg<span style="color:#555">.</span>lstsq(mX,mY)[<span style="color:#f60">0</span>])
+
+result <span style="color:#555">=</span> groupA<span style="color:#555">.</span><span style="color:#366">apply</span>(myfunc)
+<span style="color:#069;font-weight:bold">print</span>(result)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">A
+bar    0.700528
+foo    0.006956
+dtype: float64</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">myfunc</span>(group_data):
+    <span style="color:#09f;font-style:italic"># if the return result is a dataframe, pandas will look at its index, and merge the result back to original </span>
+    <span style="color:#09f;font-style:italic"># dataframe by same index</span>
+    <span style="color:#069;font-weight:bold">return</span> (group_data[<span style="color:#c30">&#39;C&#39;</span>]<span style="color:#555">/</span>group_data[<span style="color:#c30">&#39;D&#39;</span>]<span style="color:#555">.</span><span style="color:#366">sum</span>())<span style="color:#555">.</span>to_frame(<span style="color:#c30">&#39;ret&#39;</span>)
+data[<span style="color:#c30">&#39;ret&#39;</span>] <span style="color:#555">=</span> data<span style="color:#555">.</span>groupby(<span style="color:#c30">&#39;A&#39;</span>)<span style="color:#555">.</span><span style="color:#366">apply</span>(myfunc)
+data</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>ret</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>foo</td>
+      <td>one</td>
+      <td>-0.230517</td>
+      <td>-0.258188</td>
+      <td>0.476460</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>bar</td>
+      <td>one</td>
+      <td>0.093289</td>
+      <td>-1.435398</td>
+      <td>-0.028224</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>foo</td>
+      <td>two</td>
+      <td>1.186510</td>
+      <td>-0.579577</td>
+      <td>-2.452417</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>bar</td>
+      <td>three</td>
+      <td>1.610691</td>
+      <td>0.099456</td>
+      <td>-0.487309</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>foo</td>
+      <td>two</td>
+      <td>0.819184</td>
+      <td>-0.837487</td>
+      <td>-1.693185</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>bar</td>
+      <td>two</td>
+      <td>1.674365</td>
+      <td>-1.969331</td>
+      <td>-0.506574</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>foo</td>
+      <td>one</td>
+      <td>-0.637371</td>
+      <td>0.495621</td>
+      <td>1.317392</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>foo</td>
+      <td>three</td>
+      <td>0.640498</td>
+      <td>0.695818</td>
+      <td>-1.323855</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="2-6-merge-data">2.6 Merge data</h2>
+
+<p>This is another power object, please go through <a href="http://pandas.pydata.org/pandas-docs/stable/merging.html">detail</a></p>
+
+<p>basic syntax:</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#555">.</span>merge(left, right, how<span style="color:#555">=</span><span style="color:#c30">&#39;inner&#39;</span>, on<span style="color:#555">=</span>None, left_on<span style="color:#555">=</span>None, right_on<span style="color:#555">=</span>None,
+         left_index<span style="color:#555">=</span>False, right_index<span style="color:#555">=</span>False, sort<span style="color:#555">=</span>True,
+         suffixes<span style="color:#555">=</span>(<span style="color:#c30">&#39;_x&#39;</span>, <span style="color:#c30">&#39;_y&#39;</span>), copy<span style="color:#555">=</span>True, indicator<span style="color:#555">=</span>False)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">left <span style="color:#555">=</span> pd<span style="color:#555">.</span>DataFrame({<span style="color:#c30">&#39;key&#39;</span>: [<span style="color:#c30">&#39;K0&#39;</span>, <span style="color:#c30">&#39;K1&#39;</span>, <span style="color:#c30">&#39;K2&#39;</span>, <span style="color:#c30">&#39;K3&#39;</span>],
+                       <span style="color:#c30">&#39;A&#39;</span>: [<span style="color:#c30">&#39;A0&#39;</span>, <span style="color:#c30">&#39;A1&#39;</span>, <span style="color:#c30">&#39;A2&#39;</span>, <span style="color:#c30">&#39;A3&#39;</span>],
+                       <span style="color:#c30">&#39;B&#39;</span>: [<span style="color:#c30">&#39;B0&#39;</span>, <span style="color:#c30">&#39;B1&#39;</span>, <span style="color:#c30">&#39;B2&#39;</span>, <span style="color:#c30">&#39;B3&#39;</span>]})
+
+
+right <span style="color:#555">=</span> pd<span style="color:#555">.</span>DataFrame({<span style="color:#c30">&#39;key&#39;</span>: [<span style="color:#c30">&#39;K1&#39;</span>, <span style="color:#c30">&#39;K2&#39;</span>, <span style="color:#c30">&#39;K3&#39;</span>, <span style="color:#c30">&#39;K4&#39;</span>],
+                        <span style="color:#c30">&#39;C&#39;</span>: [<span style="color:#c30">&#39;C0&#39;</span>, <span style="color:#c30">&#39;C1&#39;</span>, <span style="color:#c30">&#39;C2&#39;</span>, <span style="color:#c30">&#39;C3&#39;</span>],
+                        <span style="color:#c30">&#39;D&#39;</span>: [<span style="color:#c30">&#39;D0&#39;</span>, <span style="color:#c30">&#39;D1&#39;</span>, <span style="color:#c30">&#39;D2&#39;</span>, <span style="color:#c30">&#39;D3&#39;</span>]})
+<span style="color:#069;font-weight:bold">print</span>(left)
+<span style="color:#069;font-weight:bold">print</span>(right)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    A   B key
+0  A0  B0  K0
+1  A1  B1  K1
+2  A2  B2  K2
+3  A3  B3  K3
+    C   D key
+0  C0  D0  K1
+1  C1  D1  K2
+2  C2  D2  K3
+3  C3  D3  K4</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">inner_merged <span style="color:#555">=</span> pd<span style="color:#555">.</span>merge(left,right,how<span style="color:#555">=</span><span style="color:#c30">&#39;inner&#39;</span>,left_on<span style="color:#555">=</span>[<span style="color:#c30">&#39;key&#39;</span>],right_on<span style="color:#555">=</span>[<span style="color:#c30">&#39;key&#39;</span>])
+<span style="color:#069;font-weight:bold">print</span>(inner_merged)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    A   B key   C   D
+0  A1  B1  K1  C0  D0
+1  A2  B2  K2  C1  D1
+2  A3  B3  K3  C2  D2</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">left_merged <span style="color:#555">=</span> pd<span style="color:#555">.</span>merge(left,right,how<span style="color:#555">=</span><span style="color:#c30">&#39;left&#39;</span>,left_on<span style="color:#555">=</span>[<span style="color:#c30">&#39;key&#39;</span>],right_on<span style="color:#555">=</span>[<span style="color:#c30">&#39;key&#39;</span>])
+<span style="color:#069;font-weight:bold">print</span>(left_merged)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    A   B key    C    D
+0  A0  B0  K0  NaN  NaN
+1  A1  B1  K1   C0   D0
+2  A2  B2  K2   C1   D1
+3  A3  B3  K3   C2   D2</pre></div>
+<h2 id="2-7-pivot-and-reshape-table">2.7 Pivot and reshape table</h2>
+
+<p>&hellip;Again&hellip;very power object, details click <a href="http://pandas.pydata.org/pandas-docs/stable/reshaping.html">here</a></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#555">=</span> pd<span style="color:#555">.</span>DataFrame({<span style="color:#c30">&#39;A&#39;</span> : [<span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;bar&#39;</span>, <span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;bar&#39;</span>,
+                          <span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;bar&#39;</span>, <span style="color:#c30">&#39;foo&#39;</span>, <span style="color:#c30">&#39;foo&#39;</span>],
+                   <span style="color:#c30">&#39;B&#39;</span> : [<span style="color:#c30">&#39;one&#39;</span>, <span style="color:#c30">&#39;one&#39;</span>, <span style="color:#c30">&#39;two&#39;</span>, <span style="color:#c30">&#39;three&#39;</span>,
+                          <span style="color:#c30">&#39;two&#39;</span>, <span style="color:#c30">&#39;two&#39;</span>, <span style="color:#c30">&#39;one&#39;</span>, <span style="color:#c30">&#39;three&#39;</span>],
+                   <span style="color:#c30">&#39;C&#39;</span> : np<span style="color:#555">.</span>random<span style="color:#555">.</span>randn(<span style="color:#f60">8</span>),
+                   <span style="color:#c30">&#39;D&#39;</span> : np<span style="color:#555">.</span>random<span style="color:#555">.</span>randn(<span style="color:#f60">8</span>)})
+data</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>foo</td>
+      <td>one</td>
+      <td>1.329326</td>
+      <td>0.515690</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>bar</td>
+      <td>one</td>
+      <td>0.912863</td>
+      <td>-0.309627</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>foo</td>
+      <td>two</td>
+      <td>-0.219018</td>
+      <td>2.094762</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>bar</td>
+      <td>three</td>
+      <td>-0.159688</td>
+      <td>0.737186</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>foo</td>
+      <td>two</td>
+      <td>1.182747</td>
+      <td>0.359100</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>bar</td>
+      <td>two</td>
+      <td>-0.013464</td>
+      <td>-1.514432</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>foo</td>
+      <td>one</td>
+      <td>-1.277657</td>
+      <td>0.657462</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>foo</td>
+      <td>three</td>
+      <td>0.012385</td>
+      <td>0.535246</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">table <span style="color:#555">=</span> pd<span style="color:#555">.</span>pivot_table(data,index<span style="color:#555">=</span>[<span style="color:#c30">&#39;A&#39;</span>],columns<span style="color:#555">=</span>[<span style="color:#c30">&#39;B&#39;</span>],values<span style="color:#555">=</span>[<span style="color:#c30">&#39;C&#39;</span>])
+<span style="color:#069;font-weight:bold">print</span>(table)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">            C                    
+B         one     three       two
+A                                
+bar  0.912863 -0.159688 -0.013464
+foo  0.025835  0.012385  0.481865</pre></div>
+<h2 id="2-7-useful-funciton-on-dataframe">2.7 <strong>Useful funciton on DataFrame</strong></h2>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#555">.</span>describe()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#555">.</span>describe(percentiles<span style="color:#555">=</span>[<span style="color:#f60">0.2</span>,<span style="color:#f60">0.3</span>,<span style="color:#f60">0.4</span>,<span style="color:#f60">0.8</span>])</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># shape</span>
+data<span style="color:#555">.</span>shape</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># transpose</span>
+data<span style="color:#555">.</span>T</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># link to numpy</span>
+data_values <span style="color:#555">=</span> data<span style="color:#555">.</span>values
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#366">type</span>(data_values))
+<span style="color:#069;font-weight:bold">print</span>(data_values)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># caveat, data_values is a &#34;VIEW&#34; of the DataFrame, which means that it is mutable!</span>
+data_values[<span style="color:#f60">0</span>,<span style="color:#f60">0</span>] <span style="color:#555">=</span> <span style="color:#f60">15</span>
+data</code></pre></div>
+<h1 id="3-learn-pandas-by-example">3. Learn Pandas by example</h1>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">matplotlib.pyplot</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">plt</span>
+<span style="color:#555">%</span>matplotlib inline
+data <span style="color:#555">=</span> pd<span style="color:#555">.</span>read_csv(<span style="color:#c30">&#39;data.csv&#39;</span>)
+data<span style="color:#555">.</span>head(<span style="color:#f60">6</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>minor</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Adj Close</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010-01-04</td>
+      <td>AAPL</td>
+      <td>213.430</td>
+      <td>214.500</td>
+      <td>212.380</td>
+      <td>214.010</td>
+      <td>123432400.000</td>
+      <td>27.727</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2010-01-04</td>
+      <td>INTC</td>
+      <td>20.790</td>
+      <td>21.030</td>
+      <td>20.730</td>
+      <td>20.880</td>
+      <td>47800900.000</td>
+      <td>16.443</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2010-01-04</td>
+      <td>MSFT</td>
+      <td>30.620</td>
+      <td>31.100</td>
+      <td>30.590</td>
+      <td>30.950</td>
+      <td>38409100.000</td>
+      <td>25.555</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010-01-05</td>
+      <td>AAPL</td>
+      <td>214.600</td>
+      <td>215.590</td>
+      <td>213.250</td>
+      <td>214.380</td>
+      <td>150476200.000</td>
+      <td>27.775</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010-01-05</td>
+      <td>INTC</td>
+      <td>20.940</td>
+      <td>20.990</td>
+      <td>20.600</td>
+      <td>20.870</td>
+      <td>52357700.000</td>
+      <td>16.435</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2010-01-05</td>
+      <td>MSFT</td>
+      <td>30.850</td>
+      <td>31.100</td>
+      <td>30.640</td>
+      <td>30.960</td>
+      <td>49749600.000</td>
+      <td>25.564</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#555">.</span>info()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 5412 entries, 0 to 5411
+Data columns (total 8 columns):
+Date         5412 non-null object
+minor        5412 non-null object
+Open         5412 non-null float64
+High         5412 non-null float64
+Low          5412 non-null float64
+Close        5412 non-null float64
+Volume       5412 non-null float64
+Adj Close    5412 non-null float64
+dtypes: float64(6), object(2)
+memory usage: 338.3+ KB</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># change the column name</span>
+data<span style="color:#555">.</span>rename(columns<span style="color:#555">=</span>{<span style="color:#c30">&#39;minor&#39;</span>:<span style="color:#c30">&#39;ticker&#39;</span>},inplace<span style="color:#555">=</span>True)
+data<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>ticker</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Adj Close</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010-01-04</td>
+      <td>AAPL</td>
+      <td>213.430</td>
+      <td>214.500</td>
+      <td>212.380</td>
+      <td>214.010</td>
+      <td>123432400.000</td>
+      <td>27.727</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2010-01-04</td>
+      <td>INTC</td>
+      <td>20.790</td>
+      <td>21.030</td>
+      <td>20.730</td>
+      <td>20.880</td>
+      <td>47800900.000</td>
+      <td>16.443</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2010-01-04</td>
+      <td>MSFT</td>
+      <td>30.620</td>
+      <td>31.100</td>
+      <td>30.590</td>
+      <td>30.950</td>
+      <td>38409100.000</td>
+      <td>25.555</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010-01-05</td>
+      <td>AAPL</td>
+      <td>214.600</td>
+      <td>215.590</td>
+      <td>213.250</td>
+      <td>214.380</td>
+      <td>150476200.000</td>
+      <td>27.775</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010-01-05</td>
+      <td>INTC</td>
+      <td>20.940</td>
+      <td>20.990</td>
+      <td>20.600</td>
+      <td>20.870</td>
+      <td>52357700.000</td>
+      <td>16.435</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data<span style="color:#555">.</span>sort_values(by<span style="color:#555">=</span>[<span style="color:#c30">&#39;ticker&#39;</span>,<span style="color:#c30">&#39;Date&#39;</span>],inplace<span style="color:#555">=</span>True)
+data<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>ticker</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Adj Close</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010-01-04</td>
+      <td>AAPL</td>
+      <td>213.430</td>
+      <td>214.500</td>
+      <td>212.380</td>
+      <td>214.010</td>
+      <td>123432400.000</td>
+      <td>27.727</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010-01-05</td>
+      <td>AAPL</td>
+      <td>214.600</td>
+      <td>215.590</td>
+      <td>213.250</td>
+      <td>214.380</td>
+      <td>150476200.000</td>
+      <td>27.775</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2010-01-06</td>
+      <td>AAPL</td>
+      <td>214.380</td>
+      <td>215.230</td>
+      <td>210.750</td>
+      <td>210.970</td>
+      <td>138040000.000</td>
+      <td>27.333</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2010-01-07</td>
+      <td>AAPL</td>
+      <td>211.750</td>
+      <td>212.000</td>
+      <td>209.050</td>
+      <td>210.580</td>
+      <td>119282800.000</td>
+      <td>27.283</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2010-01-08</td>
+      <td>AAPL</td>
+      <td>210.300</td>
+      <td>212.000</td>
+      <td>209.060</td>
+      <td>211.980</td>
+      <td>111902700.000</td>
+      <td>27.464</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data[<span style="color:#c30">&#39;Date&#39;</span>] <span style="color:#555">=</span> pd<span style="color:#555">.</span>to_datetime(data[<span style="color:#c30">&#39;Date&#39;</span>]<span style="color:#555">.</span>astype(<span style="color:#366">str</span>), format<span style="color:#555">=</span><span style="color:#c30">&#39;%Y-%m-</span><span style="color:#a00">%d</span><span style="color:#c30">&#39;</span>)
+data<span style="color:#555">.</span>info()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 5412 entries, 0 to 5411
+Data columns (total 8 columns):
+Date         5412 non-null datetime64[ns]
+ticker       5412 non-null object
+Open         5412 non-null float64
+High         5412 non-null float64
+Low          5412 non-null float64
+Close        5412 non-null float64
+Volume       5412 non-null float64
+Adj Close    5412 non-null float64
+dtypes: datetime64[ns](1), float64(6), object(1)
+memory usage: 380.5+ KB</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># if we only interested in adjusted close price, we can pivot the table</span>
+close_price <span style="color:#555">=</span> pd<span style="color:#555">.</span>pivot_table(data,index<span style="color:#555">=</span><span style="color:#c30">&#39;Date&#39;</span>,columns<span style="color:#555">=</span><span style="color:#c30">&#39;ticker&#39;</span>,values<span style="color:#555">=</span><span style="color:#c30">&#39;Adj Close&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">close_price<span style="color:#555">.</span>head(<span style="color:#f60">6</span>)</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ticker</th>
+      <th>AAPL</th>
+      <th>INTC</th>
+      <th>MSFT</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2010-01-04</th>
+      <td>27.727</td>
+      <td>16.443</td>
+      <td>25.555</td>
+    </tr>
+    <tr>
+      <th>2010-01-05</th>
+      <td>27.775</td>
+      <td>16.435</td>
+      <td>25.564</td>
+    </tr>
+    <tr>
+      <th>2010-01-06</th>
+      <td>27.333</td>
+      <td>16.380</td>
+      <td>25.407</td>
+    </tr>
+    <tr>
+      <th>2010-01-07</th>
+      <td>27.283</td>
+      <td>16.222</td>
+      <td>25.143</td>
+    </tr>
+    <tr>
+      <th>2010-01-08</th>
+      <td>27.464</td>
+      <td>16.403</td>
+      <td>25.316</td>
+    </tr>
+    <tr>
+      <th>2010-01-11</th>
+      <td>27.222</td>
+      <td>16.498</td>
+      <td>24.994</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">close_price<span style="color:#555">.</span>plot(figsize<span style="color:#555">=</span>(<span style="color:#f60">12</span>,<span style="color:#f60">5</span>))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;matplotlib.axes._subplots.AxesSubplot at 0x7eff568117b8&gt;</pre></div>
+<p><img src="/img/posts/PyTutorial2/output_103_1.png" alt="png" /></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># if we want the return, Pandas provide an extremely easy transformation</span>
+stock_return <span style="color:#555">=</span> close_price<span style="color:#555">.</span>pct_change()
+stock_return<span style="color:#555">.</span>head(<span style="color:#f60">5</span>)</code></pre></div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ticker</th>
+      <th>AAPL</th>
+      <th>INTC</th>
+      <th>MSFT</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2010-01-04</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2010-01-05</th>
+      <td>0.001729</td>
+      <td>-0.000479</td>
+      <td>0.000323</td>
+    </tr>
+    <tr>
+      <th>2010-01-06</th>
+      <td>-0.015906</td>
+      <td>-0.003354</td>
+      <td>-0.006137</td>
+    </tr>
+    <tr>
+      <th>2010-01-07</th>
+      <td>-0.001849</td>
+      <td>-0.009615</td>
+      <td>-0.010400</td>
+    </tr>
+    <tr>
+      <th>2010-01-08</th>
+      <td>0.006648</td>
+      <td>0.011165</td>
+      <td>0.006897</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic">#plot the cumulative return in one line</span>
+(<span style="color:#f60">1</span><span style="color:#555">+</span>stock_return)<span style="color:#555">.</span>cumprod()<span style="color:#555">.</span>plot()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f76333135f8&gt;</pre></div>
+<p><img src="/img/posts/PyTutorial2/output_105_1.png" alt="png" /></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># just show the style of OOP</span>
+(<span style="color:#f60">1</span> <span style="color:#555">+</span> pd<span style="color:#555">.</span>pivot_table(data,index<span style="color:#555">=</span><span style="color:#c30">&#39;Date&#39;</span>,columns<span style="color:#555">=</span><span style="color:#c30">&#39;ticker&#39;</span>,values<span style="color:#555">=</span><span style="color:#c30">&#39;Adj Close&#39;</span>)<span style="color:#555">.</span>pct_change())<span style="color:#555">.</span>cumprod()<span style="color:#555">.</span>plot()</code></pre></div>
+<p><img src="/img/posts/PyTutorial2/output_106_1.png" alt="png" /></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># save the return dataframe to csv</span>
+stock_return<span style="color:#555">.</span>to_csv(<span style="color:#c30">&#39;stockReturn.csv&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#09f;font-style:italic"># or, to save it to HDF5 format, which is much faster</span>
+<span style="color:#09f;font-style:italic"># create a HDF store</span>
+hdf <span style="color:#555">=</span> pd<span style="color:#555">.</span>HDFStore(<span style="color:#c30">&#39;stock.h5&#39;</span>)
+hdf[<span style="color:#c30">&#39;stock_return&#39;</span>] <span style="color:#555">=</span> stock_return
+hdf[<span style="color:#c30">&#39;raw_data&#39;</span>] <span style="color:#555">=</span> data
+hdf<span style="color:#555">.</span>close()</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit data <span style="color:#555">=</span> pd<span style="color:#555">.</span>read_csv(<span style="color:#c30">&#39;data.csv&#39;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">100 loops, best of 3: 5.75 ms per loop</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">hdf <span style="color:#555">=</span> pd<span style="color:#555">.</span>HDFStore(<span style="color:#c30">&#39;stock.h5&#39;</span>)
+<span style="color:#555">%</span>timeit data <span style="color:#555">=</span> hdf[<span style="color:#c30">&#39;raw_data&#39;</span>]</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">The slowest run took 6.86 times longer than the fastest. This could mean that an intermediate result is being cached.
+100 loops, best of 3: 2.61 ms per loop</pre></div>
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

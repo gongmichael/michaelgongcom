@@ -74,5 +74,41 @@
       <description></description>
     </item>
     
+    <item>
+      <title>OptionMetrics</title>
+      <link>https://michael-gong.com/tags/optionmetrics/</link>
+      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/optionmetrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://michael-gong.com/tags/tutorial/</link>
+      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Numpy</title>
+      <link>https://michael-gong.com/tags/numpy/</link>
+      <pubDate>Mon, 03 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>https://michael-gong.com/tags/pandas/</link>
+      <pubDate>Mon, 03 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/pandas/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

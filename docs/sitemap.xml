@@ -111,8 +111,52 @@
   </url>
   
   <url>
+    <loc>https://michael-gong.com/blogs/fastfilteringpart1/</loc>
+    <lastmod>2018-06-01T12:52:36+06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://michael-gong.com/imvolsurf/crosssection/</loc>
     <lastmod>2017-09-12T14:51:12+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/optionmetrics/</loc>
+    <lastmod>2017-04-07T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/blogs/python-tutorial-iii-clean-optionmetrics/</loc>
+    <lastmod>2017-04-07T12:52:36+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/tutorial/</loc>
+    <lastmod>2017-04-07T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/numpy/</loc>
+    <lastmod>2017-04-03T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/pandas/</loc>
+    <lastmod>2017-04-03T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/blogs/python-tutorial-part-ii-numpy-and-pandas/</loc>
+    <lastmod>2017-04-03T12:52:36+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/blogs/python-tutorial-part-i-basics/</loc>
+    <lastmod>2017-04-01T12:52:36+06:00</lastmod>
   </url>
   
   <url>

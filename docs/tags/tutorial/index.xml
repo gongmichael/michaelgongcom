@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Michael Gong</title>
+    <link>https://michael-gong.com/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Michael Gong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Apr 2017 12:52:36 +0600</lastBuildDate>
+    
+	<atom:link href="https://michael-gong.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Tutorial Part III--Clean OptionMetrics</title>
+      <link>https://michael-gong.com/blogs/python-tutorial-iii-clean-optionmetrics/</link>
+      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/python-tutorial-iii-clean-optionmetrics/</guid>
+      <description>1. Clean OptionMetrics dataset import pandas as pd import numpy as np import matplotlib.</description>
+    </item>
+    
+    <item>
+      <title>Python Tutorial Part II--Numpy and Pandas</title>
+      <link>https://michael-gong.com/blogs/python-tutorial-part-ii-numpy-and-pandas/</link>
+      <pubDate>Mon, 03 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/python-tutorial-part-ii-numpy-and-pandas/</guid>
+      <description>1. Numpy/Scipy NumPy and SciPy are open-source add-on modules to Python that provide common mathematical and numerical routines in pre-compiled, fast functions.</description>
+    </item>
+    
+    <item>
+      <title>Python Tutorial Part I--Basics</title>
+      <link>https://michael-gong.com/blogs/python-tutorial-part-i-basics/</link>
+      <pubDate>Sat, 01 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/python-tutorial-part-i-basics/</guid>
+      <description>import thisThe Zen of Python, by Tim Peters Beautiful is better than ugly.</description>
+    </item>
+    
+  </channel>
+</rss>

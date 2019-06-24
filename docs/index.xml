@@ -66,12 +66,48 @@
     </item>
     
     <item>
+      <title>Fast Kalman Filtering with univariate treatment Part I---Basics</title>
+      <link>https://michael-gong.com/blogs/fastfilteringpart1/</link>
+      <pubDate>Fri, 01 Jun 2018 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/fastfilteringpart1/</guid>
+      <description>Fast Kalman Filtering with univariate treatment Part I&amp;mdash;Basics 1. Introduction 1.</description>
+    </item>
+    
+    <item>
       <title>Option contracts availability </title>
       <link>https://michael-gong.com/imvolsurf/crosssection/</link>
       <pubDate>Tue, 12 Sep 2017 14:51:12 +0600</pubDate>
       
       <guid>https://michael-gong.com/imvolsurf/crosssection/</guid>
       <description>1. Likelihood of models ______________________________________________________________________________ ecoDfm fulDfm ecoDfmX1 ecoDfmX2 fulDfmX1 fulDfmX2 ______________________________________________________________________________ JNJ aic -350936.</description>
+    </item>
+    
+    <item>
+      <title>Python Tutorial Part III--Clean OptionMetrics</title>
+      <link>https://michael-gong.com/blogs/python-tutorial-iii-clean-optionmetrics/</link>
+      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/python-tutorial-iii-clean-optionmetrics/</guid>
+      <description>1. Clean OptionMetrics dataset import pandas as pd import numpy as np import matplotlib.</description>
+    </item>
+    
+    <item>
+      <title>Python Tutorial Part II--Numpy and Pandas</title>
+      <link>https://michael-gong.com/blogs/python-tutorial-part-ii-numpy-and-pandas/</link>
+      <pubDate>Mon, 03 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/python-tutorial-part-ii-numpy-and-pandas/</guid>
+      <description>1. Numpy/Scipy NumPy and SciPy are open-source add-on modules to Python that provide common mathematical and numerical routines in pre-compiled, fast functions.</description>
+    </item>
+    
+    <item>
+      <title>Python Tutorial Part I--Basics</title>
+      <link>https://michael-gong.com/blogs/python-tutorial-part-i-basics/</link>
+      <pubDate>Sat, 01 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/python-tutorial-part-i-basics/</guid>
+      <description>import thisThe Zen of Python, by Tim Peters Beautiful is better than ugly.</description>
     </item>
     
     <item>
