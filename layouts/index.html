@@ -1,124 +1,212 @@
 {{ define "content"}}
 
-    {{ partial "mainNav.html" . }}
-    <header class="masthead text-center text-white d-flex">
-        <div class="container my-auto">
+{{ partial "mainNav.html" . }}
+<header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-            <h3 class="text-center">
-                <blockquote>Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.</blockquote>
-            </h3>
-            <hr>
+                <h3 class="text-center">
+                    <blockquote>Imagination is more important than knowledge. Knowledge is limited. Imagination
+                        encircles the world.</blockquote>
+                </h3>
+                <hr>
             </div>
             <div class="col-lg-8 mx-auto">
-            {{/*  <p class="text-faded mb-5 font-italic">Albert Einstein</p>  */}}
-            <h4><footer class="blockquote-footer text-faded font-italic">Albert Einstein</footer></h4>
-            {{/*  <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>  */}}
+                {{/*  <p class="text-faded mb-5 font-italic">Albert Einstein</p>  */}}
+                <h4>
+                    <footer class="blockquote-footer text-faded font-italic">Albert Einstein</footer>
+                </h4>
+                {{/*  <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>  */}}
             </div>
         </div>
-        </div>
-    </header>
+    </div>
+</header>
 
-    <section class="bg-primary" id="about">
-      <div class="container my-auto">
+<section class="bg-primary" id="about">
+    <div class="container my-auto">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <div class="text-center">
-                <img src="img/michael.jpg" class="rounded-circle" alt="Cinque Terre" width="25%">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="text-center">
+                    <img src="img/michael.jpg" class="rounded-circle" alt="Cinque Terre" width="25%">
+                </div>
+                <h2 class="section-heading text-white">About Me</h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4">
+                    I'm a PhD student of Econometric Institute, Erasmus University Rotterdam. My primary research
+                    interest including financial econometrics, time series modelling, derivative modelling, and
+                    artificial neural network.
+                </p>
+                <a class="btn btn-light btn-xl" href={{ "resume" | absURL}}>My Resume</a>
+                <ul class="list-inline list-social-icons mb-0">
+
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/xun-michael-gong-02096775/" data-toggle="tooltip" title=""
+                            data-offset="0 10" data-original-title="LinkedIn">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="https://github.com/gongmichael" data-toggle="tooltip" title="" data-offset="0 10"
+                            data-original-title="GitHub">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/gong.michael.1" data-toggle="tooltip" title=""
+                            data-offset="0 10" data-original-title="FaceBook">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+
+
             </div>
-            <h2 class="section-heading text-white">About Me</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">
-              I'm a PhD student of Econometric Institute, Erasmus University Rotterdam. My primary research 
-              interest including financial econometrics, time series modelling, derivative modelling, and 
-              artificial neural network.
-            </p>
-            <a class="btn btn-light btn-xl" href={{ "resume" | absURL}}>My Resume</a>
-            <ul class="list-inline list-social-icons mb-0">
-
-                <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/xun-michael-gong-02096775/" data-toggle="tooltip"
-                        title="" data-offset="0 10" data-original-title="LinkedIn">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-
-                <li class="list-inline-item">
-                    <a href="https://github.com/gongmichael" data-toggle="tooltip" title="" data-offset="0 10"
-                        data-original-title="GitHub">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-
-                <li class="list-inline-item">
-                    <a href="https://www.facebook.com/gong.michael.1" data-toggle="tooltip" title=""
-                        data-offset="0 10" data-original-title="FaceBook">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-
-
-
-          </div>
         </div>
-      </div>
-    </section>  
+    </div>
+</section>
 
-    <section id="blogs">
-      <div class="container-fluid">
+<section id="blogs">
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">My Articles and Blogs</h2>
-            <hr class="my-4">
-          </div>
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">My Articles and Blogs</h2>
+                <hr class="my-4">
+            </div>
         </div>
-      </div>
+    </div>
 
-      {{ with .Site.GetPage "/blogs"}}
+    <div class="container">
+        {{ with .Site.GetPage "/blogs"}}
         {{ $featuredPages := where .Pages "Params.featured" true }}
         <div class="row">
-          {{ range first 4 $featuredPages.ByPublishDate.Reverse}}
-              {{ .Scratch.Set "totruncated" 400 }}
-              {{if .Params.thumbnail}}
-                {{.Scratch.Set "totruncated" 100}}
-              {{end}}
-              {{$vvvv := .Scratch.Get "totruncated" }}
-              <div class="col">
-                  <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-                      <div class="card-body d-flex flex-column align-items-start">
+            {{ range first 4 $featuredPages.ByPublishDate.Reverse}}
+            {{ .Scratch.Set "totruncated" 400 }}
+            {{if .Params.thumbnail}}
+            {{.Scratch.Set "totruncated" 100}}
+            {{end}}
+            {{$vvvv := .Scratch.Get "totruncated" }}
+            <div class="col">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
                         <h6 class="mb-0">
                             <a class="text-dark" href="{{.RelPermalink}}">{{.Title}}</a>
                         </h6>
                         <div class="mb-1 text-muted small">{{.Date.Format "Jan 2, 2006"}}</div>
                         <p class="card-text mb-auto">{{.Summary | truncate $vvvv}}</p>
-                        <a class="btn btn-outline-primary btn-sm" role="button" href="{{.RelPermalink}}">Continue reading</a>
-                      </div>
-                      {{ if .Params.thumbnail}}
-                      <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail" src="{{$.Site.BaseURL}}{{.Params.thumbnail}}" style="width: 200px; height: 200px;">
-                      {{ end }}
-                  </div>
-              </div>
-          {{ end }}
-      {{end}}
+                        <a class="btn btn-outline-primary btn-sm" role="button" href="{{.RelPermalink}}">Continue
+                            reading</a>
+                    </div>
+                    {{ if .Params.thumbnail}}
+                    <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail"
+                        src="{{$.Site.BaseURL}}{{.Params.thumbnail}}" style="width: 200px; height: 200px;">
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+            {{end}}
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <hr class="my-4">
+                <a class="btn btn-secondary btn-xl" href={{ "blogs" | absURL}}>Read More Blogs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="my-auto" style="background-color: aliceblue;" id="moments">
+    <div class="container-fluid">
+        {{/*  <div class="row">  */}}
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">My Life Moments</h2>
+                <hr class="my-4">
+            </div>
+        {{/*  </div>  */}}
+    </div>
+
+    <div class="container my-auto">
+        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                <li data-target="#carousel-example-2" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="view">
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                            alt="First slide">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Light mask</h3>
+                        <p>First text</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                            alt="Second slide">
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Strong mask</h3>
+                        <p>Secondary text</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                            alt="Third slide">
+                        <div class="mask rgba-black-slight"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Slight mask</h3>
+                        <p>Third text</p>
+                    </div>
+                </div>
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <hr class="my-4">
+                <a class="btn btn-info btn-xl" href={{ "timeline" | absURL}}>More My Moments</a>
+            </div>
+        </div>
+
 
     </div>
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <hr class="my-4">
-            <a class="btn btn-secondary btn-xl" href={{ "blogs" | absURL}}>Read More Blogs</a>
-          </div> 
-        </div>
-      </div>
-    </section>
+</section>
 
 {{ end }}

@@ -142,7 +142,7 @@ I use CMake to compile the module. For more information of the CMake compilation
 ```cmake
 cmake_minimum_required(VERSION 3.9)
 project(kfcore)
-# Set C++ 14 Standard
+# Set C++ 17 Standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(mkl_DIR ${CMAKE_CURRENT_LIST_DIR})
@@ -152,10 +152,6 @@ include_directories("/home/michael/anaconda3/include/python3.6m")
 find_package(pybind11 REQUIRED)
 
 file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "*.cpp")
-# message(${CMAKE_SOURCE_DIR})
-# message(${PROJECT_SOURCE_DIR})
-# message(${SOURCES})
-
 pybind11_add_module(kfcore ${SOURCES})
 target_link_libraries(kfcore PUBLIC mkl_rt mkl_core mkl_intel_thread mkl_intel_lp64 iomp5 pthread dl m)
 install(
@@ -217,10 +213,7 @@ y = genMeasure(mZ,mH,f)
 
 
 ```python
-from tvcore import kfcore
-import matplotlib.pyplot as plt
-%matplotlib inline
-```
+import kfcore
 
 
 ```python
