@@ -1,0 +1,390 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Michael">
+
+    <title>Michael Gong</title>
+    
+
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <link href="https://michael-gong.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="https://michael-gong.com/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    
+    <link href="https://michael-gong.com/css/creative.css" rel="stylesheet">
+    <link href="https://michael-gong.com/css/tweak.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/ef59e62c/src/bibtex_js.js"></script>
+    <bibtex src="https://michael-gong.com/reference.bib"></bibtex>
+
+
+    <base href="https://michael-gong.com/">
+    
+
+    <meta name="generator" content="Hugo 0.55.6" />
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>
+<body id="page-top">
+    
+        
+        
+        <div class="content">
+            
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="genNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Michael Gong</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#research">Moments</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href=https://michael-gong.com/imvolsurf>IVS via DFMX</a>
+                            <a class="dropdown-item" href="#">IVS via DPCP</a>
+                            <a class="dropdown-item" href="#">IVS via Deep Learning</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="container post">
+  <div class="my-auto">
+    <h2 class="mb-0"><span class="text-primary">Fast Kalman Filtering with univariate treatment Part II---Fast C&#43;&#43; implementation with PyBind11</span></h2>
+    <span class="text-info">June 3, 2018 | Michael Gong</span>
+    <ul class="tags">
+    
+      <li><a class="tag" href="/tags/kalman-filter">Kalman Filter</a></li>
+    
+      <li><a class="tag" href="/tags/univariate">Univariate</a></li>
+    
+      <li><a class="tag" href="/tags/python">Python</a></li>
+    
+      <li><a class="tag" href="/tags/c&#43;&#43;">C&#43;&#43;</a></li>
+    
+      <li><a class="tag" href="/tags/pybind11">PyBind11</a></li>
+    
+</ul>
+
+    
+    <br classmy-4>
+    
+
+<h1 id="fast-kalman-filtering-with-univariate-treatment-part-ii-fast-c-implementation-with-pybind11">Fast Kalman Filtering with univariate treatment Part II&mdash;Fast C++ implementation with PyBind11</h1>
+
+<p>If you haven&rsquo;t read the <a href="https://michael-gong.com/blogs/fastfilteringpart1/">Part I</a> of the this series, please read <a href="https://michael-gong.com/blogs/fastfilteringpart1/">it now</a>. In the Part <a href="https://michael-gong.com/blogs/fastfilteringpart1/">Part I</a>, we see that the univariate filter can successfully extract the signal from the noisy meansurement. However, in pure Python/Numpy environment, looping over all time steps and all measurments is very costly. The timing experiment shows that the univariate filter actually runs slower than the conventional Kalman Filter. In this article, I will show the implementation in C++ with Eigen and PyBind11.</p>
+
+<p><strong><em>prerequisites of this tutorial</em></strong></p>
+
+<ul>
+<li>GCC &gt;= 7.0.0</li>
+<li><a href="https://github.com/pybind/pybind11">PyBind11</a></li>
+<li><a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a></li>
+<li><a href="https://cmake.org/">CMake</a></li>
+</ul>
+
+<h2 id="1-implementation-in-eigen-c">1. Implementation in Eigen (c++)</h2>
+
+<p>The code below is the implementation of the univariate filter in C++. Note that
+- I set the state dimension as 4 as illustration. For more general usage, you should change the state dimension accordingly. The real advantage of using fixed size array of Eigen is the stunning performance when the dimension is known during compilation. This allows Eigen to do more aggresive optimization.
+- Unlike Numpy, Eigen does not (naively) support 3-dimensional array (though you can use tensor in Eigen&rsquo;s unsupported feature). So, it is pretty challenging when the dimension of the measurement is time varying. To solve this, we need to transform the unbalance data to &ldquo;psudo&rdquo; balance data. That is, we can allocate a two-dimensional array whose size is <em>&ldquo;max length of the measurement&rdquo;</em> $\times$ <em>&ldquo;time steps&rdquo;</em>. Then pad measurements whose length is less than the max length with 0. Inside the filtering function, we also provide a (integer) vector $vS$ to tell the algorithm what&rsquo;s the dimension of the measurements at each time step.
+- Another performance bottleneck is the measurement loading matrix $mZ$. Numpy use <em>row-major</em> layout, but Eigen use &ldquo;column-major&rdquo; layout. Since univariate filter will loop over each row of the measurement loading $Z$, accessing each row of the $Z$ is costly since the memory is not continuous. One way to deal with memory layout problem is to transpose the loading matrix $Z$ and copy as <em>column-major</em>. So, instead of looping over each row, we loop over each column of the transposed $Z$.
+- Last, similar to padding of measurements, we also need to pad the loading matrix $Z$ and disturbance covariance $H$.</p>
+
+<p><code>uniFilter.cpp</code></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#099">#include</span> <span style="color:#099">&lt;cmath&gt;</span><span style="color:#099">
+</span><span style="color:#099">#include</span> <span style="color:#099">&lt;iostream&gt;</span><span style="color:#099">
+</span><span style="color:#099">#define EIGEN_USE_MKL_ALL
+</span><span style="color:#099">#define EIGEN_INITIALIZE_MATRICES_BY_ZERO
+</span><span style="color:#099">#include</span> <span style="color:#099">&lt;pybind11/eigen.h&gt;</span><span style="color:#099">
+</span><span style="color:#099">#include</span> <span style="color:#099">&lt;pybind11/numpy.h&gt;</span><span style="color:#099">
+</span><span style="color:#099">#include</span> <span style="color:#099">&lt;pybind11/pybind11.h&gt;</span><span style="color:#099">
+</span><span style="color:#099">#include</span> <span style="color:#099">&lt;pybind11/stl.h&gt;</span><span style="color:#099">
+</span><span style="color:#099">#include</span> <span style="color:#099">&lt;eigen3/Eigen/Dense&gt;</span><span style="color:#099">
+</span><span style="color:#099">#include</span> <span style="color:#099">&lt;tuple&gt;</span><span style="color:#099">
+</span><span style="color:#099"></span>
+<span style="color:#069;font-weight:bold">using</span> <span style="color:#069;font-weight:bold">namespace</span> Eigen;
+<span style="color:#069;font-weight:bold">using</span> <span style="color:#069;font-weight:bold">namespace</span> std;
+<span style="color:#069;font-weight:bold">namespace</span> py <span style="color:#555">=</span> pybind11;
+
+<span style="color:#069;font-weight:bold">typedef</span> Eigen<span style="color:#555">::</span>Matrix<span style="color:#555">&lt;</span><span style="color:#078;font-weight:bold">double</span>, <span style="color:#f60">4</span>, <span style="color:#555">-</span><span style="color:#f60">1</span><span style="color:#555">&gt;</span> Matrixfd;
+std<span style="color:#555">::</span>tuple<span style="color:#555">&lt;</span>Matrixfd, Matrixfd, Matrixfd, Matrixfd<span style="color:#555">&gt;</span>
+univariateFilter(Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span> a1, Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>Matrix4d<span style="color:#555">&gt;</span> p1,
+                 Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>Matrixfd<span style="color:#555">&gt;</span> mZf,Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>MatrixXd<span style="color:#555">&gt;</span> mH,
+                 Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span> vD, Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>Matrix4d<span style="color:#555">&gt;</span> mT,
+                 Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>Matrix4d<span style="color:#555">&gt;</span> mQ, Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>MatrixXd<span style="color:#555">&gt;</span> mY,
+                 Eigen<span style="color:#555">::</span>Ref<span style="color:#555">&lt;</span>VectorXi<span style="color:#555">&gt;</span> vS) {
+    <span style="color:#078;font-weight:bold">int</span> N <span style="color:#555">=</span> mY.cols(), maxM <span style="color:#555">=</span> mY.rows(), m <span style="color:#555">=</span> <span style="color:#f60">0</span>;
+
+    <span style="color:#09f;font-style:italic">//Allocate memory to store the results
+</span><span style="color:#09f;font-style:italic"></span>    Matrixfd <span style="color:#c0f">aFf</span>(<span style="color:#f60">4</span>, N);
+    Matrixfd <span style="color:#c0f">aPf</span>(<span style="color:#f60">4</span>, (N <span style="color:#555">+</span> <span style="color:#f60">1</span>));
+    Matrixfd <span style="color:#c0f">aSf</span>(<span style="color:#f60">4</span>, N);
+    Matrixfd <span style="color:#c0f">pFf</span>(<span style="color:#f60">4</span>, N <span style="color:#555">*</span> <span style="color:#f60">4</span>);
+    MatrixXd <span style="color:#c0f">v</span>(maxM, N), F(maxM, N), mKf(<span style="color:#f60">4</span>, maxM <span style="color:#555">*</span> N);
+
+    aPf.col(<span style="color:#f60">0</span>) <span style="color:#555">=</span> a1;
+    pPf.leftCols(<span style="color:#f60">4</span>) <span style="color:#555">=</span> p1;
+
+    Vector4d a <span style="color:#555">=</span> a1;
+    Matrix4d P <span style="color:#555">=</span> p1;
+
+    <span style="color:#09f;font-style:italic">// Construct the Map object, so we don&#39;t need to copy the matrix during iteration
+</span><span style="color:#09f;font-style:italic"></span>    Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span> aF(<span style="color:#366">NULL</span>);
+    Map<span style="color:#555">&lt;</span>Matrix4d<span style="color:#555">&gt;</span> pF(<span style="color:#366">NULL</span>);
+    Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span> aP(<span style="color:#366">NULL</span>);
+    Map<span style="color:#555">&lt;</span>Matrix4d<span style="color:#555">&gt;</span> pP(<span style="color:#366">NULL</span>);
+
+    Map<span style="color:#555">&lt;</span>Matrixfd<span style="color:#555">&gt;</span> mK(<span style="color:#366">NULL</span>, <span style="color:#f60">4</span>, maxM);
+    Map<span style="color:#555">&lt;</span>Matrixfd<span style="color:#555">&gt;</span> mZ(<span style="color:#366">NULL</span>, <span style="color:#f60">4</span>, maxM);
+    Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span> mZp(<span style="color:#366">NULL</span>);
+    Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span> mKp(<span style="color:#366">NULL</span>);
+    
+    <span style="color:#069;font-weight:bold">for</span> (<span style="color:#078;font-weight:bold">int</span> t <span style="color:#555">=</span> <span style="color:#f60">0</span>; t <span style="color:#555">&lt;</span> N; t<span style="color:#555">++</span>) { <span style="color:#09f;font-style:italic">// Time step filtering
+</span><span style="color:#09f;font-style:italic"></span>        
+        <span style="color:#09f;font-style:italic">// Accessing the results columns or blocks 
+</span><span style="color:#09f;font-style:italic"></span>        <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>aF) Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span>(aFf.col(t).data());
+        <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>pF) Map<span style="color:#555">&lt;</span>Matrix4d<span style="color:#555">&gt;</span>(pFf.col(t <span style="color:#555">*</span> <span style="color:#f60">4</span>).data());
+        <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>aP) Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span>(aPf.col(t <span style="color:#555">+</span> <span style="color:#f60">1</span>).data());
+        <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>pP) Map<span style="color:#555">&lt;</span>Matrix4d<span style="color:#555">&gt;</span>(pPf.col((t <span style="color:#555">+</span> <span style="color:#f60">1</span>) <span style="color:#555">*</span> <span style="color:#f60">4</span>).data());
+
+        <span style="color:#09f;font-style:italic">// Retrieving the loading matrix block and Kalman Gain block
+</span><span style="color:#09f;font-style:italic"></span>        <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>mK) Map<span style="color:#555">&lt;</span>Matrixfd<span style="color:#555">&gt;</span>(mKf.col(maxM <span style="color:#555">*</span> t).data(), <span style="color:#f60">4</span>, maxM);
+        <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>mZ) Map<span style="color:#555">&lt;</span>Matrixfd<span style="color:#555">&gt;</span>(mZf.col(maxM <span style="color:#555">*</span> t).data(), <span style="color:#f60">4</span>, maxM);
+
+        m <span style="color:#555">=</span> vS(t);
+        <span style="color:#069;font-weight:bold">for</span> (<span style="color:#078;font-weight:bold">int</span> i <span style="color:#555">=</span> <span style="color:#f60">0</span>; i <span style="color:#555">&lt;</span> m; i<span style="color:#555">++</span>) {
+            <span style="color:#09f;font-style:italic">// Retrieving the loading matrix columns and Kalman Gain columns
+</span><span style="color:#09f;font-style:italic"></span>            <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>mZp) Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span>(mZ.col(i).data());
+            <span style="color:#069;font-weight:bold">new</span> (<span style="color:#555">&amp;</span>mKp) Map<span style="color:#555">&lt;</span>Vector4d<span style="color:#555">&gt;</span>(mK.col(i).data());
+
+            v(i, t) <span style="color:#555">=</span> mY(i, t) <span style="color:#555">-</span> mZp.adjoint() <span style="color:#555">*</span> a; <span style="color:#09f;font-style:italic">// error decomposition
+</span><span style="color:#09f;font-style:italic"></span>            F(i, t) <span style="color:#555">=</span> mZp.adjoint() <span style="color:#555">*</span> P <span style="color:#555">*</span> mZp <span style="color:#555">+</span> mH(i, t); <span style="color:#09f;font-style:italic">// measurement variance
+</span><span style="color:#09f;font-style:italic"></span>            mKp <span style="color:#555">=</span> P <span style="color:#555">*</span> mZp <span style="color:#555">/</span> F(i, t); <span style="color:#09f;font-style:italic">// Kalman gain
+</span><span style="color:#09f;font-style:italic"></span>
+            <span style="color:#069;font-weight:bold">if</span> (F(i, t) <span style="color:#555">!=</span> <span style="color:#f60">0</span>) {
+                a <span style="color:#555">+=</span> mKp <span style="color:#555">*</span> v(i, t); <span style="color:#09f;font-style:italic">// filtering state
+</span><span style="color:#09f;font-style:italic"></span>                P <span style="color:#555">-=</span> F(i, t) <span style="color:#555">*</span> mKp <span style="color:#555">*</span> mKp.transpose(); <span style="color:#09f;font-style:italic">// filtering state variance
+</span><span style="color:#09f;font-style:italic"></span>            }
+        }
+        aF <span style="color:#555">=</span> a;
+        pF <span style="color:#555">=</span> P;
+        aP <span style="color:#555">=</span> mT <span style="color:#555">*</span> a <span style="color:#555">+</span> vD; <span style="color:#09f;font-style:italic">// predicting state
+</span><span style="color:#09f;font-style:italic"></span>        pP <span style="color:#555">=</span> mT <span style="color:#555">*</span> P <span style="color:#555">*</span> mT.transpose() <span style="color:#555">+</span> mQ; <span style="color:#09f;font-style:italic">// predicting state variance
+</span><span style="color:#09f;font-style:italic"></span>    }
+
+
+    <span style="color:#069;font-weight:bold">return</span> std<span style="color:#555">::</span>make_tuple(aFf, aPf, aSf, pFf);
+};
+
+<span style="color:#09f;font-style:italic">// initialize the PyBind11 module
+</span><span style="color:#09f;font-style:italic"></span><span style="color:#078;font-weight:bold">void</span> <span style="color:#c0f">init_univariateFilter</span>(py<span style="color:#555">::</span>module<span style="color:#555">&amp;</span> m) {
+    m.def(<span style="color:#c30">&#34;univariateSmooth&#34;</span>, <span style="color:#555">&amp;</span>univariateSmooth);
+}
+</code></pre></div>
+<p>Once we finish the implementation of the univariate filter, we need to wrap it into PyBind11 module.</p>
+
+<p><code>Index.cpp</code></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#099">#include</span> <span style="color:#099">&lt;pybind11/pybind11.h&gt;</span><span style="color:#099">
+</span><span style="color:#099"></span>
+<span style="color:#069;font-weight:bold">namespace</span> py <span style="color:#555">=</span> pybind11;
+<span style="color:#078;font-weight:bold">void</span> <span style="color:#c0f">init_univariateFilter</span>(py<span style="color:#555">::</span>module<span style="color:#555">&amp;</span>);
+
+PYBIND11_MODULE(kfcore, m) {
+    m.doc() <span style="color:#555">=</span> <span style="color:#c30">&#34;pybind11 Univariate Ganssian Kalman Filter&#34;</span>;
+    init_univariateFilter(m);
+}
+</code></pre></div>
+<p>I use CMake to compile the module. For more information of the CMake compilation for the PyBind11, <a href="https://pybind11.readthedocs.io/en/master/compiling.html#building-with-cmake">click here</a>.</p>
+
+<p><code>CMakeLists.txt</code></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#366">cmake_minimum_required</span>(<span style="color:#c30">VERSION</span> <span style="color:#c30">3.9</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">project</span>(<span style="color:#c30">kfcore</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#09f;font-style:italic"># Set C++ 14 Standard
+</span><span style="color:#09f;font-style:italic"></span><span style="color:#366">set</span>(<span style="color:#c30">CMAKE_CXX_STANDARD</span> <span style="color:#c30">17</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">set</span>(<span style="color:#c30">CMAKE_CXX_STANDARD_REQUIRED</span> <span style="color:#c30">ON</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">set</span>(<span style="color:#c30">mkl_DIR</span> <span style="color:#555">${</span><span style="color:#033">CMAKE_CURRENT_LIST_DIR</span><span style="color:#555">}</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">set</span>(<span style="color:#c30">CMAKE_CXX_FLAGS</span> <span style="color:#c30">&#34;-Wall -O3 -mavx2 -fopenmp&#34;</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">include_directories</span>(<span style="color:#c30">&#34;/home/michael/anaconda3/include/python3.6m&#34;</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">find_package</span>(<span style="color:#c30">pybind11</span> <span style="color:#c30">REQUIRED</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">file</span>(<span style="color:#c30">GLOB_RECURSE</span> <span style="color:#c30">SOURCES</span> <span style="color:#c30">RELATIVE</span> <span style="color:#555">${</span><span style="color:#033">CMAKE_SOURCE_DIR</span><span style="color:#555">}</span> <span style="color:#c30">&#34;*.cpp&#34;</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#09f;font-style:italic"># message(${CMAKE_SOURCE_DIR})
+</span><span style="color:#09f;font-style:italic"># message(${PROJECT_SOURCE_DIR})
+</span><span style="color:#09f;font-style:italic"># message(${SOURCES})
+</span><span style="color:#09f;font-style:italic"></span><span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">pybind11_add_module</span>(<span style="color:#c30">kfcore</span> <span style="color:#555">${</span><span style="color:#033">SOURCES</span><span style="color:#555">}</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">target_link_libraries</span>(<span style="color:#c30">kfcore</span> <span style="color:#c30">PUBLIC</span> <span style="color:#c30">mkl_rt</span> <span style="color:#c30">mkl_core</span> <span style="color:#c30">mkl_intel_thread</span> <span style="color:#c30">mkl_intel_lp64</span> <span style="color:#c30">iomp5</span> <span style="color:#c30">pthread</span> <span style="color:#c30">dl</span> <span style="color:#c30">m</span>)<span style="color:#a00;background-color:#faa">
+</span><span style="color:#a00;background-color:#faa"></span><span style="color:#366">install</span>(
+  <span style="color:#c30">TARGETS</span> 
+  <span style="color:#c30">kfcore</span> 
+  <span style="color:#c30">DESTINATION</span> <span style="color:#555">${</span><span style="color:#033">PROJECT_SOURCE_DIR</span><span style="color:#555">}</span>)</code></pre></div>
+<p>Finally, we can build the module by</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir build
+<span style="color:#366">cd</span> build/
+cmake ..
+make install</code></pre></div>
+<h1 id="2-test-the-performance">2. Test the performance</h1>
+
+<p><strong>Let&rsquo;s generate some data</strong> similar to the <a href="https://michael-gong.com/blogs/fastfilteringpart1/">Part I</a> of this series</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">genStates</span>(vD, mT, mQ, N):
+    eta <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>multivariate_normal(vD, mQ, [N])
+    
+    f <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros_like(eta)
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">1</span>,N<span style="color:#555">-</span><span style="color:#f60">1</span>):
+        f[i<span style="color:#555">+</span><span style="color:#f60">1</span>] <span style="color:#555">=</span> vD <span style="color:#555">+</span> mT<span style="color:#99f">@f</span>[i] <span style="color:#555">+</span> eta[i]
+    <span style="color:#069;font-weight:bold">return</span> f
+
+<span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">genMeasure</span>(mZ, mH, f):
+    N <span style="color:#555">=</span> f<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    M <span style="color:#555">=</span> mZ<span style="color:#555">.</span>shape[<span style="color:#f60">0</span>]
+    y <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([M, N])
+    eps <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>multivariate_normal(np<span style="color:#555">.</span>zeros(M), mH, [N])
+    y <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros_like(eps)<span style="color:#555">.</span>T
+    <span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">1</span>, N<span style="color:#555">-</span><span style="color:#f60">1</span>):
+        y[:,i] <span style="color:#555">=</span> mZ<span style="color:#99f">@f</span>[i] <span style="color:#555">+</span> eps[i]
+    <span style="color:#069;font-weight:bold">return</span> y
+
+np<span style="color:#555">.</span>random<span style="color:#555">.</span>seed(<span style="color:#f60">123</span>)
+N <span style="color:#555">=</span> <span style="color:#f60">200</span>
+r <span style="color:#555">=</span> <span style="color:#f60">4</span>
+m <span style="color:#555">=</span> <span style="color:#f60">10</span>
+mZ <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>rand(m,r)
+mH <span style="color:#555">=</span> np<span style="color:#555">.</span>diag(np<span style="color:#555">.</span>random<span style="color:#555">.</span>normal(<span style="color:#f60">0</span>,<span style="color:#f60">1</span>,m)<span style="color:#555">**</span><span style="color:#f60">2</span>)
+
+vD <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(<span style="color:#f60">4</span>)
+mT <span style="color:#555">=</span> np<span style="color:#555">.</span>eye(r) <span style="color:#555">*</span> <span style="color:#f60">0.97</span>
+mQ <span style="color:#555">=</span> np<span style="color:#555">.</span>random<span style="color:#555">.</span>normal(<span style="color:#f60">0</span>,<span style="color:#f60">1</span>,[r,r])
+mQ <span style="color:#555">=</span> mQ<span style="color:#555">.</span>T<span style="color:#99f">@mQ</span>
+
+f <span style="color:#555">=</span> genStates(vD,mT,mQ,N)
+y <span style="color:#555">=</span> genMeasure(mZ,mH,f)</code></pre></div>
+<p><strong>Preparing the data dimension requried by our C++ univariate filter (tranposing and padding)</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">tvcore</span> <span style="color:#069;font-weight:bold">import</span> kfcore
+<span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">matplotlib.pyplot</span> <span style="color:#069;font-weight:bold">as</span> <span style="color:#0cf;font-weight:bold">plt</span>
+<span style="color:#555">%</span>matplotlib inline</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a1 <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros(r,order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)
+p1 <span style="color:#555">=</span> np<span style="color:#555">.</span>eye(r,order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)
+maxM <span style="color:#555">=</span> m <span style="color:#09f;font-style:italic"># In this case, the dimension of measurement is constant</span>
+Z <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([r, N<span style="color:#555">*</span>maxM], order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)
+H <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([maxM, N], order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)
+Y <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([maxM ,N], order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)
+<span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(N):
+    Z[:, i<span style="color:#555">*</span>maxM:(i<span style="color:#555">+</span><span style="color:#f60">1</span>)<span style="color:#555">*</span>maxM] <span style="color:#555">=</span> mZ<span style="color:#555">.</span>T <span style="color:#09f;font-style:italic"># Transpose</span>
+    Y[:,i] <span style="color:#555">=</span> y[:,i]
+    H[:,i] <span style="color:#555">=</span> np<span style="color:#555">.</span>diagonal(mH)
+    
+vD, mT, mQ <span style="color:#555">=</span> <span style="color:#366">map</span>(np<span style="color:#555">.</span>asfortranarray,[vD,mT,mQ])
+vS <span style="color:#555">=</span> np<span style="color:#555">.</span>ones(N,dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>int32)<span style="color:#555">*</span>r
+
+vC <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([m, N],order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)
+mG <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([r,r], order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)
+mU <span style="color:#555">=</span> np<span style="color:#555">.</span>ones([r,N],order<span style="color:#555">=</span><span style="color:#c30">&#39;F&#39;</span>)</code></pre></div>
+<p><strong>Run the C++ univariate filter</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">aFf, aPf, aSf, pFf <span style="color:#555">=</span> kfcore<span style="color:#555">.</span>univariateFilter(a1,p1,Z,H,vD,mT,mQ,Y,vS)</code></pre></div>
+<p><strong>Compare the results with Python/Numpy univaraite filter</strong> implemented in <a href="https://michael-gong.com/blogs/fastfilteringpart1/">Part I</a></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Z <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N,m,r])
+H <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N,m,m])
+Y <span style="color:#555">=</span> np<span style="color:#555">.</span>zeros([N,m,<span style="color:#f60">1</span>])
+<span style="color:#069;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(N):
+    Z[i], H[i],Y[i] <span style="color:#555">=</span> mZ,mH,y[:,[i]]
+sizes <span style="color:#555">=</span> np<span style="color:#555">.</span>ones(N,dtype<span style="color:#555">=</span>np<span style="color:#555">.</span>int32)<span style="color:#555">*</span>r
+
+<span style="color:#09f;font-style:italic"># Filtering</span>
+aF, pF, aP, pP <span style="color:#555">=</span> UniFilter(a1, p1, Z, H, vD, mT, mQ, Y, sizes)
+
+<span style="color:#069;font-weight:bold">print</span>(<span style="color:#c30">&#34;Is the output of C++ implmentation same as Python implmentation?&#34;</span>, np<span style="color:#555">.</span>allclose(aF, aFf))</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Is the output of C++ implmentation same as Python implmentation? False</pre></div>
+<p><strong>Let&rsquo;s time the performance</strong></p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit kfcore<span style="color:#555">.</span>univariateFilter(a1, p1, Z, H, vD, mT, mQ, Y, vS)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">80.8 µs ± 1.1 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#555">%</span>timeit UniFilter(a1, p1, Z, H, vD, mT, mQ, Y, sizes)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">18.9 ms ± 881 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)</pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#069;font-weight:bold">print</span>(f<span style="color:#c30">&#34;C++/Python speed up: {round(18900/80.8, 2)}x&#34;</span>)</code></pre></div><div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4">C++/Python speed up: 233.91x</pre></div>
+<p><strong>We achieve 234 times speed up!</strong></p>
+
+    
+    
+  </div>
+</section>
+
+
+        </div>
+        
+
+
+<script src="https://michael-gong.com/vendor/jquery/jquery.min.js"></script>
+<script src="https://michael-gong.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://michael-gong.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://michael-gong.com/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="https://michael-gong.com/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+<script src="https://michael-gong.com/js/creative.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

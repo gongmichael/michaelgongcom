@@ -20,14 +20,5 @@
       <description>Speed up GJR-GARCH with Numba 1. Introduction GJR-GARCH is widely used for modeling the heteroskedasticity of assets&amp;rsquo; return.</description>
     </item>
     
-    <item>
-      <title>Fast Kalman Filtering with univariate treatment Part I---Basics</title>
-      <link>https://michael-gong.com/blogs/fastfilteringpart1/</link>
-      <pubDate>Fri, 01 Jun 2018 12:52:36 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/blogs/fastfilteringpart1/</guid>
-      <description>Fast Kalman Filtering with univariate treatment Part I&amp;mdash;Basics 1. Introduction 1.</description>
-    </item>
-    
   </channel>
 </rss>

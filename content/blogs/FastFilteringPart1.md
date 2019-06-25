@@ -5,7 +5,7 @@ image: images/blog/blog-post-1.jpg
 author: Michael Gong
 featured: true
 thumbnail: "/img/posts/FastFiltering1/kalman.png"
-tags: ["Numba","GARCH","Python"]
+tags: ["Kalman Filter","Univariate","Python"]
 ---
 
 

@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Fast Kalman Filtering with univariate treatment Part II---Fast C&#43;&#43; implementation with PyBind11</title>
+      <link>https://michael-gong.com/blogs/fastfilteringpart2/</link>
+      <pubDate>Sun, 03 Jun 2018 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/blogs/fastfilteringpart2/</guid>
+      <description>Fast Kalman Filtering with univariate treatment Part II&amp;mdash;Fast C++ implementation with PyBind11 If you haven&amp;rsquo;t read the Part I of the this series, please read it now.</description>
+    </item>
+    
+    <item>
       <title>Fast Kalman Filtering with univariate treatment Part I---Basics</title>
       <link>https://michael-gong.com/blogs/fastfilteringpart1/</link>
       <pubDate>Fri, 01 Jun 2018 12:52:36 +0600</pubDate>

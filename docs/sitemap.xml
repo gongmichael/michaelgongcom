@@ -111,6 +111,35 @@
   </url>
   
   <url>
+    <loc>https://michael-gong.com/tags/c&#43;&#43;/</loc>
+    <lastmod>2018-06-03T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/blogs/fastfilteringpart2/</loc>
+    <lastmod>2018-06-03T12:52:36+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/kalman-filter/</loc>
+    <lastmod>2018-06-03T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/pybind11/</loc>
+    <lastmod>2018-06-03T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://michael-gong.com/tags/univariate/</loc>
+    <lastmod>2018-06-03T12:52:36+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://michael-gong.com/blogs/fastfilteringpart1/</loc>
     <lastmod>2018-06-01T12:52:36+06:00</lastmod>
   </url>
