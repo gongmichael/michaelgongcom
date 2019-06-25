@@ -10,7 +10,7 @@ tags: ["Kalman Filter","Univariate","Python", "C++", "PyBind11"]
 
 # Fast Kalman Filtering with univariate treatment Part II---Fast C++ implementation with PyBind11
 
-If you haven't read the [Part I](https://michael-gong.com/blogs/fastfilteringpart1/) of the this series, please read [it now](https://michael-gong.com/blogs/fastfilteringpart1/). In the Part [Part I](https://michael-gong.com/blogs/fastfilteringpart1/), we see that the univariate filter can successfully extract the signal from the noisy meansurement. However, in pure Python/Numpy environment, looping over all time steps and all measurments is very costly. The timing experiment shows that the univariate filter actually runs slower than the conventional Kalman Filter. In this article, I will show the implementation in C++ with Eigen and PyBind11.
+If you haven't read the [Part I](https://michael-gong.com/blogs/fastfilteringpart1/) of the this series, please read [it now](https://michael-gong.com/blogs/fastfilteringpart1/). In the Part [Part I](https://michael-gong.com/blogs/fastfilteringpart1/), we see that the univariate filter can successfully extract the signal from the noisy measurement. However, in pure Python/Numpy environment, looping over all time steps and all measurements is very costly. The timing experiment shows that the univariate filter actually runs slower than the conventional Kalman Filter. In this article, I will show the implementation in C++ with Eigen and PyBind11.
 
 ***prerequisites of this tutorial***
 
@@ -22,8 +22,9 @@ If you haven't read the [Part I](https://michael-gong.com/blogs/fastfilteringpar
 ## 1. Implementation in Eigen (c++)
 
 The code below is the implementation of the univariate filter in C++. Note that
-- I set the state dimension as 4 as illustration. For more general usage, you should change the state dimension accordingly. The real advantage of using fixed size array of Eigen is the stunning performance when the dimension is known during compilation. This allows Eigen to do more aggresive optimization. 
-- Unlike Numpy, Eigen does not (naively) support 3-dimensional array (though you can use tensor in Eigen's unsupported feature). So, it is pretty challenging when the dimension of the measurement is time varying. To solve this, we need to transform the unbalance data to "psudo" balance data. That is, we can allocate a two-dimensional array whose size is *"max length of the measurement"* $\times$ *"time steps"*. Then pad measurements whose length is less than the max length with 0. Inside the filtering function, we also provide a (integer) vector $vS$ to tell the algorithm what's the dimension of the measurements at each time step.
+
+- I set the state dimension as 4 as illustration. For more general usage, you should change the state dimension accordingly. The real advantage of using fixed size array of Eigen is the stunning performance when the dimension is known during compilation. This allows Eigen to do more aggressive optimization. 
+- Unlike Numpy, Eigen does not (naively) support 3-dimensional array (though you can use tensor in Eigen's unsupported feature). So, it is pretty challenging when the dimension of the measurement is time varying. To solve this, we need to transform the unbalance data to "pseudo" balance data. That is, we can allocate a two-dimensional array whose size is *"max length of the measurement"* $\times$ *"time steps"*. Then pad measurements whose length is less than the max length with 0. Inside the filtering function, we also provide a (integer) vector $vS$ to tell the algorithm what's the dimension of the measurements at each time step.
 - Another performance bottleneck is the measurement loading matrix $mZ$. Numpy use *row-major* layout, but Eigen use "column-major" layout. Since univariate filter will loop over each row of the measurement loading $Z$, accessing each row of the $Z$ is costly since the memory is not continuous. One way to deal with memory layout problem is to transpose the loading matrix $Z$ and copy as *column-major*. So, instead of looping over each row, we loop over each column of the transposed $Z$.
 - Last, similar to padding of measurements, we also need to pad the loading matrix $Z$ and disturbance covariance $H$. 
 
@@ -266,7 +267,7 @@ aF, pF, aP, pP = UniFilter(a1, p1, Z, H, vD, mT, mQ, Y, sizes)
 print("Is the output of C++ implmentation same as Python implmentation?", np.allclose(aF, aFf))
 ```
 
-    Is the output of C++ implmentation same as Python implmentation? False
+    Is the output of C++ implmentation same as Python implmentation? True
 
 
 **Let's time the performance**
