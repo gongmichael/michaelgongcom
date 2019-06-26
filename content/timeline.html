@@ -30,6 +30,21 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142766014-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142766014-1');
+    </script>
+
+
 </head>
 
 <body>
@@ -51,6 +66,9 @@
                         <a class="nav-link js-scroll-trigger" href={{"resume" | relURL}}>About me</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{{$.Site.BaseURL}}#research">Research</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href={{"blogs" | relURL}}>Blogs</a>
                     </li>
                     <li class="nav-item">
@@ -65,7 +83,7 @@
         <ul class="timeline">
             <li>
                 <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
-                            title="11 hours ago via Twitter" id=""></i></a></div>
+                             id=""></i>2019</a></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <img class="img-responsive" src="http://lorempixel.com/1600/500/sports/2" />
@@ -83,8 +101,8 @@
             </li>
 
             <li class="timeline-inverted">
-                {{/*  <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
-                            title="11 hours ago via Twitter" id=""></i></a></div>  */}}
+                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
+                            title="11 hours ago via Twitter" id=""></i></a></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <img class="img-responsive" src="/img/michael.jpg" />
@@ -166,7 +184,7 @@
 
             <li class="timeline-inverted">
                 <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
-                            title="11 hours ago via Twitter" id=""></i></a></div>
+                            title="11 hours ago via Twitter" id=""></i>dfd</a></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <img class="img-responsive" src="http://lorempixel.com/1600/500/sports/2" />
