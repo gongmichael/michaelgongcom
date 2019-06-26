@@ -6,13 +6,22 @@
     <description>Recent content in Tags on Michael Gong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2019 12:52:36 +0600</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jun 2018 12:52:36 +0600</lastBuildDate>
     
 	<atom:link href="https://michael-gong.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>GARCH</title>
+      <title>C&#43;&#43;</title>
+      <link>https://michael-gong.com/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 03 Jun 2018 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Garch</title>
       <link>https://michael-gong.com/tags/garch/</link>
       <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
       
@@ -21,52 +30,7 @@
     </item>
     
     <item>
-      <title>Numba</title>
-      <link>https://michael-gong.com/tags/numba/</link>
-      <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/tags/numba/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://michael-gong.com/tags/python/</link>
-      <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MCS</title>
-      <link>https://michael-gong.com/tags/mcs/</link>
-      <pubDate>Tue, 12 Mar 2019 12:52:36 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/tags/mcs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://michael-gong.com/tags/test/</link>
-      <pubDate>Tue, 12 Mar 2019 12:52:36 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jQuery</title>
-      <link>https://michael-gong.com/tags/jquery/</link>
-      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/tags/jquery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
+      <title>Java</title>
       <link>https://michael-gong.com/tags/java/</link>
       <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
@@ -75,11 +39,11 @@
     </item>
     
     <item>
-      <title>C&#43;&#43;</title>
-      <link>https://michael-gong.com/tags/c&#43;&#43;/</link>
-      <pubDate>Sun, 03 Jun 2018 12:52:36 +0600</pubDate>
+      <title>Jquery</title>
+      <link>https://michael-gong.com/tags/jquery/</link>
+      <pubDate>Wed, 12 Sep 2018 14:51:12 +0600</pubDate>
       
-      <guid>https://michael-gong.com/tags/c&#43;&#43;/</guid>
+      <guid>https://michael-gong.com/tags/jquery/</guid>
       <description></description>
     </item>
     
@@ -93,38 +57,20 @@
     </item>
     
     <item>
-      <title>PyBind11</title>
-      <link>https://michael-gong.com/tags/pybind11/</link>
-      <pubDate>Sun, 03 Jun 2018 12:52:36 +0600</pubDate>
+      <title>Mcs</title>
+      <link>https://michael-gong.com/tags/mcs/</link>
+      <pubDate>Tue, 12 Mar 2019 12:52:36 +0600</pubDate>
       
-      <guid>https://michael-gong.com/tags/pybind11/</guid>
+      <guid>https://michael-gong.com/tags/mcs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Univariate</title>
-      <link>https://michael-gong.com/tags/univariate/</link>
-      <pubDate>Sun, 03 Jun 2018 12:52:36 +0600</pubDate>
+      <title>Numba</title>
+      <link>https://michael-gong.com/tags/numba/</link>
+      <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
       
-      <guid>https://michael-gong.com/tags/univariate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OptionMetrics</title>
-      <link>https://michael-gong.com/tags/optionmetrics/</link>
-      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/tags/optionmetrics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://michael-gong.com/tags/tutorial/</link>
-      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
-      
-      <guid>https://michael-gong.com/tags/tutorial/</guid>
+      <guid>https://michael-gong.com/tags/numba/</guid>
       <description></description>
     </item>
     
@@ -138,11 +84,65 @@
     </item>
     
     <item>
+      <title>Optionmetrics</title>
+      <link>https://michael-gong.com/tags/optionmetrics/</link>
+      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/optionmetrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pandas</title>
       <link>https://michael-gong.com/tags/pandas/</link>
       <pubDate>Mon, 03 Apr 2017 12:52:36 +0600</pubDate>
       
       <guid>https://michael-gong.com/tags/pandas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pybind11</title>
+      <link>https://michael-gong.com/tags/pybind11/</link>
+      <pubDate>Sun, 03 Jun 2018 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/pybind11/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://michael-gong.com/tags/python/</link>
+      <pubDate>Sat, 01 Jun 2019 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://michael-gong.com/tags/test/</link>
+      <pubDate>Tue, 12 Mar 2019 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://michael-gong.com/tags/tutorial/</link>
+      <pubDate>Fri, 07 Apr 2017 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Univariate</title>
+      <link>https://michael-gong.com/tags/univariate/</link>
+      <pubDate>Sun, 03 Jun 2018 12:52:36 +0600</pubDate>
+      
+      <guid>https://michael-gong.com/tags/univariate/</guid>
       <description></description>
     </item>
     

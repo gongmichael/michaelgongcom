@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PyBind11 on Michael Gong</title>
+    <title>Pybind11 on Michael Gong</title>
     <link>https://michael-gong.com/tags/pybind11/</link>
-    <description>Recent content in PyBind11 on Michael Gong</description>
+    <description>Recent content in Pybind11 on Michael Gong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jun 2018 12:52:36 +0600</lastBuildDate>
